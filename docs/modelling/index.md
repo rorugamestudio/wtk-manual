@@ -10,6 +10,11 @@ Open it from the **Modelling** tab of the [World Toolkit window](../getting-star
 
 ## The Modelling tabs
 
+<figure markdown="span" class="wtk-ui">
+  ![The Create tab](../assets/images/window/ui-modelling-create.webp){ loading=lazy }
+  <figcaption>The Create tab of the Modelling panel.</figcaption>
+</figure>
+
 The Modelling panel has four tabs:
 
 **Create**

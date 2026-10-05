@@ -4,6 +4,11 @@ The **Settings** tab of the Terrain panel.
 
 ## Splines
 
+<figure markdown="span" class="wtk-ui">
+  ![The Terrain Settings tab](../assets/images/window/ui-terrain-settings.webp){ loading=lazy }
+  <figcaption>The Settings tab of the Terrain panel.</figcaption>
+</figure>
+
 **Line**, **Closed Spline Fill** and **Line Thickness** of stamp outlines in the Scene view.
 
 ## Preview

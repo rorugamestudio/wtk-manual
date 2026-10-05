@@ -4,6 +4,11 @@ Masks decide **where** a stamp layer applies and **how strongly**, from 0 (no ef
 
 ## Fills
 
+<figure markdown="span" class="wtk-ui">
+  ![A stamp with several masks](../assets/images/terrain/ui-stamp-masks.webp){ loading=lazy }
+  <figcaption>A stamp layer that combines a spline area with a border fade, a noise mask and a slope mask.</figcaption>
+</figure>
+
 Fills create mask values. Each fill has an **Alpha** (its strength) and a **Mode** that sets how it combines with the masks above it: **Add**, **Subtract**, **Difference**, **Multiply** or **Divide**.
 
 ### Shapes

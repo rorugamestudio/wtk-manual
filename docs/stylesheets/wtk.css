@@ -4,3 +4,10 @@
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 }
+
+/* Wide editor windows such as the UV View. */
+.wtk-ui-wide img {
+  max-width: min(100%, 720px);
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}

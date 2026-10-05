@@ -4,6 +4,11 @@ Most of World Toolkit is driven from one window. Open it from **Tools > World To
 
 ## Modules
 
+<figure markdown="span" class="wtk-ui">
+  ![The World Toolkit window](../assets/images/window/ui-roads.webp){ loading=lazy }
+  <figcaption>The World Toolkit window: the module bar on top, here showing the Roads module.</figcaption>
+</figure>
+
 The bar at the top of the window switches between modules:
 
 | Module | What it's for |

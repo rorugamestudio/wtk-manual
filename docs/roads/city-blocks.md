@@ -4,6 +4,11 @@ A :wtk-component-city-block-floor: **City Block Floor** fills a closed area surr
 
 ## Creating floors
 
+<figure markdown="span" class="wtk-ui">
+  ![City Block Floors section](../assets/images/roads/ui-section-city-block-floors.webp){ loading=lazy }
+  <figcaption>The City Block Floors section of the Roads panel.</figcaption>
+</figure>
+
 1. In the **Roads** panel, click **Create City Block Floors**.
 2. **Hover** a closed region between roads. It's highlighted.
 3. **Click** to create a floor there.
@@ -11,6 +16,11 @@ A :wtk-component-city-block-floor: **City Block Floor** fills a closed area surr
 Regions shown in **orange** already have a floor. Press ++esc++ to stop.
 
 ## Settings
+
+<figure markdown="span" class="wtk-ui">
+  ![City Block Floor inspector](../assets/images/roads/ui-city-block-floor.webp){ loading=lazy }
+  <figcaption>The City Block Floor inspector.</figcaption>
+</figure>
 
 **Extrusion Height**
 :   Gives the floor a thickness, with walls down its sides. Useful for raised blocks.

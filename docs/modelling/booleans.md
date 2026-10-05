@@ -18,6 +18,11 @@ A :wtk-component-boolean-stack: **Boolean Stack** holds the result. Each mesh th
 
 ## Creating a Boolean Stack
 
+<figure markdown="span" class="wtk-ui">
+  ![The Booleans section](../assets/images/modelling/ui-section-booleans.webp){ loading=lazy }
+  <figcaption>The Booleans section of the Create tab.</figcaption>
+</figure>
+
 In the **Create** tab, under **Booleans**:
 
 1. Select the meshes to combine. The **first** one you select becomes the Base.
@@ -35,6 +40,11 @@ To add another mesh to an existing stack, select the new mesh **first**, then th
 
 ## Editing the stack
 
+<figure markdown="span" class="wtk-ui">
+  ![Boolean Stack inspector](../assets/images/modelling/ui-boolean-stack.webp){ loading=lazy }
+  <figcaption>A Boolean Stack: a box with a second box cut out of it.</figcaption>
+</figure>
+
 The Boolean Stack inspector lists its operands. For each one you can:
 
 - Change its **Operation**.
@@ -44,6 +54,11 @@ The Boolean Stack inspector lists its operands. For each one you can:
 The inspector also shows the stack's status (**Up to date**, **Rebuilding...**) and has a **Rebuild** button.
 
 The **Boolean Operand** component on each mesh has more options:
+
+<figure markdown="span" class="wtk-ui">
+  ![Boolean Operand inspector](../assets/images/modelling/ui-boolean-operand.webp){ loading=lazy }
+  <figcaption>The Boolean Operand inspector.</figcaption>
+</figure>
 
 **Show Input**
 :   Shows the original mesh, to see and edit it.

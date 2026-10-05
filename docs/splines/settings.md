@@ -4,6 +4,11 @@ Spline display options are in the **Settings** tab of the **More** module. They 
 
 ## Spline Display
 
+<figure markdown="span" class="wtk-ui">
+  ![The More Settings tab](../assets/images/window/ui-more-settings.webp){ loading=lazy }
+  <figcaption>The Settings tab of the More module.</figcaption>
+</figure>
+
 **Always Show Splines**
 :   Draws splines even when you're not editing them.
 

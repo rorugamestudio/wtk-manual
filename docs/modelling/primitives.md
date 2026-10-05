@@ -9,6 +9,11 @@ Primitives are the starting point for most models. Pick one in the **Create** ta
 
 ## Available primitives
 
+<figure markdown="span" class="wtk-ui">
+  ![The Primitives section](../assets/images/modelling/ui-section-primitives.webp){ loading=lazy }
+  <figcaption>The Primitives section of the Create tab.</figcaption>
+</figure>
+
 | | | |
 |---|---|---|
 | :wtk-create-plane: **Plane** | :wtk-create-cube: **Cube** | :wtk-create-circle: **Circle** |

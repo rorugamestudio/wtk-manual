@@ -36,6 +36,11 @@ With **Origin** set to **Custom**:
 
 ## :wtk-transform-options: Transform Options
 
+<figure markdown="span" class="wtk-ui">
+  ![Transform Options](../assets/images/modelling/ui-section-transform-options.webp){ loading=lazy }
+  <figcaption>Transform Options: pivot position and rotation, axis locks and proportional editing.</figcaption>
+</figure>
+
 **Lock on axis**
 :   Restricts the transform to the chosen axes.
 
@@ -46,6 +51,11 @@ With **Origin** set to **Custom**:
 :   A toolbar toggle. When you drag one of the **Scale** tool's plane handles, which scale two axes at once, both axes scale by the same amount.
 
 ## :wtk-transform-numeric: Numeric Transform
+
+<figure markdown="span" class="wtk-ui">
+  ![Numeric Transform](../assets/images/modelling/ui-section-numeric-transform.webp){ loading=lazy }
+  <figcaption>Numeric Transform.</figcaption>
+</figure>
 
 Type exact values instead of dragging:
 

@@ -35,6 +35,11 @@ Open it from the **Buildings** tab of the [World Toolkit window](../getting-star
 
 ## The Buildings panel
 
+<figure markdown="span" class="wtk-ui">
+  ![The Buildings panel](../assets/images/window/ui-buildings-edit.webp){ loading=lazy }
+  <figcaption>The Edit tab of the Buildings panel.</figcaption>
+</figure>
+
 **Edit Buildings**
 :   Edits building footprints in the Scene view. Hold ++shift++ and click to create a new building.
 

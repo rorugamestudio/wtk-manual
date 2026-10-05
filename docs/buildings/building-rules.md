@@ -15,6 +15,11 @@ A **Building Rules** asset is a reusable building recipe: its volumes, walls, ro
 
 ## What rules contain
 
+<figure markdown="span" class="wtk-ui">
+  ![Building Rules inspector](../assets/images/buildings/ui-building-rules.webp){ loading=lazy }
+  <figcaption>A Building Rules asset.</figcaption>
+</figure>
+
 **Volumes**
 :   The same volume setup as on a building. See [Volumes](buildings-and-volumes.md#volumes).
 

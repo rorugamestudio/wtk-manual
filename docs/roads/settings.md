@@ -4,6 +4,11 @@ The **Settings** tab of the Roads panel.
 
 ## Default Junction Settings
 
+<figure markdown="span" class="wtk-ui">
+  ![The Roads Settings tab](../assets/images/window/ui-roads-settings.webp){ loading=lazy }
+  <figcaption>The Settings tab of the Roads panel.</figcaption>
+</figure>
+
 The starting values of new [junctions](junctions.md): **Junction Core Resolver**, **Continue Road Profile UVs**, **Junction Core UV Scale**, **Core Subdivision Size** and **Lock Materials**.
 
 **Conversions**

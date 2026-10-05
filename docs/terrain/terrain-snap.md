@@ -18,6 +18,11 @@ Objects that are themselves height stamps don't snap, since they would move the 
 
 ## :wtk-component-terrain-spline-snap: Terrain Spline Snap
 
+<figure markdown="span" class="wtk-ui">
+  ![Terrain Spline Snap inspector](../assets/images/terrain/ui-terrain-spline-snap.webp){ loading=lazy }
+  <figcaption>The Terrain Spline Snap inspector.</figcaption>
+</figure>
+
 **Add Component > World Toolkit > Terrain > Terrain Spline Snap** keeps a spline on the terrain surface. Use it for paths, fences, rivers or anything drawn with a spline that should follow the ground.
 
 The spline is **baked**: extra knots are added where needed so it follows the terrain's bumps, not just its own knots.

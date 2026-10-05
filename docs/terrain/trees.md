@@ -2,6 +2,11 @@
 
 The **Trees** operation places terrain trees inside its [mask](masks.md). Where the mask is weaker, fewer trees are placed.
 
+<figure markdown="span" class="wtk-ui">
+  ![A stamp with a Trees operation](../assets/images/terrain/ui-stamp-trees.webp){ loading=lazy }
+  <figcaption>A stamp with a Trees operation.</figcaption>
+</figure>
+
 **Source Prefab**
 :   The tree prefab. It's added to the terrains' tree prototypes when needed.
 

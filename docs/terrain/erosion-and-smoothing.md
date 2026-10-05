@@ -2,6 +2,11 @@
 
 ## Smooth
 
+<figure markdown="span" class="wtk-ui">
+  ![A stamp with Erosion and Smooth](../assets/images/terrain/ui-stamp-erosion.webp){ loading=lazy }
+  <figcaption>A stamp layer with an Erosion and a Smooth operation.</figcaption>
+</figure>
+
 The **Smooth** operation softens the terrain shape inside its [mask](masks.md).
 
 **Iterations**

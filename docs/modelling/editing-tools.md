@@ -117,13 +117,18 @@ These tools use a **Distance** value as strength:
 
 ## Modify
 
+<figure markdown="span" class="wtk-ui">
+  ![The Modify section](../assets/images/modelling/ui-section-modify.webp){ loading=lazy }
+  <figcaption>The Modify section. The **...** buttons show each tool's options in the Scene view.</figcaption>
+</figure>
+
 | Tool | What it does |
 |---|---|
 | :wtk-modify-duplicate: **Duplicate** | Duplicates the selected components inside the same mesh. |
 | :wtk-modify-connect: **Connect** | Connects the selected vertices, or pairs of edges, with a new edge across the face. |
 | :wtk-modify-merge-meshes: **Merge Meshes** | Merges the selected objects into the active one. |
 | :wtk-modify-separate: **Separate** | Moves the selected faces into a new object. |
-| :wtk-modify-rip: **Rip** | Tears the selection open, so it can be pulled apart. |
+| :wtk-modify-rip: **Rip** | Tears the selection open, so it can be pulled apart. In face mode the button reads **Extract**: the faces are detached as their own island. |
 | :wtk-modify-rip-fill: **Rip Fill** | Tears the selection open and fills simple gaps. |
 | :wtk-modify-dissolve-vertices: **Dissolve Verts** | Removes the selected vertices but keeps the surrounding faces. |
 | :wtk-modify-dissolve-edges: **Dissolve Edges** | Removes the selected edges but keeps the surrounding faces. |
@@ -165,6 +170,11 @@ For non-destructive booleans, see [Booleans](booleans.md).
 
 ## :wtk-brush: Vertex colors
 
+<figure markdown="span" class="wtk-ui">
+  ![Vertex Color](../assets/images/modelling/ui-section-vertex-color.webp){ loading=lazy }
+  <figcaption>The Vertex Color section.</figcaption>
+</figure>
+
 Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again to stop.
 
 **Color**
@@ -179,6 +189,11 @@ Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging
 **Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection.
 
 ## :wtk-materials: Materials
+
+<figure markdown="span" class="wtk-ui">
+  ![Materials](../assets/images/modelling/ui-section-materials.webp){ loading=lazy }
+  <figcaption>The Materials section.</figcaption>
+</figure>
 
 The **Materials** section lists the mesh's material slots.
 

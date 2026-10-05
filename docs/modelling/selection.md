@@ -45,6 +45,11 @@ On macOS, use ++cmd++ instead of ++ctrl++.
 
 ## :wtk-selection-add: Advanced Selection
 
+<figure markdown="span" class="wtk-ui">
+  ![Advanced Selection](../assets/images/modelling/ui-section-advanced-selection.webp){ loading=lazy }
+  <figcaption>Advanced Selection in the Topology tab.</figcaption>
+</figure>
+
 Found in the **Topology** tab:
 
 **Loop**
@@ -72,6 +77,11 @@ Found in the **Topology** tab:
 
 ## :wtk-selection-filter: Selection Filter
 
+<figure markdown="span" class="wtk-ui">
+  ![Selection Filter](../assets/images/modelling/ui-section-selection-filter.webp){ loading=lazy }
+  <figcaption>The Selection Filter.</figcaption>
+</figure>
+
 Selects components by their properties:
 
 | Filter | Selects |
@@ -85,6 +95,11 @@ Selects components by their properties:
 | **Interior** | Components that aren't on a border. |
 
 ## :wtk-visibility: Hiding components and objects
+
+<figure markdown="span" class="wtk-ui">
+  ![Visibility](../assets/images/modelling/ui-section-visibility.webp){ loading=lazy }
+  <figcaption>The Visibility section.</figcaption>
+</figure>
 
 Hide parts of a mesh to reach what's behind them. Under **Visibility** in the **Topology** tab:
 

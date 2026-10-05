@@ -13,6 +13,11 @@ To add another knot to an existing group, select the group and the knot, **right
 
 ## Editing a link group
 
+<figure markdown="span" class="wtk-ui">
+  ![Spline Link Group inspector](../assets/images/splines/ui-link-group.webp){ loading=lazy }
+  <figcaption>The link group of a junction, listing the road ends it holds together.</figcaption>
+</figure>
+
 When you select a link group, the **Selected Knots** panel shows **Selected Link Group** and lists its knots. From there you can remove a knot from the group.
 
 You can move and rotate the whole group with the Scene view handles. All linked knots move together.

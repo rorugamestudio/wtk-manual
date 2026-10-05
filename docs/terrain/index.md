@@ -17,6 +17,11 @@ Open it from the **Terrain** tab of the [World Toolkit window](../getting-starte
 
 ## How it fits together
 
+<figure markdown="span" class="wtk-ui">
+  ![The Terrain panel](../assets/images/window/ui-terrain.webp){ loading=lazy }
+  <figcaption>The Edit tab of the Terrain panel.</figcaption>
+</figure>
+
 :wtk-component-terrain-stamp-target: **Terrain Stamp Target**
 :   Groups the terrains that stamps affect, and stores their **base**: the state of the terrain before any stamp.
 

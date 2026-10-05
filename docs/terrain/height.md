@@ -4,6 +4,11 @@ The **Height** operation changes the shape of the ground inside its [mask](masks
 
 ## Apply Mode
 
+<figure markdown="span" class="wtk-ui">
+  ![A stamp with a Height operation](../assets/images/terrain/ui-stamp-height.webp){ loading=lazy }
+  <figcaption>A stamp with a Height operation.</figcaption>
+</figure>
+
 How the stamp's height combines with the terrain:
 
 | Mode | Result |

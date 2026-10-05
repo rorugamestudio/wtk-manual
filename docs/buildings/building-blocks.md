@@ -12,6 +12,11 @@ The block splits into lots and generates a building on each one.
 
 ## Choosing the buildings
 
+<figure markdown="span" class="wtk-ui">
+  ![Building Block inspector](../assets/images/buildings/ui-building-block.webp){ loading=lazy }
+  <figcaption>The Building Block inspector.</figcaption>
+</figure>
+
 **Building Rule Chances**
 :   The [Building Rules](building-rules.md) used for the generated buildings, each with a chance. Mix several rules to vary the style along the block.
 

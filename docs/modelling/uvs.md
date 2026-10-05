@@ -10,6 +10,11 @@ Editing UVs by hand switches the edited faces to manual UVs. Turning **Auto UV**
 
 ## :wtk-uv-view: The UV View
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![The UV View](../assets/images/modelling/ui-uv-view.webp){ loading=lazy }
+  <figcaption>The UV View, with the tools on the left and the snapping, pivot and UV channel options on top.</figcaption>
+</figure>
+
 **Open UV View** in the **UV** tab opens the UV editor, which shows the selected mesh's UVs over its texture. Turn on **Auto Open UV View** to open it every time you switch to the **UV** tab.
 
 ### Selecting UVs
@@ -26,6 +31,11 @@ UV selection works on its own component types, chosen in the toolbar or with the
 The toolbar also has **UV corners** and **Connected 3D** modes, and box-selection rules for edges and faces, as in the [Scene view](selection.md#box-selection-rules).
 
 ## Transforming UVs
+
+<figure markdown="span" class="wtk-ui">
+  ![The UV tab](../assets/images/window/ui-modelling-uv.webp){ loading=lazy }
+  <figcaption>The UV tab of the Modelling panel.</figcaption>
+</figure>
 
 Move, rotate and scale UVs with the regular transform tools, or with exact values under **Numeric Transform**: **Move Selection**, **Rotate Selection** and **Scale Selection** apply the typed offset, angle or factor.
 

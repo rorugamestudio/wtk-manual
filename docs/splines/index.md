@@ -10,6 +10,11 @@ World Toolkit uses its own spline system, the **Spline Container** component, wh
 
 ## Where to edit splines
 
+<figure markdown="span" class="wtk-ui">
+  ![The More panel](../assets/images/window/ui-more.webp){ loading=lazy }
+  <figcaption>Edit Splines is in the More tab of the World Toolkit window.</figcaption>
+</figure>
+
 - In the **More** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md), click **Edit Splines**.
 - Or **double-click** a Spline Container that is already selected in the Scene view.
 

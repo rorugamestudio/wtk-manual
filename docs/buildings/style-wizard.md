@@ -6,6 +6,11 @@ Open it from **Tools > World Toolkit > Buildings > Style Wizard**.
 
 ## Using it
 
+<figure markdown="span" class="wtk-ui">
+  ![The Building Style Wizard](../assets/images/buildings/ui-style-wizard.webp){ loading=lazy }
+  <figcaption>The Building Style Wizard.</figcaption>
+</figure>
+
 **Front Wall**
 :   The wall for the first footprint side, and every other side after it.
 

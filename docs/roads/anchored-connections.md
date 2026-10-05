@@ -8,6 +8,11 @@ Right-click the road component of the road that should attach, and choose **Add 
 
 ## Settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Road Anchor Connection inspector](../assets/images/roads/ui-anchored-connection.webp){ loading=lazy }
+  <figcaption>The Road Anchor Connection inspector.</figcaption>
+</figure>
+
 **Endpoint**
 :   Which end of this road attaches: **Start** or **End**.
 

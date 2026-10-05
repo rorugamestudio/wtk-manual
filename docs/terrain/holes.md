@@ -2,6 +2,11 @@
 
 The **Holes** operation cuts holes in the terrain inside its [mask](masks.md), for cave and tunnel entrances, or for openings where a mesh replaces the terrain.
 
+<figure markdown="span" class="wtk-ui">
+  ![A stamp with a Holes operation](../assets/images/terrain/ui-stamp-holes.webp){ loading=lazy }
+  <figcaption>A stamp with a Holes operation.</figcaption>
+</figure>
+
 **Action**
 :   **Cut** makes holes. **Fill** closes holes made by stamps above it.
 
