@@ -30,6 +30,11 @@ The target's inspector has:
 
 ## Creating stamps
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![Editing terrain stamps](../assets/images/terrain/ui-scene-stamps.webp){ loading=lazy }
+  <figcaption>Editing terrain stamps: each outline is a spline with numbered knots.</figcaption>
+</figure>
+
 <figure markdown="span" class="wtk-ui">
   ![The Terrain panel](../assets/images/window/ui-terrain.webp){ loading=lazy }
   <figcaption>The Terrain panel.</figcaption>

@@ -17,6 +17,11 @@ To continue an existing road, start drawing from one of its ends.
 
 ## Editing a road
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![Editing road points](../assets/images/roads/ui-scene-edit.webp){ loading=lazy }
+  <figcaption>Editing road points: the road splines with their knots, and the spline panels.</figcaption>
+</figure>
+
 With **Edit Road Points** active:
 
 - **Click** spline knots to select them.

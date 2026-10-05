@@ -16,6 +16,11 @@ These tools show an options panel in the Scene view. Adjust the options, check t
 
 ### :wtk-modify-extrude: Extrude
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![Extrude Options in the Scene view](../assets/images/modelling/ui-scene-extrude.webp){ loading=lazy }
+  <figcaption>Extrude Options in the Scene view, with the top face selected.</figcaption>
+</figure>
+
 Pulls the selected faces or edges out to create new geometry.
 
 **Distance**

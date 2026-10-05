@@ -56,6 +56,11 @@ Draw common shapes in one drag:
 
 ## Editing knots
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![Editing spline knots](../assets/images/splines/ui-scene-knots.webp){ loading=lazy }
+  <figcaption>Editing a spline: the selected knot with its handles, and the New Splines and Selected Knots panels.</figcaption>
+</figure>
+
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
 - **Drag** across empty space to box-select knots.
 - **Drag** a selected knot or handle to move it.

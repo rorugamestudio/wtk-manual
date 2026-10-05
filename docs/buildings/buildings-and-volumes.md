@@ -2,6 +2,11 @@
 
 ## Creating a building
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![A building in the Scene view](../assets/images/buildings/ui-scene-layout.webp){ loading=lazy }
+  <figcaption>A generated building selected in the Scene view, with its footprint outlined.</figcaption>
+</figure>
+
 1. In the **Buildings** panel, set **Draw Creates** to **Building**.
 2. Click **Edit Buildings**.
 3. Hold ++shift++ and **click** to draw the footprint, then close it.

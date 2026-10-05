@@ -33,6 +33,11 @@ The panel follows what you're doing: picking a primitive switches to **Create**,
 
 ## Editing in the Scene view
 
+<figure markdown="span" class="wtk-ui-wide">
+  ![Editing a mesh in the Scene view](../assets/images/modelling/ui-scene-edit.webp){ loading=lazy }
+  <figcaption>Editing faces: the Modelling Edit toolbar on the right, the selected face highlighted, and the context tips at the bottom.</figcaption>
+</figure>
+
 When you edit a mesh's vertices, edges or faces, Unity switches its **Tool Context** to **WTK: Editable Mesh**. A **Modelling Edit** toolbar appears in the Scene view with the component modes (vertices, edges, faces), the selection tool, vertex painting and X-Ray.
 
 Many tools also show an options panel in the Scene view (for example **Extrude Options**), where you tweak the operation and then press **Apply** or **Cancel**.
