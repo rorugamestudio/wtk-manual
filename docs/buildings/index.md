@@ -4,6 +4,11 @@ The Buildings module generates modular buildings from a **footprint**, the outli
 
 Open it from the **Buildings** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
+<figure markdown="span">
+  ![A generated villa with a mansard roof](../assets/images/buildings/villa.webp){ loading=lazy }
+  <figcaption>A building generated from a footprint, a few walls and two roofs.</figcaption>
+</figure>
+
 ## How a building is put together
 
 **Building**

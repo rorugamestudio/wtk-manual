@@ -28,11 +28,16 @@ Fills create mask values. Each fill has an **Alpha** (its strength) and a **Mode
 
 For **Terrain Height** and **Terrain Slope**, **Modulate Alpha By Incidence** fades the mask across the range, from 0 at its minimum to 1 at its maximum, instead of a hard cut.
 
+!!! note
+    **Terrain Height** and **Terrain Slope** read the terrain as it is **before** their own stamp. To paint the slopes of a hill that a stamp creates, put the painting in a separate stamp below the hill in the Hierarchy.
+
 ## Adjustments
 
-Adjustments change the mask built so far.
+Adjustments change mask values. Where they go depends on their kind.
 
 ### Shape adjustments
+
+Shape adjustments belong to one **shape fill** and only change that fill. Add them inside the fill, for example a **Border** inside a **Spline Area**.
 
 | Adjustment | What it does |
 |---|---|
@@ -43,6 +48,8 @@ Adjustments change the mask built so far.
 | **Transform**, **Scale**, **Rotate** | Moves, scales or rotates the mask, optionally following another object's transform. |
 
 ### Value adjustments
+
+Value and raster adjustments sit in the layer's mask list, and change the mask built by everything above them.
 
 | Adjustment | What it does |
 |---|---|

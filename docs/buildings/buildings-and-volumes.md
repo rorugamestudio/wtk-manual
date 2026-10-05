@@ -35,6 +35,11 @@ You can also add the **Building** component to an object with a spline (**Add Co
 
 Each volume is a block of floors with its own walls and roof.
 
+<figure markdown="span">
+  ![A villa made of two volumes](../assets/images/buildings/villa-side.webp){ loading=lazy }
+  <figcaption>Two volumes: the main block with a mansard roof, and a small attic volume standing on top of it.</figcaption>
+</figure>
+
 **Key**
 :   A name other volumes use to stack on top of this one.
 

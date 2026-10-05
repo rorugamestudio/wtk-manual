@@ -2,6 +2,11 @@
 
 Primitives are the starting point for most models. Pick one in the **Create** tab of the Modelling panel, then draw it in the Scene view.
 
+<figure markdown="span">
+  ![The basic primitives](../assets/images/modelling/primitives.webp){ loading=lazy }
+  <figcaption>Back row: Plane, Cube, Circle and Cylinder. Front row: Cone, Sphere, Torus and Arch.</figcaption>
+</figure>
+
 ## Available primitives
 
 | | | |

@@ -2,6 +2,16 @@
 
 A **junction** is the mesh that joins roads where they meet. World Toolkit generates it from the roads' layers: lanes, borders and sidewalks continue into the junction, and the middle is filled with a core surface.
 
+<figure markdown="span">
+  ![A four-way junction](../assets/images/roads/junction-cross.webp){ loading=lazy }
+  <figcaption>A four-way junction. The curbs and sidewalks follow the corners, and the lanes stop at each road mouth.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![A T junction](../assets/images/roads/junction-t.webp){ loading=lazy }
+  <figcaption>A T junction between a straight road and a curved branch.</figcaption>
+</figure>
+
 ## Creating junctions
 
 Junctions are created when roads meet:

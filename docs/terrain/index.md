@@ -6,6 +6,11 @@ Stamps are **non-destructive**. The terrain is always rebuilt from a saved base 
 
 Open it from the **Terrain** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
+<figure markdown="span">
+  ![A terrain shaped with stamps](../assets/images/terrain/landscape.webp){ loading=lazy }
+  <figcaption>Three stamps on a flat terrain: a hill, a riverbed and a wood.</figcaption>
+</figure>
+
 ## How it fits together
 
 **Terrain Stamp Target**

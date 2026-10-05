@@ -2,6 +2,11 @@
 
 A **Building Rules** asset is a reusable building recipe: its volumes, walls, roofs and floor counts. Give the same rules to many buildings and they share a style, while each footprint still gets its own shape.
 
+<figure markdown="span">
+  ![Three buildings with the same walls and roof](../assets/images/buildings/same-rules.webp){ loading=lazy }
+  <figcaption>The same walls and roof on three different footprints and floor counts.</figcaption>
+</figure>
+
 ## Creating rules
 
 - **From a building you've set up:** right-click the Building component and choose **Create Building Rules From Current Setup...**.

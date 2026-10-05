@@ -27,6 +27,11 @@ Pick a **Preset** and click **Apply** to start from a common shape:
 
 Applying a preset replaces the profile and sets the **Top** it's meant for.
 
+<figure markdown="span">
+  ![The eight roof presets](../assets/images/buildings/roof-presets.webp){ loading=lazy }
+  <figcaption>Back row: Hip 30°, Hip 45°, Steep 60° and Flat. Front row: Parapet, Mansard, Mansard, Flat Top and Bell-Cast Mansard.</figcaption>
+</figure>
+
 ### Editing the profile
 
 The profile graph works like other World Toolkit profile editors: drag points to move them, and press ++f++ or click **Frame** to fit the view. The **Roof Preview** shows the result in 3D.

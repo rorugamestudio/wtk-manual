@@ -4,6 +4,11 @@ The Roads module builds road meshes from splines. You draw where the road goes, 
 
 Open it from the **Roads** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
+<figure markdown="span">
+  ![A small road network](../assets/images/roads/network.webp){ loading=lazy }
+  <figcaption>Six roads joined by a cross junction and a T junction.</figcaption>
+</figure>
+
 ## The building blocks
 
 **Road** (Editable Mesh Road component)
