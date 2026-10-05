@@ -115,4 +115,7 @@ The building inspector reports problems found while generating, for example:
 
 Click an issue to jump to the field that causes it. The report also shows how many pieces were generated and how long it took.
 
-The **Layout Overlay** in the Scene view labels each footprint side with the wall it got.
+The **Layout Overlay** in the Scene view shows, on selected buildings, the wall of each footprint side, the corners and the row of each floor:
+
+- **Click** a wall label to give that side a different wall.
+- Hold ++ctrl+shift++ over a generated piece to see where it comes from, and click to open it.

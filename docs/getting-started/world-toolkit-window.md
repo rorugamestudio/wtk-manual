@@ -22,6 +22,21 @@ The window remembers the last module you used while the editor stays open.
 
 :wtk-context-tips: While a module is active, a small panel in the Scene view shows tips for what you're doing right now: which tool is active, what clicking and dragging will do, and which keys are available. You can turn the tips off in the Modelling **Settings** tab, under **Scene View Overlays > Show Context Tips**.
 
+## Rebuild settings
+
+Roads, buildings, terrain stamps and spawners rebuild as you edit them. Each module's **Settings** tab has a **Rebuilds** section that controls how often that happens while you drag:
+
+**Rebuild Debounce**
+:   While the mouse is held down, waits until you stop moving before rebuilding. Releasing the mouse always applies the pending rebuild.
+
+**Mouse Down Idle (s)**
+:   How long you have to hold still, while dragging, before a rebuild happens. 1.5 seconds by default.
+
+**Update Interval (ms)**
+:   With debounce off, the minimum time between rebuilds (16.6 ms by default, about once per frame). Zero rebuilds on every editor update.
+
+Turn debounce off for live feedback on small scenes, and keep it on for heavy roads, buildings or large terrains.
+
 ## Settings
 
 Your World Toolkit preferences can be moved between machines or shared with your team:

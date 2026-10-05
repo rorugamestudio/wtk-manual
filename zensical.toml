@@ -24,12 +24,14 @@ nav = [
     { "UVs" = "modelling/uvs.md" },
     { "Booleans" = "modelling/booleans.md" },
     { "Decals" = "modelling/decals.md" },
+    { "Modelling Settings" = "modelling/settings.md" },
   ] },
   { "Splines" = [
     "splines/index.md",
     { "Spline Container" = "splines/spline-container.md" },
     { "Point Anchors" = "splines/point-anchors.md" },
     { "Link Groups" = "splines/link-groups.md" },
+    { "Spline Settings" = "splines/settings.md" },
   ] },
   { "Roads" = [
     "roads/index.md",
@@ -38,6 +40,7 @@ nav = [
     { "Junctions" = "roads/junctions.md" },
     { "Anchored Connections" = "roads/anchored-connections.md" },
     { "City Blocks" = "roads/city-blocks.md" },
+    { "Roads Settings" = "roads/settings.md" },
   ] },
   { "Buildings" = [
     "buildings/index.md",
@@ -46,6 +49,7 @@ nav = [
     { "Roofs" = "buildings/roofs.md" },
     { "Building Blocks" = "buildings/building-blocks.md" },
     { "Style Wizard" = "buildings/style-wizard.md" },
+    { "Buildings Settings" = "buildings/settings.md" },
   ] },
   { "Terrain" = [
     "terrain/index.md",
@@ -58,11 +62,13 @@ nav = [
     { "Details" = "terrain/details.md" },
     { "Holes" = "terrain/holes.md" },
     { "Terrain Snap" = "terrain/terrain-snap.md" },
+    { "Terrain Settings" = "terrain/settings.md" },
   ] },
   { "More" = [
     "more/index.md",
     { "Array Spawner" = "more/array-spawner.md" },
     { "Area Spawner" = "more/area-spawner.md" },
+    { "More Settings" = "more/settings.md" },
   ] },
   { "Support" = [
     "support/index.md",

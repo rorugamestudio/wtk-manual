@@ -7,6 +7,11 @@ All editing tools live in the **Topology** tab of the Modelling panel. They act 
 
 ## Tools with options
 
+<figure markdown="span">
+  ![A cube, then inset, extruded and beveled](../assets/images/modelling/editing-sequence.webp){ loading=lazy }
+  <figcaption>From left: a cube, then Inset on the top face, Extrude of the inset face, and Bevel on the vertical edges.</figcaption>
+</figure>
+
 These tools show an options panel in the Scene view. Adjust the options, check the preview, then press **Apply**, or **Cancel** to leave without changing anything. The **...** button next to each tool in the panel shows or hides its Scene view options.
 
 ### :wtk-modify-extrude: Extrude
