@@ -1,0 +1,20 @@
+name: 📖 Documentation
+description: Something in the manual is wrong, unclear or missing.
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Link to the page, if it exists.
+      placeholder: https://rorugamestudio.github.io/wtk-manual/...
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix

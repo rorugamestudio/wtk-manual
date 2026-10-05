@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: World Toolkit Manual
+    url: https://rorugamestudio.github.io/wtk-manual/
+    about: Read the manual before opening an issue.

@@ -1,0 +1,34 @@
+name: ❓ Question
+description: Ask how to do something with World Toolkit.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the [manual](https://rorugamestudio.github.io/wtk-manual/) first, the answer may already be there.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Modelling
+        - Splines
+        - Roads
+        - Buildings
+        - Terrain
+        - Spawners / More
+        - World Toolkit window / Settings
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What are you trying to achieve, and what have you tried so far?
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots

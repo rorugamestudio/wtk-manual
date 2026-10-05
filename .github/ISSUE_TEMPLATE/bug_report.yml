@@ -1,0 +1,90 @@
+name: 🐛 Bug Report
+description: Something in World Toolkit doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please [search existing issues](https://github.com/rorugamestudio/wtk-manual/issues?q=is%3Aissue) first.
+  - type: input
+    id: wtk-version
+    attributes:
+      label: World Toolkit version
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      placeholder: e.g. 6000.2.6f1
+    validations:
+      required: true
+  - type: dropdown
+    id: render-pipeline
+    attributes:
+      label: Render pipeline
+      options:
+        - URP
+        - HDRP
+        - Built-in
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Affected module
+      options:
+        - Modelling
+        - Splines
+        - Roads
+        - Buildings
+        - Terrain
+        - Spawners / More
+        - World Toolkit window / Settings
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from a new scene if you can.
+      placeholder: |
+        1. Create a new scene
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video
+      description: Drag and drop files here.
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: Full error message and stack trace from the Unity Console, if any.
+      render: shell
