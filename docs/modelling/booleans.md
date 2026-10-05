@@ -4,7 +4,7 @@ Booleans combine meshes: merge them, cut one with another, or keep only where th
 
 ## How it works
 
-A **Boolean Stack** holds the result. Each mesh that takes part is a **Boolean Operand** in the stack:
+A :wtk-component-boolean-stack: **Boolean Stack** holds the result. Each mesh that takes part is a :wtk-component-boolean-operand: **Boolean Operand** in the stack:
 
 - One operand is the **Base**, the mesh everything else is applied to.
 - Every other operand applies an **Operation** to it, in order.

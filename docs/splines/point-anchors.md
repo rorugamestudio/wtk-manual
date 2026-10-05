@@ -1,6 +1,6 @@
 # Point Anchors
 
-A **Spline Point Anchor** keeps an object attached to a point on a spline. When the spline changes, the object follows. Use it for lamp posts at a road corner, a sign at the end of a path, or anything that must stay in place along a curve.
+A :wtk-component-spline-point-anchor: **Spline Point Anchor** keeps an object attached to a point on a spline. When the spline changes, the object follows. Use it for lamp posts at a road corner, a sign at the end of a path, or anything that must stay in place along a curve.
 
 Add it with **Add Component > World Toolkit > Splines > Spline Point Anchor**.
 

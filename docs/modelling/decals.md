@@ -4,10 +4,10 @@ Mesh decals are paint-like meshes that follow the surface below them: road marki
 
 There are two kinds:
 
-**Mesh Decal Stroke**
+:wtk-component-mesh-decal-stroke: **Mesh Decal Stroke**
 :   Lines painted **along** a spline, like lane markings.
 
-**Mesh Decal Area**
+:wtk-component-mesh-decal-area: **Mesh Decal Area**
 :   A filled area **inside** a closed spline, with optional outline lines.
 
 Create them from **GameObject > World Toolkit > Decals**.

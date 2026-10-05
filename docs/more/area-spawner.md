@@ -1,6 +1,6 @@
 # Area Spawner
 
-The **Spline Area Spawner** fills an area with copies of an object: cars in a parking lot, trees in an orchard, crates on a dock. The area is outlined by a closed spline.
+The :wtk-component-spline-area-spawner: **Spline Area Spawner** fills an area with copies of an object: cars in a parking lot, trees in an orchard, crates on a dock. The area is outlined by a closed spline.
 
 ## Creating one
 

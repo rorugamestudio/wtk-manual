@@ -8,9 +8,9 @@ Pick the component type in the **Modelling Edit** toolbar in the Scene view, or 
 
 | Key | Mode |
 |---|---|
-| ++1++ | Vertices |
-| ++2++ | Edges |
-| ++3++ | Faces |
+| ++1++ | :wtk-select-vertex: Vertices |
+| ++2++ | :wtk-select-edge: Edges |
+| ++3++ | :wtk-select-face: Faces |
 
 Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh**, where clicks select components instead of objects.
 
@@ -18,17 +18,17 @@ Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh*
 
 - **Click** a component to select it.
 - **Drag** across empty space to box-select.
-- ++q++ switches to the **Select** tool.
+- ++q++ switches to the :wtk-select: **Select** tool.
 
 ### Box selection rules
 
 The toolbar lets you decide what a box selection includes:
 
 **Edges**
-:   **Intersecting** (any edge the box touches), **Midpoint** (edges whose middle is inside the box) or **Fully Inside**.
+:   :wtk-box-intersect: **Intersecting** (any edge the box touches), :wtk-box-center: **Midpoint** (edges whose middle is inside the box) or :wtk-box-inside: **Fully Inside**.
 
 **Faces**
-:   **Touching Box**, **Center Only** (faces whose center is inside the box) or **Fully Inside**.
+:   :wtk-box-intersect: **Touching Box**, :wtk-box-center: **Center Only** (faces whose center is inside the box) or :wtk-box-inside: **Fully Inside**.
 
 ## Keyboard shortcuts
 
@@ -43,7 +43,7 @@ The toolbar lets you decide what a box selection includes:
 
 On macOS, use ++cmd++ instead of ++ctrl++.
 
-## Advanced Selection
+## :wtk-selection-add: Advanced Selection
 
 Found in the **Topology** tab:
 
@@ -70,7 +70,7 @@ Found in the **Topology** tab:
 
 **Convert Selection** turns the current selection into another component type, for example from faces to their edges.
 
-## Selection Filter
+## :wtk-selection-filter: Selection Filter
 
 Selects components by their properties:
 
@@ -84,7 +84,7 @@ Selects components by their properties:
 | **Boundary** | Components on an open border of the mesh. |
 | **Interior** | Components that aren't on a border. |
 
-## Hiding components and objects
+## :wtk-visibility: Hiding components and objects
 
 Hide parts of a mesh to reach what's behind them. Under **Visibility** in the **Topology** tab:
 

@@ -1,6 +1,6 @@
 # Editable Meshes
 
-Every mesh you edit with the Modelling tools has an **Editable Mesh** component. It stores the mesh as faces you can edit (quads and polygons, not only triangles) and rebuilds the Unity mesh whenever you change it.
+Every mesh you edit with the Modelling tools has an :wtk-component-editable-mesh: **Editable Mesh** component. It stores the mesh as faces you can edit (quads and polygons, not only triangles) and rebuilds the Unity mesh whenever you change it.
 
 ## Getting an Editable Mesh
 
@@ -14,7 +14,7 @@ The **Open WTK Modelling** button in the Editable Mesh inspector opens the Model
 
 ## Editable Primitives
 
-Primitives keep their parameters (size, segments, and so on) in an **Editable Primitive** component, so you can still change them after creation from the **Topology** tab.
+Primitives keep their parameters (size, segments, and so on) in an :wtk-component-editable-primitive: **Editable Primitive** component, so you can still change them after creation from the **Topology** tab.
 
 While a mesh is controlled by its primitive, its vertices, edges and faces can't be edited directly. Use **Make Editable** to turn it into a regular Editable Mesh and edit the topology. After that, the primitive parameters are gone.
 
@@ -35,8 +35,8 @@ See [UVs](uvs.md) for manual UV editing.
 
 In the **Topology** tab, under **Modify**:
 
-- **Merge Meshes** merges the selected Editable Mesh objects into the active one.
-- **Separate** moves the selected faces into a new Editable Mesh object.
+- :wtk-modify-merge-meshes: **Merge Meshes** merges the selected Editable Mesh objects into the active one.
+- :wtk-modify-separate: **Separate** moves the selected faces into a new Editable Mesh object.
 
 ## Import and export
 

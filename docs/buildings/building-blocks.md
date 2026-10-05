@@ -1,6 +1,6 @@
 # Building Blocks
 
-A **Building Block** takes a large area, splits it into lots, and generates a building on each one. Use it to fill a whole city block quickly, then adjust individual buildings if needed.
+A :wtk-component-building-block: **Building Block** takes a large area, splits it into lots, and generates a building on each one. Use it to fill a whole city block quickly, then adjust individual buildings if needed.
 
 ## Creating a block
 

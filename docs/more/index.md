@@ -1,3 +1,7 @@
+---
+icon: wtk/more
+---
+
 # More
 
 The **More** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md) holds tools shared across modules.
@@ -10,8 +14,8 @@ The **More** tab of the [World Toolkit window](../getting-started/world-toolkit-
 **Spawners**
 :   Create spawners that place copies of prefabs along a spline or inside an area:
 
-    - [Array Spawner](array-spawner.md): rows of objects along a spline, like fences, lamp posts or walls.
-    - [Area Spawner](area-spawner.md): objects filling an area, like a parking lot or an orchard.
+    - :wtk-component-spline-array-spawner: [Array Spawner](array-spawner.md): rows of objects along a spline, like fences, lamp posts or walls.
+    - :wtk-component-spline-area-spawner: [Area Spawner](area-spawner.md): objects filling an area, like a parking lot or an orchard.
 
 ## Settings tab
 

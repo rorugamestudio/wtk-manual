@@ -1,3 +1,7 @@
+---
+icon: wtk/terrain
+---
+
 # Terrain
 
 The Terrain module shapes and paints Unity terrains with **stamps**: objects in your scene that each apply one change (raise a hill, carve a riverbed, paint grass, place trees) inside an area you define.
@@ -13,10 +17,10 @@ Open it from the **Terrain** tab of the [World Toolkit window](../getting-starte
 
 ## How it fits together
 
-**Terrain Stamp Target**
+:wtk-component-terrain-stamp-target: **Terrain Stamp Target**
 :   Groups the terrains that stamps affect, and stores their **base**: the state of the terrain before any stamp.
 
-**Terrain Stamp**
+:wtk-component-terrain-stamp: **Terrain Stamp**
 :   One stamp. It has an area (usually a spline outline), and one or more **layers**. Each layer combines **masks** (where it applies) with **stamp operations** (what it does).
 
 **Terrain Stamp Snapshot** (asset)

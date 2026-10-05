@@ -14,27 +14,27 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Install World Toolkit and build your first scene.
 
--   :material-cube-outline: **[Modelling](modelling/index.md)**
+-   :wtk-modelling: **[Modelling](modelling/index.md)**
 
     Create and edit meshes directly in the Scene view.
 
--   :material-vector-curve: **[Splines](splines/index.md)**
+-   :wtk-splines: **[Splines](splines/index.md)**
 
     The spline system shared by every other module.
 
--   :material-road-variant: **[Roads](roads/index.md)**
+-   :wtk-roads: **[Roads](roads/index.md)**
 
     Road networks with junctions generated for you.
 
--   :material-office-building: **[Buildings](buildings/index.md)**
+-   :wtk-buildings: **[Buildings](buildings/index.md)**
 
     Modular buildings from a footprint and a set of rules.
 
--   :material-terrain: **[Terrain](terrain/index.md)**
+-   :wtk-terrain: **[Terrain](terrain/index.md)**
 
     Shape Unity terrains with stamps and masks.
 
--   :material-dots-horizontal-circle-outline: **[More](more/index.md)**
+-   :wtk-more: **[More](more/index.md)**
 
     Array and area spawners, and other extra tools.
 

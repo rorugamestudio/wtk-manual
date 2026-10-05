@@ -1,3 +1,7 @@
+---
+icon: wtk/buildings
+---
+
 # Buildings
 
 The Buildings module generates modular buildings from a **footprint**, the outline of the building on the ground, and a set of **rules** that decide which walls, floors and roof go where. Change the footprint and the building regenerates.
@@ -11,7 +15,7 @@ Open it from the **Buildings** tab of the [World Toolkit window](../getting-star
 
 ## How a building is put together
 
-**Building**
+:wtk-component-building: **Building**
 :   The object in the scene. It has a footprint (a closed spline) and generates the building pieces.
 
 **Volumes**
@@ -26,7 +30,7 @@ Open it from the **Buildings** tab of the [World Toolkit window](../getting-star
 **Building Rules** (asset)
 :   A reusable recipe of volumes, walls, roofs and floor counts. Apply the same rules to many buildings to give them a shared style.
 
-**Building Block**
+:wtk-component-building-block: **Building Block**
 :   A large area that splits itself into lots and fills them with buildings.
 
 ## The Buildings panel

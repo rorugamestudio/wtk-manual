@@ -8,7 +8,7 @@ By default, Editable Meshes can generate their UVs from the geometry with **Auto
 
 Editing UVs by hand switches the edited faces to manual UVs. Turning **Auto UV** back on replaces the current UVs with generated ones, and you'll be asked to confirm because manual edits are lost.
 
-## The UV View
+## :wtk-uv-view: The UV View
 
 **Open UV View** in the **UV** tab opens the UV editor, which shows the selected mesh's UVs over its texture. Turn on **Auto Open UV View** to open it every time you switch to the **UV** tab.
 

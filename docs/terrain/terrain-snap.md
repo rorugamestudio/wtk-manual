@@ -2,7 +2,7 @@
 
 Two components keep things sitting on the terrain, even after stamps change it.
 
-## Terrain Snap
+## :wtk-component-terrain-snap: Terrain Snap
 
 **Add Component > World Toolkit > Terrain > Terrain Snap** keeps an object on the terrain surface. When the terrain under it changes, the object moves with it.
 
@@ -11,7 +11,7 @@ Two components keep things sitting on the terrain, even after stamps change it.
 
 Objects that are themselves height stamps don't snap, since they would move the terrain they're sitting on.
 
-## Terrain Spline Snap
+## :wtk-component-terrain-spline-snap: Terrain Spline Snap
 
 **Add Component > World Toolkit > Terrain > Terrain Spline Snap** keeps a spline on the terrain surface. Use it for paths, fences, rivers or anything drawn with a spline that should follow the ground.
 

@@ -1,3 +1,7 @@
+---
+icon: wtk/modelling
+---
+
 # Modelling
 
 The Modelling module lets you build and edit meshes directly in the Scene view, without leaving Unity. It's meant for blockouts, level geometry, props and any mesh you'd like to tweak in place.

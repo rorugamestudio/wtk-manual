@@ -1,6 +1,6 @@
 # Array Spawner
 
-The **Spline Array Spawner** places copies of prefabs along a spline: fence posts and rails, lamp posts, barriers, modular walls. Change the spline and the copies follow.
+The :wtk-component-spline-array-spawner: **Spline Array Spawner** places copies of prefabs along a spline: fence posts and rails, lamp posts, barriers, modular walls. Change the spline and the copies follow.
 
 ## Creating one
 

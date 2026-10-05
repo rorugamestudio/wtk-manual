@@ -1,3 +1,7 @@
+---
+icon: wtk/roads
+---
+
 # Roads
 
 The Roads module builds road meshes from splines. You draw where the road goes, and World Toolkit generates the surface, lanes, sidewalks and curbs, plus the junctions where roads meet.
@@ -11,7 +15,7 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 
 ## The building blocks
 
-**Road** (Editable Mesh Road component)
+:wtk-component-editable-mesh-road: **Road** (Editable Mesh Road component)
 :   One road, following a [spline](../splines/index.md). Its cross-section is made of **layers**: the driving lanes, sidewalks, curbs and so on.
 
 **Road Profile** (asset)
@@ -20,13 +24,13 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 **Road Layers Snapshot** (asset)
 :   A saved layer setup you can reuse for new roads or apply to existing ones.
 
-**Junction** (Editable Mesh Junction component)
+:wtk-component-editable-mesh-junction: **Junction** (Editable Mesh Junction component)
 :   The generated mesh where two or more roads meet. See [Junctions](junctions.md).
 
-**Road Anchor Connection**
+:wtk-component-road-anchor-connection: **Road Anchor Connection**
 :   A road that attaches to the side of another road without a full junction. See [Anchored Connections](anchored-connections.md).
 
-**City Block Floor**
+:wtk-component-city-block-floor: **City Block Floor**
 :   Fills the area enclosed by roads, for example a block's ground. See [City Blocks](city-blocks.md).
 
 ## The Roads panel

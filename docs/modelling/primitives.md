@@ -11,19 +11,19 @@ Primitives are the starting point for most models. Pick one in the **Create** ta
 
 | | | |
 |---|---|---|
-| **Plane** | **Cube** | **Circle** |
-| **Cylinder** | **Cone** | **Sphere** |
-| **Torus** | **Arch** | **Free-form** |
+| :wtk-create-plane: **Plane** | :wtk-create-cube: **Cube** | :wtk-create-circle: **Circle** |
+| :wtk-create-cylinder: **Cylinder** | :wtk-create-cone: **Cone** | :wtk-create-sphere: **Sphere** |
+| :wtk-create-torus: **Torus** | :wtk-create-arch: **Arch** | :wtk-create-freeform: **Free-form** |
 
 The last row creates meshes from a spline. Select an object with a spline first:
 
-**Stairs**
+:wtk-create-stairs: **Stairs**
 :   Creates editable stairs along the selected spline.
 
-**Tube**
+:wtk-create-tube: **Tube**
 :   Creates an editable tube along the selected spline.
 
-**Surface**
+:wtk-create-surface: **Surface**
 :   Creates a surface that fills the area enclosed by the selected spline.
 
 ## Drawing a primitive
@@ -36,7 +36,7 @@ The **Create Mesh Options** panel appears in the Scene view while you draw. It s
 
 **Create** in that panel builds the primitive again at the last footprint you drew. If you haven't drawn one yet, it uses the typed dimensions at the world origin. **Cancel** stops the creation.
 
-### Free-form
+### :wtk-create-freeform: Free-form
 
 **Free-form** draws a flat polygon point by point:
 

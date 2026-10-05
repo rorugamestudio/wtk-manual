@@ -1,6 +1,6 @@
 # Link Groups
 
-A **Spline Link Group** keeps knots from different splines together. Move one linked knot and the others follow. It's how separate splines meet at a shared point, for example two road splines ending at the same junction.
+A :wtk-component-spline-link-group: **Spline Link Group** keeps knots from different splines together. Move one linked knot and the others follow. It's how separate splines meet at a shared point, for example two road splines ending at the same junction.
 
 ## Linking knots
 

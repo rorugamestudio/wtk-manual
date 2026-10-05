@@ -1,3 +1,7 @@
+---
+icon: wtk/splines
+---
+
 # Splines
 
 Splines are curves made of **knots** (points) with handles that control how the curve bends between them. In World Toolkit they're the backbone of almost everything: roads, building footprints, terrain stamps, spawners, decals and spline-based primitives all start from a spline.

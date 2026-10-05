@@ -9,7 +9,7 @@ All editing tools live in the **Topology** tab of the Modelling panel. They act 
 
 These tools show an options panel in the Scene view. Adjust the options, check the preview, then press **Apply**, or **Cancel** to leave without changing anything. The **...** button next to each tool in the panel shows or hides its Scene view options.
 
-### Extrude
+### :wtk-modify-extrude: Extrude
 
 Pulls the selected faces or edges out to create new geometry.
 
@@ -31,7 +31,7 @@ Pulls the selected faces or edges out to create new geometry.
 **Hard Edge Angle**
 :   Edges created by the extrusion are marked hard (sharp shading) when the angle between their faces reaches this value. Flatter edges stay smooth.
 
-### Inset
+### :wtk-modify-inset: Inset
 
 Creates a smaller copy of the selected faces inside them, for panels, windows and borders.
 
@@ -41,7 +41,7 @@ Creates a smaller copy of the selected faces inside them, for panels, windows an
 **Distance**
 :   How far inward the new edges are.
 
-### Bevel
+### :wtk-modify-bevel: Bevel
 
 Rounds or cuts the selected edges or vertices.
 
@@ -57,11 +57,11 @@ Rounds or cuts the selected edges or vertices.
 **Junctions**
 :   How corners where several beveled edges meet are filled: with segmented faces (**Segmented**) or with a single polygon (**Ngon**).
 
-### Bridge
+### :wtk-modify-bridge: Bridge
 
 Connects two selected face groups, edge chains or edge loops with new faces. Handy for joining two parts of a mesh or closing a gap between them.
 
-### Merge
+### :wtk-modify-merge: Merge
 
 Merges the selected vertices.
 
@@ -71,7 +71,7 @@ Merges the selected vertices.
     - **Collapse**: each connected group of selected vertices becomes its own vertex.
     - **Distance**: only selected vertices closer than **Distance** are merged.
 
-### Knife
+### :wtk-modify-knife: Knife
 
 Cuts new edges across faces by hand.
 
@@ -86,11 +86,11 @@ Cuts new edges across faces by hand.
 **Step**
 :   Snaps cut points along edges in steps. 0 is continuous; 0.25 snaps to quarters of the edge.
 
-### Slide
+### :wtk-modify-slide: Slide
 
 Slides the selected vertices or edges along the surrounding edges, without changing the shape of the surface. **Step** snaps the slide amount.
 
-### Subdivide
+### :wtk-modify-subdivide: Subdivide
 
 Splits the selected faces or edges. **Cuts** sets how many times.
 
@@ -98,37 +98,37 @@ Splits the selected faces or edges. **Cuts** sets how many times.
 
 These tools use a **Distance** value as strength:
 
-**Smooth**
+:wtk-modify-smooth: **Smooth**
 :   Smooths the selected vertices. Strength from 0 to 1.
 
-**Relax**
+:wtk-modify-relax: **Relax**
 :   Evens out the spacing of the selected vertices along the surface, without flattening it. Strength from 0 to 1.
 
-**Shrink/Fatten**
+:wtk-modify-shrink-fatten: **Shrink/Fatten**
 :   Moves the selected vertices along their normals. Positive values inflate, negative values deflate.
 
-**Push/Pull**
+:wtk-modify-push-pull: **Push/Pull**
 :   Moves the selected vertices away from or toward the transform pivot.
 
 ## Modify
 
 | Tool | What it does |
 |---|---|
-| **Duplicate** | Duplicates the selected components inside the same mesh. |
-| **Connect** | Connects the selected vertices, or pairs of edges, with a new edge across the face. |
-| **Merge Meshes** | Merges the selected objects into the active one. |
-| **Separate** | Moves the selected faces into a new object. |
-| **Rip** | Tears the selection open, so it can be pulled apart. |
-| **Rip Fill** | Tears the selection open and fills simple gaps. |
-| **Dissolve Verts** | Removes the selected vertices but keeps the surrounding faces. |
-| **Dissolve Edges** | Removes the selected edges but keeps the surrounding faces. |
-| **Dissolve Faces** | Merges the selected connected faces into one. |
-| **Triangulate** | Splits the selected faces into triangles. |
-| **Tris to Quads** | Joins pairs of adjacent triangles into quads. |
-| **Poke** | Splits each selected face into triangles around a new center vertex. |
-| **Fill** | Creates a face from the selected vertices or edge loop. |
-| **Grid Fill** | Fills a closed edge loop with a grid of quads. |
-| **Join Edges** | Welds two open edge chains with the same number of edges. |
+| :wtk-modify-duplicate: **Duplicate** | Duplicates the selected components inside the same mesh. |
+| :wtk-modify-connect: **Connect** | Connects the selected vertices, or pairs of edges, with a new edge across the face. |
+| :wtk-modify-merge-meshes: **Merge Meshes** | Merges the selected objects into the active one. |
+| :wtk-modify-separate: **Separate** | Moves the selected faces into a new object. |
+| :wtk-modify-rip: **Rip** | Tears the selection open, so it can be pulled apart. |
+| :wtk-modify-rip-fill: **Rip Fill** | Tears the selection open and fills simple gaps. |
+| :wtk-modify-dissolve-vertices: **Dissolve Verts** | Removes the selected vertices but keeps the surrounding faces. |
+| :wtk-modify-dissolve-edges: **Dissolve Edges** | Removes the selected edges but keeps the surrounding faces. |
+| :wtk-modify-dissolve-faces: **Dissolve Faces** | Merges the selected connected faces into one. |
+| :wtk-modify-triangulate: **Triangulate** | Splits the selected faces into triangles. |
+| :wtk-modify-tris-to-quads: **Tris to Quads** | Joins pairs of adjacent triangles into quads. |
+| :wtk-modify-poke: **Poke** | Splits each selected face into triangles around a new center vertex. |
+| :wtk-modify-fill: **Fill** | Creates a face from the selected vertices or edge loop. |
+| :wtk-modify-grid-fill: **Grid Fill** | Fills a closed edge loop with a grid of quads. |
+| :wtk-modify-join-edges: **Join Edges** | Welds two open edge chains with the same number of edges. |
 
 ## Boolean (destructive)
 
@@ -137,7 +137,7 @@ These tools use a **Distance** value as strength:
 
 For non-destructive booleans, see [Booleans](booleans.md).
 
-## Normals and shading
+## :wtk-normals: Normals and shading
 
 **Modify Normals**
 :   **Flip Normals** reverses the selected faces. **Recalc Outside** and **Recalc Inside** make the selected faces point away from or toward their center.
@@ -145,7 +145,7 @@ For non-destructive booleans, see [Booleans](booleans.md).
 **Modify Shading**
 :   **Flat Faces** and **Smooth Faces** set flat or smooth shading. **Smooth by Angle** smooths everything except edges sharper than **Smooth by Angle Limit**. **Mark Hard** and **Clear Hard** set sharp shading on individual edges. **Set Custom Normals** and **Clear Custom Normals** store or remove the current face normals.
 
-## Cleanup
+## :wtk-mesh-cleanup: Cleanup
 
 | Tool | What it does |
 |---|---|
@@ -158,7 +158,7 @@ For non-destructive booleans, see [Booleans](booleans.md).
 | **Validate Mesh** | Writes a report of topology problems to the Console. |
 | **Delete Unused Materials** | Removes material slots no face uses. |
 
-## Vertex colors
+## :wtk-brush: Vertex colors
 
 Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again to stop.
 
@@ -173,7 +173,7 @@ Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging
 
 **Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection.
 
-## Materials
+## :wtk-materials: Materials
 
 The **Materials** section lists the mesh's material slots.
 

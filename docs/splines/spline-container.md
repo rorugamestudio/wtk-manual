@@ -1,6 +1,6 @@
 # Spline Container
 
-A **Spline Container** holds one or more spline paths. Create one from **GameObject > World Toolkit > Spline Container**, or add it with **Add Component > World Toolkit > Splines > Spline Container**.
+A :wtk-component-spline-container: **Spline Container** holds one or more spline paths. Create one from **GameObject > World Toolkit > Spline Container**, or add it with **Add Component > World Toolkit > Splines > Spline Container**.
 
 To add another path to the same container, click **Add Spline Path** in its inspector.
 
@@ -12,7 +12,7 @@ While editing splines:
 - Press ++esc++ or **right-click** to finish drawing.
 - **Double-click** the end knot of a spline to continue drawing from it.
 
-The **New Splines** panel in the Scene view sets how new knots are created:
+The :wtk-new-splines: **New Splines** panel in the Scene view sets how new knots are created:
 
 **New Spline Mode**
 :   **Auto** creates smooth curves, with handles set automatically. **Linear** creates straight segments.
@@ -20,7 +20,7 @@ The **New Splines** panel in the Scene view sets how new knots are created:
 **Append to Selected Container**
 :   Adds new splines to the selected container instead of creating a new object.
 
-### Freeform drawing
+### :wtk-shape-freeform: Freeform drawing
 
 **Draw Freeform Spline** lets you draw a spline by holding the mouse button and dragging, like a pencil. The stroke is turned into a smooth curve.
 
@@ -31,7 +31,7 @@ The **New Splines** panel in the Scene view sets how new knots are created:
 | **Close Distance** | If the stroke ends this close to where it started, the spline is closed. |
 | **Stick to Surface** | Draws on the objects under the cursor instead of a flat plane. |
 
-### Shapes
+### :wtk-shape-ellipse: Shapes
 
 Draw common shapes in one drag:
 
@@ -56,7 +56,7 @@ Draw common shapes in one drag:
 - **Drag** a selected knot or handle to move it.
 - ++delete++ or ++backspace++ deletes the selected knots.
 
-The **Selected Knots** panel shows the selection's **Position** and **Rotation**, and whether the spline is **Closed**. It also has the knot **type**:
+The :wtk-selected-knots: **Selected Knots** panel shows the selection's **Position** and **Rotation**, and whether the spline is **Closed**. It also has the knot **type**:
 
 | Type | Curve |
 |---|---|

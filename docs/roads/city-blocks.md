@@ -1,6 +1,6 @@
 # City Blocks
 
-A **City Block Floor** fills a closed area surrounded by roads and junctions, such as the ground of a city block, a park or a plaza. It follows the inner edges of the roads around it, and rebuilds when they change.
+A :wtk-component-city-block-floor: **City Block Floor** fills a closed area surrounded by roads and junctions, such as the ground of a city block, a park or a plaza. It follows the inner edges of the roads around it, and rebuilds when they change.
 
 ## Creating floors
 

@@ -4,7 +4,7 @@ An **anchored connection** attaches the end of a road to the **side** of another
 
 ## Adding one
 
-Right-click the road component of the road that should attach, and choose **Add Anchored Connection**. This adds a **Road Anchor Connection** component.
+Right-click the road component of the road that should attach, and choose **Add Anchored Connection**. This adds a :wtk-component-road-anchor-connection: **Road Anchor Connection** component.
 
 ## Settings
 
