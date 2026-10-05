@@ -18,7 +18,8 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 - When something is inferred rather than read, verify it in the implementation before writing it, or leave it out. Past mistakes caught this way: Merge variants, Hard Edge Angle, which junction settings are per "conversion", which mask adjustments nest inside a fill, slope masks reading the terrain from before their own stamp, Rip being labelled Extract in face mode.
 - Audience: artists and designers. Lead with what a tool is for, then how to use it. UI names in **bold**, menu paths as **Tools > World Toolkit > ...**, keys as `++ctrl+d++`.
 - Definition lists (`**Name**` then `:   text`) for settings, tables for options. Admonitions for tips and warnings.
-- Section and heading names are linked from the World Toolkit components' `[HelpURL]`s (constants in `Assets/Scripts/Common/Documentation/` of the Unity project, anchors are heading slugs). If you rename a page or a linked heading, update those constants too.
+- Every World Toolkit component and asset has a `[HelpURL]` into this manual, through constants in `Assets/Scripts/Common/Documentation/` of the Unity project (one file per module). Components point at the section that explains their inspector (`#road-settings`, `#junction-settings`, `#settings`...). Anchors are heading slugs: if you rename a page or a linked heading, update the constants, then check every constant against the built `site/` (page exists, `id="<anchor>"` present).
+- Don't give a section the same title as its page: the anchor gets a `_1` suffix and the link lands on the page top instead.
 
 ## Icons
 
