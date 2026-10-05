@@ -2,6 +2,11 @@
 
 ## Setting up a Stamp Target
 
+<figure markdown="span" class="wtk-ui">
+  ![Terrain Stamp Target inspector](../assets/images/terrain/ui-stamp-target.webp){ loading=lazy }
+  <figcaption>The Terrain Stamp Target inspector.</figcaption>
+</figure>
+
 Stamps need a **Terrain Stamp Target**, which tells them which terrains to modify.
 
 1. Select your terrain objects.
@@ -25,6 +30,11 @@ The target's inspector has:
 
 ## Creating stamps
 
+<figure markdown="span" class="wtk-ui">
+  ![The Terrain panel](../assets/images/window/ui-terrain.webp){ loading=lazy }
+  <figcaption>The Terrain panel.</figcaption>
+</figure>
+
 1. In the Terrain panel, click **Edit Terrain Stamps**.
 2. Hold ++shift++ and **click** to draw the stamp's outline.
 
@@ -35,6 +45,11 @@ To edit a stamp, select it and use **Edit Terrain Stamps**: click knots to selec
 **Create with Selected** adds a stamp to the selected object instead, for example to turn an existing spline into a stamp.
 
 ## Stamp layers
+
+<figure markdown="span" class="wtk-ui">
+  ![Terrain Stamp inspector](../assets/images/terrain/ui-stamp.webp){ loading=lazy }
+  <figcaption>A Terrain Stamp with a height layer and a slope-masked texture layer.</figcaption>
+</figure>
 
 A stamp is a list of **layers**. Each layer has:
 

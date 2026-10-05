@@ -10,6 +10,11 @@ The :wtk-component-spline-area-spawner: **Spline Area Spawner** fills an area wi
 
 ## Settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Spline Area Spawner inspector](../assets/images/more/ui-area-spawner.webp){ loading=lazy }
+  <figcaption>The Spline Area Spawner inspector.</figcaption>
+</figure>
+
 **Source Object**
 :   The object to copy.
 

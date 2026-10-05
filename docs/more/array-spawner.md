@@ -11,6 +11,11 @@ The :wtk-component-spline-array-spawner: **Spline Array Spawner** places copies 
 
 ## Settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Spline Array Spawner inspector](../assets/images/more/ui-array-spawner.webp){ loading=lazy }
+  <figcaption>The Spline Array Spawner inspector.</figcaption>
+</figure>
+
 **Spline**
 :   The spline to follow, and which path in it.
 

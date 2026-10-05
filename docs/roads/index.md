@@ -35,6 +35,11 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 
 ## The Roads panel
 
+<figure markdown="span" class="wtk-ui">
+  ![The Roads panel](../assets/images/window/ui-roads.webp){ loading=lazy }
+  <figcaption>The Roads panel.</figcaption>
+</figure>
+
 **Points**
 :   **Edit Road Points** edits road splines in the Scene view. **Create Roads/Junctions from Selection** converts the selected splines into roads and junctions.
 

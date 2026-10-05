@@ -10,6 +10,11 @@ A **Road Profile** is an asset holding a 2D shape: the outline of a curb, a side
 
 ### Editing the shape
 
+<figure markdown="span" class="wtk-ui">
+  ![Road Profile inspector](../assets/images/roads/ui-road-profile.webp){ loading=lazy }
+  <figcaption>A Road Profile: the shape graph and the 3D preview.</figcaption>
+</figure>
+
 Select the profile asset to edit its points in the graph:
 
 - **Click** a point or span to select it, and **drag** points to move them.

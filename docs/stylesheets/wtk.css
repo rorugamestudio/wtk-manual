@@ -1,0 +1,6 @@
+/* Editor UI screenshots are tall and narrow: keep them at a readable size instead of stretching to the column. */
+.wtk-ui img {
+  max-width: min(100%, 380px);
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}

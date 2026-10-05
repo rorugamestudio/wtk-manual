@@ -4,6 +4,11 @@ The **Settings** tab of the Modelling panel controls how meshes are drawn while 
 
 ## Components Visibility
 
+<figure markdown="span" class="wtk-ui">
+  ![The Modelling Settings tab](../assets/images/window/ui-modelling.webp){ loading=lazy }
+  <figcaption>The Settings tab of the Modelling panel.</figcaption>
+</figure>
+
 Which parts of a mesh are drawn in the Scene view, in each situation:
 
 | Column | Draws |

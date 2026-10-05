@@ -6,6 +6,11 @@ Add it with **Add Component > World Toolkit > Splines > Spline Point Anchor**.
 
 ## Settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Spline Point Anchor inspector](../assets/images/splines/ui-point-anchor.webp){ loading=lazy }
+  <figcaption>The Spline Point Anchor inspector.</figcaption>
+</figure>
+
 **Container** and **Path Index**
 :   The spline the object is attached to. **Path Index** picks the path when the container has several.
 

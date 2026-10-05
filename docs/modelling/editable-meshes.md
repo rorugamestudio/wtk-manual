@@ -14,11 +14,21 @@ The **Open WTK Modelling** button in the Editable Mesh inspector opens the Model
 
 ## Editable Primitives
 
+<figure markdown="span" class="wtk-ui">
+  ![Editable Primitive inspector](../assets/images/modelling/ui-editable-primitive.webp){ loading=lazy }
+  <figcaption>The Editable Primitive inspector.</figcaption>
+</figure>
+
 Primitives keep their parameters (size, segments, and so on) in an :wtk-component-editable-primitive: **Editable Primitive** component, so you can still change them after creation from the **Topology** tab.
 
 While a mesh is controlled by its primitive, its vertices, edges and faces can't be edited directly. Use **Make Editable** to turn it into a regular Editable Mesh and edit the topology. After that, the primitive parameters are gone.
 
 ## UV options
+
+<figure markdown="span" class="wtk-ui">
+  ![Editable Mesh inspector](../assets/images/modelling/ui-editable-mesh.webp){ loading=lazy }
+  <figcaption>The Editable Mesh inspector.</figcaption>
+</figure>
 
 **Auto UV**
 :   Generates UVs automatically from the mesh geometry.

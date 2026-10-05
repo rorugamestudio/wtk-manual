@@ -4,6 +4,11 @@ A **Roof** asset describes a roof shape that follows any footprint. Create one f
 
 ## Shape
 
+<figure markdown="span" class="wtk-ui">
+  ![Roof inspector](../assets/images/buildings/ui-roof.webp){ loading=lazy }
+  <figcaption>A Roof asset: the profile graph and the preview.</figcaption>
+</figure>
+
 **Profile**
 :   The roof's cross-section, drawn from the eave (the roof's outer edge) inward: X is how far in from the eave, Y is the height above it, both in meters. The same profile is applied along every side of the footprint.
 

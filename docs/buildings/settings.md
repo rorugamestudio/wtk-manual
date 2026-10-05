@@ -4,6 +4,11 @@ The **Settings** tab of the Buildings panel.
 
 ## Splines
 
+<figure markdown="span" class="wtk-ui">
+  ![The Buildings Settings tab](../assets/images/window/ui-buildings.webp){ loading=lazy }
+  <figcaption>The Settings tab of the Buildings panel.</figcaption>
+</figure>
+
 **Line**, **Closed Spline Fill** and **Line Thickness** of building footprints in the Scene view.
 
 ## Rebuilds

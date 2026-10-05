@@ -6,6 +6,11 @@ Two components keep things sitting on the terrain, even after stamps change it.
 
 **Add Component > World Toolkit > Terrain > Terrain Snap** keeps an object on the terrain surface. When the terrain under it changes, the object moves with it.
 
+<figure markdown="span" class="wtk-ui">
+  ![Terrain Snap inspector](../assets/images/terrain/ui-terrain-snap.webp){ loading=lazy }
+  <figcaption>The Terrain Snap inspector.</figcaption>
+</figure>
+
 **Height Offset**
 :   Distance above the terrain surface.
 

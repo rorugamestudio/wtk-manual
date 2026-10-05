@@ -6,6 +6,11 @@ To add another path to the same container, click **Add Spline Path** in its insp
 
 ## Drawing splines
 
+<figure markdown="span" class="wtk-ui">
+  ![Spline Container inspector](../assets/images/splines/ui-spline-container.webp){ loading=lazy }
+  <figcaption>The Spline Container inspector.</figcaption>
+</figure>
+
 While editing splines:
 
 - Hold ++shift++ and **click** empty space to start a new spline, then **click** to add each knot.

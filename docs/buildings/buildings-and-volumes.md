@@ -14,6 +14,11 @@ You can also add the **Building** component to an object with a spline (**Add Co
 
 ## Building settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Building inspector](../assets/images/buildings/ui-building.webp){ loading=lazy }
+  <figcaption>The Building inspector.</figcaption>
+</figure>
+
 **Spline Container**
 :   The footprint. Instead, you can give an **Explicit Footprint**, a list of points.
 
@@ -70,6 +75,11 @@ Each volume is a block of floors with its own walls and roof.
 Several settings accept a **range**: a building picks a random value inside it, using its seed.
 
 ## Walls
+
+<figure markdown="span" class="wtk-ui">
+  ![Volume Wall inspector](../assets/images/buildings/ui-wall.webp){ loading=lazy }
+  <figcaption>A Volume Wall asset.</figcaption>
+</figure>
 
 A **Volume Wall** asset (**Assets > Create > World Toolkit > Buildings > Volume Wall**) describes what goes along a footprint side. It's a list of **rows** stacked floor by floor, plus an optional **Corner**.
 

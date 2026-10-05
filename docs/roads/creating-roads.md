@@ -33,6 +33,11 @@ Select one or more spline containers and click **Create Roads/Junctions from Sel
 
 ## Road settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Editable Mesh Road inspector](../assets/images/roads/ui-road.webp){ loading=lazy }
+  <figcaption>The road inspector.</figcaption>
+</figure>
+
 **Lock Materials**
 :   Keeps the current material slots when the road rebuilds, instead of resetting them from the profiles.
 

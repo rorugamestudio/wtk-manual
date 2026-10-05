@@ -8,8 +8,13 @@ The **More** tab of the [World Toolkit window](../getting-started/world-toolkit-
 
 ## Edit tab
 
+<figure markdown="span" class="wtk-ui">
+  ![The More panel](../assets/images/window/ui-more.webp){ loading=lazy }
+  <figcaption>The More panel.</figcaption>
+</figure>
+
 **Splines**
-:   **Edit Splines** and the spline tools. See [Splines](../splines/index.md).
+:   **Edit Splines** and the spline tools. See [Splines](../splines/index.md). **Centralize Pivot** moves the selected spline container's pivot to the middle of its knots, and **Place Pivot On Knot 0** moves it to the first knot.
 
 **Spawners**
 :   Create spawners that place copies of prefabs along a spline or inside an area:

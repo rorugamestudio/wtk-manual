@@ -24,6 +24,11 @@ Behind the scenes, the roads' knots are linked with a [Link Group](../splines/li
 
 ## Junction settings
 
+<figure markdown="span" class="wtk-ui">
+  ![Editable Mesh Junction inspector](../assets/images/roads/ui-junction.webp){ loading=lazy }
+  <figcaption>The junction inspector.</figcaption>
+</figure>
+
 **Continue Road Profile UVs**
 :   Continues the road surface textures from each road into the junction entrance, instead of restarting them. The center keeps a flat (planar) mapping.
 

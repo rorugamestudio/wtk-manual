@@ -22,6 +22,11 @@ For strokes, **Spline Ranges** limit which parts of each spline get painted. Lea
 
 ## Stroke lines
 
+<figure markdown="span" class="wtk-ui">
+  ![Mesh Decal Stroke inspector](../assets/images/modelling/ui-mesh-decal-stroke.webp){ loading=lazy }
+  <figcaption>The Mesh Decal Stroke inspector.</figcaption>
+</figure>
+
 A stroke is made of one or more lines. Each line has:
 
 | Setting | What it does |
