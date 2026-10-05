@@ -9,6 +9,7 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 - Local check: `python -m venv .venv`, `pip install -r requirements.txt pillow`, then `zensical build --clean` (must print "No issues found") or `zensical serve` (http://localhost:8000/wtk-manual/; the first request after a rebuild can 404, reload).
 - New pages must be added to `nav` in `zensical.toml`. Multi-line nested nav tables work.
 - Commit as `rorugamestudio <338178956+rorugamestudio@users.noreply.github.com>` (set in the repo's local git config), with no AI co-author line.
+- Commit in small chunks as you go (a page, a section, a batch of images), not only at the end, and push after every commit so the site stays current. Build with `zensical build --clean` before each commit. If a push is rejected for authentication, don't retry with other credentials: leave the commits local and ask the maintainer to push.
 - This repo is public. Never commit local paths, machine or account names, or anything describing where the World Toolkit source lives. Grep the staged diff for them before every commit, and look at every screenshot before publishing it.
 
 ## Writing pages
