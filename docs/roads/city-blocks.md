@@ -29,5 +29,3 @@ The floor follows the roads around it. If the region it belonged to changes a lo
 - **Reassign Region** lets you click the region it should fill.
 
 The inspector shows the floor's build status.
-
-[Buildings](../buildings/building-blocks.md) can also be generated inside city blocks.

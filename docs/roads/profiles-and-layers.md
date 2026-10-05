@@ -96,6 +96,6 @@ Layers can be organized in **Road Layer Groups**. A group can be placed relative
 
 ## Default mesh
 
-When none of a road's layers has a profile, the road uses its **Default Mesh**: a flat strip with a **Material** and a **Longitudinal Segment Length**. With **Follow Spline Width**, its width comes from the spline's width data, falling back to **Width** where there's none.
+When none of a road's layers has a profile, the road uses its **Default Mesh**: a strip with a **Material**, flat or shaped across its width by **Profile Curve**, with **Lateral Segments** across and a **Longitudinal Segment Length** along. With **Follow Spline Width**, its width comes from the spline's width data, falling back to **Width** where there's none.
 
 **Position Jitter** and **Jitter Seed** add a small, repeatable random displacement, for a worn, uneven look. Road ends and junction mouths stay fixed.
