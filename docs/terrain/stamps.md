@@ -28,7 +28,7 @@ The target's inspector has:
 1. In the Terrain panel, click **Edit Terrain Stamps**.
 2. Hold ++shift++ and **click** to draw the stamp's outline.
 
-New stamps start from the **Terrain Stamp Snapshot** set in the panel, if any.
+New stamps start from the **Terrain Stamp Snapshot** set in the panel. Without one, they start with a single layer holding a [Height](height.md) operation.
 
 To edit a stamp, select it and use **Edit Terrain Stamps**: click knots to select them, and drag knots or handles to reshape the stamp. Press ++esc++ to stop editing.
 
