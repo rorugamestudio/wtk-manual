@@ -309,3 +309,10 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
 .md-typeset p:has(> .wtk-hero-logo) {
   margin-top: 0;
 }
+
+/* Compact layout: only the open drawer is frosted (the theme's own blur on .md-sidebar--primary);
+   the page behind it is dimmed but stays sharp. */
+.md-overlay {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
