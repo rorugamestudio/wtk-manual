@@ -20,9 +20,34 @@ Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh*
 
 ## :wtk-select: Selecting
 
-- **Click** a component to select it.
+- **Click** a component to select it. The rest of the selection is cleared.
 - **Drag** across empty space to box-select.
+- **Click** empty space to deselect the components of the current mode.
+- Hold ++shift++ to add to the selection, or ++ctrl++ to remove from it. Both work with clicks, double-clicks and box selection, and with either key held a click on empty space leaves the selection alone.
+- With ++alt++ held, clicks go to the Scene view camera instead of selecting.
 - ++q++ switches to the :wtk-select: **Select** tool.
+
+When several components are under the cursor, a component on a face turned toward the camera wins over one on a face turned away. After that, the vertex or edge closest to the cursor wins, or the face closest to the camera. Components on faces turned away from the camera can only be picked when **Backface Picking** allows it (see [Modelling Settings](settings.md)). Hidden components can't be selected.
+
+### :lucide-mouse-pointer-click: Double-click
+
+A double-click selects a whole group of components at once. What it selects depends on the component mode, and on whether you clicked another component of the same mesh first:
+
+| Mode | Double-click | Click one, then double-click another |
+|---|---|---|
+| :wtk-select-vertex: Vertices | Just the vertex | The shortest path of vertices between the two |
+| :wtk-select-edge: Edges | The edge loop through the edge. On an open border, the whole border | The edge ring when the two edges are opposite sides of the same face; the part of the ring between them when they lie further apart on the same ring; otherwise the shortest path of edges between them |
+| :wtk-select-face: Faces | Every face linked to it | The face loop through both faces when they share an edge; otherwise the shortest path of faces between them |
+
+- The result replaces the selection. Hold ++shift++ to add it to the selection, or ++ctrl++ to remove it, for example ++shift++ + double-click to add a second edge loop.
+- **Vertices:** the first vertex must still be selected when you double-click the second one, so hold ++shift++ for the double-click: click the first vertex, then ++shift++ + double-click the second.
+- **Edges:** the first edge must be picked with a single click, not a box selection. It doesn't need to stay selected.
+- **Faces:** the path starts from the face that was selected on its own, or else from the last face you clicked if it's still selected.
+- The first click is remembered until you box-select, click empty space or switch component mode.
+- **Path Diagonal** in the **Topology** tab ([Advanced Selection](#advanced-selection)) also applies to vertex and face paths made by double-clicking. Edge paths always follow the edges.
+
+!!! info "Selecting UV islands from the Scene view"
+    When the **Modelling Edit** toolbar shows its UV controls and the UV selection mode is **Islands** or **Connected 3D** (see [UVs](uvs.md#selecting-uvs)), clicking a face in the Scene view selects its whole island, and face double-clicks don't apply.
 
 ### :lucide-box-select: Box selection rules
 
