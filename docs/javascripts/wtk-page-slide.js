@@ -1,6 +1,7 @@
-// Slides the page content sideways when moving between pages: a page further right in the
-// navigation comes in from the right, one further left from the left. Runs on top of the
-// theme's instant navigation, which swaps the page in place and announces it on document$.
+// Slides the page content sideways when moving between top-level sections (the header tabs):
+// a tab further right comes in from the right, one further left from the left. Pages inside the
+// same section swap without sliding. Runs on top of the theme's instant navigation, which swaps
+// the page in place and announces it on document$.
 (function () {
   "use strict";
 
@@ -12,7 +13,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const swapTimeoutMs = 2000;
 
-  let pageOrder = null;
+  let tabPaths = null;
   let currentPath = normalizePath(location.pathname);
   let resolveSwap = null;
 
@@ -20,25 +21,28 @@
     return path.endsWith("/") ? path : path.replace(/\/index\.html$/, "/");
   }
 
-  // Page order as listed in the primary navigation: the tabs and sidebars follow the same order.
-  function buildPageOrder() {
-    const order = new Map();
-    for (const link of document.querySelectorAll(".md-nav--primary a.md-nav__link[href], .md-tabs__link[href]")) {
+  // Section index pages in tab order. The tabs stay in the page while hidden in the compact layout.
+  function buildTabPaths() {
+    const paths = [];
+    for (const link of document.querySelectorAll(".md-tabs__link[href]")) {
       const url = new URL(link.href, location.href);
-      if (url.origin !== location.origin) {
-        continue;
-      }
-      const path = normalizePath(url.pathname);
-      if (!order.has(path)) {
-        order.set(path, order.size);
+      if (url.origin === location.origin) {
+        paths.push(normalizePath(url.pathname));
       }
     }
-    return order;
+    return paths;
   }
 
-  function pageIndex(path) {
-    pageOrder ??= buildPageOrder();
-    return pageOrder.get(path);
+  // The tab a page belongs to is the one with the longest path prefix (Home prefixes every page).
+  function tabIndex(path) {
+    tabPaths ??= buildTabPaths();
+    let best = -1;
+    for (let i = 0; i < tabPaths.length; i++) {
+      if (path.startsWith(tabPaths[i]) && (best < 0 || tabPaths[i].length > tabPaths[best].length)) {
+        best = i;
+      }
+    }
+    return best;
   }
 
   function mainTop() {
@@ -50,9 +54,9 @@
     if (reducedMotion.matches || resolveSwap || targetPath === currentPath) {
       return;
     }
-    const from = pageIndex(currentPath);
-    const to = pageIndex(targetPath);
-    if (from === undefined || to === undefined) {
+    const from = tabIndex(currentPath);
+    const to = tabIndex(targetPath);
+    if (from < 0 || to < 0 || from === to) {
       return;
     }
 
