@@ -18,7 +18,8 @@ Before opening a new issue, :lucide-search: [search the existing ones](https://g
 - :lucide-tag: **Versions.** The World Toolkit version, the Unity version and the render pipeline you use.
 - :lucide-list-ordered: **Steps to reproduce.** Start from a new scene when you can, and list every step.
 - :lucide-scale: **Expected and actual result.** What you thought would happen, and what happened instead.
-- :lucide-video: **Screenshots or a short video.** Especially for anything visible in the Scene view.
+- :lucide-video: **Screenshots or a short video.** Especially for anything visible in the Scene view, including screenshots of your Inspector setup.
+- :lucide-paperclip: **Reproduction assets.** Whenever possible, attach files that help reproduce the issue: a minimal reproduction scene, relevant assets (such as `.emeshes`, profiles, or textures), or an exported package.
 - :lucide-terminal: **Console errors.** Copy the full message, including the stack trace, from the Unity Console.
 
 !!! tip "Junction problems"
