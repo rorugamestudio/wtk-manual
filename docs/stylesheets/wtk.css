@@ -13,7 +13,7 @@
 }
 
 /* Icons that lead headings and card titles take the link colour (it has a light and a dark variant),
-   so a page can be scanned by its icons. */
+   so a page can be scanned by its icons. Module-specific overrides below tint them per section. */
 .md-typeset h2 > .twemoji,
 .md-typeset h3 > .twemoji,
 .md-typeset .grid.cards .twemoji.lg {
@@ -24,4 +24,166 @@
 .md-typeset h2 > .twemoji,
 .md-typeset h3 > .twemoji {
   margin-right: 0.15em;
+}
+
+/* Module identity colors matching World Toolkit editor components */
+:root {
+  --wtk-color-getting-started: #818cf8;
+  --wtk-color-modelling: #4da3ff;
+  --wtk-color-splines: #f2b338;
+  --wtk-color-roads: #ff8a21;
+  --wtk-color-buildings: #bd80ff;
+  --wtk-color-terrain: #59d675;
+  --wtk-color-more: #2dd4bf;
+  --wtk-color-support: #f87171;
+}
+
+/* Sidebar navigation icons tinted per module */
+[id="__nav_2"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_2"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_2_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/getting-started/"] > svg,
+a.md-nav__link[href^="getting-started/"] > svg {
+  color: var(--wtk-color-getting-started);
+}
+
+[id="__nav_3"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_3"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_3_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/modelling/"] > svg,
+a.md-nav__link[href^="modelling/"] > svg {
+  color: var(--wtk-color-modelling);
+}
+
+[id="__nav_4"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_4"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_4_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/splines/"] > svg,
+a.md-nav__link[href^="splines/"] > svg {
+  color: var(--wtk-color-splines);
+}
+
+[id="__nav_5"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_5"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_5_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/roads/"] > svg,
+a.md-nav__link[href^="roads/"] > svg {
+  color: var(--wtk-color-roads);
+}
+
+[id="__nav_6"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_6"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_6_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/buildings/"] > svg,
+a.md-nav__link[href^="buildings/"] > svg {
+  color: var(--wtk-color-buildings);
+}
+
+[id="__nav_7"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_7"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_7_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/terrain/"] > svg,
+a.md-nav__link[href^="terrain/"] > svg {
+  color: var(--wtk-color-terrain);
+}
+
+[id="__nav_8"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_8"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_8_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/more/"] > svg,
+a.md-nav__link[href^="more/"] > svg {
+  color: var(--wtk-color-more);
+}
+
+[id="__nav_9"] ~ * .md-nav__link > svg,
+li.md-nav__item:has(> [id="__nav_9"]) .md-nav__link > svg,
+nav[aria-labelledby="__nav_9_label"] .md-nav__link > svg,
+a.md-nav__link[href*="/support/"] > svg,
+a.md-nav__link[href^="support/"] > svg {
+  color: var(--wtk-color-support);
+}
+
+/* Page content icons (headings, card grids, definition lists) tinted per section */
+body:has(a[href*="/docs/getting-started/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/getting-started/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/getting-started/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/getting-started/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/getting-started/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-getting-started);
+}
+
+body:has(a[href*="/docs/modelling/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/modelling/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/modelling/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/modelling/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/modelling/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-modelling);
+}
+
+body:has(a[href*="/docs/splines/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/splines/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/splines/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/splines/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/splines/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-splines);
+}
+
+body:has(a[href*="/docs/roads/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/roads/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/roads/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/roads/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/roads/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-roads);
+}
+
+body:has(a[href*="/docs/buildings/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/buildings/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/buildings/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/buildings/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/buildings/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-buildings);
+}
+
+body:has(a[href*="/docs/terrain/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/terrain/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/terrain/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/terrain/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/terrain/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-terrain);
+}
+
+body:has(a[href*="/docs/more/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/more/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/more/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/more/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/more/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-more);
+}
+
+body:has(a[href*="/docs/support/"]) .md-typeset h2 > .twemoji,
+body:has(a[href*="/docs/support/"]) .md-typeset h3 > .twemoji,
+body:has(a[href*="/docs/support/"]) .md-typeset .grid.cards .twemoji.lg,
+body:has(a[href*="/docs/support/"]) .md-typeset dt > .twemoji,
+body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
+  color: var(--wtk-color-support);
+}
+
+/* Home page module card icons */
+.md-typeset .grid.cards li:has(a[href*="modelling"]) .twemoji {
+  color: var(--wtk-color-modelling);
+}
+.md-typeset .grid.cards li:has(a[href*="splines"]) .twemoji {
+  color: var(--wtk-color-splines);
+}
+.md-typeset .grid.cards li:has(a[href*="roads"]) .twemoji {
+  color: var(--wtk-color-roads);
+}
+.md-typeset .grid.cards li:has(a[href*="buildings"]) .twemoji {
+  color: var(--wtk-color-buildings);
+}
+.md-typeset .grid.cards li:has(a[href*="terrain"]) .twemoji {
+  color: var(--wtk-color-terrain);
+}
+.md-typeset .grid.cards li:has(a[href*="more"]) .twemoji {
+  color: var(--wtk-color-more);
 }
