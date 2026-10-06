@@ -58,7 +58,7 @@ Your World Toolkit preferences can be moved between machines or shared with your
 !!! note
     Import and restore reload the editor scripts, so every module picks up the new settings.
 
-## :wtk-logo: About World Toolkit
+## :wtk-world: About World Toolkit
 
 The **About World Toolkit** window opens by itself once, the first time the editor loads World Toolkit in a project. Open it again at any time from **Window > World Toolkit > About**, or from **About World Toolkit** in the window tab's menu.
 

@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-:wtk-logo:{ .wtk-hero-logo }
+:wtk-world:{ .wtk-hero-logo }
 
 # World Toolkit Manual
 

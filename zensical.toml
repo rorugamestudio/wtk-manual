@@ -101,7 +101,7 @@ features = [
 ]
 
 [project.theme.icon]
-logo = "wtk/logo"
+logo = "wtk/world"
 
 [project.theme.icon.admonition]
 tip = "lucide/lightbulb"
