@@ -1,4 +1,5 @@
 ---
+title: Modelling
 icon: wtk/modelling
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Terrain
 icon: wtk/terrain
 ---
 

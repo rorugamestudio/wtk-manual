@@ -1,4 +1,5 @@
 ---
+title: Getting Started
 icon: lucide/rocket
 ---
 

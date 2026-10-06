@@ -1,4 +1,5 @@
 ---
+title: More
 icon: wtk/more
 ---
 

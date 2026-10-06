@@ -11,13 +11,13 @@ extra_javascript = ["javascripts/wtk-page-slide.js", "javascripts/wtk-build-relo
 nav = [
   { "Home" = "index.md" },
   { "Getting Started" = [
-    "getting-started/index.md",
+    { "Overview" = "getting-started/index.md" },
     { "Installation" = "getting-started/installation.md" },
     { "The World Toolkit Window" = "getting-started/world-toolkit-window.md" },
     { "Quick Start" = "getting-started/quick-start.md" },
   ] },
   { "Modelling" = [
-    "modelling/index.md",
+    { "Overview" = "modelling/index.md" },
     { "Editable Meshes" = "modelling/editable-meshes.md" },
     { "Primitives" = "modelling/primitives.md" },
     { "Selection" = "modelling/selection.md" },
@@ -29,14 +29,14 @@ nav = [
     { "Modelling Settings" = "modelling/settings.md" },
   ] },
   { "Splines" = [
-    "splines/index.md",
+    { "Overview" = "splines/index.md" },
     { "Spline Container" = "splines/spline-container.md" },
     { "Point Anchors" = "splines/point-anchors.md" },
     { "Link Groups" = "splines/link-groups.md" },
     { "Spline Settings" = "splines/settings.md" },
   ] },
   { "Roads" = [
-    "roads/index.md",
+    { "Overview" = "roads/index.md" },
     { "Creating Roads" = "roads/creating-roads.md" },
     { "Profiles and Layers" = "roads/profiles-and-layers.md" },
     { "Junctions" = "roads/junctions.md" },
@@ -45,7 +45,7 @@ nav = [
     { "Roads Settings" = "roads/settings.md" },
   ] },
   { "Buildings" = [
-    "buildings/index.md",
+    { "Overview" = "buildings/index.md" },
     { "Buildings and Volumes" = "buildings/buildings-and-volumes.md" },
     { "Building Rules" = "buildings/building-rules.md" },
     { "Roofs" = "buildings/roofs.md" },
@@ -54,7 +54,7 @@ nav = [
     { "Buildings Settings" = "buildings/settings.md" },
   ] },
   { "Terrain" = [
-    "terrain/index.md",
+    { "Overview" = "terrain/index.md" },
     { "Stamps" = "terrain/stamps.md" },
     { "Masks" = "terrain/masks.md" },
     { "Height" = "terrain/height.md" },
@@ -67,13 +67,13 @@ nav = [
     { "Terrain Settings" = "terrain/settings.md" },
   ] },
   { "More" = [
-    "more/index.md",
+    { "Overview" = "more/index.md" },
     { "Array Spawner" = "more/array-spawner.md" },
     { "Area Spawner" = "more/area-spawner.md" },
     { "More Settings" = "more/settings.md" },
   ] },
   { "Support" = [
-    "support/index.md",
+    { "Overview" = "support/index.md" },
     { "Reporting Issues" = "support/reporting-issues.md" },
   ] },
 ]
@@ -89,7 +89,6 @@ features = [
   "content.tabs.link",
   "content.tooltips",
   "navigation.footer",
-  "navigation.indexes",
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.path",

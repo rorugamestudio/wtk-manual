@@ -1,4 +1,5 @@
 ---
+title: Buildings
 icon: wtk/buildings
 ---
 

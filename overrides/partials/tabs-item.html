@@ -20,16 +20,8 @@
     {% set class = class ~ " md-tabs__item--active" %}
   {% endif %}
   {% if nav_item.children %}
-    {% set _ = namespace(index = none) %}
-    {% if "navigation.indexes" in features %}
-      {% for item in nav_item.children %}
-        {% if item.is_index and _.index is none %}
-          {% set _.index = item %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-    {% set index = _.index %}
-    {% set first = index or nav_item.children | first %}
+    {#- Each section starts with its Overview page, which the tab links to. -#}
+    {% set first = nav_item.children | first %}
     {% if first.children %}
       {{ render(first, ref) }}
     {% else %}

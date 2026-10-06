@@ -1,4 +1,5 @@
 ---
+title: Support
 icon: lucide/life-buoy
 ---
 

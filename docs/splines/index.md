@@ -1,4 +1,5 @@
 ---
+title: Splines
 icon: wtk/splines
 ---
 
