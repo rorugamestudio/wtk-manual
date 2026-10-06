@@ -12,7 +12,7 @@ The :wtk-component-spline-area-spawner: **Spline Area Spawner** fills an area wi
 2. Optionally, select the object with the spline that outlines the area. The **Spline** field picks it up.
 3. Click :wtk-component-spline-area-spawner: **Create Area Spawner**.
 
-The new object, named after the source object, is placed where the source object is (next to it in the hierarchy when the source is in the scene) and is selected. It starts in **Fixed Grid** mode, with **Grid Spacing** set to the source object's size along its Z axis. The copies are created as its children.
+The new object, named after the source object, is placed where the source object is and is selected. In the hierarchy it goes under the selected spline object, or next to the source object when there's no spline and the source is in the scene. It starts in **Fixed Grid** mode, with **Grid Spacing** set to the source object's size along its Z axis. The copies are created as its children.
 
 You can also add the component yourself with **Add Component > World Toolkit > Spawners > Spline Area Spawner**.
 
