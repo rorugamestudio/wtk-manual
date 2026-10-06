@@ -41,6 +41,10 @@ How the [snapping](../modelling/transform.md#snapping) highlights look:
 **Normal Indicator Length**
 :   The on-screen length of the line that shows the surface direction of a face or collider while snapping.
 
+## :lucide-file-cog: Settings files
+
+**Import Settings…**, **Export Settings…** and **Restore Default Settings** for all World Toolkit preferences. See [The World Toolkit Window](../getting-started/world-toolkit-window.md#settings).
+
 ## :wtk-splines: Splines
 
 How splines are drawn and edited everywhere, and how often they're redrawn while you drag. See [Spline Settings](../splines/settings.md).
@@ -48,7 +52,3 @@ How splines are drawn and edited everywhere, and how often they're redrawn while
 ## :wtk-component-spline-spawner: Spawners
 
 **Rebuilds** sets how often [spawners](index.md) place their copies again while you drag a spline. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
-
-## :lucide-file-cog: Settings files
-
-**Import Settings…**, **Export Settings…** and **Restore Default Settings** for all World Toolkit preferences. See [The World Toolkit Window](../getting-started/world-toolkit-window.md#settings).
