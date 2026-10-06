@@ -12,8 +12,8 @@ nav = [
   { "Getting Started" = [
     "getting-started/index.md",
     { "Installation" = "getting-started/installation.md" },
-    { "Quick Start" = "getting-started/quick-start.md" },
     { "The World Toolkit Window" = "getting-started/world-toolkit-window.md" },
+    { "Quick Start" = "getting-started/quick-start.md" },
   ] },
   { "Modelling" = [
     "modelling/index.md",
@@ -80,6 +80,7 @@ nav = [
 [project.theme]
 custom_dir = "overrides"
 language = "en"
+favicon = "assets/favicon.svg"
 features = [
   "announce.dismiss",
   "content.action.edit",
@@ -98,6 +99,12 @@ features = [
   "search.highlight",
   "toc.follow",
 ]
+
+[project.theme.icon]
+logo = "wtk/world"
+
+[project.theme.icon.admonition]
+tip = "lucide/lightbulb"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
@@ -119,6 +126,12 @@ toggle.name = "Switch to system preference"
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/rorugamestudio/wtk-manual"
+name = "Manual and issues on GitHub"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://x.com/rorugamestudio"
+name = "@rorugamestudio on X"
 
 [project.markdown_extensions]
 abbr = {}

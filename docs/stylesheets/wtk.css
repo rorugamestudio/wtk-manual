@@ -11,3 +11,17 @@
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 }
+
+/* Icons that lead headings and card titles take the link colour (it has a light and a dark variant),
+   so a page can be scanned by its icons. */
+.md-typeset h2 > .twemoji,
+.md-typeset h3 > .twemoji,
+.md-typeset .grid.cards .twemoji.lg {
+  color: var(--md-typeset-a-color);
+}
+
+/* A little space between a heading icon and its text. */
+.md-typeset h2 > .twemoji,
+.md-typeset h3 > .twemoji {
+  margin-right: 0.15em;
+}
