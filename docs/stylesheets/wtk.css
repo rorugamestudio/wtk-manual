@@ -39,68 +39,68 @@
 }
 
 /* Sidebar navigation icons tinted per module */
-[id="__nav_2"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_2"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_2_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/getting-started/"] > svg,
-a.md-nav__link[href^="getting-started/"] > svg {
-  color: var(--wtk-color-getting-started);
+[id="__nav_2"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_2"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_2_label"] .md-nav__link svg,
+a.md-nav__link[href*="getting-started"] svg {
+  color: var(--wtk-color-getting-started) !important;
+  stroke: var(--wtk-color-getting-started) !important;
 }
 
-[id="__nav_3"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_3"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_3_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/modelling/"] > svg,
-a.md-nav__link[href^="modelling/"] > svg {
-  color: var(--wtk-color-modelling);
+[id="__nav_3"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_3"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_3_label"] .md-nav__link svg,
+a.md-nav__link[href*="modelling"] svg {
+  color: var(--wtk-color-modelling) !important;
+  stroke: var(--wtk-color-modelling) !important;
 }
 
-[id="__nav_4"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_4"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_4_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/splines/"] > svg,
-a.md-nav__link[href^="splines/"] > svg {
-  color: var(--wtk-color-splines);
+[id="__nav_4"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_4"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_4_label"] .md-nav__link svg,
+a.md-nav__link[href*="splines"] svg {
+  color: var(--wtk-color-splines) !important;
+  stroke: var(--wtk-color-splines) !important;
 }
 
-[id="__nav_5"] ~ * .md-nav__link > svg,
+[id="__nav_5"] ~ * .md-nav__link svg,
 li.md-nav__item:has(> [id="__nav_5"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_5_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/roads/"] > svg,
-a.md-nav__link[href^="roads/"] > svg {
-  color: var(--wtk-color-roads);
+nav[aria-labelledby="__nav_5_label"] .md-nav__link svg,
+a.md-nav__link[href*="roads"] svg {
+  color: var(--wtk-color-roads) !important;
+  stroke: var(--wtk-color-roads) !important;
 }
 
-[id="__nav_6"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_6"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_6_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/buildings/"] > svg,
-a.md-nav__link[href^="buildings/"] > svg {
-  color: var(--wtk-color-buildings);
+[id="__nav_6"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_6"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_6_label"] .md-nav__link svg,
+a.md-nav__link[href*="buildings"] svg {
+  color: var(--wtk-color-buildings) !important;
+  stroke: var(--wtk-color-buildings) !important;
 }
 
-[id="__nav_7"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_7"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_7_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/terrain/"] > svg,
-a.md-nav__link[href^="terrain/"] > svg {
-  color: var(--wtk-color-terrain);
+[id="__nav_7"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_7"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_7_label"] .md-nav__link svg,
+a.md-nav__link[href*="terrain"] svg {
+  color: var(--wtk-color-terrain) !important;
+  stroke: var(--wtk-color-terrain) !important;
 }
 
-[id="__nav_8"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_8"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_8_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/more/"] > svg,
-a.md-nav__link[href^="more/"] > svg {
-  color: var(--wtk-color-more);
+[id="__nav_8"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_8"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_8_label"] .md-nav__link svg,
+a.md-nav__link[href*="more"] svg {
+  color: var(--wtk-color-more) !important;
+  stroke: var(--wtk-color-more) !important;
 }
 
-[id="__nav_9"] ~ * .md-nav__link > svg,
-li.md-nav__item:has(> [id="__nav_9"]) .md-nav__link > svg,
-nav[aria-labelledby="__nav_9_label"] .md-nav__link > svg,
-a.md-nav__link[href*="/support/"] > svg,
-a.md-nav__link[href^="support/"] > svg {
-  color: var(--wtk-color-support);
+[id="__nav_9"] ~ * .md-nav__link svg,
+li.md-nav__item:has(> [id="__nav_9"]) .md-nav__link svg,
+nav[aria-labelledby="__nav_9_label"] .md-nav__link svg,
+a.md-nav__link[href*="support"] svg {
+  color: var(--wtk-color-support) !important;
+  stroke: var(--wtk-color-support) !important;
 }
 
 /* Page content icons (headings, card grids, definition lists) tinted per section */

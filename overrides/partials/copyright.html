@@ -1,0 +1,21 @@
+{#-
+  Custom copyright partial showing the build commit hash
+-#}
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if config.extra.commit_hash %}
+    <div class="md-copyright__highlight">
+      Published from <a href="{{ config.repo_url }}/commit/{{ config.extra.commit_hash }}" target="_blank" rel="noopener"><code>{{ config.extra.commit_hash[:7] }}</code></a>
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  {% endif %}
+</div>
