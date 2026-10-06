@@ -6,6 +6,7 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 
 - Plain Markdown in `docs/`, built with [Zensical](https://zensical.org) from `zensical.toml`, published to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 - Zensical is pinned in `requirements.txt`; it's still 0.0.x, so bump it on purpose and check the build.
+- `overrides/partials/` holds copies of theme partials with small changes (`nav-item.html`, `footer.html`, `tabs-item.html`, `copyright.html`; each header says what changed). After bumping Zensical, diff them against `.venv/Lib/site-packages/zensical/templates/partials/` and carry the changes over.
 - Local check: `python -m venv .venv`, `pip install -r requirements.txt pillow`, then `zensical build --clean` (must print "No issues found") or `zensical serve` (http://localhost:8000/wtk-manual/; the first request after a rebuild can 404, reload).
 - **Run Zensical from the repo root.** `custom_icons = ["overrides/.icons"]` resolves against the working directory, not the config file: run from anywhere else (for example `zensical serve --config-file ...` from another folder) and every `:wtk-*:` icon renders as literal text, which also leaks into heading anchors and breaks links. `serve` writes into the same `site/` as `build`, so a misplaced `serve` silently corrupts a good build; stop it and rebuild before checking anything.
 - New pages must be added to `nav` in `zensical.toml`. Multi-line nested nav tables work.
