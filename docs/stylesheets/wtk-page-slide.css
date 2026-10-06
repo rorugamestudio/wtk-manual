@@ -1,0 +1,66 @@
+/* Sideways slide between pages, driven by javascripts/wtk-page-slide.js. Only the content area
+   (sidebars and page) slides; the header and tabs cross-fade in place.
+   The name is only set during a slide: a named element is a stacking context, which would trap
+   the compact-layout drawer (inside .md-main) under the theme's blurred overlay. */
+:root[data-wtk-slide] .md-main {
+  view-transition-name: wtk-main;
+}
+
+:root {
+  --wtk-slide-duration: 380ms;
+  --wtk-slide-easing: cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+/* Keep the slide inside the content area, so the outgoing page never draws over the header. */
+::view-transition-group(wtk-main) {
+  animation: none;
+}
+
+::view-transition-image-pair(wtk-main) {
+  overflow: clip;
+}
+
+::view-transition-old(wtk-main),
+::view-transition-new(wtk-main) {
+  height: auto;
+  mix-blend-mode: normal;
+  animation-duration: var(--wtk-slide-duration);
+  animation-timing-function: var(--wtk-slide-easing);
+  animation-fill-mode: both;
+}
+
+::view-transition-old(wtk-main) {
+  translate: 0 var(--wtk-slide-old-offset, 0px);
+}
+
+:root[data-wtk-slide="forward"]::view-transition-old(wtk-main) {
+  animation-name: wtk-slide-out-left;
+}
+
+:root[data-wtk-slide="forward"]::view-transition-new(wtk-main) {
+  animation-name: wtk-slide-in-right;
+}
+
+:root[data-wtk-slide="back"]::view-transition-old(wtk-main) {
+  animation-name: wtk-slide-out-right;
+}
+
+:root[data-wtk-slide="back"]::view-transition-new(wtk-main) {
+  animation-name: wtk-slide-in-left;
+}
+
+@keyframes wtk-slide-out-left {
+  to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes wtk-slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes wtk-slide-out-right {
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes wtk-slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+}

@@ -5,7 +5,8 @@ site_description = "User manual for World Toolkit, a world-building toolkit for 
 repo_url = "https://github.com/rorugamestudio/wtk-manual"
 repo_name = "rorugamestudio/wtk-manual"
 edit_uri = "edit/main/docs/"
-extra_css = ["stylesheets/wtk.css"]
+extra_css = ["stylesheets/wtk.css", "stylesheets/wtk-page-slide.css"]
+extra_javascript = ["javascripts/wtk-page-slide.js"]
 
 nav = [
   { "Home" = "index.md" },
