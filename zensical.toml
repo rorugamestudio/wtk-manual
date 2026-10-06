@@ -124,7 +124,7 @@ toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
 [project.extra]
-commit_hash = "9c6c43d4f78085746c93d24b528d0c5e219c10d8"
+commit_hash = "0045e82a9187da9ee41492606b49e3cc0fa8dd4d"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"

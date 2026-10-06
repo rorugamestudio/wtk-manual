@@ -23,7 +23,11 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Create primitives and edit meshes directly in the Scene view, then unwrap, combine and decorate them.
 
-    :wtk-create-cube: [Primitives](modelling/primitives.md) · :wtk-modify-extrude: [Editing Tools](modelling/editing-tools.md) · :wtk-uv-view: [UVs](modelling/uvs.md) · :wtk-component-boolean-stack: [Booleans](modelling/booleans.md) · :wtk-component-mesh-decal-area: [Decals](modelling/decals.md)
+    - :wtk-create-cube: [Primitives](modelling/primitives.md)
+    - :wtk-modify-extrude: [Editing Tools](modelling/editing-tools.md)
+    - :wtk-uv-view: [UVs](modelling/uvs.md)
+    - :wtk-component-boolean-stack: [Booleans](modelling/booleans.md)
+    - :wtk-component-mesh-decal-area: [Decals](modelling/decals.md)
 
 -   :wtk-splines:{ .lg .middle } **[Splines](splines/index.md)**
 
@@ -31,7 +35,9 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     The spline system shared by every other module: one set of controls for roads, footprints, stamps and spawners.
 
-    :wtk-component-spline-container: [Spline Container](splines/spline-container.md) · :wtk-component-spline-point-anchor: [Point Anchors](splines/point-anchors.md) · :wtk-component-spline-link-group: [Link Groups](splines/link-groups.md)
+    - :wtk-component-spline-container: [Spline Container](splines/spline-container.md)
+    - :wtk-component-spline-point-anchor: [Point Anchors](splines/point-anchors.md)
+    - :wtk-component-spline-link-group: [Link Groups](splines/link-groups.md)
 
 -   :wtk-roads:{ .lg .middle } **[Roads](roads/index.md)**
 
@@ -39,7 +45,9 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Road networks with layered cross-sections, and junctions generated where roads meet.
 
-    :wtk-component-editable-mesh-road: [Creating Roads](roads/creating-roads.md) · :wtk-component-editable-mesh-junction: [Junctions](roads/junctions.md) · :wtk-component-city-block-floor: [City Blocks](roads/city-blocks.md)
+    - :wtk-component-editable-mesh-road: [Creating Roads](roads/creating-roads.md)
+    - :wtk-component-editable-mesh-junction: [Junctions](roads/junctions.md)
+    - :wtk-component-city-block-floor: [City Blocks](roads/city-blocks.md)
 
 -   :wtk-buildings:{ .lg .middle } **[Buildings](buildings/index.md)**
 
@@ -47,7 +55,9 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Modular buildings from a footprint and a set of rules, one at a time or a whole block of lots.
 
-    :wtk-component-building: [Buildings and Volumes](buildings/buildings-and-volumes.md) · :lucide-file-box: [Building Rules](buildings/building-rules.md) · :wtk-component-building-block: [Building Blocks](buildings/building-blocks.md)
+    - :wtk-component-building: [Buildings and Volumes](buildings/buildings-and-volumes.md)
+    - :lucide-file-box: [Building Rules](buildings/building-rules.md)
+    - :wtk-component-building-block: [Building Blocks](buildings/building-blocks.md)
 
 -   :wtk-terrain:{ .lg .middle } **[Terrain](terrain/index.md)**
 
@@ -55,7 +65,10 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Shape Unity terrains with non-destructive stamps: height, textures, trees and details, limited by masks.
 
-    :wtk-component-terrain-stamp: [Stamps](terrain/stamps.md) · :lucide-mountain: [Height](terrain/height.md) · :lucide-trees: [Trees](terrain/trees.md) · :wtk-component-terrain-snap: [Terrain Snap](terrain/terrain-snap.md)
+    - :wtk-component-terrain-stamp: [Stamps](terrain/stamps.md)
+    - :lucide-mountain: [Height](terrain/height.md)
+    - :lucide-trees: [Trees](terrain/trees.md)
+    - :wtk-component-terrain-snap: [Terrain Snap](terrain/terrain-snap.md)
 
 -   :wtk-more:{ .lg .middle } **[More](more/index.md)**
 
@@ -63,7 +76,8 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 
     Spline editing, spawners that place objects along and inside splines, and the settings shared by every module.
 
-    :wtk-component-spline-array-spawner: [Array Spawner](more/array-spawner.md) · :wtk-component-spline-area-spawner: [Area Spawner](more/area-spawner.md)
+    - :wtk-component-spline-array-spawner: [Array Spawner](more/array-spawner.md)
+    - :wtk-component-spline-area-spawner: [Area Spawner](more/area-spawner.md)
 
 </div>
 

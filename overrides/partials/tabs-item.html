@@ -1,0 +1,49 @@
+{#-
+  Custom tabs-item partial with icons and module colors
+-#}
+{% macro render_content(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% set icon_item = nav_item if (nav_item.meta and nav_item.meta.icon) else ref %}
+  {% if icon_item.meta and icon_item.meta.icon %}
+    {% include ".icons/" ~ icon_item.meta.icon ~ ".svg" %}
+  {% endif %}
+  <span class="md-ellipsis">
+    {{ ref.title or nav_item.title }}
+  </span>
+{% endmacro %}
+{% macro render(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% set title = ref.title or nav_item.title %}
+  {% set module_id = title | lower | replace(' ', '-') %}
+  {% set class = "md-tabs__item" %}
+  {% if ref.active %}
+    {% set class = class ~ " md-tabs__item--active" %}
+  {% endif %}
+  {% if nav_item.children %}
+    {% set _ = namespace(index = none) %}
+    {% if "navigation.indexes" in features %}
+      {% for item in nav_item.children %}
+        {% if item.is_index and _.index is none %}
+          {% set _.index = item %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% set index = _.index %}
+    {% set first = index or nav_item.children | first %}
+    {% if first.children %}
+      {{ render(first, ref) }}
+    {% else %}
+      <li class="{{ class }}" data-module="{{ module_id }}">
+        <a href="{{ first.url | url }}" class="md-tabs__link" data-module="{{ module_id }}">
+          {{ render_content(first, ref) }}
+        </a>
+      </li>
+    {% endif %}
+  {% else %}
+    <li class="{{ class }}" data-module="{{ module_id }}">
+      <a href="{{ nav_item.url | url }}" class="md-tabs__link" data-module="{{ module_id }}">
+        {{ render_content(nav_item) }}
+      </a>
+    </li>
+  {% endif %}
+{% endmacro %}
