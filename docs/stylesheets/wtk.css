@@ -347,3 +347,8 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
     display: none;
   }
 }
+
+/* Keep names in a table's first column (command names, row prefixes) on one line. */
+.md-typeset td:first-child > code {
+  white-space: nowrap;
+}

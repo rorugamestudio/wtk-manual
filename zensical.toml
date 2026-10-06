@@ -70,6 +70,7 @@ nav = [
     { "Array Spawner" = "more/array-spawner.md" },
     { "Area Spawner" = "more/area-spawner.md" },
     { "More Settings" = "more/settings.md" },
+    { "Command Line" = "more/command-line.md" },
   ] },
   { "Support" = [
     { "Overview" = "support/index.md" },

@@ -46,4 +46,10 @@ Camera, Scene view background and snapping highlight options, the spline and spa
 
     Camera, background and snapping highlight options, spline and spawner settings, and settings files.
 
+-   :lucide-square-terminal:{ .lg .middle } **[Command Line](command-line.md)**
+
+    ---
+
+    World Toolkit commands for the Unity CLI, for scripts, build checks and AI agents.
+
 </div>
