@@ -1,25 +1,21 @@
+---
+icon: wtk/modify-extrude
+---
+
 # Editing Tools
 
 All editing tools live in the **Topology** tab of the Modelling panel. They act on the current [selection](selection.md).
 
+Many of them also work with whole Editable Mesh objects selected, outside component editing: they then act on every visible component of the mesh. For example, **Extrude** and **Inset** use all the faces, **Bevel** all the edges, and **Fill**, **Grid Fill** and **Bridge** the open borders of the mesh. The shading buttons shade the whole mesh.
+
 !!! tip "Quick tool search"
-    **Right-click** in the Scene view (without dragging) while editing a mesh to open **Modelling Tools**, a searchable list of every tool. It shows your **Recent** and **Pinned** tools at the top.
+    **Right-click** in the Scene view (without dragging) while editing a mesh to open **Modelling Tools**, a searchable list of every tool. It shows your **Recent** and **Pinned** tools at the top. See [Modelling Tools search](#modelling-tools-search).
 
-## Tools with options
-
-<figure markdown="span">
-  ![A cube, then inset, extruded and beveled](../assets/images/modelling/editing-sequence.webp){ loading=lazy }
-  <figcaption>From left: a cube, then Inset on the top face, Extrude of the inset face, and Bevel on the vertical edges.</figcaption>
-</figure>
+## :lucide-sliders-horizontal: Tools with options
 
 These tools show an options panel in the Scene view. Adjust the options, check the preview, then press **Apply**, or **Cancel** to leave without changing anything. The **...** button next to each tool in the panel shows or hides its Scene view options.
 
 ### :wtk-modify-extrude: Extrude
-
-<figure markdown="span" class="wtk-ui-wide">
-  ![Extrude Options in the Scene view](../assets/images/modelling/ui-scene-extrude.webp){ loading=lazy }
-  <figcaption>Extrude Options in the Scene view, with the top face selected.</figcaption>
-</figure>
 
 Pulls the selected faces or edges out to create new geometry.
 
@@ -40,6 +36,9 @@ Pulls the selected faces or edges out to create new geometry.
 
 **Hard Edge Angle**
 :   Edges created by the extrusion are marked hard (sharp shading) when the angle between their faces reaches this value. Flatter edges stay smooth.
+
+!!! tip
+    In edge or face mode, you can also extrude by holding ++shift++ when you start dragging a move, rotate or scale handle. See [Transform](transform.md).
 
 ### :wtk-modify-inset: Inset
 
@@ -104,28 +103,25 @@ Slides the selected vertices or edges along the surrounding edges, without chang
 
 Splits the selected faces or edges. **Cuts** sets how many times.
 
-## Deformation
+## :lucide-waves: Deformation
 
-These tools use a **Distance** value as strength:
+Clicking one of these buttons applies it right away with the current amount; its **...** button shows its options in the Scene view instead, where you set the amount and press **Apply**. The amount is shared with the **Distance** of Extrude and Inset.
 
 :wtk-modify-smooth: **Smooth**
-:   Smooths the selected vertices. Strength from 0 to 1.
+:   Smooths the selected vertices. **Strength** from 0 to 1.
 
 :wtk-modify-relax: **Relax**
-:   Evens out the spacing of the selected vertices along the surface, without flattening it. Strength from 0 to 1.
+:   Evens out the spacing of the selected vertices along the surface, without flattening it. **Strength** from 0 to 1.
 
 :wtk-modify-shrink-fatten: **Shrink/Fatten**
-:   Moves the selected vertices along their normals. Positive values inflate, negative values deflate.
+:   Moves the selected vertices along their normals by **Distance**. Positive values inflate, negative values deflate.
 
 :wtk-modify-push-pull: **Push/Pull**
-:   Moves the selected vertices away from or toward the transform pivot.
+:   Moves the selected vertices away from or toward the transform pivot by **Distance**.
 
-## Modify
+**Preserve Borders**, in the Smooth and Relax options, keeps the vertices on open borders of the mesh in place.
 
-<figure markdown="span" class="wtk-ui">
-  ![The Modify section](../assets/images/modelling/ui-section-modify.webp){ loading=lazy }
-  <figcaption>The Modify section. The **...** buttons show each tool's options in the Scene view.</figcaption>
-</figure>
+## :wtk-topology: Modify
 
 | Tool | What it does |
 |---|---|
@@ -145,7 +141,46 @@ These tools use a **Distance** value as strength:
 | :wtk-modify-grid-fill: **Grid Fill** | Fills a closed edge loop with a grid of quads. |
 | :wtk-modify-join-edges: **Join Edges** | Welds two open edge chains with the same number of edges. |
 
-## Boolean (destructive)
+## :wtk-shape-freeform: Shapes
+
+The **Shapes** section of the **Topology** tab draws new edges onto the faces of the selected mesh, like a stencil:
+
+| Shape | Draws |
+|---|---|
+| :wtk-shape-freeform: **Freeform** | A free stroke that follows the cursor. End it near its start to close it. |
+| :wtk-select-edge: **Line** | A straight line from where you press to where you release. |
+| :wtk-shape-ellipse: **Ellipse** | An ellipse inside the box you drag. |
+| :wtk-select-face: **Rectangle** | A rectangle from corner to corner. |
+
+1. Click a shape.
+2. Press on a face of the selected mesh and drag. Hold ++shift++ to keep a **Rectangle** or **Ellipse** at 1:1.
+3. Release the mouse: the stroke is cut into the faces it crosses.
+
+++esc++ cancels. The **Shape Settings** panel in the Scene view has the options:
+
+**Projection**
+:   **Visible Surfaces** projects the stroke through the camera onto the faces under it. **Initial Face Plane** keeps the stroke on the plane of the face you started on.
+
+**Simplification Tolerance**
+:   How much a **Freeform** stroke is simplified, in world units. Zero keeps every captured point.
+
+**Ellipse Segments**
+:   The number of segments of an **Ellipse**.
+
+## :lucide-flip-horizontal-2: Mirror and Subdivision Surface
+
+These two whole-mesh tools are run from the [Modelling Tools search](#modelling-tools-search). They rebuild every face of the selected meshes, whatever components are selected, in a single undo step.
+
+**Mirror X**, **Mirror Y** and **Mirror Z**
+:   Adds a mirrored copy of the mesh across the object's local X, Y or Z plane, through its pivot. Vertices lying on that plane are shared by both halves, so half a model joins up into a whole one. Materials, flat faces and hard edges are mirrored too.
+
+**Subdivision Surface**
+:   Smooths the whole mesh by one level: each face with *n* corners becomes *n* quads, and the shape is rounded toward a smooth surface. Hard edges and open borders stay sharp. Faces keep their material and flat shading.
+
+!!! note
+    Both tools skip meshes with faces that have holes. Vertex colors and custom normals aren't kept, and a mesh with manual UVs switches to automatic UVs.
+
+## :lucide-scissors: Boolean (destructive)
 
 **Surface Cut**
 :   Cuts the active mesh with the other selected meshes. The cutting meshes are kept. Select the mesh to be cut **last**.
@@ -160,27 +195,23 @@ For non-destructive booleans, see [Booleans](booleans.md).
 **Modify Shading**
 :   **Flat Faces** and **Smooth Faces** set flat or smooth shading. **Smooth by Angle** smooths everything except edges sharper than **Smooth by Angle Limit**. **Mark Hard** and **Clear Hard** set sharp shading on individual edges. **Set Custom Normals** and **Clear Custom Normals** store or remove the current face normals.
 
+For automatic smoothing of the whole mesh by angle, see **Auto Smooth** in the [Editable Mesh inspector](editable-meshes.md#shading).
+
 ## :wtk-mesh-cleanup: Cleanup
 
 | Tool | What it does |
 |---|---|
-| **Weld** | Welds selected vertices closer than **Weld Distance**. |
-| **Weld Doubles** | Welds overlapping vertices closer than **Weld Distance**. |
+| **Weld** | Under **Weld Doubles**: welds the selected vertices that are closer than **Weld Distance**. |
 | **Delete Loose** | Deletes selected vertices and edges that don't belong to any face. |
 | **Remove Degenerate** | Removes broken, zero-area faces and edges. |
-| **Dissolve** / **Limited Dissolve** | Removes interior edges between faces that are nearly flat, under **Limited Angle**. |
+| **Dissolve** | Under **Limited Dissolve**: removes the selected interior edges between faces that are nearly flat, under **Limited Angle**. |
 | **Create Support Edge** | Adds an edge between exactly two selected vertices. |
 | **Validate Mesh** | Writes a report of topology problems to the Console. |
 | **Delete Unused Materials** | Removes material slots no face uses. |
 
 ## :wtk-brush: Vertex colors
 
-<figure markdown="span" class="wtk-ui">
-  ![Vertex Color](../assets/images/modelling/ui-section-vertex-color.webp){ loading=lazy }
-  <figcaption>The Vertex Color section.</figcaption>
-</figure>
-
-Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again to stop.
+Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again to stop.
 
 **Color**
 :   The paint color. White visually erases painted color.
@@ -195,14 +226,26 @@ Click **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging
 
 ## :wtk-materials: Materials
 
-<figure markdown="span" class="wtk-ui">
-  ![Materials](../assets/images/modelling/ui-section-materials.webp){ loading=lazy }
-  <figcaption>The Materials section.</figcaption>
-</figure>
-
 The **Materials** section lists the mesh's material slots.
 
 - **Add Material** adds a slot.
 - **Assign** gives the slot's material to the selected faces.
 - **Select** adds the faces that use that slot to the selection.
 - **Delete** removes the slot.
+
+!!! tip "Drag and drop"
+    In face mode, drag a material from the Project window onto one of the selected faces in the Scene view to give it to all the selected faces.
+
+## :lucide-search: Modelling Tools search
+
+**Right-click** in the Scene view (without dragging) while editing a mesh to open **Modelling Tools**, a searchable list of every Modelling tool. It also has tools without a button in the panel, such as [Mirror and Subdivision Surface](#mirror-and-subdivision-surface).
+
+- Type to filter the list, pick a tool with the arrow keys and press ++enter++ to run it. ++esc++ closes the list.
+- The pin button next to a tool pins it. **Pinned** and **Recent** tools are listed above **All Tools**; **Recents first** decides which of the two comes first.
+- The **…** button next to a tool opens its options in the Scene view instead of running it.
+
+## :lucide-repeat: Repeating the last action
+
+Press ++enter++ in the Scene view to run the last operation again on the current selection: an extrude, bevel, inset, bridge or slide, most buttons of the **Topology** tab, a move, rotation or scale (also a ++shift++ extrude-and-move), or a tool run from the Modelling Tools search. A message in the Scene view confirms it (*Repeated: Extrude*) or says it can't (*Cannot repeat Extrude on this selection*).
+
+It doesn't apply while the Knife is active or while you create a primitive, where ++enter++ finishes the cut or the shape.

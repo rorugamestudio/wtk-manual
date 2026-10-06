@@ -4,14 +4,9 @@ icon: wtk/world
 
 # The World Toolkit Window
 
-Most of World Toolkit is driven from one window. Open it from **Tools > World Toolkit > World Toolkit**, and dock it next to the Inspector so it stays at hand.
+Most of World Toolkit is driven from one window. Open it from **Window > World Toolkit > Open**, and dock it next to the Inspector so it stays at hand.
 
 ## :lucide-layout-grid: Modules
-
-<figure markdown="span" class="wtk-ui">
-  ![The World Toolkit window](../assets/images/window/ui-roads.webp){ loading=lazy }
-  <figcaption>The World Toolkit window: the module bar on top, here showing the Roads module.</figcaption>
-</figure>
 
 The bar at the top of the window switches between modules:
 
@@ -36,7 +31,7 @@ You can turn the tips off in the Modelling **Settings** tab, under **Scene View 
 
 ## :lucide-timer: Rebuild settings
 
-Roads, buildings, terrain stamps, splines and spawners rebuild as you edit them. Each module's **Settings** tab has its own **Rebuilds** section that controls how often that happens while you drag, so a heavy module can wait while a light one updates live:
+Roads, buildings, terrain stamps, spawners and Boolean Stacks rebuild as you edit them, and splines redraw. Each module's **Settings** tab has its own **Rebuilds** section that controls how often that happens while you drag, so a heavy module can wait while a light one updates live:
 
 **Rebuild Debounce**
 :   While the mouse is held down, waits until you stop moving before rebuilding. Releasing the mouse always applies the pending rebuild.
@@ -52,7 +47,7 @@ Roads, buildings, terrain stamps, splines and spawners rebuild as you edit them.
 
 ## :lucide-settings: Settings
 
-Your World Toolkit preferences can be moved between machines or shared with your team. The same three commands are in the **Tools > World Toolkit > Settings** menu and in the **Settings Files** section of the [More](../more/index.md) module's **Settings** tab:
+Your World Toolkit preferences can be moved between machines or shared with your team. The commands are available in the window tab's menu (the three dots or right-click menu on the window title) under **Settings**, and in the **Settings Files** section of the [More](../more/index.md) module's **Settings** tab:
 
 | Command | What it does |
 |---|---|

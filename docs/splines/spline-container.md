@@ -1,106 +1,158 @@
+---
+icon: wtk/component-spline-container
+---
+
 # Spline Container
 
-A :wtk-component-spline-container: **Spline Container** holds one or more spline paths. Create one from **GameObject > World Toolkit > Spline Container**, or add it with **Add Component > World Toolkit > Splines > Spline Container**.
+A :wtk-component-spline-container: **Spline Container** holds one or more splines, which its inspector calls paths. Create one from **GameObject > World Toolkit > Spline Container**, which adds an object with a short two-knot spline, or add the component with **Add Component > World Toolkit > Splines > Spline Container**. You can also draw new ones directly while [editing splines](index.md#where-to-edit-splines).
 
-To add another path to the same container, click **Add Spline Path** in its inspector.
-
-## Drawing splines
-
-<figure markdown="span" class="wtk-ui">
-  ![Spline Container inspector](../assets/images/splines/ui-spline-container.webp){ loading=lazy }
-  <figcaption>The Spline Container inspector.</figcaption>
-</figure>
+## :lucide-pen-tool: Drawing splines
 
 While editing splines:
 
-- Hold ++shift++ and **click** empty space to start a new spline, then **click** to add each knot.
-- Press ++esc++ or **right-click** to finish drawing.
-- **Double-click** the end knot of a spline to continue drawing from it.
+1. With no knots selected, hold ++shift++ and **click** away from other splines to place the first knot. If a Spline Container is selected, the new spline is added to it. Otherwise a new **Spline** object is created.
+2. **Click** to add each knot. **Click and drag** to pull out the new knot's handles: it becomes a **Bezier** knot with **Mirrored** handles.
+3. Finish the spline in one of these ways:
+    - **Right-click**, or press ++esc++.
+    - **Click the knot at the other end** of the spline, usually the first one, to close it into a loop.
+    - **Click the end knot of another open spline** to join the new spline to it.
 
-The :wtk-new-splines: **New Splines** panel in the Scene view sets how new knots are created:
+**Double-click** either end knot of an open spline to continue drawing from it: the new knots take that knot's type. **Double-click** a spline between two knots to insert a knot there.
+
+!!! note "Single-knot splines"
+    If you right-click after placing just one knot of a new spline object, the object is removed again. ++esc++ always keeps the knots you placed.
+
+### :wtk-snap: Where new knots land
+
+New knots use the [snapping](../modelling/transform.md#snapping) options shared by all World Toolkit tools. Turn snapping on in the :wtk-snap: **Snapping** panel of the Scene view, or with ++shift+v++.
+
+| Snapping | Where the new knot goes |
+|---|---|
+| Off | On the ground plane, at height 0. |
+| On, over a snap target | On the target under the cursor, among the ones turned on in the **Snapping** panel: vertices, edges, face surfaces, spline knots, collider surfaces (**Surface (Collider)**) and so on. On a face or collider surface, the knot is also tilted to match it. |
+| **Grid** | Away from targets, onto the grid (**Grid Size**). On a face or collider surface, the rounding happens along the surface, so the knot stays on it. |
+| **Increment** | After the first knot, a whole number of **Grid Size** steps away from the previous knot, across the ground plane. It wins over **Grid** when both are on. |
+
+The knot you're drawing from is never a snap target, so it can't swallow the next knot. Handles you pull out of a new knot snap the same way, and a highlight shows what the knot is snapping to.
+
+## :wtk-new-splines: New Splines panel
+
+The :wtk-new-splines: **New Splines** panel in the Scene view sets up the splines you draw:
 
 **New Spline Mode**
-:   **Auto** creates smooth curves, with handles set automatically. **Linear** creates straight segments.
+:   The type of the knots you click: **Auto** creates smooth curves with handles set automatically, **Linear** creates straight segments.
 
-**Append to Selected Container**
-:   Adds new splines to the selected container instead of creating a new object.
+### :lucide-signature: Freeform drawing
 
-### :wtk-shape-freeform: Freeform drawing
-
-**Draw Freeform Spline** lets you draw a spline by holding the mouse button and dragging, like a pencil. The stroke is turned into a smooth curve.
+Click **Draw Freeform Spline**, then hold the mouse button and drag in the Scene view to draw a spline like a pencil stroke. The stroke is turned into a smooth curve of **Auto** knots. The tool stays on so you can draw more strokes: click **Exit Freeform Spline** or press ++esc++ to stop.
 
 | Setting | What it does |
 |---|---|
 | **Minimum Sample Distance** | How far apart the captured points of the stroke are. |
 | **Simplification Tolerance** | How much the stroke is simplified. Higher values give fewer knots. |
 | **Close Distance** | If the stroke ends this close to where it started, the spline is closed. |
-| **Stick to Surface** | Draws on the objects under the cursor instead of a flat plane. |
+| **Stick to Surface** | Draws on the colliders under the cursor instead of the ground plane. |
+| **Append to Selected Container** | Adds the stroke to the selected Spline Container instead of creating a new object. |
 
-### :wtk-shape-ellipse: Shapes
+### :lucide-shapes: Shapes
 
-Draw common shapes in one drag:
+Click a shape button, then drag in the Scene view to draw the whole shape in one go. The shape tool stays on so you can draw several: click its button again, or press ++esc++, to stop. ++esc++ during a drag only cancels that shape.
 
-**Circle**
+:lucide-circle: **Circle**
 :   Drag corner to corner. Hold ++ctrl++ for a perfect circle.
 
-**Rectangle**
+:lucide-rectangle-horizontal: **Rectangle**
 :   Drag corner to corner. Hold ++ctrl++ for a square.
 
-**Polygon**
+:lucide-pentagon: **Polygon**
 :   Drag from the center to set the radius and rotation. **Sides** sets the number of sides, or the number of points for a star. **Inset** pulls every other knot toward the center to make a star, and **Spike Size** rounds the outer points.
 
-**Spiral**
+:lucide-shell: **Spiral**
 :   Drag from the center. **Turns** sets the number of revolutions.
 
-**Stick to Surface** starts the shape on the surface under the cursor, aligned with it.
+**Stick to Surface** starts the shape on the collider under the cursor, aligned with it; the rest of the drag stays on that plane. **Append to Selected Container** adds the shape to the selected Spline Container instead of creating a new object. Both have their own setting here, separate from the freeform ones.
 
-## Editing knots
-
-<figure markdown="span" class="wtk-ui-wide">
-  ![Editing spline knots](../assets/images/splines/ui-scene-knots.webp){ loading=lazy }
-  <figcaption>Editing a spline: the selected knot with its handles, and the New Splines and Selected Knots panels.</figcaption>
-</figure>
+## :lucide-mouse-pointer-click: Editing knots
 
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
-- **Drag** across empty space to box-select knots.
-- **Drag** a selected knot or handle to move it.
-- ++delete++ or ++backspace++ deletes the selected knots.
+- **Drag** across empty space to box-select knots, with the same modifiers.
+- ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
+- **Click** a spline's line to select its object.
+- **Drag** a selected knot or handle to move it. With snapping on, dragged knots snap too.
+- Unity's **Move**, **Rotate** and **Scale** tools work on the selected knots. Rotating a single knot turns it in place, and several knots turn around their center.
+- ++f++ frames the selected knots.
+- ++delete++ or ++backspace++ deletes the selected knots. Deleting the last knot of a spline removes the spline.
 
-The :wtk-selected-knots: **Selected Knots** panel shows the selection's **Position** and **Rotation**, and whether the spline is **Closed**. It also has the knot **type**:
+### :wtk-selected-knots: Selected Knots panel
+
+The :wtk-selected-knots: **Selected Knots** panel says how many knots are selected, on how many splines and containers, and edits them all at once:
+
+**Closed**
+:   Whether the selected knots' splines are closed loops.
+
+**Position** and **Rotation**
+:   The knots' position and rotation, relative to their Spline Container.
+
+**Linear**, **Auto** and **Bezier**
+:   The knot type, see the table below. With a single **Bezier** knot selected, the **Bezier** list picks how its handles behave.
+
+**In** and **Out**
+:   The length of the knot's two handles. Expand them to type each handle's position. Typing a handle value turns the knot into a **Bezier** knot with **Broken** handles, unless it is **Mirrored**.
 
 | Type | Curve |
 |---|---|
 | **Linear** | Straight lines in and out of the knot, no handles. |
 | **Auto** | Smooth, with handles set automatically. |
-| **Bezier** | Handles you control. Choose how they behave: **Mirrored** (both sides equal), **Continuous** (aligned, but different lengths) or **Broken** (independent). |
+| **Bezier** | Handles you control. Choose how they behave: **Mirrored** (both sides equal), **Broken** (independent) or **Continuous** (aligned, but different lengths). |
 
-### Knot menu
+### :lucide-menu: Knot menu
 
 **Right-click** with knots selected for more operations:
 
 **Split**
-:   Cuts the spline at the selected knots.
+:   Cuts an open spline in two at each selected knot; both new ends sit on that knot. On a closed spline, opens the loop at the knot. The two end knots of an open spline can't be split.
 
 **Extract**
-:   Moves the selected part into a new spline.
+:   With two or more knots of the same spline selected, moves that stretch into a copy of the spline's object, named after it with **Extracted** added. The original keeps the rest, cut open where the stretch was.
 
 **Join**
-:   Connects the selected end knots of two splines into one.
+:   With two end knots selected, joins two open splines into one, or closes a spline when both ends are its own. The joined knot sits halfway between them.
 
 **Link** and **Link to Selected Knot Link**
 :   Make knots of different splines move together. See [Link Groups](link-groups.md).
 
-**Drop to Ground**
-:   Moves the selected knots down onto the surface below.
+**Drop to Ground** (++alt+shift+d++)
+:   Moves the selected knots onto the ground below them: any collider or terrain. Knots buried under the ground move up onto it. The spline's own object is ignored, so a road doesn't land on its own mesh.
 
 **Center Pivot on Selection**
-:   Moves the container's pivot to the center of the selected knots.
+:   Moves the container's pivot to the center of the selected knots, without moving the spline.
 
-## Settings
+## :lucide-list-tree: Paths and path data
 
-Spline display options are in the **Settings** tab of the **More** module:
+The inspector lists the container's splines under **Paths**. **Add Spline Path** adds a new short two-knot spline. Each path has:
 
-- **Always Show Splines**, **Line Thickness**, **Knot Size** and **Show Knot Indexes**.
-- **Draw Occluded** and **Occluded Opacity** show splines hidden behind other objects.
-- **Edit Selected Containers Only** only shows editable knots on the containers you have selected. Useful in busy scenes.
-- **Colors** for every part of the spline display.
+**Closed**
+:   Whether the spline is a closed loop.
+
+**Knots**
+:   The knots, usually edited in the Scene view.
+
+**Path Data**
+:   Extra values stored along the spline, each with a **Name** that other tools look up. Add an entry and pick its type, for example **Float Curve** (a curve from the start of the spline, 0, to its end, 1) or **Gradient** (colors along it). A [Point Anchor](point-anchors.md) can read a **Float Curve** to scale its object.
+
+**Override Debug Sampling** and **Debug Samples Per Segment**
+:   Draw this spline smoother or coarser than the **Samples Per Segment** in the [Spline Settings](settings.md).
+
+**Debug Thickness Data Name** and **Debug Color Data Name**
+:   The name of a **Float Curve** that sets the drawn line's thickness along the spline, and of a **Gradient** that colors it.
+
+??? info "Editing a Float Curve in the Scene view"
+    Set a **Float Curve**'s **Show On Scene As** to draw it along the spline while its object is selected and splines are shown. **Sides Mirrored** draws two lines, one on each side of the spline, half the value away from it, which suits widths. **Sides** draws one line offset to the right, negative values going left. **Vertical Mirrored** and **Vertical** do the same above and below the spline.
+
+    - **Double-click** a line to add a key, and **double-click** a key to delete it.
+    - **Drag** a key along the spline to move it, or across it to change its value.
+    - **Right-click** a key for **Delete Key**, **Edit Key...** and the curve's tangent options.
+
+## :lucide-settings: Settings
+
+The [Spline Settings](settings.md), in the **Settings** tab of the More module, set how splines and knots are drawn and which containers you can edit.

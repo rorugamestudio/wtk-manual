@@ -1,8 +1,15 @@
+---
+icon: wtk/transform-options
+---
+
 # Transform
 
 Move, rotate and scale the selected components with Unity's regular **Move**, **Rotate** and **Scale** tools. The handle appears at the selection's pivot.
 
-## Pivot and orientation
+!!! tip "Extrude while you drag"
+    In edge or face mode, hold ++shift++ when you start dragging a **Move**, **Rotate** or **Scale** handle: the selection is extruded first, and the new geometry follows the handle. Extrude and transform are a single undo step, and the **Move** tool shows the extruded distance in the Scene view.
+
+## :lucide-crosshair: Pivot and orientation
 
 **Origin** sets where the handle sits:
 
@@ -24,7 +31,7 @@ Move, rotate and scale the selected components with Unity's regular **Move**, **
 
 Press ++z++ to cycle through the origins and ++x++ to cycle through the orientations. Both shortcuts can be changed in Unity's **Shortcuts** window, under **Modelling**.
 
-### Custom pivots
+### :wtk-pivot-origin-custom: Custom pivots
 
 With **Origin** set to **Custom**:
 
@@ -34,28 +41,20 @@ With **Origin** set to **Custom**:
 
 **Custom Orient** works the same way, with **Auto Update Custom Orientation** following **Rotate**.
 
-## :wtk-transform-options: Transform Options
+You can also press ++d++ in the Scene view to edit the pivot, starting from where the handle is: the first press edits its position with a handle, the second its rotation, and the third finishes. ++esc++ cancels.
 
-<figure markdown="span" class="wtk-ui">
-  ![Transform Options](../assets/images/modelling/ui-section-transform-options.webp){ loading=lazy }
-  <figcaption>Transform Options: pivot position and rotation, axis locks and proportional editing.</figcaption>
-</figure>
+## :wtk-transform-options: Transform Options
 
 **Lock on axis**
 :   Restricts the transform to the chosen axes.
 
 :wtk-proportional-transform: **Proportional Transform**
-:   Also moves nearby unselected components, fading with distance, for smooth soft edits. Set the **Radius** of the effect and its **Falloff** shape: **Smooth**, **Sphere**, **Root**, **Sharp**, **Linear**, **Constant**, or a **Custom** curve. **Domain** decides what counts as "nearby": everything within the radius (**World**), or only components connected to the selection (**Connected**).
+:   Also moves nearby unselected components, fading with distance, for smooth soft edits. Turn it on with **Activate**, then set the **Radius** of the effect and its **Falloff** shape: **Smooth**, **Sphere**, **Root**, **Sharp**, **Linear**, **Constant**, or a **Custom** curve. **Domain** decides what counts as "nearby": everything within the radius (**World**), or only components connected to the selection (**Connected**).
 
 :wtk-proportional-2-axis: **Proportional 2-Axis Scaling**
 :   A toolbar toggle. When you drag one of the **Scale** tool's plane handles, which scale two axes at once, both axes scale by the same amount.
 
 ## :wtk-transform-numeric: Numeric Transform
-
-<figure markdown="span" class="wtk-ui">
-  ![Numeric Transform](../assets/images/modelling/ui-section-numeric-transform.webp){ loading=lazy }
-  <figcaption>Numeric Transform.</figcaption>
-</figure>
 
 Type exact values instead of dragging:
 
@@ -71,6 +70,47 @@ Type exact values instead of dragging:
 **Flip UVs**
 :   When a scale is negative, mirrors the UVs too. Faces with automatic UVs become manual.
 
+!!! tip "Repeat it"
+    Press ++enter++ in the Scene view to repeat the last move, rotation or scale, dragged or typed, on the current selection. See [Repeating the last action](editing-tools.md#repeating-the-last-action).
+
+## :wtk-pivot: Object pivot
+
+The **Object Pivot** overlay in the Scene view works on the selected Editable Mesh object's own pivot, its Transform. Its buttons move or rotate that pivot without moving the mesh:
+
+**Show Object Pivot**
+:   Draws the selected object's pivot in the Scene view.
+
+**Align To Selection Pivot**
+:   Moves the object's pivot to the pivot of the current component selection.
+
+**Orient To Selection Pivot**
+:   Rotates the object's pivot to the orientation of the current component selection pivot.
+
+**X**, **Y** and **Z**
+:   Move the object's pivot to the start, middle or end of the mesh's bounds on that axis: **Left**, **Center** or **Right**; **Bottom**, **Middle** or **Top**; **Back**, **Center** or **Front**.
+
+**Bake Transform**
+:   **Position**, **Rotation**, **Scale** or **All** bakes that part of the object's transform into the mesh, while the mesh and its child objects stay where they are.
+
+## :lucide-arrow-down-to-line: Drop to Ground
+
+With components selected, **Drop to Ground** (++alt+shift+d++) moves every vertex of the selection straight down onto the surface below it, so the selection follows the ground. The mesh's own colliders are ignored. With objects selected instead, the same command drops the whole objects; see [Terrain Snap](../terrain/terrain-snap.md).
+
 ## :wtk-snap: Snapping
 
-Press ++shift+v++ to turn snapping on or off. The **Snapping** panel in the Scene view sets what the selection snaps to and how close it has to be.
+Press ++shift+v++ to turn snapping on or off. The :wtk-snap: **Snapping** overlay in the Scene view (its title reads **Snapping: On** or **Snapping: Off**) sets what the selection snaps to and how close it has to be. The same options are in the **Snapping** section of the [Modelling settings](settings.md#snapping), for the Scene view and for the UV View.
+
+| Option | What it does |
+|---|---|
+| **Activate Snapping** | Turns all the chosen snap modes on or off at once, without changing them. Same as ++shift+v++. |
+| **Snap To Selected Only** | Only uses the selected objects as snap targets. |
+| **Use snapping outside Edit Mode** | Allows snapping while using tools outside their main edit mode. |
+| **Grid** | Snaps to the grid, every **Grid Size**. |
+| **Vertex**, **Edge**, **Face Surface** | Snaps to vertices, to edges, or to any point on a face. |
+| **Edge Center**, **Face Center** | Snaps to the middle of edges and faces. |
+| **Spline Knot** | Snaps to spline knots. |
+| **Increment** | Moves in fixed steps. |
+| **Surface (Collider)** | Snaps to the colliders in the scene. |
+| **Projected Edge**, **Projected Face** | Snaps to visible edges or faces projected along an axis. **Automatic** follows the axis of the handle you drag, or the normal of a plane handle; dragging freely needs **X**, **Y** or **Z**. |
+
+Most modes have a **Tolerance**: how close the cursor has to get before that target catches it. The UV View has fewer modes: the UV grid, vertices, edges, and edge and face centers.

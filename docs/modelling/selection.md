@@ -1,8 +1,12 @@
+---
+icon: wtk/select
+---
+
 # Selection
 
 To edit a mesh you select its **components**: vertices, edges or faces.
 
-## Component modes
+## :lucide-component: Component modes
 
 Pick the component type in the **Modelling Edit** toolbar in the Scene view, or with the keyboard:
 
@@ -14,13 +18,13 @@ Pick the component type in the **Modelling Edit** toolbar in the Scene view, or 
 
 Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh**, where clicks select components instead of objects.
 
-## Selecting
+## :wtk-select: Selecting
 
 - **Click** a component to select it.
 - **Drag** across empty space to box-select.
 - ++q++ switches to the :wtk-select: **Select** tool.
 
-### Box selection rules
+### :lucide-box-select: Box selection rules
 
 The toolbar lets you decide what a box selection includes:
 
@@ -30,7 +34,9 @@ The toolbar lets you decide what a box selection includes:
 **Faces**
 :   :wtk-box-intersect: **Touching Box**, :wtk-box-center: **Center Only** (faces whose center is inside the box) or :wtk-box-inside: **Fully Inside**.
 
-## Keyboard shortcuts
+:wtk-supporting-edges: **Support Edges**, also in the toolbar, lets edge selection pick the support edges made with **Create Support Edge** (see [Cleanup](editing-tools.md#cleanup)). It turns on by itself when you create one.
+
+## :lucide-keyboard: Keyboard shortcuts
 
 | Shortcut | Action |
 |---|---|
@@ -44,11 +50,6 @@ The toolbar lets you decide what a box selection includes:
 On macOS, use ++cmd++ instead of ++ctrl++.
 
 ## :wtk-selection-add: Advanced Selection
-
-<figure markdown="span" class="wtk-ui">
-  ![Advanced Selection](../assets/images/modelling/ui-section-advanced-selection.webp){ loading=lazy }
-  <figcaption>Advanced Selection in the Topology tab.</figcaption>
-</figure>
 
 Found in the **Topology** tab:
 
@@ -73,14 +74,22 @@ Found in the **Topology** tab:
 **Similar**
 :   Selects components similar to the current selection.
 
-**Convert Selection** turns the current selection into another component type, for example from faces to their edges.
+### :lucide-repeat: Convert Selection
+
+**Convert Selection**, in its own section of the **Topology** tab, turns the current selection into another component type, for example from faces to their edges:
+
+**Convert To**
+:   The component type you want, out of the two you're not in.
+
+**Approach**
+:   Which components count:
+
+    - From faces: **All** of their components, only the **Boundary** of the selected group (inner loops included), or only the **Interior**, leaving the group's boundary out.
+    - From vertices or edges: components **Touching** the selection, or only those **Fully Contained** in it (all of their vertices or edges selected). Converting to vertices takes **All**.
+
+Then click **Convert Selection**.
 
 ## :wtk-selection-filter: Selection Filter
-
-<figure markdown="span" class="wtk-ui">
-  ![Selection Filter](../assets/images/modelling/ui-section-selection-filter.webp){ loading=lazy }
-  <figcaption>The Selection Filter.</figcaption>
-</figure>
 
 Selects components by their properties:
 
@@ -96,22 +105,17 @@ Selects components by their properties:
 
 ## :wtk-visibility: Hiding components and objects
 
-<figure markdown="span" class="wtk-ui">
-  ![Visibility](../assets/images/modelling/ui-section-visibility.webp){ loading=lazy }
-  <figcaption>The Visibility section.</figcaption>
-</figure>
-
-Hide parts of a mesh to reach what's behind them. Under **Visibility** in the **Topology** tab:
+Hide parts of a mesh to reach what's behind them. Under **Visibility** in the **Topology** tab, the **Components** card has:
 
 - **Hide Selected Components** and **Hide Unselected Components**.
-- **Reveal** brings hidden components of the current type back, and **Select Hidden** selects them.
+- **Select *n* Hidden** selects the hidden components of the current type, and **Reveal *n* Selected** shows the selected hidden components again. The buttons count the components they affect, for example **Select 4 Hidden Faces**.
 
-For whole objects:
+For whole objects, the **Mesh** card has:
 
 - **Hide Mesh** hides or shows the selected objects, the same as the eye icon in the Hierarchy.
 - **Isolate** shows only the selected objects.
 - **Reveal** shows the other hidden objects again.
 
-## X-Ray
+## :lucide-scan-eye: X-Ray
 
 The **XR** button in the Modelling Edit toolbar turns on a temporary X-Ray view of the selected meshes. You can see and select components on the far side.

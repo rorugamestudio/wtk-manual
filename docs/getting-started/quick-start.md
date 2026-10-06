@@ -7,23 +7,25 @@ icon: lucide/zap
 A short tour from an empty scene to a small piece of world: a shaped terrain, a road, a building and a modelled detail. Each step links to the full page if you want more detail.
 
 !!! tip "Drawing a shape, in short"
-    Most steps below draw a spline in the Scene view, and they all work the same way:
+    Stamp outlines and building footprints are drawn the same way:
 
-    - With no knots selected, hold ++shift++ and click to place the first point.
-    - Click to add more points. **Middle-click** removes the last one.
-    - Press ++enter++ or **right-click** to finish, or click the first point again to close the shape.
+    - With nothing selected, hold ++shift++ and click to place the first point.
+    - Click to add more points. Drag while placing a point to pull out its handles and curve the line.
+    - Click the first point again to close the shape, or **right-click** to finish it.
     - ++esc++ while drawing throws the new shape away.
+
+    Roads work a little differently, see step 3.
 
 ## :wtk-world: 1. Open the World Toolkit window
 
-Open **Tools > World Toolkit > World Toolkit** and dock it next to the Inspector. You'll switch between its modules as you go. See [The World Toolkit Window](world-toolkit-window.md).
+Open **Window > World Toolkit > Open** and dock it next to the Inspector. You'll switch between its modules as you go. See [The World Toolkit Window](world-toolkit-window.md).
 
 ## :wtk-terrain: 2. Shape the terrain
 
 1. Create a terrain (**GameObject > 3D Object > Terrain**).
 2. In the :wtk-terrain: **Terrain** module, click **Edit Terrain Stamps**.
-3. Hold ++shift++ and click on the terrain to start a stamp outline, click around an area, and click the first point again to close it. If the terrain has no **Terrain Stamp Target** yet, the first stamp creates one.
-4. Unless the panel sets a **Terrain Stamp Snapshot** for new stamps, a new stamp has a single layer with a **Height** operation. Select the outline's knots and move them up: the ground follows.
+3. With nothing selected, hold ++shift++ and click on the terrain to start a stamp outline, click around an area, and click the first point again to close it. If the terrain has no **Terrain Stamp Target** yet, the first stamp creates one.
+4. Unless the panel sets a **Terrain Stamp Preset** for new stamps, a new stamp has a single layer with a **Height** operation. Select the outline's knots and move them up: the ground follows.
 5. In the stamp's inspector, add a **Texture** operation with a terrain layer to paint the area.
 
 More in [Stamps](../terrain/stamps.md) and [Height](../terrain/height.md).
@@ -31,7 +33,7 @@ More in [Stamps](../terrain/stamps.md) and [Height](../terrain/height.md).
 ## :wtk-roads: 3. Draw a road
 
 1. In the :wtk-roads: **Roads** module, pick a **Road Rules** asset under **New Roads**. The roads you draw, and the junctions between them, take their lanes, sidewalks and settings from it.
-2. Click **Edit Road Points**, hold ++shift++ and click to start a road, click to add points, and press ++enter++ or **right-click** to finish.
+2. Click **Edit Road Points**, hold ++shift++ and click to start a road, and click to add points. Press ++esc++ or **right-click** to finish it: unlike other shapes, ++esc++ keeps the road. A second ++esc++ stops editing road points.
 3. Draw a second road that ends on the first one: a junction is created where they meet.
 
 More in [Creating Roads](../roads/creating-roads.md) and [Junctions](../roads/junctions.md).
@@ -39,7 +41,7 @@ More in [Creating Roads](../roads/creating-roads.md) and [Junctions](../roads/ju
 ## :wtk-buildings: 4. Add a building
 
 1. In the :wtk-buildings: **Buildings** module, check that **Draw Creates** is set to **Building** and that **New Building Defaults** has a **Building Rules** asset. If you don't have one yet, make one with the :lucide-wand-sparkles: [Style Wizard](../buildings/style-wizard.md).
-2. Click **Edit Buildings**, hold ++shift++ and click to place the first corner of a footprint next to the road, then click the other corners. Click the first corner again, or press ++enter++, to close it.
+2. Click **Edit Buildings**, then, with nothing selected, hold ++shift++ and click to place the first corner of a footprint next to the road, and click the other corners. Click the first corner again, or **right-click**, to close it.
 
 The building generates as soon as the footprint closes. Move its knots and it regenerates. More in [Buildings and Volumes](../buildings/buildings-and-volumes.md).
 

@@ -8,21 +8,16 @@ The Roads module builds road meshes from splines. You draw where the road goes, 
 
 Open it from the **Roads** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
-<figure markdown="span">
-  ![A small road network](../assets/images/roads/network.webp){ loading=lazy }
-  <figcaption>Six roads joined by a cross junction and a T junction.</figcaption>
-</figure>
-
-## The building blocks
+## :lucide-blocks: The building blocks
 
 :wtk-component-editable-mesh-road: **Road** (Editable Mesh Road component)
 :   One road, following a [spline](../splines/index.md). Its cross-section is made of **layers**: the driving lanes, sidewalks, curbs and so on.
 
-**Road Profile** (asset)
+:lucide-pen-tool: **Road Profile** (asset)
 :   The 2D shape of one layer, like the shape of a curb or a sidewalk. See [Profiles and Layers](profiles-and-layers.md).
 
-**Road Layers Snapshot** (asset)
-:   A saved layer setup you can reuse for new roads or apply to existing ones.
+:lucide-file-box: **Road Rules** (asset)
+:   A reusable road setup: layers, generation settings and the defaults for junctions. New roads use it, and a road that references it is rebuilt whenever the asset changes. See [Road Rules](creating-roads.md#road-rules).
 
 :wtk-component-editable-mesh-junction: **Junction** (Editable Mesh Junction component)
 :   The generated mesh where two or more roads meet. See [Junctions](junctions.md).
@@ -33,31 +28,57 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 :wtk-component-city-block-floor: **City Block Floor**
 :   Fills the area enclosed by roads, for example a block's ground. See [City Blocks](city-blocks.md).
 
-## The Roads panel
-
-<figure markdown="span" class="wtk-ui">
-  ![The Roads panel](../assets/images/window/ui-roads.webp){ loading=lazy }
-  <figcaption>The Roads panel.</figcaption>
-</figure>
+## :wtk-roads: The Roads panel
 
 **Points**
-:   **Edit Road Points** edits road splines in the Scene view. **Create Roads/Junctions from Selection** converts the selected splines into roads and junctions.
+:   **Edit Road Points** turns on road editing in the Scene view; while it's on, the button reads **Exit Editing Road Points**. :wtk-component-editable-mesh-road: **Create Roads/Junctions from Selection** turns the selected spline containers into roads, and their linked knots into junctions.
 
 **New Roads**
-:   The **Road Layers Snapshot** used for roads you draw. **Apply to Selected** replaces the layer setup of the selected roads with it.
+:   The **Road Rules** used for the roads you draw or convert, and for new junctions. **Apply to Selected** applies these rules to the selected roads and junctions.
 
 **City Block Floors**
-:   Creates floors for the areas between roads.
+:   :wtk-component-city-block-floor: **Create City Block Floors**, and the settings given to new floors.
 
-**Default Junction Settings** and **Conversions**
-:   The starting values for new junctions.
+The **Settings** tab sets the lane guides and their colors, how road splines are drawn in the Scene view, and when roads rebuild. See [Roads Settings](settings.md).
 
-The **Settings** tab sets how road splines and lanes are drawn in the Scene view, and when roads rebuild.
+## :lucide-book-open: In this section
 
-## In this section
+<div class="grid cards" markdown>
 
-- [Creating Roads](creating-roads.md)
-- [Profiles and Layers](profiles-and-layers.md)
-- [Junctions](junctions.md)
-- [Anchored Connections](anchored-connections.md)
-- [City Blocks](city-blocks.md)
+-   :wtk-component-editable-mesh-road:{ .lg .middle } **[Creating Roads](creating-roads.md)**
+
+    ---
+
+    Draw and edit roads, set up how each road is generated, and reuse a setup with Road Rules.
+
+-   :lucide-layers:{ .lg .middle } **[Profiles and Layers](profiles-and-layers.md)**
+
+    ---
+
+    Build a road's cross-section from layers, the 2D profiles that shape them and the road materials.
+
+-   :wtk-component-editable-mesh-junction:{ .lg .middle } **[Junctions](junctions.md)**
+
+    ---
+
+    How junctions join roads, round their corners and paint markings, and where their settings come from.
+
+-   :wtk-component-road-anchor-connection:{ .lg .middle } **[Anchored Connections](anchored-connections.md)**
+
+    ---
+
+    Attach the end of a road to the side of another road or junction, for driveways and entrances.
+
+-   :wtk-component-city-block-floor:{ .lg .middle } **[City Blocks](city-blocks.md)**
+
+    ---
+
+    Fill the closed areas between roads with generated floors that follow the roads around them.
+
+-   :lucide-settings:{ .lg .middle } **[Roads Settings](settings.md)**
+
+    ---
+
+    Scene view colors, how road splines are drawn and when roads rebuild.
+
+</div>

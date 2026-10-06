@@ -1,31 +1,29 @@
+---
+icon: lucide/settings
+---
+
 # Roads Settings
 
-The **Settings** tab of the Roads panel.
+The **Settings** tab of the Roads panel: how roads are drawn in the Scene view, and when they rebuild.
 
-## Default Junction Settings
+!!! info "Looking for junction defaults?"
+    The starting values of new junctions, and the intersection settings shared by all junctions, are part of the [Road Rules](creating-roads.md#road-rules) asset set under **New Roads**. See [Where junction settings come from](junctions.md#where-junction-settings-come-from).
 
-<figure markdown="span" class="wtk-ui">
-  ![The Roads Settings tab](../assets/images/window/ui-roads-settings.webp){ loading=lazy }
-  <figcaption>The Settings tab of the Roads panel.</figcaption>
-</figure>
+## :lucide-palette: Lane Guides
 
-The starting values of new [junctions](junctions.md): **Junction Core Resolver**, **Continue Road Profile UVs**, **Junction Core UV Scale**, **Core Subdivision Size** and **Lock Materials**.
-
-**Conversions**
-:   **Default Conversion Arc Radius** and **Default Conversion Arc Segments** for the curves between neighbouring roads.
-
-**Intersections**
-:   **Adjacent Pair Angle** and **Vertex Merge Distance**, which apply to every junction. See [Junctions](junctions.md#defaults-for-new-junctions).
-
-## Colors
+**Show for Selected Only**
+:   Draws the lane guide dotted lines and junction conversion previews only for the currently selected road or junction.
 
 **Lanes**
 :   The color of the lane guides drawn over roads in the Scene view.
 
-## Splines
+**Conversions**
+:   The color of the lane guides drawn through junctions, which connect the lanes of different roads.
+
+## :wtk-splines: Splines
 
 **Line**, **Closed Spline Fill** and **Line Thickness** of road splines in the Scene view.
 
-## Rebuilds
+## :lucide-refresh-cw: Rebuilds
 
 How often roads and junctions rebuild while you drag. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).

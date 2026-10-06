@@ -48,7 +48,7 @@ New to World Toolkit? Start here, in this order:
 
     ---
 
-    Keep a setup in an asset and apply it to new or existing objects: **[Road Rules](../roads/creating-roads.md)** for roads and junctions, **[Building Rules](../buildings/building-rules.md)** for buildings, a **[Terrain Stamp Snapshot](../terrain/stamps.md#snapshots)** for stamps and a **[Spline Array Rules Snapshot](../more/array-spawner.md#reusing-rules)** for array spawners.
+    Keep a setup in an asset and apply it to new or existing objects: **[Road Rules](../roads/creating-roads.md#road-rules)** for roads and junctions, **[Building Rules](../buildings/building-rules.md)** for buildings, a **[Terrain Stamp Preset](../terrain/stamps.md#presets)** for stamps and a **[Spline Array Rules Snapshot](../more/array-spawner.md#reusing-rules)** for array spawners.
 
 -   :wtk-context-tips:{ .lg .middle } **Watch the context tips**
 

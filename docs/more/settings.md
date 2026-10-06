@@ -1,13 +1,12 @@
+---
+icon: lucide/settings
+---
+
 # More Settings
 
-The **Settings** tab of the More module holds settings shared by every module.
+The **Settings** tab of the :wtk-more: **More** module holds settings shared by every module.
 
-## Misc
-
-<figure markdown="span" class="wtk-ui">
-  ![The More Settings tab](../assets/images/window/ui-more-settings.webp){ loading=lazy }
-  <figcaption>The Settings tab of the More module.</figcaption>
-</figure>
+## :lucide-sliders-horizontal: Misc
 
 **Instant Camera Switch**
 :   Skips the Scene view's animated transition when switching camera views.
@@ -18,23 +17,38 @@ The **Settings** tab of the More module holds settings shared by every module.
 **Show Grid Coordinates**
 :   Writes the world coordinates of one grid cell near the center of each Scene view.
 
-## Scene View Background
+!!! info "Switching camera views"
+    Hold ++space++ in the Scene view to open the camera menu, move the mouse toward **Top**, **Left**, **Front** or **Perspective**, and release ++space++ to switch to that view. **Top**, **Left** and **Front** are orthographic. ++esc++ closes the menu without switching.
+
+## :lucide-palette: Scene View Background
 
 **Gradient Background**
-:   Replaces the Scene view's flat background with a gradient from **Top Color** to **Bottom Color**. **Reset Background Colors** puts the default colors back.
+:   Replaces the Scene view's flat background with a gradient from **Top Color** to **Bottom Color**, behind the grid. It shows in shaded Scene views of URP projects, when the skybox is hidden. **Reset Background Colors** puts the default colors back.
 
-## Snapping Settings
+## :wtk-snap: Snapping Settings
 
-Colors of the snapping gizmos in the Scene view and in the UV View (**Scene Gizmo Color**, **Face Fill Color**, **UV Gizmo Color**), and **Normal Indicator Length**, the length of the line showing the surface direction while snapping.
+How the [snapping](../modelling/transform.md#snapping) highlights look:
 
-## Splines
+**Scene Gizmo Color**
+:   The color of snap targets, guide lines and surface direction lines in the Scene view.
 
-How splines are drawn and edited everywhere, and how often spline-driven objects rebuild while you drag. See [Spline Settings](../splines/settings.md).
+**Face Fill Color**
+:   The color and opacity of faces highlighted while snapping.
 
-## Spawners
+**UV Gizmo Color**
+:   The color of the snapping highlights in the [UV View](../modelling/uvs.md).
 
-How often [spawners](index.md) rebuild while you drag. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
+**Normal Indicator Length**
+:   The on-screen length of the line that shows the surface direction of a face or collider while snapping.
 
-## Settings files
+## :wtk-splines: Splines
+
+How splines are drawn and edited everywhere, and how often they're redrawn while you drag. See [Spline Settings](../splines/settings.md).
+
+## :wtk-component-spline-spawner: Spawners
+
+**Rebuilds** sets how often [spawners](index.md) place their copies again while you drag a spline. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
+
+## :lucide-file-cog: Settings files
 
 **Import Settings…**, **Export Settings…** and **Restore Default Settings** for all World Toolkit preferences. See [The World Toolkit Window](../getting-started/world-toolkit-window.md#settings).

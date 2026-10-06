@@ -1,20 +1,19 @@
+---
+icon: lucide/settings
+---
+
 # Buildings Settings
 
-The **Settings** tab of the Buildings panel.
+The **Settings** tab of the :wtk-buildings: **Buildings** module.
 
-## Splines
+## :lucide-spline: Splines
 
-<figure markdown="span" class="wtk-ui">
-  ![The Buildings Settings tab](../assets/images/window/ui-buildings.webp){ loading=lazy }
-  <figcaption>The Settings tab of the Buildings panel.</figcaption>
-</figure>
+**Line**, **Closed Spline Fill** and **Line Thickness**
+:   How building footprints and block outlines are drawn in the Scene view: the color of their lines, the color that fills closed outlines, and the line thickness.
 
-**Line**, **Closed Spline Fill** and **Line Thickness** of building footprints in the Scene view.
+## :lucide-timer: Rebuilds
 
-## Rebuilds
+How often buildings regenerate while you drag a footprint or edit their settings. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
 
-How often buildings regenerate while you drag a footprint. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
-
-## Generated Piece Pool
-
-Buildings reuse the objects of their pieces instead of creating new ones every time they regenerate, which keeps regeneration fast. **Current Size** shows how many pieces are waiting in the pool, and **Clear Pool** empties it. You'd only need it to free memory after working on very large buildings.
+!!! info "Looking for the piece pool?"
+    **Generated Piece Pool** is in the **Edit** tab of the module. See [The Buildings panel](index.md#the-buildings-panel).

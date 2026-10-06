@@ -1,105 +1,126 @@
+---
+icon: wtk/component-terrain-stamp
+---
+
 # Stamps
 
-## Setting up a Stamp Target
+A stamp is a GameObject with a :wtk-component-terrain-stamp: **Terrain Stamp** component. It changes the terrains of one :wtk-component-terrain-stamp-target: **Terrain Stamp Target**, inside the area its masks define.
 
-<figure markdown="span" class="wtk-ui">
-  ![Terrain Stamp Target inspector](../assets/images/terrain/ui-stamp-target.webp){ loading=lazy }
-  <figcaption>The Terrain Stamp Target inspector.</figcaption>
-</figure>
+## :wtk-component-terrain-stamp-target: Setting up a Stamp Target
 
-Stamps need a **Terrain Stamp Target**, which tells them which terrains to modify.
+Stamps need a **Terrain Stamp Target**, which tells them which terrains to modify and keeps those terrains' **base**.
 
-1. Select your terrain objects.
+1. Select your terrain objects. Several tiles can share one target.
 2. In the Terrain panel, under **Terrain Stamp Targets**, click **Create Terrain Stamp Target**.
+
+This creates a **Terrain Stamp Target** object, moves the selected terrains under it in the Hierarchy and lists them in its **Terrain States**, one **Target Terrain** per entry. You can also add the component with **Add Component > World Toolkit > Terrain > Terrain Stamp Target** and fill the list yourself. Changing the list rebuilds the stamps.
+
+!!! tip "No target yet?"
+    When you draw a stamp on a terrain that has no target, one is created for that terrain.
 
 The target's inspector has:
 
 **Capture Base**
-:   Saves the current terrain as the base that stamps build on. Do this before stamping, or after you sculpt the terrain by hand and want to keep those changes.
+:   Saves the terrains as they are now as the base that stamps build on: heights, painted terrain layers, holes, details and trees. The base is captured automatically the first time stamps are applied, so you only need this to replace it.
 
 **Restore Base**
-:   Puts the terrain back to its saved base, without any stamp.
+:   Puts the terrains back to their saved base, without any stamp.
 
 **Stitch Edges**
-:   Matches the edges of neighbouring terrain tiles so there are no seams.
+:   Matches the heights along the shared edges of neighbouring terrain tiles, so there are no seams. Full rebuilds do this too.
 
 **Rebuild Stamps**
-:   Rebuilds the terrain from the base and every stamp.
+:   Rebuilds the terrains from the base and every stamp of this target.
 
-**Clear Terrains Base**, in the Terrain panel, resets the base height of every terrain (and optionally paints a **Terrain Layer** over it). You'll be asked to confirm.
+The base is saved in the Terrain Stamp Target component, with the scene.
 
-## Creating stamps
+!!! warning "Every rebuild starts from the base"
+    Changes you make with Unity's own terrain tools don't survive a rebuild unless they're part of the base. **Capture Base** saves the terrain exactly as it is: if the stamps are applied at that moment, their result becomes part of the base and gets applied twice. To change the base by hand:
 
-<figure markdown="span" class="wtk-ui-wide">
-  ![Editing terrain stamps](../assets/images/terrain/ui-scene-stamps.webp){ loading=lazy }
-  <figcaption>Editing terrain stamps: each outline is a spline with numbered knots.</figcaption>
-</figure>
+    1. Click **Restore Base** to take the stamps off the terrain.
+    2. Sculpt or paint the terrain.
+    3. Click **Capture Base**.
+    4. Click **Rebuild Stamps** to apply the stamps on top.
 
-<figure markdown="span" class="wtk-ui">
-  ![The Terrain panel](../assets/images/window/ui-terrain.webp){ loading=lazy }
-  <figcaption>The Terrain panel.</figcaption>
-</figure>
+### :lucide-eraser: Clearing the base
 
-1. In the Terrain panel, click **Edit Terrain Stamps**.
-2. Hold ++shift++ and **click** to draw the stamp's outline.
+To start again from flat ground, select a Terrain Stamp Target and use the **Clear Terrains** group of the Terrain panel:
 
-New stamps start from the **Terrain Stamp Snapshot** set in the panel. Without one, they start with a single layer holding a [Height](height.md) operation.
+1. Set **Height**, the world height of the flat ground.
+2. Optionally set a **Terrain Layer** to paint over the whole base.
+3. Click **Clear Terrains Base** and confirm.
 
-To edit a stamp, select it and use **Edit Terrain Stamps**: click knots to select them, and drag knots or handles to reshape the stamp. Press ++esc++ to stop editing.
+Every terrain of the target gets a flat base at that height. The terrains then show the cleared base: click **Rebuild Stamps** to apply the stamps on top of it.
 
-**Create with Selected** adds a stamp to the selected object instead, for example to turn an existing spline into a stamp.
+## :lucide-pencil: Creating stamps
 
-## Stamp layers
+1. In the Terrain panel, click **Edit Terrain Stamps**. The button changes to **Exit Editing Terrain Stamps**.
+2. Hold ++shift++ and **click** on the terrain to place the first point of the outline. This creates a new **Terrain Stamp** object.
+3. **Click** to add more points. Click and drag to pull out Bézier handles.
+4. Finish the outline:
+    - **Right-click** to finish it.
+    - **Click the first point** to close the outline and finish.
+    - Press ++esc++ to discard the stamp you're drawing.
 
-<figure markdown="span" class="wtk-ui">
-  ![Terrain Stamp inspector](../assets/images/terrain/ui-stamp.webp){ loading=lazy }
-  <figcaption>A Terrain Stamp with a height layer and a slope-masked texture layer.</figcaption>
-</figure>
+When you finish, the terrain is rebuilt with the new stamp. An outline needs at least 3 points when the panel's preset has a **Spline Area** mask, 2 otherwise; a shorter one is removed. While you edit stamps, the [context tips](../getting-started/world-toolkit-window.md#context-tips) panel in the Scene view recalls the main controls.
 
-A stamp is a list of **layers**. Each layer has:
+New stamps start from the **Terrain Stamp Preset** set in the panel's **New Terrain Stamps** card. Without one, they start with a single layer: a **Spline Area** mask on the outline and a [Height](height.md) operation. Their target is the selected Terrain Stamp Target, or else the target of the terrain under the first point.
 
-**Masks**
-:   Where the layer applies, and how strongly. See [Masks](masks.md).
+!!! note "Shift-click with a stamp selected"
+    If a stamp is selected, the new outline is added to that stamp instead of creating a new one. Select the terrain or clear the selection first to start a separate stamp.
 
-**Stamps**
-:   What the layer does there. Add one or more operations:
+To edit a stamp, keep **Edit Terrain Stamps** on: click knots to select them, and drag knots or handles to reshape the stamp. The terrain follows. Press ++esc++ to stop editing. Everything you can do with knots is described in [Spline Container](../splines/spline-container.md#editing-knots).
+
+:wtk-component-terrain-stamp: **Create with Selected** adds a stamp to each selected object that doesn't have one, for example to turn existing splines into stamps. The stamp starts from the panel's preset and uses the object's Spline Container (or one on its children) for its spline masks. It targets the terrain under the object, and a target is created for that terrain if needed.
+
+You can also add the component with **Add Component > World Toolkit > Terrain > Terrain Stamp**. Set its **Stamp Target**, or it won't change any terrain.
+
+## :lucide-layers: Stamp layers
+
+The Terrain Stamp inspector has:
+
+**Stamp Target**
+:   The Terrain Stamp Target whose terrains this stamp changes. Pick another target to move the stamp's effect to its terrains.
+
+**Layers**
+:   The stamp's layers, applied from top to bottom.
+
+Each layer has a **Mask Composition**, which says where the layer applies and how strongly (see [Masks](masks.md)), and **Stamps**, the operations it applies there, in list order:
 
 | Operation | What it does |
 |---|---|
-| [Height](height.md) | Raises, lowers or flattens the ground. |
-| [Smooth](erosion-and-smoothing.md#smooth) | Softens the shape. |
-| [Erosion](erosion-and-smoothing.md#erosion) | Simulates weathering by water or gravity. |
-| [Texture](textures.md) | Paints a terrain layer. |
-| [Trees](trees.md) | Places trees. |
-| [Details](details.md) | Places grass and other details. |
-| [Holes](holes.md) | Cuts or fills terrain holes. |
+| :lucide-mountain: [Height](height.md) | Raises, lowers or flattens the ground. |
+| :lucide-waves: [Smooth](erosion-and-smoothing.md#smooth) | Softens the shape. |
+| :lucide-droplets: [Erosion](erosion-and-smoothing.md#erosion) | Simulates weathering by water or gravity. |
+| :lucide-paintbrush: [Texture](textures.md) | Paints a terrain layer. |
+| :lucide-trees: [Trees](trees.md) | Places trees. |
+| :lucide-sprout: [Details](details.md) | Places grass and other details. |
+| :lucide-circle-dashed: [Holes](holes.md) | Cuts or fills terrain holes. |
 
-Every mask and operation has a **Mute** toggle to turn it off temporarily.
+Every mask and operation has a **Mute** toggle to turn it off temporarily. To take a whole stamp out, disable its component or its GameObject.
 
-The **Layer Masks** preview in the inspector shows the combined mask of each layer.
+The **Layer Masks** preview at the bottom of the inspector shows the combined mask of a layer in shades of grey: the brighter, the stronger. When a stamp has several layers, buttons above the preview (**Layer 0**, **Layer 1**...) pick which one you see. Its detail follows **Mask Preview Resolution** in the [Terrain Settings](settings.md).
 
-## Snapshots
+## :lucide-list-ordered: How stamps are applied
 
-A **Terrain Stamp Snapshot** stores a stamp's layers so you can reuse them.
+A rebuild starts from the target's base, then:
 
-- **Create one from a stamp:** right-click the Terrain Stamp component and choose **Create Terrain Stamp Snapshot From Current Setup...**.
-- **Create an empty one:** **Assets > Create > World Toolkit > Terrain > Stamp Snapshot**.
-- **Apply it to existing stamps:** select them and click **Apply to Selected** in the Terrain panel.
+1. Applies every enabled stamp of the target, in Hierarchy order from top to bottom (a parent before its children). In each stamp, layers run from top to bottom, and the operations of each layer in list order, except trees and details.
+2. Stitches the edges between neighbouring terrains of the target.
+3. Places the trees and details of every stamp, in the same order, on the finished ground.
 
-## Settings
+Stamps rebuild by themselves when you move, reshape or edit them, reorder them, or turn them on or off. **Rebuild Stamps** on a target, or **Rebuild all stamps** in the Terrain panel for every target in the scene, forces a full rebuild. How often rebuilds happen while you drag is set in the [Terrain Settings](settings.md#rebuilds).
 
-The Terrain panel's **Settings** tab has:
+## :lucide-file-box: Presets
 
-**Preview**
-:   **Show Mask Preview** and **Mask Preview Resolution** draw the selected stamp's mask on the terrain.
+A :lucide-file-box: **Terrain Stamp Preset** stores a stamp's layers so you can reuse them.
 
-**Processing**
-:   **Mode** chooses where stamps are computed. **Auto** is recommended.
+- **Create one from a stamp:** right-click the Terrain Stamp component and choose **Create Terrain Stamp Preset From Current Setup...**, then pick where to save it.
+- **Create an empty one:** **Assets > Create > World Toolkit > Terrain > Stamp Preset**. Its inspector has the same **Layers** list as a stamp.
+- **Use it for new stamps:** set it in the **Terrain Stamp Preset** field of the Terrain panel. Drawn stamps and :wtk-component-terrain-stamp: **Create with Selected** start from it.
+- **Apply it to existing stamps:** select them and click **Apply Preset** in the Terrain panel. This replaces their layers.
 
-**Stamp Gizmos**
-:   Show and color the outlines of selected and non-selected stamps.
+When a preset is applied, its **Spline Area** and **Spline Stroke** masks, and its Height operations with a **Spline** source, are pointed at the stamp's own spline.
 
-**Terrain Stamp Rebuilds**
-:   **Use progressive terrain rebuilds (experimental)** updates the terrain in tiles, which keeps the editor responsive on large terrains. **Show terrain rebuild regions** draws the tiles being rebuilt.
-
-**Rebuild All Terrain Stamps** rebuilds every terrain from scratch.
+!!! note "Presets are copied"
+    A stamp keeps its own copy of the preset's layers. Editing the preset later doesn't change the stamps made from it: select them and click **Apply Preset** again.
