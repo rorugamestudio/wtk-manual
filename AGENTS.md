@@ -7,6 +7,7 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 - Plain Markdown in `docs/`, built with [Zensical](https://zensical.org) from `zensical.toml`, published to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 - Zensical is pinned in `requirements.txt`; it's still 0.0.x, so bump it on purpose and check the build.
 - Local check: `python -m venv .venv`, `pip install -r requirements.txt pillow`, then `zensical build --clean` (must print "No issues found") or `zensical serve` (http://localhost:8000/wtk-manual/; the first request after a rebuild can 404, reload).
+- **Run Zensical from the repo root.** `custom_icons = ["overrides/.icons"]` resolves against the working directory, not the config file: run from anywhere else (for example `zensical serve --config-file ...` from another folder) and every `:wtk-*:` icon renders as literal text, which also leaks into heading anchors and breaks links. `serve` writes into the same `site/` as `build`, so a misplaced `serve` silently corrupts a good build; stop it and rebuild before checking anything.
 - New pages must be added to `nav` in `zensical.toml`. Multi-line nested nav tables work.
 - Commit as `rorugamestudio <338178956+rorugamestudio@users.noreply.github.com>` (set in the repo's local git config), with no AI co-author line.
 - Commit in small chunks as you go (a page, a section, a batch of images), not only at the end, and push after every commit so the site stays current. Build with `zensical build --clean` before each commit. If a push is rejected for authentication, don't retry with other credentials: leave the commits local and ask the maintainer to push.
@@ -16,16 +17,31 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 
 - **Write only what the code shows.** Take names from the editor UI: button labels, tooltips, `[Tooltip]` attributes, Inspector field names (Unity nicifies `camelCase` fields), `MenuItem` and `CreateAssetMenu` paths, enum values. The Scene view context tips providers (`*ContextTipsProvider.cs`) describe each tool in user language and are the best single source.
 - When something is inferred rather than read, verify it in the implementation before writing it, or leave it out. Past mistakes caught this way: Merge variants, Hard Edge Angle, which junction settings are per "conversion", which mask adjustments nest inside a fill, slope masks reading the terrain from before their own stamp, Rip being labelled Extract in face mode.
-- Audience: artists and designers. Lead with what a tool is for, then how to use it. UI names in **bold**, menu paths as **Tools > World Toolkit > ...**, keys as `++ctrl+d++`.
+- **Check that the code you read is reachable.** The spline editor has several creation inputs and some are dead: `SplineCreationSceneInput`, `WorldToolkitSplineCreationSceneInput` and the road-specific `RoadCreationSceneInput` (behind `RoadEditPointsSceneInput`, never started) all handle Enter and middle-click, but nothing starts them. Drawing really goes through `SplineDrawingSceneInput` + `SplineEditSceneHandles.HandleCancelInput`: right-click finishes, clicking the first knot closes, Enter and middle-click do nothing, and Esc depends on the module (roads: finishes the road; buildings, blocks, stamps: discards the new shape; plain splines: keeps the knots placed). Grep for callers before trusting a key handler.
+- **`[InspectorName]` only works on enum values.** On a field Unity ignores it and shows the nicified field name (`continueRoadProfileUVs` reads **Continue Road Profile U Vs**). Write the label Unity shows; the screenshots confirm it.
+- Audience: artists and designers. Lead with what a tool is for, then how to use it. UI names in **bold**, menu paths as **Window > World Toolkit > ...**, keys as `++ctrl+d++`.
 - Definition lists (`**Name**` then `:   text`) for settings, tables for options. Admonitions for tips and warnings.
 - Every World Toolkit component and asset has a `[HelpURL]` into this manual, through constants in `Assets/Scripts/Common/Documentation/` of the Unity project (one file per module). Components point at the section that explains their inspector (`#road-settings`, `#junction-settings`, `#settings`...). Anchors are heading slugs: if you rename a page or a linked heading, update the constants, then check every constant against the built `site/` (page exists, `id="<anchor>"` present).
 - Don't give a section the same title as its page: the anchor gets a `_1` suffix and the link lands on the page top instead.
 
-## Icons
+## Icons and visual structure
 
-The editor's own button icons are a custom icon set: `:wtk-<name>:` (e.g. `:wtk-modify-extrude:`, `:wtk-component-editable-mesh-road:`). Put them next to tools, components and modules the first time they appear on a page, and in headings of tool sections. Section index pages set `icon: wtk/<module>` in front matter for the navigation.
+The site is meant to be scanned by its icons. Two icon families, nothing else:
 
-The SVGs in `overrides/.icons/wtk/` are generated: the editor icons are white for the dark skin, and the sync script turns white into `currentColor` so they work in both themes. Don't edit them by hand; resync instead (below).
+- `:wtk-<name>:` is the editor's own button icon set (e.g. `:wtk-modify-extrude:`, `:wtk-component-editable-mesh-road:`): use it for anything that has an editor icon (tools, components, modules, overlays).
+- `:lucide-<name>:` for generic concepts (settings, assets, tips, steps). Lucide is the theme's own set and has the same stroke style as the WTK icons. A wrong name renders as literal text, so check it exists in `.venv/Lib/site-packages/zensical/templates/.icons/lucide/`.
+
+Where they go:
+
+- **Every page has `icon:` in its front matter** (`wtk/<name>` or `lucide/<name>`), shown next to it in the sidebar. Section index pages use `wtk/<module>`, module settings pages `lucide/settings`.
+- **H2 headings**, and H3 headings that name tools, components or modes, start with an icon: `## :wtk-modify-extrude: Extrude`. An icon doesn't change the heading's anchor. No icon on H1.
+- **Definition-list terms** that are components, assets, tools or modes get their icon; plain settings fields don't.
+- **Section index pages** list their pages as a card grid (`<div class="grid cards" markdown>`, icon with `{ .lg .middle }`, linked title, `---`, one sentence). The home page and Getting Started use the same cards.
+- Tips, warnings and side notes go in admonitions (`!!! tip`, `!!! warning`, `??? info` for collapsible detail); the `tip` icon is set to a lightbulb in `zensical.toml`.
+
+`docs/stylesheets/wtk.css` tints heading and card icons with the link colour. The header logo is `wtk/world` (`theme.icon.logo`) and the favicon is `docs/assets/favicon.svg`, the same globe with fixed colours for light and dark browser tabs.
+
+The SVGs in `overrides/.icons/wtk/` are generated: the editor icons are white for the dark skin, and the sync script turns white into `currentColor` so they work in both themes (component icons keep their own colours). It also drops embedded `<metadata>`: the pivot icons carried kilobytes of base64 content credentials that the Markdown toolchain read as heading text, turning `### :wtk-pivot-origin-custom: Custom pivots` into a giant anchor. Don't edit them by hand; resync instead (below).
 
 ## Images
 
@@ -66,3 +82,8 @@ What made them work (keep these when extending them):
 
 - `getting-started/installation.md` is still a stub: it needs the distribution method, minimum Unity version and supported render pipelines from the maintainer.
 - Overlays still missing screenshots: Create Mesh Options (while dragging), Knife and the other tool options panels, the Buildings Layout Overlay labels, the Modelling Tools search popup.
+- Screenshots taken before the October 2026 changes, to recapture with `capture_manual_ui.py` (the pages already describe the current UI):
+    - Roads: `window/ui-roads`, `window/ui-roads-settings` (old Snapshot field, Default Junction Settings), `roads/ui-road` (Open WTK Roads button, no Rules or Lane Overrides), `roads/ui-city-block-floor`, `roads/ui-section-city-block-floors` (pre-Surface floor fields).
+    - Buildings: `buildings/ui-building` (Open WTK Buildings button, no Explicit Footprint), `buildings/ui-wall` (old four-sided preview), `buildings/ui-building-block` (no Overall Inset).
+    - Terrain: `terrain/ui-stamp-target`, `ui-stamp`, `ui-stamp-height`, `ui-stamp-trees`, `ui-stamp-details`, `ui-stamp-masks`, and probably `ui-stamp-holes` and `ui-stamp-erosion` (Open WTK Terrain button).
+    - Modelling: `modelling/ui-editable-mesh` (Open WTK Modelling button), `modelling/ui-mesh-decal-stroke` (fields now in the settings asset), `modelling/ui-section-primitives` and `window/ui-modelling-create` (no Spline Based header).
