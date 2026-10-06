@@ -24,6 +24,7 @@ Notes for agents writing or updating this manual. Read them before touching a pa
 - Definition lists (`**Name**` then `:   text`) for settings, tables for options. Admonitions for tips and warnings.
 - Every World Toolkit component and asset has a `[HelpURL]` into this manual, through constants in `Assets/Scripts/Common/Documentation/` of the Unity project (one file per module). Components point at the section that explains their inspector (`#road-settings`, `#junction-settings`, `#settings`...). Anchors are heading slugs: if you rename a page or a linked heading, update the constants, then check every constant against the built `site/` (page exists, `id="<anchor>"` present).
 - Don't give a section the same title as its page: the anchor gets a `_1` suffix and the link lands on the page top instead.
+- `more/command-line.md` follows the `[CliCommand]` / `[CliArg]` attributes in the `Editor/Commands` folders of each module. When commands are added, renamed or change arguments, update its tables; `unity cmd --tag worldtoolkit --detail compact` lists the current set. Check examples against the live editor in a throwaway scene (`wtk_scene_create`, then `wtk_scene_close --confirm true`) and use neutral object names, not the project's samples.
 
 ## Icons and visual structure
 
