@@ -77,12 +77,6 @@ Open it from the :wtk-buildings: **Buildings** module of the [World Toolkit wind
 
     Fill a whole city block: split an area into lots and generate a building on each one.
 
--   :lucide-wand-sparkles:{ .lg .middle } **[Style Wizard](style-wizard.md)**
-
-    ---
-
-    Turn a couple of walls, or a folder of prefabs, into a working style in a few clicks.
-
 -   :lucide-settings:{ .lg .middle } **[Buildings Settings](settings.md)**
 
     ---

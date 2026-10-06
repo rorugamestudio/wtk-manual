@@ -40,7 +40,7 @@ More in [Creating Roads](../roads/creating-roads.md) and [Junctions](../roads/ju
 
 ## :wtk-buildings: 4. Add a building
 
-1. In the :wtk-buildings: **Buildings** module, check that **Draw Creates** is set to **Building** and that **New Building Defaults** has a **Building Rules** asset. If you don't have one yet, make one with the :lucide-wand-sparkles: [Style Wizard](../buildings/style-wizard.md).
+1. In the :wtk-buildings: **Buildings** module, check that **Draw Creates** is set to **Building** and that **New Building Defaults** has a **Building Rules** asset. If you don't have one yet, see [Creating rules](../buildings/building-rules.md#creating-rules).
 2. Click **Edit Buildings**, then, with nothing selected, hold ++shift++ and click to place the first corner of a footprint next to the road, and click the other corners. Click the first corner again, or **right-click**, to close it.
 
 The building generates as soon as the footprint closes. Move its knots and it regenerates. More in [Buildings and Volumes](../buildings/buildings-and-volumes.md).

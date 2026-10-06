@@ -50,7 +50,6 @@ nav = [
     { "Building Rules" = "buildings/building-rules.md" },
     { "Roofs" = "buildings/roofs.md" },
     { "Building Blocks" = "buildings/building-blocks.md" },
-    { "Style Wizard" = "buildings/style-wizard.md" },
     { "Buildings Settings" = "buildings/settings.md" },
   ] },
   { "Terrain" = [

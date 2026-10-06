@@ -10,7 +10,6 @@ A :lucide-file-box: **Building Rules** asset is a reusable building recipe: its 
 
 - **From a building you've set up:** right-click the :wtk-component-building: **Building** component and choose **Create Building Rules From Current Setup...**, then pick where to save the asset.
 - **From scratch:** **Assets > Create > World Toolkit > Buildings > Rules**.
-- **With the [Style Wizard](style-wizard.md):** pick a front and side wall, and it creates the rules for you.
 
 Rules made from a building capture what it generates now: its volumes (or those of its **Rules Override**), and its current floor and subfloor counts as single entries. A volume with its own **Footprint Spline** keeps that shape as an **Explicit Footprint**, since an asset can't point at a spline in the scene: its knots become corners joined by straight walls.
 
@@ -63,7 +62,6 @@ There are two ways to give rules to a building, and they behave differently when
 
     - **New Building Defaults** in the Buildings panel, for every new building you draw,
     - **Apply to Selected** in the Buildings panel, for the selected buildings,
-    - **Apply To Selection** in the [Style Wizard](style-wizard.md),
     - **Building Rule Chances** on [building blocks](building-blocks.md), for the buildings of each lot.
 
     The building's volumes are its own afterwards, so you can change them on that building alone.

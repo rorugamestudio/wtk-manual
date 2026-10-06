@@ -109,7 +109,25 @@ A **Volume Wall** asset (**Assets > Create > World Toolkit > Buildings > Volume 
 
 Editing a wall regenerates every building in the open scenes that uses it. With many buildings, the Scene view shows **Regenerating buildings** and a count while it works through them: selected buildings first, then the ones closest to the camera.
 
-To get a first wall from a set of wall, window and door prefabs in one step, see [Starting from a kit of prefabs](style-wizard.md#starting-from-a-kit-of-prefabs).
+### :lucide-boxes: Starting from a kit of prefabs
+
+If you have wall, window and door prefabs but no wall asset yet, World Toolkit can build a first **Volume Wall** from them:
+
+1. Select the prefabs in the Project window.
+2. Choose **Assets > Create > World Toolkit > Buildings > Volume Wall From Selected Prefabs**. It's also in the Project window's right-click menu, under **Create**.
+
+The prefabs are sorted by what their names contain:
+
+| Name contains | Used for |
+|---|---|
+| `door` | A **ground** row, one floor high, with the doors placed once. |
+| `window` or `win_` | An **upper** row for all the other floors, with the windows distributed along each side. |
+| `corner` | The wall's corner, if the prefab has a vertical cut at its middle. Without one, it counts as a plain wall piece. |
+| anything else | Plain wall pieces. The first one (or the first window or door, without any) fills each row: it's stretched on both sides of the doors and windows, so any side length is covered. |
+
+Without a corner prefab, the wall gets a flat procedural corner in the material of its first wall piece. Prefabs without a mesh are skipped.
+
+The new wall is saved next to the first prefab, named after what the prefab names have in common, and selected. Open it to tune the rows, then give it to a volume's sides (see [Assigning walls to sides](#assigning-walls-to-sides)).
 
 ### The wall inspector
 

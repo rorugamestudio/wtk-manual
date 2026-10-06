@@ -63,7 +63,7 @@ The SVGs in `overrides/.icons/wtk/` are generated: the editor icons are white fo
 All images come from scripts in `Tools/Manual/` of the World Toolkit Unity project, so they can be redone when the tools change. They drive the open editor through the Unity CLI (`unity cmd run_script`), which compiles one C# file in memory without a domain reload; the runners merge `Tools/Manual/Shots/*.cs` into one file first. They publish straight into this repo's `docs/assets/images/`.
 
 - `render_manual_shots.py [Class.Method ...]`: offscreen result renders (buildings, roads, terrain, modelling). No focus needed.
-- `capture_manual_ui.py [name-prefix ...]`: editor screenshots of the World Toolkit window tabs, single panel sections, inspectors, the UV View, the Style Wizard and Scene view overlays. Unity must be the focused app and stay untouched while it runs; ask the user to click into Unity and not come back to the chat until it finishes (replying moves focus away, and the script then waits).
+- `capture_manual_ui.py [name-prefix ...]`: editor screenshots of the World Toolkit window tabs, single panel sections, inspectors, the UV View and Scene view overlays. Unity must be the focused app and stay untouched while it runs; ask the user to click into Unity and not come back to the chat until it finishes (replying moves focus away, and the script then waits).
 - `sync_manual_icons.py`: refreshes the `:wtk-*:` icon set.
 
 What made them work (keep these when extending them):
