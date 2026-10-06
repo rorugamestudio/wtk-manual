@@ -316,3 +316,34 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+
+/* The theme navigates with P (previous) and N (next): show the key beside each footer link,
+   drawn like the manual's other keys. Hidden on touch screens, where there's no keyboard. */
+.md-footer__link--prev .md-footer__direction::after,
+.md-footer__link--next .md-footer__direction::after {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0 0.6em;
+  border-radius: 0.2rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.9em;
+  vertical-align: text-top;
+  color: var(--md-default-fg-color);
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 0 0 0.05rem var(--md-typeset-kbd-border-color), 0 0.15rem 0 var(--md-typeset-kbd-border-color);
+}
+
+.md-footer__link--prev .md-footer__direction::after {
+  content: "P";
+}
+
+.md-footer__link--next .md-footer__direction::after {
+  content: "N";
+}
+
+@media (hover: none) {
+  .md-footer__link--prev .md-footer__direction::after,
+  .md-footer__link--next .md-footer__direction::after {
+    display: none;
+  }
+}
