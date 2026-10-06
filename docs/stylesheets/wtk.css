@@ -292,3 +292,20 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   width: 4.5rem;
   max-height: none;
 }
+
+/* Pull the home page logo up to the tabs: drop the theme's top spacing on that page only. */
+.md-main__inner:has(.wtk-hero-logo) {
+  margin-top: 0.6rem;
+}
+
+.md-content__inner:has(.wtk-hero-logo) {
+  padding-top: 0;
+}
+
+.md-content__inner:has(.wtk-hero-logo)::before {
+  height: 0;
+}
+
+.md-typeset p:has(> .wtk-hero-logo) {
+  margin-top: 0;
+}
