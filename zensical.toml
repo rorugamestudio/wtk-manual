@@ -6,7 +6,7 @@ repo_url = "https://github.com/rorugamestudio/wtk-manual"
 repo_name = "rorugamestudio/wtk-manual"
 edit_uri = "edit/main/docs/"
 extra_css = ["stylesheets/wtk.css", "stylesheets/wtk-page-slide.css"]
-extra_javascript = ["javascripts/wtk-page-slide.js"]
+extra_javascript = ["javascripts/wtk-page-slide.js", "javascripts/wtk-build-reload.js"]
 
 nav = [
   { "Home" = "index.md" },

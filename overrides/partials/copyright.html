@@ -8,7 +8,7 @@
     </div>
   {% endif %}
   {% if config.extra.commit_hash %}
-    <div class="md-copyright__highlight">
+    <div class="md-copyright__highlight" data-wtk-build="{{ config.extra.commit_hash }}">
       Published from <a href="{{ config.repo_url }}/commit/{{ config.extra.commit_hash }}" target="_blank" rel="noopener"><code>{{ config.extra.commit_hash[:7] }}</code></a>
     </div>
   {% endif %}
