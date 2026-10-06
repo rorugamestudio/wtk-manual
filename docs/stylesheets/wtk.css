@@ -276,6 +276,12 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   stroke: var(--wtk-color-support) !important;
 }
 
+/* The theme fills tab icons with the text colour. The Lucide life buoy is outline-only,
+   so filled it turns into a solid disc: keep it unfilled. */
+.md-tabs__link svg.lucide-life-buoy {
+  fill: none;
+}
+
 /* The World Toolkit logo above the home page title. */
 .md-typeset .twemoji.wtk-hero-logo {
   height: 4.5rem;
