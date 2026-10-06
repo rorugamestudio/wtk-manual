@@ -5,6 +5,8 @@ hide:
   - toc
 ---
 
+:wtk-logo:{ .wtk-hero-logo }
+
 # World Toolkit Manual
 
 World Toolkit is a set of world-building tools for Unity: model meshes in the Scene view, draw roads with generated junctions, generate modular buildings, and shape terrain with non-destructive stamps.

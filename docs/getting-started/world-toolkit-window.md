@@ -57,3 +57,12 @@ Your World Toolkit preferences can be moved between machines or shared with your
 
 !!! note
     Import and restore reload the editor scripts, so every module picks up the new settings.
+
+## :wtk-logo: About World Toolkit
+
+The **About World Toolkit** window opens by itself once, the first time the editor loads World Toolkit in a project. Open it again at any time from **Window > World Toolkit > About**, or from **About World Toolkit** in the window tab's menu.
+
+It shows the installed version, links to this manual, to [@rorugamestudio on X](https://x.com/rorugamestudio) and to the Unity Asset Store, and a set of quick tips. Page through the tips with **Previous** and **Next**, by clicking the dots between them, or with ++left++ and ++right++. Each time the window opens it starts on the next tip.
+
+**Show on startup**
+:   Opens the window every time the editor starts. Off by default. The choice is saved in the project's `UserSettings` folder, so it only applies to you.
