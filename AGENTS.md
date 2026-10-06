@@ -87,4 +87,5 @@ What made them work (keep these when extending them):
     - Roads: `window/ui-roads`, `window/ui-roads-settings` (old Snapshot field, Default Junction Settings), `roads/ui-road` (Open WTK Roads button, no Rules or Lane Overrides), `roads/ui-city-block-floor`, `roads/ui-section-city-block-floors` (pre-Surface floor fields).
     - Buildings: `buildings/ui-building` (Open WTK Buildings button, no Explicit Footprint), `buildings/ui-wall` (old four-sided preview), `buildings/ui-building-block` (no Overall Inset).
     - Terrain: `terrain/ui-stamp-target`, `ui-stamp`, `ui-stamp-height`, `ui-stamp-trees`, `ui-stamp-details`, `ui-stamp-masks`, and probably `ui-stamp-holes` and `ui-stamp-erosion` (Open WTK Terrain button).
+    - More (not used by a page yet): `more/ui-array-spawner` (old Rules Snapshot row with Apply and Export buttons, no inline Rules field), `window/ui-more` (Array Rules Snapshot field).
     - Modelling: `modelling/ui-editable-mesh` (Open WTK Modelling button), `modelling/ui-mesh-decal-stroke` (fields now in the settings asset), `modelling/ui-section-primitives` and `window/ui-modelling-create` (no Spline Based header).

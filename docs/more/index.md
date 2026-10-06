@@ -17,7 +17,7 @@ The :wtk-more: **More** module of the [World Toolkit window](../getting-started/
 :wtk-component-spline-spawner: **Spawners**
 :   Create spawners that place copies of objects along a spline or inside an area. The **Spline** field shows the Spline Container of the selected object: select the object with the spline to use it.
 
-    - :wtk-component-spline-array-spawner: **Create Array Spawner** places rows of objects along that spline, following the rules in the **Array Rules Snapshot** asset you set above it. See [Array Spawner](array-spawner.md).
+    - :wtk-component-spline-array-spawner: **Create Array Spawner** places rows of objects along that spline, following the **Array Rules** asset you set above it. See [Array Spawner](array-spawner.md).
     - :wtk-component-spline-area-spawner: **Create Area Spawner** fills an area with copies of the **Area Source Object**, inside the selected spline if there is one. See [Area Spawner](area-spawner.md).
 
 ## :lucide-settings: Settings tab

@@ -45,11 +45,11 @@ New to World Toolkit? Start here, in this order:
 
     Roads, junctions, buildings, terrain stamps and boolean operations rebuild from their settings whenever something changes. Move a knot and the result follows, so there's no need to get it right the first time.
 
--   :lucide-file-box:{ .lg .middle } **Rules and snapshots make setups reusable**
+-   :lucide-file-box:{ .lg .middle } **Rules and presets make setups reusable**
 
     ---
 
-    Keep a setup in an asset and apply it to new or existing objects: **[Road Rules](../roads/creating-roads.md#road-rules)** for roads and junctions, **[Building Rules](../buildings/building-rules.md)** for buildings, a **[Terrain Stamp Preset](../terrain/stamps.md#presets)** for stamps and a **[Spline Array Rules Snapshot](../more/array-spawner.md#reusing-rules)** for array spawners.
+    Keep a setup in an asset and apply it to new or existing objects: **[Road Rules](../roads/creating-roads.md#road-rules)** for roads and junctions, **[Building Rules](../buildings/building-rules.md)** for buildings, a **[Terrain Stamp Preset](../terrain/stamps.md#presets)** for stamps and **[Spline Array Rules](../more/array-spawner.md#spline-array-rules)** for array spawners.
 
 -   :wtk-context-tips:{ .lg .middle } **Watch the context tips**
 

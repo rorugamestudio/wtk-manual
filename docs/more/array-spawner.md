@@ -8,14 +8,14 @@ The :wtk-component-spline-array-spawner: **Spline Array Spawner** places copies 
 
 ## :lucide-list-ordered: Creating one
 
-1. Get a :lucide-file-box: **Spline Array Rules Snapshot** with the rules you want: create one with **Assets > Create > World Toolkit > Spawners > Spline Array Rules Snapshot** and fill in its **Rules**, or export one from an existing spawner (see [Reusing rules](#reusing-rules)).
+1. Get a :lucide-file-box: **Spline Array Rules** asset with what you want to place: create one with **Assets > Create > World Toolkit > Spawners > Spline Array Rules** and fill in its slots, or make one from an existing spawner (see [Creating rules](#creating-rules)).
 2. Select the object with the spline. In the **Edit** tab of the [More](index.md) module, under **Spawners**, the **Spline** field picks it up.
-3. Set **Array Rules Snapshot** to your snapshot.
-4. Click :wtk-component-spline-array-spawner: **Create Array Spawner**. It needs both a spline and a snapshot.
+3. Set **Array Rules** to your rules.
+4. Click :wtk-component-spline-array-spawner: **Create Array Spawner**. It needs both a spline and rules.
 
-The new object, named after the snapshot, is placed at the spline object's position, next to it in the hierarchy. It follows the container's first spline and is selected. The copies are created as its children.
+The new object, named after the rules, is created as a child of the spline object, at its position. It follows the container's first spline, uses the rules (see [How spawners use rules](#how-spawners-use-rules)) and is selected. The copies are created as its children.
 
-You can also add the component yourself with **Add Component > World Toolkit > Spawners > Spline Array Spawner**, then set its **Spline** and build the rules in its inspector.
+You can also add the component yourself with **Add Component > World Toolkit > Spawners > Spline Array Spawner**, then set its **Spline** and either give it **Rules** or fill in its own slots.
 
 ## :lucide-settings: Settings
 
@@ -29,13 +29,13 @@ You can also add the component yourself with **Add Component > World Toolkit > S
 :   Changes the random choices: which object each piece uses, and any value set to **Random**.
 
 **Rules**
-:   What to place, and where. See [Rules](#rules).
+:   Optional [Spline Array Rules](#spline-array-rules). While it's set, the spawner places what the asset describes, and its own slots are hidden. Expand the field's arrow to edit the asset from the spawner inspector, or click **New** to create a Spline Array Rules asset and assign it.
+
+**Corner Placement**, **Corner Slots** and **Segment Slots**
+:   The spawner's own slots: what to place, and where. Shown while **Rules** is empty. See [Slots](#slots).
 
 **Show Lattice Wireframes**
-:   Only shown when a slot uses **Lattice Deform**. Draws the cage that bends each deformed piece while the spawner is selected.
-
-**Rules Snapshot**, **Apply Snapshot** and **Export Current Rules as Snapshot…**
-:   Copy rules from, or save them to, a snapshot asset. See [Reusing rules](#reusing-rules).
+:   Only shown when a slot uses **Lattice Deform**, in the spawner's own slots or in its rules. Draws the cage that bends each deformed piece while the spawner is selected.
 
 **Rebuild**
 :   Places all the copies again.
@@ -48,9 +48,9 @@ The copies rebuild by themselves when you change a setting or the spline. How of
 !!! warning "Edits to the copies don't last"
     Every rebuild replaces the copies, so changes you make to them by hand are lost. Use **Make Spawned Objects Editable** first if you want to edit them.
 
-## :lucide-layers: Rules
+## :lucide-layers: Slots
 
-Rules are made of **slots**. **Segment slots** fill the spline between knots, and **corner slots** go on the knots themselves.
+Slots describe what an array places. **Segment slots** fill the spline between knots, and **corner slots** go on the knots themselves. A spawner and a [Spline Array Rules](#spline-array-rules) asset have the same slot settings.
 
 **Corner Placement**
 :   **All Knots**: corner slots can go on every knot, and segment slots fill each stretch from one knot to the next. **Endpoints Only**: corner slots only go on the two ends of an open spline (none on a closed one), and segment slots fill the whole spline as one long stretch.
@@ -97,13 +97,21 @@ Several corner slots on the same knot are lined up along the spline, centered on
 
 Every slot can vary its copies: **Position Offset**, **Rotation Offset** (absolute, local values) and **Scale Multiplier** (relative). **Count**, **Spacing** and these values can each be a fixed value or, with **Random** on, a range: each piece (each stretch, for **Count**) gets a value between the minimum and the maximum, picked from the **Seed**.
 
-## :lucide-file-box: Reusing rules
+## :lucide-file-box: Spline Array Rules
 
-A :lucide-file-box: **Spline Array Rules Snapshot** asset stores a set of rules. Create one with **Assets > Create > World Toolkit > Spawners > Spline Array Rules Snapshot**; its inspector shows the same **Rules** as a spawner.
+A **Spline Array Rules** asset is a reusable array setup: a **Corner Placement**, **Corner Slots** and **Segment Slots**, the same as on a spawner. Its inspector shows the same slot settings.
 
-- In a spawner's inspector, set **Rules Snapshot** and click **Apply Snapshot** to replace the spawner's rules with the snapshot's.
-- **Export Current Rules as Snapshot…** saves the spawner's current rules as a new snapshot asset.
-- In the **More** module, the **Array Rules Snapshot** sets the rules of the spawners you create with **Create Array Spawner**.
+### How spawners use rules
+
+- When you click **Create Array Spawner**, the new spawner copies the **Array Rules** set in the More module and keeps a reference to them in its **Rules** field.
+- While a spawner references rules, it places what the asset describes. Edit the asset, and every spawner that references it rebuilds.
+- Clear a spawner's **Rules** field to make it independent: it goes back to its own slots, which you can then edit on that spawner alone. A spawner made with **Create Array Spawner** keeps the setup it copied.
 
 !!! note
-    A spawner gets a copy of the snapshot's rules. Editing the snapshot later doesn't change spawners made from it until you apply it again.
+    Setting **Rules** on a spawner doesn't change its own slots: they're only hidden, and clearing the field shows them again as they were.
+
+### Creating rules
+
+- **From a spawner:** right-click the spawner component and choose **Create Spline Array Rules From Current Setup...**. The asset gets the slots the spawner places now: those of its **Rules** when it has some, otherwise its own.
+- **Empty:** **Assets > Create > World Toolkit > Spawners > Spline Array Rules**.
+- **From a spawner's Rules field:** click **New**.
