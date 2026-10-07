@@ -352,3 +352,39 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
 .md-typeset td:first-child > code {
   white-space: nowrap;
 }
+
+/* Home page feature table: one row per feature, grouped under a full-width row per category.
+   Each category's icons and header row take its module colour. */
+.md-typeset .wtk-features .md-typeset__table {
+  width: 100%;
+}
+
+.md-typeset .wtk-features table:not([class]) {
+  display: table;
+  width: 100%;
+}
+
+.wtk-features tbody.wtk-features-modelling { --wtk-feature-color: var(--wtk-color-modelling); }
+.wtk-features tbody.wtk-features-splines { --wtk-feature-color: var(--wtk-color-splines); }
+.wtk-features tbody.wtk-features-roads { --wtk-feature-color: var(--wtk-color-roads); }
+.wtk-features tbody.wtk-features-buildings { --wtk-feature-color: var(--wtk-color-buildings); }
+.wtk-features tbody.wtk-features-terrain { --wtk-feature-color: var(--wtk-color-terrain); }
+.wtk-features tbody.wtk-features-more { --wtk-feature-color: var(--wtk-color-more); }
+.wtk-features tbody.wtk-features-workflow { --wtk-feature-color: var(--wtk-color-getting-started); }
+
+.wtk-features th {
+  background-color: color-mix(in srgb, var(--wtk-feature-color) 14%, transparent);
+  border-left: 0.2rem solid var(--wtk-feature-color);
+}
+
+.wtk-features .twemoji {
+  color: var(--wtk-feature-color);
+  margin-right: 0.3em;
+}
+
+/* Feature names stay on one line on wide screens; on phones they wrap with the rest. */
+@media screen and (min-width: 45em) {
+  .wtk-features td:first-child {
+    white-space: nowrap;
+  }
+}
