@@ -168,7 +168,7 @@ Commands for [roads](../roads/index.md) and [junctions](../roads/junctions.md) (
 | --- | --- |
 | `wtk_roads_create` | Creates a road along knot positions (paths as in [Splines](#splines)), following `--rules` or the new-road rules from the Roads settings. |
 | `wtk_roads_convert` | Turns splines into roads and Spline Links into junctions, like **Create Roads/Junctions from Selection**. |
-| `wtk_roads_connect` | Joins road ends in a new junction. With `--to_road`, the ends meet that road at the point nearest to `--at`, making a T-junction. |
+| `wtk_roads_connect` | Joins road ends in a new junction. With `--to_road`, the ends meet that road at the point nearest to `--at`, making a T-junction. The junction takes its core, UV, material and corner settings from `--rules`. Without it, the junction uses the Road Rules asset all the connected roads follow, or the new-road rules if they don't share one. |
 | `wtk_roads_disconnect` | Takes road ends out of their junctions. A junction left with one road is removed. |
 | `wtk_roads_apply_rules` | Applies a Road Rules asset to roads and junctions. By default the roads follow the asset from then on (`--mode follow`). `--mode copy` gives them a copy, like **Apply Rules** in the Roads window. |
 | `wtk_roads_save_rules` | Saves a road's layers and generation settings as a new Road Rules asset. |
