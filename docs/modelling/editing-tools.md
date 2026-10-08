@@ -249,3 +249,5 @@ The **Materials** section lists the mesh's material slots.
 Press ++enter++ in the Scene view to run the last operation again on the current selection: an extrude, bevel, inset, bridge or slide, most buttons of the **Topology** tab, a move, rotation or scale (also a ++shift++ extrude-and-move), or a tool run from the Modelling Tools search. A message in the Scene view confirms it (*Repeated: Extrude*) or says it can't (*Cannot repeat Extrude on this selection*).
 
 It doesn't apply while the Knife is active or while you create a primitive, where ++enter++ finishes the cut or the shape.
+
+While you edit UVs (the **UV** tab), ++enter++ repeats the last UV action instead, both in the Scene view and in the [UV View](uvs.md#the-uv-view): a button of the **UV** tab such as **Sew**, **Normalize** or **Pack**, a typed **Move Selection**, **Rotate Selection** or **Scale Selection**, or a move, rotation, scale or rect drag of UVs in either view. A repeated drag applies the same offset, angle or factor to the current selection, around its own pivot.

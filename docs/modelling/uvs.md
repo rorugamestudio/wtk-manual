@@ -50,6 +50,9 @@ Move, rotate and scale UVs with the regular transform tools, or with exact value
 **Quick Rotate**
 :   **Rotate Left** and **Rotate Right** turn the selection by **Angle** (90 degrees by default).
 
+!!! tip "Repeat it"
+    Press ++enter++ in the UV View, or in the Scene view while editing UVs, to repeat the last UV action on the current selection: a UV tool, or a move, rotation, scale or rect drag. See [Repeating the last action](editing-tools.md#repeating-the-last-action).
+
 ## :lucide-scissors: Seams and islands
 
 **Cut**
