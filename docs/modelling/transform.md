@@ -94,7 +94,7 @@ The **Object Pivot** overlay in the Scene view works on the selected Editable Me
 
 ## :lucide-arrow-down-to-line: Drop to Ground
 
-With components selected, **Drop to Ground** (++alt+shift+d++) moves every vertex of the selection straight down onto the surface below it, so the selection follows the ground. The mesh's own colliders are ignored. With objects selected instead, the same command drops the whole objects; see [Terrain Snap](../terrain/terrain-snap.md).
+With components selected, **Drop to Ground** (++alt+shift+d++) moves every vertex of the selection straight down onto the surface below it, so the selection follows the ground. The mesh's own colliders are ignored. With objects selected instead, the same command drops the whole objects; see [Drop to Ground](../more/ground-snap.md#drop-to-ground).
 
 ## :wtk-snap: Snapping
 

@@ -37,7 +37,7 @@ With a collider or mesh source, only the ground under that object changes.
 
 **Source Height Offset** moves the source height up or down, in meters.
 
-A spline that carries a [Terrain Spline Snap](terrain-snap.md#terrain-spline-snap) can't be used as a source: stamps ignore it.
+A spline that carries a [Terrain Spline Snap](terrain-spline-snap.md#terrain-spline-snap) can't be used as a source: stamps ignore it.
 
 ## :lucide-chart-spline: Source Mode and profile
 

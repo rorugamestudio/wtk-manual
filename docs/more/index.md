@@ -5,7 +5,7 @@ icon: wtk/more
 
 # More
 
-The :wtk-more: **More** module of the [World Toolkit window](../getting-started/world-toolkit-window.md) holds tools shared across modules: spline editing, spawners, and the settings every module uses.
+The :wtk-more: **More** module of the [World Toolkit window](../getting-started/world-toolkit-window.md) holds tools shared across modules: spline editing, spawners, and the settings every module uses. This section also covers :wtk-component-ground-snap: [Ground Snap](ground-snap.md) and Drop to Ground, which keep objects on the ground in every module.
 
 ## :lucide-pencil: Edit tab
 
@@ -39,6 +39,12 @@ Camera, Scene view background and snapping highlight options, the spline and spa
     ---
 
     Copies of one object filling the area inside a spline, like cars in a parking lot or trees in an orchard.
+
+-   :wtk-component-ground-snap:{ .lg .middle } **[Ground Snap](ground-snap.md)**
+
+    ---
+
+    Keep objects on colliders and terrains while the ground changes, or drop them onto it once.
 
 -   :lucide-settings:{ .lg .middle } **[More Settings](settings.md)**
 

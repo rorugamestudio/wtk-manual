@@ -70,16 +70,17 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
     - :wtk-component-terrain-stamp: [Stamps](terrain/stamps.md)
     - :lucide-mountain: [Height](terrain/height.md)
     - :lucide-trees: [Trees](terrain/trees.md)
-    - :wtk-component-terrain-snap: [Terrain Snap](terrain/terrain-snap.md)
+    - :wtk-component-terrain-spline-snap: [Terrain Spline Snap](terrain/terrain-spline-snap.md)
 
 -   :wtk-more:{ .lg .middle } **[More](more/index.md)**
 
     ---
 
-    Spline editing, spawners that place objects along and inside splines, and the settings shared by every module.
+    Spline editing, spawners that place objects along and inside splines, ground snapping, and the settings shared by every module.
 
     - :wtk-component-spline-array-spawner: [Array Spawner](more/array-spawner.md)
     - :wtk-component-spline-area-spawner: [Area Spawner](more/area-spawner.md)
+    - :wtk-component-ground-snap: [Ground Snap](more/ground-snap.md)
 
 </div>
 
@@ -152,7 +153,7 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 <tr markdown><td markdown>:lucide-sprout: [Details](terrain/details.md)</td><td>Grass, flowers and small meshes from reusable Detail Sources.</td></tr>
 <tr markdown><td markdown>:lucide-circle-dashed: [Holes](terrain/holes.md)</td><td>Cut openings for caves and tunnels, or close them again.</td></tr>
 <tr markdown><td markdown>:lucide-file-box: [Stamp Presets](terrain/stamps.md#presets)</td><td>Save a stamp's layers and reuse them on new or existing stamps.</td></tr>
-<tr markdown><td markdown>:wtk-component-terrain-snap: [Terrain Snap](terrain/terrain-snap.md)</td><td>Keep objects and splines on the ground while stamps change it, also in Play mode and builds.</td></tr>
+<tr markdown><td markdown>:wtk-component-terrain-spline-snap: [Terrain Spline Snap](terrain/terrain-spline-snap.md)</td><td>Keep splines on the terrain while stamps change it, also in Play mode and builds.</td></tr>
 </tbody>
 <tbody class="wtk-features-more" markdown>
 <tr markdown><th colspan="2" markdown>:wtk-component-spline-spawner: [Spawners](more/index.md)</th></tr>
@@ -165,7 +166,8 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 <tr markdown><td markdown>:wtk-context-tips: [Context tips](getting-started/world-toolkit-window.md#context-tips)</td><td>A Scene view panel that shows what clicks, drags and keys do right now.</td></tr>
 <tr markdown><td markdown>:wtk-snap: [Snapping](modelling/transform.md#snapping)</td><td>Shared by every tool: grid, increments, vertices, edges, faces, spline knots and colliders.</td></tr>
 <tr markdown><td markdown>:lucide-timer: [Rebuild settings](getting-started/world-toolkit-window.md#rebuild-settings)</td><td>Choose, per module, how often rebuilds run while you drag.</td></tr>
-<tr markdown><td markdown>:lucide-arrow-down-to-line: [Drop to Ground](terrain/terrain-snap.md#drop-to-ground)</td><td>Place objects or spline knots on the ground in one step.</td></tr>
+<tr markdown><td markdown>:wtk-component-ground-snap: [Ground Snap](more/ground-snap.md)</td><td>Keep objects on colliders and terrains while the ground changes, also in Play mode and builds.</td></tr>
+<tr markdown><td markdown>:lucide-arrow-down-to-line: [Drop to Ground](more/ground-snap.md#drop-to-ground)</td><td>Place objects or spline knots on the ground in one step.</td></tr>
 <tr markdown><td markdown>:lucide-camera: [Camera menu](more/settings.md#misc)</td><td>Hold a key in the Scene view to switch between top, left, front and perspective views.</td></tr>
 <tr markdown><td markdown>:lucide-file-cog: [Settings files](getting-started/world-toolkit-window.md#settings)</td><td>Export, import or restore every World Toolkit setting, to share them with your team.</td></tr>
 <tr markdown><td markdown>:lucide-square-terminal: [Command Line](more/command-line.md)</td><td>Commands for the Unity CLI that list, check, rebuild, model and render content, for scripts and AI agents.</td></tr>

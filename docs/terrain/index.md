@@ -86,11 +86,11 @@ Stamps apply in **Hierarchy order**, top to bottom. Reorder them in the Hierarch
 
     Cut openings in the terrain for caves and tunnels, or close them again.
 
--   :wtk-component-terrain-snap:{ .lg .middle } **[Terrain Snap](terrain-snap.md)**
+-   :wtk-component-terrain-spline-snap:{ .lg .middle } **[Terrain Spline Snap](terrain-spline-snap.md)**
 
     ---
 
-    Keep objects and splines on the ground while stamps change it.
+    Keep splines on the terrain while stamps change it.
 
 -   :lucide-settings:{ .lg .middle } **[Terrain Settings](settings.md)**
 
