@@ -31,8 +31,8 @@ Pulls the selected faces or edges out to create new geometry.
 **Shell**
 :   Keeps the original faces, flipped, as an inner cap. Useful to give thickness to an open surface.
 
-**Auto Trim Collisions**
-:   When the extrusion goes through another part of the same mesh, cuts an opening there. Useful for making passages through walls.
+**Merge on Contact**
+:   On by default. Stops the extrusion at the first surface of the same mesh it reaches and merges with it: the covered part of that surface is removed and the edges are welded, opening a passage. Useful for windows and doors through walls.
 
 **Hard Edge Angle**
 :   Edges created by the extrusion are marked hard (sharp shading) when the angle between their faces reaches this value. Flatter edges stay smooth.
