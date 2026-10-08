@@ -147,7 +147,7 @@ Commands for [spline containers](../splines/spline-container.md) and [link group
 | `wtk_splines_create` | Creates a spline from knot positions, on a new object or `--on` an existing one. |
 | `wtk_splines_set_paths` | Replaces a spline's paths with new knot positions, or appends paths with `--mode append`. |
 | `wtk_splines_sample` | *Read-only.* Points at even distances along a spline (`--spacing` in metres, or `--count`), each with its position, direction and up vector. |
-| `wtk_splines_link` | Links two knots of different paths so they move together, under a new Spline Link object. |
+| `wtk_splines_link` | Links two knots of different paths so they move together, under a new Spline Link object. Knots are written as `{"spline": "/Spline", "path": 0, "knot": -1}`; a negative knot counts from the end of the path. |
 
 Paths are JSON. Positions are in world space unless you pass `--space local`:
 
@@ -172,9 +172,9 @@ Commands for [roads](../roads/index.md) and [junctions](../roads/junctions.md) (
 | `wtk_roads_disconnect` | Takes road ends out of their junctions. A junction left with one road is removed. |
 | `wtk_roads_apply_rules` | Applies a Road Rules asset to roads and junctions. By default the roads follow the asset from then on (`--mode follow`). `--mode copy` gives them a copy, like **Apply Rules** in the Roads window. |
 | `wtk_roads_save_rules` | Saves a road's layers and generation settings as a new Road Rules asset. |
-| `wtk_roads_rebuild` | Rebuilds every road and junction in the open scenes. |
+| `wtk_roads_rebuild` | Rebuilds every road and junction in the open scenes, or only those of one scene with `--scene`. Every scene it rebuilds is left modified, so use `--scene` to leave the other open scenes untouched. |
 
-Road ends are written as `{"road": "/Road", "path": 0, "end": "start"}` (or `"end"`). Use `{"road": ..., "path": 0, "knot": 3}` instead to join a junction at a knot in the middle of a road. `wtk_describe` on a road lists its ends and the junction each one meets.
+Road ends are written as `{"road": "/Road", "path": 0, "end": "start"}` (or `"end"`). The road can be a handle string, as here, or a handle object such as `{"hierarchyPath": "/Road"}`. Use `{"road": ..., "path": 0, "knot": 3}` instead to join a junction at a knot in the middle of a road. `wtk_describe` on a road lists its ends and the junction each one meets.
 
 !!! example "A T-junction"
 
