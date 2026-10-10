@@ -42,13 +42,16 @@ The **Erosion** operation simulates natural weathering, giving terrain a more re
 **Strength**
 :   How much of the eroded result is used, from 0 to 1. The mask scales it further.
 
-**Radius**
-:   How far each step reaches, in heightmap samples. **Hydraulic** allows up to 8.
+### Thermal settings
+
+**Talus Angle**
+:   The steepest slope, in degrees, that stays in place. Anything steeper slides down.
 
 ### Hydraulic settings
 
 | Setting | What it does |
 |---|---|
+| **Radius** | How wide each droplet erodes around itself, in heightmap samples, 8 at most. |
 | **Seed** | Changes where the droplets fall. |
 | **Inertia** | How much droplets keep their direction instead of following the slope. |
 | **Rain Amount** | Water carried by each droplet. |
