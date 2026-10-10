@@ -168,7 +168,7 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 <tr markdown><td markdown>:lucide-timer: [Rebuild settings](getting-started/world-toolkit-window.md#rebuild-settings)</td><td>Choose, per module, how often rebuilds run while you drag.</td></tr>
 <tr markdown><td markdown>:wtk-component-ground-snap: [Ground Snap](more/ground-snap.md)</td><td>Keep objects on colliders and terrains while the ground changes, also in Play mode and builds.</td></tr>
 <tr markdown><td markdown>:lucide-arrow-down-to-line: [Drop to Ground](more/ground-snap.md#drop-to-ground)</td><td>Place objects or spline knots on the ground in one step.</td></tr>
-<tr markdown><td markdown>:lucide-camera: [Camera menu](more/settings.md#misc)</td><td>Hold a key in the Scene view to switch between top, left, front and perspective views.</td></tr>
+<tr markdown><td markdown>:lucide-camera: [Camera menu](more/settings.md#scene-view)</td><td>Hold a key in the Scene view to switch between top, left, front and perspective views.</td></tr>
 <tr markdown><td markdown>:lucide-file-cog: [Settings files](getting-started/world-toolkit-window.md#settings)</td><td>Export, import or restore every World Toolkit setting, to share them with your team.</td></tr>
 <tr markdown><td markdown>:lucide-square-terminal: [Command Line](more/command-line.md)</td><td>Commands for the Unity CLI that list, check, rebuild, model and render content, for scripts and AI agents.</td></tr>
 </tbody>

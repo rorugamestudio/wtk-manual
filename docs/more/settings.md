@@ -6,7 +6,7 @@ icon: lucide/settings
 
 The **Settings** tab of the :wtk-more: **More** module holds settings shared by every module.
 
-## :lucide-sliders-horizontal: Misc
+## :lucide-sliders-horizontal: Scene View
 
 **Instant Camera Switch**
 :   Skips the Scene view's animated transition when switching camera views.
@@ -17,10 +17,13 @@ The **Settings** tab of the :wtk-more: **More** module holds settings shared by 
 **Show Grid Coordinates**
 :   Writes the world coordinates of one grid cell near the center of each Scene view.
 
+**Show World Origin**
+:   Draws two lines from the world origin along the positive direction of the Scene view grid's two axes, in the axis colors. They run on without end, so you can always tell where the origin is.
+
 !!! info "Switching camera views"
     Hold ++space++ in the Scene view to open the camera menu, move the mouse toward **Top**, **Left**, **Front** or **Perspective**, and release ++space++ to switch to that view. **Top**, **Left** and **Front** are orthographic. ++esc++ closes the menu without switching.
 
-## :lucide-palette: Scene View Background
+### Background
 
 **Gradient Background**
 :   Replaces the Scene view's flat background with a gradient from **Top Color** to **Bottom Color**, behind the grid. It shows in shaded Scene views of URP projects, when the skybox is hidden. **Reset Background Colors** puts the default colors back.
