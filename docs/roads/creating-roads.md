@@ -69,6 +69,13 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
 **Allow Roll**
 :   Lets the road bank (tilt sideways) following each knot's rotation, for banked curves.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/roads/track-roll.webp">
+    <source src="../assets/videos/roads/track-roll.mp4" type="video/mp4">
+  </video>
+  <figcaption>Banking a curve by rotating a knot.</figcaption>
+</figure>
+
 **Mute**
 :   Other roads and junctions ignore this road, as if it weren't there; it still rebuilds its own mesh. Muted roads are outlined with a red box in the Scene view. Disabling the component instead only stops the road from rebuilding: the rest of the network still uses it.
 
@@ -84,6 +91,13 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
 
 The radius you set is a target: short segments or nearby corners can make the actual curve smaller. A radius of zero keeps the corner sharp.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/roads/auto-round-corners.webp">
+    <source src="../assets/videos/roads/auto-round-corners.mp4" type="video/mp4">
+  </video>
+  <figcaption>Rounding a sharp corner with Auto Round Mode.</figcaption>
+</figure>
+
 **Auto Round Knots** entries follow their knot when you insert or reorder knots, and the first entry that matches a knot wins. They always belong to the road: when the road's **Rules** set **Auto Round Mode** to **Per Knot**, the road still shows and uses its own entries.
 
 ### Mesh detail
@@ -93,6 +107,11 @@ The radius you set is a target: short segments or nearby corners can make the ac
 
 **Minimum Strip Length** / **Maximum Strip Length**
 :   Limits on the length of each mesh segment along the road. Zero turns a limit off, and the maximum wins when they conflict. Knots, range boundaries and junction cuts are always kept, so they can still make shorter segments.
+
+<figure markdown="span">
+  ![A road mesh selected in vertex mode](../assets/images/roads/road-quad-topology.webp){ loading=lazy }
+  <figcaption>Roads are Editable Meshes and keep a clean quad topology.</figcaption>
+</figure>
 
 ### Joining borders
 

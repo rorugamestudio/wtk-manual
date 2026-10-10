@@ -9,6 +9,13 @@ The Roads module builds road meshes from splines. You draw where the road goes, 
 
 Open it from the **Roads** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../assets/videos/roads/road-network.webp">
+    <source src="../assets/videos/roads/road-network.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing roads that join into junctions, then filling the block they enclose with a City Block Floor.</figcaption>
+</figure>
+
 ## :lucide-blocks: The building blocks
 
 :wtk-component-editable-mesh-road: **Road** (Editable Mesh Road component)

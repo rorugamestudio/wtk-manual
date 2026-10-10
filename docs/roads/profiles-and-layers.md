@@ -37,6 +37,11 @@ For the selected span (the segment between two points):
 
 The **Profile Preview** at the bottom of the inspector shows the result in 3D. **Corner** previews it around a corner, the number next to it is the preview length in meters, and **Iso**, **Wire** and **Reset** change the view.
 
+<figure markdown="span">
+  ![A curb profile in the inspector, its preview and the curb in the scene](../assets/images/roads/road-profile-curb.webp){ loading=lazy }
+  <figcaption>A steel-faced curb: its Profile Points, the Profile Preview and the result on the road.</figcaption>
+</figure>
+
 ### Profile settings
 
 **Is Lane**

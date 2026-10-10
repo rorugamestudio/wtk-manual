@@ -6,6 +6,11 @@ icon: wtk/component-editable-mesh-junction
 
 A **junction** is the mesh that joins roads where they meet. World Toolkit generates it from the roads' layers: lanes, borders and sidewalks continue into the junction, and the middle is filled with a core surface.
 
+<figure markdown="span">
+  ![Four roads meeting at uneven angles](../assets/images/roads/junction-complex.webp){ loading=lazy }
+  <figcaption>A junction joining four roads that meet at uneven angles.</figcaption>
+</figure>
+
 ## :lucide-git-merge: Creating junctions
 
 Junctions are created when roads meet:
@@ -94,6 +99,11 @@ Each conversion has an entry under **Conversion Adjustments**:
 :   Stops the marking at each road's curb line, where the curb arcs start, so it stays clear of crossings and lane markings. Turn it off to also cover the junction lead-ins.
 
 Whenever the junction rebuilds, the decal's outline is redrawn to match it.
+
+<figure markdown="span">
+  ![A junction with a yellow box grid and yellow lines along the curbs](../assets/images/roads/junction-kerb-markings.webp){ loading=lazy }
+  <figcaption>A box junction marking, with the yellow curb lines following each corner.</figcaption>
+</figure>
 
 !!! tip "Same marking everywhere"
     Set **Junction Marking** in a [Road Rules](creating-roads.md#road-rules) asset to give it to new junctions, or to the junctions you select when you click **Apply to Selected**.
