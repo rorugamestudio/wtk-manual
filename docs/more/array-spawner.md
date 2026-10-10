@@ -15,6 +15,13 @@ The :wtk-component-spline-array-spawner: **Spline Array Spawner** places copies 
 
 The new object, named after the rules, is created as a child of the spline object, at its position. It follows the container's first spline, uses the rules (see [How spawners use rules](#how-spawners-use-rules)) and is selected. The copies are created as its children.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/more/array-spawner.webp">
+    <source src="../assets/videos/more/array-spawner.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing a spline and spawning lamp posts along it.</figcaption>
+</figure>
+
 You can also add the component yourself with **Add Component > World Toolkit > Spawners > Spline Array Spawner**, then set its **Spline** and either give it **Rules** or fill in its own slots.
 
 ## :lucide-settings: Settings
@@ -66,6 +73,13 @@ Each slot has a list of **Objects** (prefabs), each with a **Chance Weight**. On
 
 **Lattice Deform**
 :   Bends the prefab's mesh to follow the curve. Use it for long pieces like rails, pipes and walls that must bend smoothly.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/more/array-conform-to-spline.webp">
+    <source src="../assets/videos/more/array-conform-to-spline.mp4" type="video/mp4">
+  </video>
+  <figcaption>Wall pieces bent along the spline with Lattice Deform.</figcaption>
+</figure>
 
 **Follow Spline** chooses which rotation axes (**X**, **Y**, **Z**) follow the spline. An axis that is off keeps the spawner object's own rotation, so turning off **X** and **Z** keeps pieces upright where the spline climbs.
 

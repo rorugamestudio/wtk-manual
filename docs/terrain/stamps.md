@@ -52,6 +52,13 @@ To start again from flat ground, select a Terrain Stamp Target and use the **Cle
 
 Every terrain of the target gets a flat base at that height. The terrains then show the cleared base: click **Rebuild Stamps** to apply the stamps on top of it.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/terrain/terrain-global-height.webp">
+    <source src="../assets/videos/terrain/terrain-global-height.mp4" type="video/mp4">
+  </video>
+  <figcaption>Creating a Terrain Stamp Target, clearing its base and adding a stamp that sets the height of the whole terrain.</figcaption>
+</figure>
+
 ## :lucide-pencil: Creating stamps
 
 1. In the Terrain panel, click **Edit Terrain Stamps**. The button changes to **Exit Editing Terrain Stamps**.
@@ -63,6 +70,13 @@ Every terrain of the target gets a flat base at that height. The terrains then s
     - Press ++esc++ to discard the stamp you're drawing.
 
 When you finish, the terrain is rebuilt with the new stamp. An outline needs at least 3 points when the panel's preset has a **Spline Area** mask, 2 otherwise; a shorter one is removed. While you edit stamps, the [context tips](../getting-started/world-toolkit-window.md#context-tips) panel in the Scene view recalls the main controls.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/terrain/terrain-stamps.webp">
+    <source src="../assets/videos/terrain/terrain-stamps.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing stamps from different presets, from hills to a patch of forest.</figcaption>
+</figure>
 
 New stamps start from the **Terrain Stamp Preset** set in the panel's **New Terrain Stamps** card. Without one, they start with a single layer: a **Spline Area** mask on the outline and a [Height](height.md) operation. Their target is the selected Terrain Stamp Target, or else the target of the terrain under the first point.
 

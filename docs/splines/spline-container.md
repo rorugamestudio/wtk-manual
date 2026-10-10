@@ -72,6 +72,13 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
 
 **Stick to Surface** starts the shape on the collider under the cursor, aligned with it; the rest of the drag stays on that plane. **Append to Selected Container** adds the shape to the selected Spline Container instead of creating a new object. Both have their own setting here, separate from the freeform ones.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/splines/spline-shapes.webp">
+    <source src="../assets/videos/splines/spline-shapes.mp4" type="video/mp4">
+  </video>
+  <figcaption>Freeform strokes, circles, rectangles, polygons and stars.</figcaption>
+</figure>
+
 ## :lucide-mouse-pointer-click: Editing knots
 
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
