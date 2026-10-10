@@ -201,7 +201,7 @@ For automatic smoothing of the whole mesh by angle, see **Auto Smooth** in the [
 
 | Tool | What it does |
 |---|---|
-| **Weld** | Under **Weld Doubles**: welds the selected vertices that are closer than **Weld Distance**. |
+| **Weld** | Under **Weld Doubles**: welds the selected vertices that are closer than **Weld Distance**. With whole objects selected, it welds every visible vertex of each mesh. |
 | **Delete Loose** | Deletes selected vertices and edges that don't belong to any face. |
 | **Remove Degenerate** | Removes broken, zero-area faces and edges. |
 | **Dissolve** | Under **Limited Dissolve**: removes the selected interior edges between faces that are nearly flat, under **Limited Angle**. |
