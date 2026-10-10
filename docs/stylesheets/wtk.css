@@ -407,3 +407,17 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
   background: #1e1e1e;
 }
+
+/* Footer studio credit: "by [logo] RORU Studio". */
+.wtk-studio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 700;
+}
+
+.wtk-studio__logo {
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 2px;
+}

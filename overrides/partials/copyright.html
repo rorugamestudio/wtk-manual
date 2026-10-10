@@ -1,7 +1,18 @@
 {#-
-  Custom copyright partial showing the build commit hash
+  Custom copyright partial showing the studio credit (logo inlined from rorustudio.com/logo.svg)
+  and the build commit hash
 -#}
 <div class="md-copyright">
+  <div class="md-copyright__highlight">
+    <a class="wtk-studio" href="https://rorustudio.com/" target="_blank" rel="noopener" title="RORU Studio">
+      by
+      <svg class="wtk-studio__logo" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 11 11" shape-rendering="crispEdges" aria-hidden="true">
+        <rect x="-1" y="-1" width="11" height="11" fill="#000"/>
+        <path fill="#fff" d="M0 0h4v1h-4zM0 0h1v4h-1zM3 1h1v1h-1zM0 2h3v1h-3zM3 3h1v1h-1zM5 0h4v1h-4zM5 3h4v1h-4zM5 0h1v4h-1zM8 0h1v4h-1zM0 5h4v1h-4zM0 5h1v4h-1zM3 6h1v1h-1zM0 7h3v1h-3zM3 8h1v1h-1zM5 5h1v4h-1zM8 5h1v4h-1zM5 8h4v1h-4z"/>
+      </svg>
+      RORU Studio
+    </a>
+  </div>
   {% if config.copyright %}
     <div class="md-copyright__highlight">
       {{ config.copyright }}
