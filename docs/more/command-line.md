@@ -205,6 +205,7 @@ Commands for [buildings](../buildings/index.md) (tag `worldtoolkit/buildings`).
 | `wtk_buildings_describe` | *Read-only.* A building's resolved layout: each volume's footprint segments and walls, each floor's height and rows, the last generation's counts, and every slot that didn't fit. |
 | `wtk_buildings_validate` | *Read-only.* Checks a building, Building Rules, Volume Wall or Roof the way its inspector does, and lists the errors, warnings and info. Buildings and rules also check the walls and roofs they use. |
 | `wtk_buildings_audit` | *Read-only.* Looks for holes and z-fighting in a generated building by rendering every facade from several angles. Real gaps in the geometry are told apart from tiny rendering cracks. `--thoroughness thorough` adds grazing angles; `--pixels_per_meter` finds smaller gaps; `--overview true` also renders overview images. |
+| `wtk_buildings_create` | Turns spline objects into buildings, or into building blocks with `--kind block`, like **Create Building with Selected** and **Create Block with Selected** in the Buildings window. Each object keeps its spline, follows `--rules` (or the window's Snapshot) and is generated. |
 | `wtk_buildings_rebuild` | Regenerates a building from its volumes or rules. With `--dry_run true`, reports the last generation and the building's issues instead. |
 | `wtk_buildings_create_rules` | Saves a building's volumes, floors and subfloors as a [Building Rules](../buildings/building-rules.md) asset at `--path`. |
 
