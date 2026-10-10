@@ -134,6 +134,12 @@ These go in the layer's **Mask Composition** list, or in the **Adjustments** of 
 
 In the **Mask Composition** list, **Multiply**, **Brightness** and **Contrast** change the mask built by the entries above them. Inside a field fill, they only change that fill. When a field fill has several of them, **Multiply** is applied first, then **Contrast**, then **Brightness**. **Peak Normalize** and **Mask Blur** always work on the layer's finished mask, after every fill is combined.
 
+## :lucide-move-vertical: Adjusting masks in the Scene view
+
+With a Terrain Stamp selected, the **Stamp Gizmos** overlay appears in the Scene view. Turn on **Show Gizmos** to edit a mask with handles instead of typing values, and pick which one in **Adjust**: the handles edit one mask at a time.
+
+A **Terrain Height** mask shows two planes over the stamp, one at the minimum and one at the maximum of its **World Height Range**. The terrain cuts through them where it crosses those heights. Drag the **Min** or **Max** handle up or down to move a plane; the handles stay under the point you are looking at. Press ++esc++ while dragging to cancel. The terrain rebuilds when you release the mouse.
+
 ## :lucide-eye: Previewing masks
 
 Turn on **Show Mask Preview** in the Terrain **Settings** tab to see the selected stamp's mask on the terrain as a red overlay. The stamp inspector also shows each layer's mask in its **Layer Masks** preview. See [Stamp layers](stamps.md#stamp-layers).
