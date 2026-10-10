@@ -27,11 +27,25 @@ The buttons under **Spline Based** create meshes from a spline. Select a single 
 
 Stairs, tubes and surfaces rebuild whenever you edit their spline. Their settings (steps and caps for stairs, sampling, roll, twist and corner rounding for tubes) are in the [Editable Primitive](editable-meshes.md#editable-primitives) inspector.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/tube-primitive.webp">
+    <source src="../assets/videos/modelling/tube-primitive.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing a freeform spline and turning it into a tube.</figcaption>
+</figure>
+
 ## :lucide-pencil-ruler: Drawing a primitive
 
 1. Click a primitive in the **Create** tab.
 2. **Drag** in the Scene view to draw its footprint. Hold ++ctrl++ while dragging to keep the footprint proportional.
 3. For shapes with height (cube, cylinder, cone and so on), release the mouse, **move it** to set the height, and **click** to finish.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/primitive-creation.webp">
+    <source src="../assets/videos/modelling/primitive-creation.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing a plane, then a cube on top of it.</figcaption>
+</figure>
 
 The **Create Mesh Options** panel appears in the Scene view while you draw. Its title names the primitive (for example **Cube Options**). It shows the dimensions (**Width**, **Depth**, **Height**, **Radius**...) and the detail settings (**Subdivisions**, **Sides**, **Segments**). You can type exact values there.
 

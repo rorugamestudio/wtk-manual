@@ -33,6 +33,13 @@ In the **Create** tab, under **Booleans**:
 
 This creates a new **Boolean Stack** object. The other meshes join it with the **Difference** operation, which you can change afterwards. With nothing selected, it creates an empty stack you can fill later.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/boolean.webp">
+    <source src="../assets/videos/modelling/boolean.mp4" type="video/mp4">
+  </video>
+  <figcaption>Combining primitives into a Boolean Stack.</figcaption>
+</figure>
+
 To add another mesh to an existing stack, select the new mesh **first**, then the Boolean Stack **last**, and click **Add to stack**. The mesh joins at the end of the stack with **Difference**, or as the Base if the stack is empty.
 
 **Auto Disable Mesh Renderer**

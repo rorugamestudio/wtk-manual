@@ -33,6 +33,13 @@ When you edit a mesh's vertices, edges or faces, Unity switches its **Tool Conte
 
 Many tools also show an options panel in the Scene view (for example **Extrude Options**), where you tweak the operation and then press **Apply** or **Cancel**.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../assets/videos/modelling/basic-mesh-edit.webp">
+    <source src="../assets/videos/modelling/basic-mesh-edit.mp4" type="video/mp4">
+  </video>
+  <figcaption>Making a primitive editable, then moving and scaling its faces.</figcaption>
+</figure>
+
 !!! tip "Every tool, one right-click away"
     While editing a mesh, **right-click** in the Scene view (without dragging) to open **Modelling Tools**, a searchable list of every tool. See [Editing Tools](editing-tools.md#modelling-tools-search).
 

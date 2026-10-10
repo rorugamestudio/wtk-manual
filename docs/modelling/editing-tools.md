@@ -40,6 +40,13 @@ Pulls the selected faces or edges out to create new geometry.
 !!! tip
     In edge or face mode, you can also extrude by holding ++shift++ when you start dragging a move, rotate or scale handle. See [Transform](transform.md).
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/smart-extrude.webp">
+    <source src="../assets/videos/modelling/smart-extrude.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing a rectangle on a wall with Shapes, then extruding it inwards to open a doorway.</figcaption>
+</figure>
+
 ### :wtk-modify-inset: Inset
 
 Creates a smaller copy of the selected faces inside them, for panels, windows and borders.
@@ -70,6 +77,13 @@ Rounds or cuts the selected edges or vertices.
 
 Connects two selected face groups, edge chains or edge loops with new faces. Handy for joining two parts of a mesh or closing a gap between them.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/merge-and-bridge.webp">
+    <source src="../assets/videos/modelling/merge-and-bridge.mp4" type="video/mp4">
+  </video>
+  <figcaption>Merging two objects with Merge Meshes, then bridging their faces.</figcaption>
+</figure>
+
 ### :wtk-modify-merge: Merge
 
 Merges the selected vertices.
@@ -95,9 +109,23 @@ Cuts new edges across faces by hand.
 **Step**
 :   Snaps cut points along edges in steps. 0 is continuous; 0.25 snaps to quarters of the edge.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/knife.webp">
+    <source src="../assets/videos/modelling/knife.mp4" type="video/mp4">
+  </video>
+  <figcaption>Cutting faces by hand and adding loop cuts with the Knife.</figcaption>
+</figure>
+
 ### :wtk-modify-slide: Slide
 
 Slides the selected vertices or edges along the surrounding edges, without changing the shape of the surface. **Step** snaps the slide amount.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/edge-slide.webp">
+    <source src="../assets/videos/modelling/edge-slide.mp4" type="video/mp4">
+  </video>
+  <figcaption>Sliding an edge along its neighbours.</figcaption>
+</figure>
 
 ### :wtk-modify-subdivide: Subdivide
 
@@ -222,7 +250,21 @@ Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors
 **Face Corners**
 :   Paints only the corners of the face under the cursor. Turn it off to paint every face inside the brush.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/vertex-paint.webp">
+    <source src="../assets/videos/modelling/vertex-paint.mp4" type="video/mp4">
+  </video>
+  <figcaption>Painting vertex colors with the brush.</figcaption>
+</figure>
+
 **Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/vertex-color.webp">
+    <source src="../assets/videos/modelling/vertex-color.mp4" type="video/mp4">
+  </video>
+  <figcaption>Filling the selected faces with Apply to Selection.</figcaption>
+</figure>
 
 ## :wtk-materials: Materials
 

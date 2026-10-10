@@ -396,3 +396,14 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
     white-space: nowrap;
   }
 }
+
+/* Screen recordings: full column width, same frame as the UI screenshots. */
+.wtk-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1600 / 860;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  background: #1e1e1e;
+}

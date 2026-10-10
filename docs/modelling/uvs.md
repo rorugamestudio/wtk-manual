@@ -19,6 +19,13 @@ Editing UVs by hand switches the edited faces to manual UVs.
 
 **Open UV View** in the **UV** tab opens the UV editor, which shows the selected mesh's UVs over its texture. Turn on **Auto Open UV View** to open it every time you switch to the **UV** tab.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/uv-edit.webp">
+    <source src="../assets/videos/modelling/uv-edit.mp4" type="video/mp4">
+  </video>
+  <figcaption>Unwrapping a cylinder and editing its UVs in the UV View.</figcaption>
+</figure>
+
 Its toolbar holds the **Transform** tools, the **Selection** modes and the **Pivot**, **Snap** and **Increment** options, plus:
 
 **Focus Mesh**
@@ -46,6 +53,13 @@ The toolbar also has **UV corners** and **Connected 3D** modes, and box-selectio
 ## :lucide-move: Transforming UVs
 
 Move, rotate and scale UVs with the regular transform tools, or with exact values under **Numeric Transform**: **Move Selection**, **Rotate Selection** and **Scale Selection** apply the typed offset, angle or factor.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/uv-edit-in-scene.webp">
+    <source src="../assets/videos/modelling/uv-edit-in-scene.mp4" type="video/mp4">
+  </video>
+  <figcaption>Moving, rotating and scaling UVs straight in the Scene view, with the UV View alongside.</figcaption>
+</figure>
 
 **Quick Rotate**
 :   **Rotate Left** and **Rotate Right** turn the selection by **Angle** (90 degrees by default).

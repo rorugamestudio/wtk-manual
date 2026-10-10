@@ -60,6 +60,22 @@ The SVGs in `overrides/.icons/wtk/` are generated: the editor icons are white fo
   `wtk-ui` for inspectors and panels (380 px), `wtk-ui-wide` for the Scene view and wide windows (720 px), no class for result renders. Styles are in `docs/stylesheets/wtk.css`.
 - No text in images. Names go in captions, so a label change doesn't force a new image.
 
+### Videos
+
+- `docs/assets/videos/<section>/<name>.mp4`, with a poster frame `<name>.webp` next to it. Screen recordings of the editor, re-encoded with ffmpeg: no audio, the OS title bar and menu bar cropped off, 1600 px wide, 30 fps, H.264 `-crf 28 -preset slow -pix_fmt yuv420p -movflags +faststart` (about 1 MB per 15 s). Watch the whole recording for anything private before publishing it.
+- Insert as a figure. Zensical rewrites `src` (write it relative to the Markdown file, like an image) but not `poster` (write it relative to the built page: one more `../` than `src`, except on `index.md` pages where both are the same):
+
+  ```html
+  <figure class="wtk-video">
+    <video controls muted loop playsinline preload="none" poster="../../assets/videos/roads/track-roll.webp">
+      <source src="../assets/videos/roads/track-roll.mp4" type="video/mp4">
+    </video>
+    <figcaption>Banking a curve by rotating a knot.</figcaption>
+  </figure>
+  ```
+
+- After a build, check that every `poster` and `src` in `site/` resolves to a file: a wrong `poster` path fails silently.
+
 ### Regenerating images
 
 All images come from scripts in `Tools/Manual/` of the World Toolkit Unity project, so they can be redone when the tools change. They drive the open editor through the Unity CLI (`unity cmd run_script`), which compiles one C# file in memory without a domain reload; the runners merge `Tools/Manual/Shots/*.cs` into one file first. They publish straight into this repo's `docs/assets/images/`.
