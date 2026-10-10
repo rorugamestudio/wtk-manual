@@ -68,10 +68,7 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
 :   Drag from the center to set the radius and rotation. **Sides** sets the number of sides, or the number of points for a star. **Inset** pulls every other knot toward the center to make a star, and **Spike Size** rounds the outer points.
 
 :lucide-shell: **Spiral**
-:   Drag from the center. **Turns** sets the number of revolutions.
-
-:lucide-tornado: **Spring**
-:   Drag from the center to set the radius. **Turns** sets the number of revolutions and **Height** how far the coil rises from the surface; a negative height coils downwards.
+:   Drag from the center to set the outer radius and rotation. **Turns** sets the number of revolutions. **Inner Radius** is where the spiral starts, as a fraction of the dragged radius: 0 starts at the center, 1 keeps the radius constant. **Height** lifts the end of the spiral off the surface, so a constant radius with a height makes a spring; a negative height coils downwards. **Radius Bias** and **Height Bias** pack the turns toward the start (negative) or the end (positive) of the radius and of the height.
 
 **Stick to Surface** starts the shape on the collider under the cursor, aligned with it; the rest of the drag stays on that plane. **Append to Selected Container** adds the shape to the selected Spline Container instead of creating a new object. Both have their own setting here, separate from the freeform ones.
 
