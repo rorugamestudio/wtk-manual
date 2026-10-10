@@ -5,6 +5,11 @@ icon: lucide/rocket
 
 # Getting Started
 
+<figure markdown="span">
+  ![The Unity editor with the World Toolkit window, a mesh in the Scene view and its UVs in the UV View](../assets/images/getting-started/editor-overview.webp){ loading=lazy }
+  <figcaption>World Toolkit in the editor: its window on the left, a mesh being edited in the Scene view and its UVs in the UV View.</figcaption>
+</figure>
+
 New to World Toolkit? Start here, in this order:
 
 <div class="grid cards" markdown>
