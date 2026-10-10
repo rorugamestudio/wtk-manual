@@ -11,7 +11,7 @@ Every mesh you edit with the Modelling tools has an :wtk-component-editable-mesh
 There are three ways:
 
 - **Create a primitive** from the Modelling **Create** tab, or from **GameObject > World Toolkit > Modelling**. See [Primitives](primitives.md).
-- **Convert an existing mesh.** Right-click the **Mesh Filter** component of any object and choose **Make Editable**, or select the object and click **Make Editable** at the top of the **Topology** tab.
+- **Convert an existing mesh.** Right-click the **Mesh Filter** component of any object and choose **Convert to WTK Mesh**, or select the object and click **Convert to WTK Mesh** at the top of the **Topology** tab. With a primitive or a Boolean Stack selected, the same button reads **Make Editable**.
 - **Add the component** manually: **Add Component > World Toolkit > Modelling > Editable Mesh**.
 
 !!! note
@@ -64,6 +64,9 @@ An Editable Mesh stores its data in the component, inside the scene, unless it h
 
 **Export Mesh... / Import Mesh...**
 :   Save the editable topology to a file, or load it back.
+
+**Export to .OBJ...**
+:   Save the mesh as a Wavefront `.obj` file for other 3D applications. Faces stay as you modelled them: quads and polygons aren't triangulated and neighbouring faces keep sharing their vertices, with the UVs and normals of each face corner and one material group per material slot. Hidden faces are exported too, and loose edges are kept as lines. Only faces with holes are written as triangles, because the format has no holes. The file is in the object's local space, and no `.mtl` file is written.
 
 **Externalize To .emesh...**
 :   Store the mesh data in a separate `.emesh` asset instead of inside the scene. Useful for large meshes, or to reuse the same mesh in several places.

@@ -225,6 +225,7 @@ Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md)
 | `wtk_modelling_find_components` | *Read-only.* Finds faces, edges or vertices by material, facing direction, position inside a box, or open edges. The result feeds `wtk_modelling_apply`. |
 | `wtk_modelling_apply` | Runs a modelling operation on listed faces, edges or vertices, or on all of them: extrude, inset, bevel, loop cut, merge, dissolve, cleanup, delete, assign material, translate, rotate, scale and more, plus whole-mesh `subdivide_surface` and `mirror`. Returns the selection the operation left, so operations can be chained. |
 | `wtk_modelling_boolean` | Combines Editable Meshes with a [Boolean Stack](../modelling/booleans.md): difference, union, intersection or slice. `--bake true` turns the result into a plain Editable Mesh. |
+| `wtk_modelling_export_obj` | *Read-only.* Writes an Editable Mesh to a Wavefront `.obj` file at `--path`, like **Export to .OBJ...** in its context menu: polygons and shared vertices as modelled, UVs and normals per face corner, one material group per slot. |
 
 The four `create` commands take their shape as JSON, from a file (`--input_file`, absolute or relative to the project folder) or inline (`--definition`). Their descriptions in the command list name every field. Pass `--target` with an existing Editable Mesh to rebuild it in place, keeping its transform, children and references.
 
