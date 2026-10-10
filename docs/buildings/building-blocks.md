@@ -15,7 +15,23 @@ A :wtk-component-building-block: **Building Block** takes a large area, splits i
 
 The block splits into lots and generates a building on each one. It starts with the **Building Rules** of **New Building Defaults** as its only rules. As with a building, ++esc++ while drawing throws the outline away.
 
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/buildings/building-blocks.webp">
+    <source src="../assets/videos/buildings/building-blocks.mp4" type="video/mp4">
+  </video>
+  <figcaption>Drawing a block outline and getting a row of buildings.</figcaption>
+</figure>
+
 You can also add the component yourself with **Add Component > World Toolkit > Buildings > Building Block**. It adds a **Spline Container** to the object if there isn't one.
+
+:wtk-component-building-block: **Create Block with Selected** turns the selected objects that have a spline into building blocks, for example a [City Block Floor](../roads/city-blocks.md) enclosed by roads.
+
+<figure class="wtk-video">
+  <video controls muted loop playsinline preload="none" poster="../../assets/videos/buildings/building-block-from-city-block.webp">
+    <source src="../assets/videos/buildings/building-block-from-city-block.mp4" type="video/mp4">
+  </video>
+  <figcaption>Turning a City Block Floor into a building block, then pulling the buildings back from the roads with Overall Inset.</figcaption>
+</figure>
 
 !!! note "Editing the outline"
     The block uses its knots as the corners of its area: curves between knots are ignored when it splits lots. While you move the knots, the block hides its buildings, and rebuilds them when you release the mouse or pause for a moment.
