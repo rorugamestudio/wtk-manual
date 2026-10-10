@@ -70,6 +70,9 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
 :lucide-shell: **Spiral**
 :   Drag from the center. **Turns** sets the number of revolutions.
 
+:lucide-tornado: **Spring**
+:   Drag from the center to set the radius. **Turns** sets the number of revolutions and **Height** how far the coil rises from the surface; a negative height coils downwards.
+
 **Stick to Surface** starts the shape on the collider under the cursor, aligned with it; the rest of the drag stays on that plane. **Append to Selected Container** adds the shape to the selected Spline Container instead of creating a new object. Both have their own setting here, separate from the freeform ones.
 
 ## :lucide-mouse-pointer-click: Editing knots

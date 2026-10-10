@@ -113,7 +113,7 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 </tbody>
 <tbody class="wtk-features-splines" markdown>
 <tr markdown><th colspan="2" markdown>:wtk-splines: [Splines](splines/index.md)</th></tr>
-<tr markdown><td markdown>:wtk-new-splines: [Drawing splines](splines/spline-container.md#drawing-splines)</td><td>Draw knot by knot, freehand like a pencil stroke, or as circles, rectangles, polygons, stars and spirals.</td></tr>
+<tr markdown><td markdown>:wtk-new-splines: [Drawing splines](splines/spline-container.md#drawing-splines)</td><td>Draw knot by knot, freehand like a pencil stroke, or as circles, rectangles, polygons, stars, spirals and springs.</td></tr>
 <tr markdown><td markdown>:wtk-selected-knots: [Knot editing](splines/spline-container.md#editing-knots)</td><td>Linear, Auto and Bezier knots, edited together in the Selected Knots panel, with split, extract and join.</td></tr>
 <tr markdown><td markdown>:lucide-list-tree: [Path data](splines/spline-container.md#paths-and-path-data)</td><td>Several paths per container, and curves or gradients stored along them for other tools to read.</td></tr>
 <tr markdown><td markdown>:wtk-component-spline-point-anchor: [Point Anchors](splines/point-anchors.md)</td><td>Keep an object attached to a point on a spline, following its position, rotation and scale.</td></tr>
