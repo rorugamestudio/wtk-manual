@@ -55,10 +55,10 @@ At a **Width Multiplier** of 1, a **Spline Stroke** reaches 5% of the spline's o
 | **Global** | Everywhere. | |
 | **Noise** | A noise pattern. | See [Noise](#noise). |
 | **Texture** | The brightness of a texture, multiplied by its alpha, stretched over each terrain of the target. | **Texture** |
-| **Terrain Height** | Where the terrain is within a range of world heights. | **World Height Range**, **Modulate Alpha By Incidence** |
-| **Terrain Slope** | Where the terrain slope is within a range, in degrees (0 to 90). Great for rocks on steep slopes and grass on flat ground. | **Slope Degrees Range**, **Modulate Alpha By Incidence** |
+| **Terrain Height** | Where the terrain is within a range of world heights. | **World Height Range**, **Modulate Alpha By Incidence**, **Use Incidence Curve** |
+| **Terrain Slope** | Where the terrain slope is within a range, in degrees (0 to 90). Great for rocks on steep slopes and grass on flat ground. | **Slope Degrees Range**, **Modulate Alpha By Incidence**, **Use Incidence Curve** |
 
-For **Terrain Height** and **Terrain Slope**, **Modulate Alpha By Incidence** fades the mask across the range, from 0 at its minimum to 1 at its maximum, instead of a hard cut.
+For **Terrain Height** and **Terrain Slope**, **Modulate Alpha By Incidence** fades the mask across the range, from 0 at its minimum to 1 at its maximum, instead of a hard cut. Turn on **Use Incidence Curve** to shape that fade with **Incidence Curve**: the left end of the curve is the minimum of the range and the right end is the maximum. A curve that rises early makes the mask strong over most of the range.
 
 !!! note
     **Terrain Height** and **Terrain Slope** read the terrain as it is **before** their own stamp. To paint the slopes of a hill that a stamp creates, put the painting in a separate stamp below the hill in the Hierarchy. Trees and details are the exception: they're placed after every stamp has shaped the ground, so their masks see the finished terrain.
@@ -126,12 +126,13 @@ These go in the layer's **Mask Composition** list, or in the **Adjustments** of 
 
 | Adjustment | What it does |
 |---|---|
+| **Multiply** | Multiplies the mask by **Multiply**: values above 1 strengthen it, values below 1 weaken it. Empty areas stay empty. |
 | **Brightness** | Adds **Brightness** to the mask: positive values strengthen it, negative values weaken it. |
 | **Contrast** | Pushes values away from the middle by **Contrast**, sharpening transitions. |
 | **Peak Normalize** | Stretches the mask so its strongest point reaches 1. |
 | **Mask Blur** | Blurs the mask over **Radius** meters, **Iterations** times (1 to 8). |
 
-In the **Mask Composition** list, **Brightness** and **Contrast** change the mask built by the entries above them. Inside a field fill, they only change that fill. **Peak Normalize** and **Mask Blur** always work on the layer's finished mask, after every fill is combined.
+In the **Mask Composition** list, **Multiply**, **Brightness** and **Contrast** change the mask built by the entries above them. Inside a field fill, they only change that fill. When a field fill has several of them, **Multiply** is applied first, then **Contrast**, then **Brightness**. **Peak Normalize** and **Mask Blur** always work on the layer's finished mask, after every fill is combined.
 
 ## :lucide-eye: Previewing masks
 
