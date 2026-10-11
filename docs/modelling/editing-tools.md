@@ -154,7 +154,7 @@ Clicking one of these buttons applies it right away with the current amount; its
 | Tool | What it does |
 |---|---|
 | :wtk-modify-duplicate: **Duplicate** | Duplicates the selected components inside the same mesh. |
-| :wtk-modify-connect: **Connect** | Connects the selected vertices, or pairs of edges, with a new edge across the face. |
+| :wtk-modify-connect: **Connect** | Connects the selected vertices, or pairs of edges, with new edges across the face. See [Connect options](#connect-options). |
 | :wtk-modify-merge-meshes: **Merge Meshes** | Merges the selected objects into the active one. |
 | :wtk-modify-separate: **Separate** | Moves the selected faces into a new object. |
 | :wtk-modify-rip: **Rip** | Tears the selection open, so it can be pulled apart. In face mode the button reads **Extract**: the faces are detached as their own island. |
@@ -168,6 +168,21 @@ Clicking one of these buttons applies it right away with the current amount; its
 | :wtk-modify-fill: **Fill** | Creates a face from the selected vertices or edge loop. |
 | :wtk-modify-grid-fill: **Grid Fill** | Fills a closed edge loop with a grid of quads. |
 | :wtk-modify-join-edges: **Join Edges** | Welds two open edge chains with the same number of edges. |
+
+### :wtk-modify-connect: Connect options
+
+In edge mode, Connect cuts every face that has two selected edges, from one edge to the other. Its **...** button shows these options in the Scene view, with a preview; the **Connect** button itself applies them right away.
+
+**Segments**
+:   How many new edges are inserted between each pair of selected edges.
+
+**Slide**
+:   Where the new edges sit along the selected edges, from 0 to 1. 0.5 keeps them centered.
+
+**Pinch**
+:   The gap between the outer edges and the new edges, from 0 to 1. 0.5 spaces them evenly, lower values push them out toward the outer edges and higher values gather them at the center. It needs at least two segments.
+
+In vertex mode the options don't apply: the selected vertices are joined by a single edge.
 
 ## :wtk-shape-freeform: Shapes
 
