@@ -76,6 +76,7 @@ nav = [
   { "Support" = [
     { "Overview" = "support/index.md" },
     { "Reporting Issues" = "support/reporting-issues.md" },
+    { "Changelog" = "support/changelog.md" },
   ] },
 ]
 

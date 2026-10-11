@@ -15,6 +15,12 @@ Bug reports, feature requests and questions are handled through :fontawesome-bra
 
     Which form to use, and what to include so a bug can be reproduced quickly.
 
+-   :lucide-history:{ .lg .middle } **[Changelog](changelog.md)**
+
+    ---
+
+    What changed in each World Toolkit release.
+
 -   :lucide-file-pen:{ .lg .middle } **Something wrong or missing in this manual?**
 
     ---
