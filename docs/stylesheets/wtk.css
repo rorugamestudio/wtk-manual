@@ -409,6 +409,16 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   background: #1e1e1e;
 }
 
+/* Captions sit right under their image or video. Image figures (markdown="span") get a line break
+   between the two from the Markdown pass: drop it along with the caption's top margin. */
+.md-typeset figure > br {
+  display: none;
+}
+
+.md-typeset figure figcaption {
+  margin-top: 0;
+}
+
 /* Footer studio credit: "by [logo] RORU Studio". */
 .wtk-studio {
   display: inline-flex;
