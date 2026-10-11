@@ -325,8 +325,9 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   backdrop-filter: none;
 }
 
-/* The theme navigates with P (previous) and N (next): show the key beside each footer link,
-   drawn like the manual's other keys. Hidden on touch screens, where there's no keyboard. */
+/* K (previous) and J (next) move between pages (javascripts/wtk-page-keys.js): show the key beside
+   each footer link, drawn like the manual's other keys. Hidden on touch screens, where there's no
+   keyboard. */
 .md-footer__link--prev .md-footer__direction::after,
 .md-footer__link--next .md-footer__direction::after {
   display: inline-block;
@@ -342,11 +343,11 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
 }
 
 .md-footer__link--prev .md-footer__direction::after {
-  content: "P";
+  content: "K";
 }
 
 .md-footer__link--next .md-footer__direction::after {
-  content: "N";
+  content: "J";
 }
 
 @media (hover: none) {
