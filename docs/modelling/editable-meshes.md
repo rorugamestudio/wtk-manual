@@ -80,7 +80,7 @@ To move the data of every mesh in a scene out of the scene file automatically, s
 
 ### :lucide-package: Prefabs
 
-When you create a prefab asset from objects whose Editable Meshes store their data in the component, World Toolkit moves each mesh's data into an `.emesh` file in a `<PrefabName>_EditableMeshes` folder next to the prefab, and links the mesh to it. This runs as a background task, with its progress in Unity's status bar.
+When you create a prefab asset from objects whose Editable Meshes store their data in the component, World Toolkit moves each mesh's data into an `.emesh` file in a `<PrefabName>_EMeshes` folder next to the prefab, and links the mesh to it. This runs as a background task, with its progress in Unity's status bar.
 
 !!! info "When `.emesh` files are written"
     Edits to a mesh that uses an `.emesh` asset are written to the file when you save the scene. Applying a prefab instance's overrides also writes them first, so the prefab's **Mesh Filter** keeps using the mesh imported from the `.emesh` file.
