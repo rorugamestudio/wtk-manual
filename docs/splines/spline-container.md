@@ -10,7 +10,7 @@ A :wtk-component-spline-container: **Spline Container** holds one or more spline
 
 While editing splines:
 
-1. With no knots selected, hold ++shift++ and **click** away from other splines to place the first knot. If a Spline Container is selected, the new spline is added to it. Otherwise a new **Spline** object is created.
+1. With no knots selected, hold ++shift++ and **click** away from other splines to place the first knot. If a Spline Container is selected and **Append to Selected Container** is on in the [New Splines panel](#new-splines-panel), the new spline is added to it. Otherwise a new **Spline** object is created.
 2. **Click** to add each knot. **Click and drag** to pull out the new knot's handles: it becomes a **Bezier** knot with **Mirrored** handles.
 3. Finish the spline in one of these ways:
     - **Right-click**, or press ++esc++.
@@ -24,14 +24,16 @@ While editing splines:
 
 ### :wtk-snap: Where new knots land
 
-New knots use the [snapping](../modelling/transform.md#snapping) options shared by all World Toolkit tools. Turn snapping on in the :wtk-snap: **Snapping** panel of the Scene view, or with ++shift+v++.
+With **Stick to Surface** on in the [New Splines panel](#new-splines-panel), new knots land on the collider under the cursor and are tilted to match it. With it off, or where there's no collider, they land on the ground plane, at height 0. The colliders of the Spline Container you're drawing into are skipped, so a road's knots don't land on its own mesh.
+
+New knots also use the [snapping](../modelling/transform.md#snapping) options shared by all World Toolkit tools. Turn snapping on in the :wtk-snap: **Snapping** panel of the Scene view, or with ++shift+v++.
 
 | Snapping | Where the new knot goes |
 |---|---|
-| Off | On the ground plane, at height 0. |
+| Off | On the collider under the cursor (**Stick to Surface**) or on the ground plane. |
 | On, over a snap target | On the target under the cursor, among the ones turned on in the **Snapping** panel: vertices, edges, face surfaces, spline knots, collider surfaces (**Surface (Collider)**) and so on. On a face or collider surface, the knot is also tilted to match it. |
 | **Grid** | Away from targets, onto the grid (**Grid Size**). On a face or collider surface, the rounding happens along the surface, so the knot stays on it. |
-| **Increment** | After the first knot, a whole number of **Grid Size** steps away from the previous knot, across the ground plane. It wins over **Grid** when both are on. |
+| **Increment** | After the first knot, a whole number of **Grid Size** steps away from the previous knot, across the ground plane, or along the collider surface with **Stick to Surface**. It wins over **Grid** when both are on. |
 
 The knot you're drawing from is never a snap target, so it can't swallow the next knot. Handles you pull out of a new knot snap the same way, and a highlight shows what the knot is snapping to.
 
@@ -42,6 +44,14 @@ The :wtk-new-splines: **New Splines** panel in the Scene view sets up the spline
 **New Spline Mode**
 :   The type of the knots you click: **Auto** creates smooth curves with handles set automatically, **Linear** creates straight segments.
 
+**Stick to Surface**
+:   Places clicked knots, freeform strokes and shapes on the collider under the cursor instead of the ground plane. Shapes start on the collider, aligned with it, and the rest of the drag stays on that plane.
+
+**Append to Selected Container**
+:   Adds new splines, freeform strokes and shapes to the selected Spline Container instead of creating a new object.
+
+Both are shared by every way of drawing splines, and are on by default.
+
 ### :lucide-signature: Freeform drawing
 
 Click **Draw Freeform Spline**, then hold the mouse button and drag in the Scene view to draw a spline like a pencil stroke. The stroke is turned into a smooth curve of **Auto** knots. The tool stays on so you can draw more strokes: click **Exit Freeform Spline** or press ++esc++ to stop.
@@ -51,8 +61,6 @@ Click **Draw Freeform Spline**, then hold the mouse button and drag in the Scene
 | **Minimum Sample Distance** | How far apart the captured points of the stroke are. |
 | **Simplification Tolerance** | How much the stroke is simplified. Higher values give fewer knots. |
 | **Close Distance** | If the stroke ends this close to where it started, the spline is closed. |
-| **Stick to Surface** | Draws on the colliders under the cursor instead of the ground plane. |
-| **Append to Selected Container** | Adds the stroke to the selected Spline Container instead of creating a new object. |
 
 ### :lucide-shapes: Shapes
 
@@ -69,8 +77,6 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
 
 :lucide-shell: **Spiral**
 :   Drag from the center to set the outer radius and rotation. **Turns** sets the number of revolutions. **Inner Radius** is where the spiral starts, as a fraction of the dragged radius: 0 starts at the center, 1 keeps the radius constant. **Height** lifts the end of the spiral off the surface, so a constant radius with a height makes a spring; a negative height coils downwards. **Radius Bias** and **Height Bias** pack the turns toward the start (negative) or the end (positive) of the radius and of the height.
-
-**Stick to Surface** starts the shape on the collider under the cursor, aligned with it; the rest of the drag stays on that plane. **Append to Selected Container** adds the shape to the selected Spline Container instead of creating a new object. Both have their own setting here, separate from the freeform ones.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/splines/spline-shapes.webp">
