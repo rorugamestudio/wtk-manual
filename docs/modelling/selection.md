@@ -143,4 +143,6 @@ For whole objects, the **Mesh** card has:
 
 ## :lucide-scan-eye: X-Ray
 
-The **XR** button in the Modelling Edit toolbar turns on a temporary X-Ray view of the selected meshes. You can see and select components on the far side.
+The **XR** button in the Modelling Edit toolbar turns on an X-Ray view of the selected meshes. You can see and select components on the far side.
+
+X-Ray only shows while you're editing a mesh, but it stays on: leave the editing context and come back, or restart Unity, and it's still active until you click **XR** again.
