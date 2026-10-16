@@ -54,7 +54,7 @@ The **Create Mesh Options** panel appears in the Scene view while you draw. Its 
 Some primitives have extra options in that panel:
 
 :wtk-create-cylinder: **Cylinder**
-:   **Inner Radius** opens a hole through the center (0 makes a solid cylinder). **Arc Degrees** sets the start and end angles, for a partial cylinder.
+:   **Inner Radius** opens a hole through the center (0 makes a solid cylinder). **Arc Degrees** sets the start and end angles, for a partial cylinder. A **Height** of 0 makes it flat: a single-sided ring with no walls, or a disc when it's solid. Clicking without moving the mouse in the height step draws it flat too. The Editable Primitive inspector accepts 0 as well.
 
 :wtk-create-torus: **Torus**
 :   **Radius** goes to the center of the ring, and **Thickness** is the diameter of its round section. **Arc Degrees** works as for the cylinder.
