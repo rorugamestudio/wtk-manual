@@ -21,7 +21,9 @@ The **Settings** tab of the :wtk-more: **More** module holds settings shared by 
 :   Draws two lines from the world origin along the positive direction of the Scene view grid's two axes, in the axis colors. They run on without end, so you can always tell where the origin is.
 
 !!! info "Switching camera views"
-    Hold ++space++ in the Scene view to open the camera menu, move the mouse toward **Top**, **Left**, **Front** or **Perspective**, and release ++space++ to switch to that view. **Top**, **Left** and **Front** are orthographic. ++esc++ closes the menu without switching.
+    Hold ++space++ in the Scene view to open the camera menu, move the mouse toward **Top**, **Left**, **Front** or **Perspective**, and release ++space++ to switch to that view. Move further out, past **Top**, **Left** or **Front**, to reach the opposite view on the outer ring: **Bottom**, **Right** or **Back**. ++esc++ closes the menu without switching.
+
+    Every view except **Perspective** is orthographic and opens with the Scene view's rotation locked, so it keeps looking down its axis. Unlock it with the padlock on the **Orientation** overlay: each view remembers whether you unlocked it. Switching views turns off the Scene view's 2D mode.
 
 ### Background
 
