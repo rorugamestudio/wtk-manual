@@ -24,6 +24,10 @@ The new loft is called **Loft**. It goes in the scene of its first profile, with
 
 **GameObject > World Toolkit > Modelling > Loft from Splines** lofts the selected splines in selection order, with the Loft tab's current options, without going through the tab. It needs two splines, or one spline and an empty object as a point profile. It's also in the [Modelling Tools search](editing-tools.md#modelling-tools-search).
 
+### :lucide-square-terminal: From the command line
+
+Scripts and AI agents make and change lofts with `wtk_modelling_create_loft`, which takes the same options as the tab and doesn't change the selection. See [Command Line](../more/command-line.md#modelling).
+
 ## :lucide-pencil: Editing a loft
 
 Select a loft and the **Loft** tab edits it. If the selection holds a loft along with other objects, the tab edits that loft, so you can select splines next to it. Every change can be undone, and the loft rebuilds as you change it.

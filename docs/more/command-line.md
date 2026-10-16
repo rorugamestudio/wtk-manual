@@ -213,13 +213,14 @@ Commands for [buildings](../buildings/index.md) (tag `worldtoolkit/buildings`).
 
 ## :wtk-component-editable-mesh: Modelling
 
-Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md) without using the editor selection (tag `worldtoolkit/modelling`).
+Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md) without using the editor selection (tag `worldtoolkit/modelling`). `wtk_describe`, `wtk_validate` and `wtk_rebuild` also work on [Editable Primitives](../modelling/editable-meshes.md#editable-primitives); for a [loft](../modelling/loft.md) they report its settings and why it can't be built.
 
 | Command | What it does |
 | --- | --- |
 | `wtk_modelling_create_mesh` | Creates an Editable Mesh from a list of vertices and polygons. |
 | `wtk_modelling_create_revolve` | Creates an Editable Mesh by turning a profile around an axis: wheels, tyres, lamps, knobs. |
-| `wtk_modelling_create_loft` | Creates an Editable Mesh surface through a grid of control points, smooth or with creases, optionally mirrored and capped. |
+| `wtk_modelling_create_grid_surface` | Creates an Editable Mesh surface through a grid of control points, smooth or with creases, optionally mirrored and capped. |
+| `wtk_modelling_create_loft` | Creates a [loft](../modelling/loft.md) through spline profiles, like **Create Loft** in the Loft tab, or changes one with `--target`. The loft keeps following its splines. |
 | `wtk_modelling_create_projected_patch` | Creates shapes projected onto another mesh, following its surface like a decal: windows, grilles, trims, panel lines, rings and text. |
 | `wtk_modelling_describe_mesh` | *Read-only.* Vertex and face counts, open and non-manifold edges, degenerate faces, volume, bounds, and faces per material. |
 | `wtk_modelling_find_components` | *Read-only.* Finds faces, edges or vertices by material, facing direction, position inside a box, or open edges. The result feeds `wtk_modelling_apply`. |
@@ -227,7 +228,16 @@ Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md)
 | `wtk_modelling_boolean` | Combines Editable Meshes with a [Boolean Stack](../modelling/booleans.md): difference, union, intersection or slice. `--bake true` turns the result into a plain Editable Mesh. |
 | `wtk_modelling_export_obj` | *Read-only.* Writes an Editable Mesh to a Wavefront `.obj` file at `--path`, like **Export to .OBJ...** in its context menu: polygons and shared vertices as modelled, UVs and normals per face corner, one material group per slot. |
 
-The four `create` commands take their shape as JSON, from a file (`--input_file`, absolute or relative to the project folder) or inline (`--definition`). Their descriptions in the command list name every field. Pass `--target` with an existing Editable Mesh to rebuild it in place, keeping its transform, children and references.
+The `create` commands take their shape as JSON, from a file (`--input_file`, absolute or relative to the project folder) or inline (`--definition`). Their descriptions in the command list name every field. Pass `--target` with an existing Editable Mesh to rebuild it in place, keeping its transform, children and references.
+
+`wtk_modelling_create_loft` takes the loft's options instead (`profiles`, `interpolation`, `guide`, `cap_start`, `quality` and so on); its description in the command list names each one and its values. Profiles, rails and the centerline are spline handles, or `{"spline": "/Ring", "path": 1}` for another path; `{"point": "/Tip"}` is a point profile. With `--target` it changes an existing loft, and the options the JSON leaves out keep their values. `wtk_describe` on a loft returns its options in the same JSON, ready to edit and pass back.
+
+!!! example "A loft from three rings"
+
+    ```bash
+    unity cmd wtk_modelling_create_loft --definition '{"profiles": ["/Base", "/Middle", "/Top"], "cap_end": false}'
+    unity cmd wtk_modelling_create_loft --target "/Loft" --definition '{"interpolation": "Straight"}'
+    ```
 
 !!! example "A knob, start to finish"
 
