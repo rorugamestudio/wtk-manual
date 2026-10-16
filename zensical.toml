@@ -20,6 +20,7 @@ nav = [
     { "Overview" = "modelling/index.md" },
     { "Editable Meshes" = "modelling/editable-meshes.md" },
     { "Primitives" = "modelling/primitives.md" },
+    { "Loft" = "modelling/loft.md" },
     { "Selection" = "modelling/selection.md" },
     { "Transform" = "modelling/transform.md" },
     { "Editing Tools" = "modelling/editing-tools.md" },

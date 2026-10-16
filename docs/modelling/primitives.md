@@ -97,6 +97,7 @@ Some primitives have extra options in that panel:
 - **Plane**, **Cube**, **Circle**, **Cylinder**, **Cone**, **Sphere**, **Torus**, **Custom Polygon** and **Arch** are created with their default size, at the center of the Scene view, or as a child of the object you right-clicked in the Hierarchy. They get the **Create Options** material.
 - **Free Form** starts drawing a [Free-form](#free-form) shape in the Scene view.
 - **Stairs from Spline**, **Tube from Spline** and **Surface from Spline** work like the **Spline Based** buttons, on the selected spline.
+- **Loft from Splines** lofts the selected splines in selection order. See [Loft](loft.md#loft-from-splines).
 
 ## :wtk-create-surface: Surface
 

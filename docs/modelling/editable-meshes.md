@@ -47,7 +47,7 @@ See [UVs](uvs.md) for manual UV editing.
 
 ## :wtk-component-editable-primitive: Editable Primitives
 
-Primitives keep their parameters in an :wtk-component-editable-primitive: **Editable Primitive** component, next to the Editable Mesh. Its inspector shows the parameters of the primitive's **Kind**: sizes, segments, the vertex color, the UV offset, scale and rotation, and the spline settings of stairs, tubes and surfaces. Changing a value rebuilds the mesh right away. Right-click the component and choose **Force Rebake** to rebuild it from its parameters on demand.
+Primitives keep their parameters in an :wtk-component-editable-primitive: **Editable Primitive** component, next to the Editable Mesh. Its inspector shows the parameters of the primitive's **Kind**: sizes, segments, the vertex color, the UV offset, scale and rotation, and the spline settings of stairs, tubes, surfaces and [lofts](loft.md). Changing a value rebuilds the mesh right away. Right-click the component and choose **Force Rebake** to rebuild it from its parameters on demand.
 
 While a mesh is controlled by its primitive, its vertices, edges and faces can't be edited directly. Click **Make Editable** at the top of the **Topology** tab to turn it into a regular Editable Mesh and edit the topology. After that, the primitive parameters are gone.
 

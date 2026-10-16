@@ -11,7 +11,7 @@ Open it from the **Modelling** tab of the [World Toolkit window](../getting-star
 
 ## :lucide-panels-top-left: The Modelling tabs
 
-The Modelling panel has four tabs:
+The Modelling panel has five tabs:
 
 :wtk-create-cube: **Create**
 :   Create [primitives](primitives.md) (cubes, cylinders, stairs and more) and [Boolean Stacks](booleans.md).
@@ -21,6 +21,9 @@ The Modelling panel has four tabs:
 
 :wtk-uv-grid: **UV**
 :   Edit [texture coordinates](uvs.md).
+
+:lucide-layers: **Loft**
+:   Make and edit [lofts](loft.md), surfaces through a series of splines.
 
 :lucide-settings: **Settings**
 :   Colors, sizes and visibility of everything Modelling draws in the Scene view, snapping, and a few behavior options. See [Modelling Settings](settings.md).
@@ -58,6 +61,12 @@ Many tools also show an options panel in the Scene view (for example **Extrude O
     ---
 
     Draw cubes, cylinders, arches and other shapes in the Scene view, or build stairs, tubes and surfaces from splines.
+
+-   :lucide-layers:{ .lg .middle } **[Loft](loft.md)**
+
+    ---
+
+    Surfaces through a series of profile splines, guided by rails or a centerline.
 
 -   :wtk-select:{ .lg .middle } **[Selection](selection.md)**
 

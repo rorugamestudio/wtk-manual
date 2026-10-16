@@ -112,4 +112,4 @@ Settings of the [UV View](uvs.md#the-uv-view):
 
 ## :lucide-timer: Rebuilds
 
-How often Boolean Stacks, the Mesh Colliders of edited meshes, and Surface primitives whose spline you're dragging rebuild while you drag. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
+How often Boolean Stacks, the Mesh Colliders of edited meshes, Surface primitives whose spline you're dragging, and [lofts](loft.md) rebuild while you drag. See [Rebuild settings](../getting-started/world-toolkit-window.md#rebuild-settings).
