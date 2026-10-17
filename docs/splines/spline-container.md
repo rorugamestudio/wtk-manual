@@ -94,7 +94,8 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 - Each separate part of a path becomes one path of its Spline Container. Closed parts become closed splines.
 - Curves keep their Bézier handles. Knots without handles are **Linear**, knots whose handles line up are **Mirrored** (same length) or **Continuous**, and the rest are **Broken**.
 - Paths, rectangles (rounded ones too), circles, ellipses, lines, polylines, polygons and `<use>` copies are imported with all their transforms. Text, images, clipping paths, masks and definitions are skipped. Hidden layers come in as inactive objects.
-- One unit of the file is one metre. The center of the drawing's canvas lands on the Scene view pivot, on the ground plane at height 0 and seen from above. In an orthographic side view (Front, Left...) the drawing lands on the plane facing the view instead, as new splines do.
+- **Scale**, next to the button, is the size in metres of one unit of the file: a pixel, or a millimetre in a document set up in millimetres. It starts at 1 and is kept between sessions.
+- The center of the drawing's canvas lands on the Scene view pivot, on the ground plane at height 0 and seen from above. In an orthographic side view (Front, Left...) the drawing lands on the plane facing the view instead, as new splines do.
 - Each Spline Container's pivot is at the center of its knots. ++ctrl+z++ removes the whole import.
 
 ## :lucide-mouse-pointer-click: Editing knots
