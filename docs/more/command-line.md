@@ -230,7 +230,7 @@ Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md)
 
 The `create` commands take their shape as JSON, from a file (`--input_file`, absolute or relative to the project folder) or inline (`--definition`). Their descriptions in the command list name every field. Pass `--target` with an existing Editable Mesh to rebuild it in place, keeping its transform, children and references.
 
-`wtk_modelling_create_loft` takes the loft's options instead (`profiles`, `interpolation`, `guide`, `cap_start`, `quality` and so on); its description in the command list names each one and its values. Profiles, rails and the centerline are spline handles, or `{"spline": "/Ring", "path": 1}` for another path; `{"point": "/Tip"}` is a point profile. With `--target` it changes an existing loft, and the options the JSON leaves out keep their values. `wtk_describe` on a loft returns its options in the same JSON, ready to edit and pass back.
+`wtk_modelling_create_loft` takes the loft's options instead (`profiles`, `interpolation`, `guide`, `cap_start`, `quality` and so on); its description in the command list names each one and its values. Profiles, rails and the centerline are spline handles, or `{"spline": "/Ring", "path": 1}` for another path; `{"point": "/Tip"}` is a point profile. A `Tangent` end can name the loft it carries on from in `start_neighbour` or `end_neighbour`. With `--target` it changes an existing loft, and the options the JSON leaves out keep their values. `wtk_describe` on a loft returns its options in the same JSON, ready to edit and pass back.
 
 !!! example "A loft from three rings"
 

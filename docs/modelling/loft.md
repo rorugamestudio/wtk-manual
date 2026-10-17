@@ -99,13 +99,30 @@ Closed profiles show their seam as a dot. **Drag** it along the profile to turn 
 How an open loft leaves its first profile (**Start**) and reaches its last (**End**). A closed loop has no ends.
 
 **Condition**
-:   With **Smooth** interpolation, **Free** lets the surface meet the profile on its own. **Direction** meets it at right angles, tilted by **Angle**. At a point profile, **Direction** rounds the tip.
+:   With **Smooth** interpolation, **Free** lets the surface meet the profile on its own. **Direction** meets it at right angles, tilted by **Angle**. At a point profile, **Direction** rounds the tip. **Tangent** carries on from the neighbouring loft that shares the profile, without a crease: see [Joining lofts without a crease](#joining-lofts-without-a-crease).
 
 **Angle** and **Weight**
-:   With **Direction**: **Angle** tilts the direction outward (positive) or inward (negative), from -80 to 80 degrees. **Weight** is how far the direction carries into the surface, from 0 to 4.
+:   **Angle**, with **Direction**, tilts the direction outward (positive) or inward (negative), from -80 to 80 degrees. **Weight**, with **Direction** or **Tangent**, is how far the direction carries into the surface, from 0 to 4.
+
+**Neighbour**
+:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile.
 
 **Cap**
 :   Closes the profile with a face. It needs closed profiles.
+
+### :lucide-link: Joining lofts without a crease
+
+Two lofts that share a profile meet at an angle along it, because each one only knows its own profiles. To make them read as one surface, like a body panel built from several lofts:
+
+1. Build both lofts so they share the profile: the last (or first) profile of one is the first (or last) profile of the other.
+2. Select the loft that should adapt, and set the **Condition** of the end at the shared profile to **Tangent**.
+3. If more than one other loft starts or ends with that profile, choose the one to follow in **Neighbour**. Under the field, the tab shows the loft it carries on from.
+
+The neighbour keeps its shape. This loft leaves the shared profile in the same direction the neighbour reaches it, so the surface goes on across the border without a fold (tangent continuity, G1), and the shading closely matches on both sides. **Weight** sets how far that direction carries into this loft before it turns towards its other profiles. When the neighbour changes, this loft follows it.
+
+Set **Tangent** on only one of the two lofts. If both carry on from each other, each follows the other's own shape and they still meet at an angle; the tab says so. On a loft with **Rails**, the rails still pull the surface next to the profile, so a small angle can remain.
+
+The lofts stay separate objects with their own options and materials. For a single mesh with no border at all, put every profile in one loft instead: **Smooth** interpolation already passes through each profile without a crease.
 
 ## :lucide-align-center: Alignment
 
@@ -176,3 +193,5 @@ Some problems still build a loft and show a note instead:
 - *Profiles have different knot counts, so they are aligned by arc length.* **Point Mapping** is set to **Knots**, but the profiles don't match.
 - *A rail does not touch every profile; the surface bridges the gap.*
 - *Add rails, or the loft is built without them.* and *Choose a centerline spline; the loft is built without one.* The **Guide** is set but has nothing to follow yet.
+- *No other loft starts or ends with the first profile; the start is left free.* and *Several lofts start or end with the first profile: choose the start's Neighbour.* A **Tangent** end has no loft to follow, or more than one.
+- *Loft (1) carries on from this loft as well; set Tangent on one of them only.* Both lofts are set to **Tangent** towards each other.
