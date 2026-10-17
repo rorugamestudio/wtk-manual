@@ -90,6 +90,7 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
 - **Drag** across empty space to box-select knots, with the same modifiers.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
+- The Scene view highlights, in green, the part of the spline each selected knot shapes: the line on both sides of the knot, fading out a third of the way to the next knots.
 - **Click** a spline's line to select its object.
 - **Drag** a selected knot or handle to move it. With snapping on, dragged knots snap too.
 - Unity's **Move**, **Rotate** and **Scale** tools work on the selected knots. Rotating a single knot turns it in place, and several knots turn around their center.
