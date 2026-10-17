@@ -28,7 +28,7 @@ Spline display options are in the **Settings** tab of the :wtk-more: **More** mo
 
 ## :lucide-palette: Colors
 
-Colors of the **Spline**, the **Closed Spline Fill**, the **Selected Spline** and its fill, **Knot** and **Selected Knot**, the **Open Spline Endpoint**, the **Knot Rotation Marker**, **Tangent**, **Selected Tangent** and **Tangent Line**, and the **Creation Offer**: the preview of the next knot before you click.
+Colors of the **Spline**, the **Closed Spline Fill**, the **Selected Spline** and its fill, **Knot** and **Selected Knot**, the **Knot Segment Highlight** drawn on the part of the spline a selected knot shapes, the **Open Spline Endpoint**, the **Knot Rotation Marker**, **Tangent**, **Selected Tangent** and **Tangent Line**, and the **Creation Offer**: the preview of the next knot before you click.
 
 !!! info "Module splines"
     The Roads, Buildings and Terrain modules have their own **Splines** settings, with **Line**, **Closed Spline Fill** and **Line Thickness**, for the splines they edit.

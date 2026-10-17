@@ -33,7 +33,7 @@ Linked knots can't be selected one by one. Each link is drawn as a small cube wh
 
 When you select a link, the :wtk-selected-knots: **Selected Knots** panel becomes **Selected Link Group**:
 
-- It says how many knots are linked, and the **Knot** list picks one of them. The Scene view highlights, in green, the part of that knot's spline next to the link.
+- It says how many knots are linked, and the **Knot** list picks one of them. The Scene view highlights the part of that knot's spline next to the link, in the **Knot Segment Highlight** color of the [Spline Settings](settings.md#colors), green by default.
 - The settings below edit the picked knot: its type, handles and rotation. Its position belongs to the link.
 - **Remove Selected Knot From Link** takes the picked knot out of the link.
 
