@@ -39,7 +39,7 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 ## :wtk-roads: The Roads panel
 
 **Points**
-:   **Edit Road Points** turns on road editing in the Scene view; while it's on, the button reads **Exit Editing Road Points**.
+:   **Edit Road Points** turns on road editing in the Scene view; while it's on, the button reads **Exit Editing Road Points**. **Edit Selected Roads Only** limits editable points to the selected roads. **Show Lane Controls** shows the [lane controls](creating-roads.md#editing-a-road) on the selected roads; turn it off to hide them.
 
 **New Roads**
 :   The **Road Rules** used for the roads you draw or convert, and for new junctions, and the **Lane Overrides** those roads get on top of them (see [Lane overrides for new roads](creating-roads.md#lane-overrides-for-new-roads)). :wtk-component-editable-mesh-road: **Create from Selection** turns the selected spline containers into roads that use these rules, and their linked knots into junctions. **Apply to Selected** applies these rules to the selected roads and junctions.

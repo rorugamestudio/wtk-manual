@@ -38,7 +38,7 @@ With **Edit Road Points** active:
 
 Knots work the same as on any [spline](../splines/spline-container.md#editing-knots), including the right-click menu.
 
-Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. See [Lanes](profiles-and-layers.md#lanes).
+Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
 
 ## :wtk-component-spline-container: Converting existing splines
 
