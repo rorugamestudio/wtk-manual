@@ -10,7 +10,7 @@ These modes draw in URP projects. In other render pipelines they're listed but d
 
 ## :lucide-move-vertical: Geometry Height
 
-Colours every surface by its height, so slopes, steps and objects that sit too high or too low stand out. The colours go from dark purple at the lowest vertex of the geometry in the Scene view, through blue, cyan, green and yellow, to dark red at the highest: the same ramp as the height pictures of [`wtk_render_positions`](command-line.md). Faces are lightly shaded so you can still tell them apart.
+Colours every surface by its height, so slopes, steps and objects that sit too high or too low stand out. The colours go from dark purple at the lowest vertex of the geometry in the Scene view, through blue, cyan, green and yellow, to dark red at the highest: the same ramp as the height pictures of [`wtk_render_positions`](command-line.md). The colours are flat, with no lighting, so the same colour always means the same height.
 
 The lowest and highest heights come from the mesh renderers, skinned mesh renderers and terrains of the open scenes, or of the prefab you're editing. Objects hidden in the Scene view, layers hidden in the **Layers** menu and disabled renderers don't count. The range follows the scene as you edit it.
 
