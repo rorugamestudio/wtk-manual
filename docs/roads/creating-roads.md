@@ -36,6 +36,8 @@ With **Edit Road Points** active:
 - **Drag a knot** onto another road to create a junction there, or onto a junction to connect it to that junction.
 - **Drag a road end** onto the outer edge of another road to attach it with an [anchored connection](anchored-connections.md).
 
+A knot inserted on a curved span, by double-clicking it or by connecting another road there, keeps the road's shape: it gets **Continuous** handles, and the handles of the knots on either side shorten to fit their part of the span, so a **Mirrored** knot between two spans becomes **Continuous**.
+
 Knots work the same as on any [spline](../splines/spline-container.md#editing-knots), including the right-click menu.
 
 Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
