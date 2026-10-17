@@ -23,11 +23,17 @@ To add another knot to an existing link:
 
 ## :lucide-move-3d: Moving linked knots
 
-Linked knots can't be selected one by one. Each link is drawn as a small cube where its knots meet: click the cube, or box-select it, to select the link. A link that belongs to a road junction is drawn as the junction's outline raised into a prism instead; its cube stays clickable at the centre. When a road is about to connect to a junction or split another road, the offer shows the footprint the junction will have, with the mouth of the arriving road.
+Linked knots can't be selected one by one, only their [handles](#handles-of-linked-knots) can. Each link is drawn as a small cube where its knots meet: click the cube, or box-select it, to select the link. A link that belongs to a road junction is drawn as the junction's outline raised into a prism instead; its cube stays clickable at the centre. When a road is about to connect to a junction or split another road, the offer shows the footprint the junction will have, with the mouth of the arriving road.
 
 - With a link selected, Unity's **Move** and **Rotate** tools move and turn all its knots together.
 - Moving the **Spline Link** object any other way, for example from its Transform in the Inspector, moves its knots too.
 - When another tool moves one of the linked knots, the other knots of the link follow it.
+
+## :lucide-spline: Handles of linked knots
+
+The handles of linked **Bezier** knots are still drawn around the link, and you edit them like the handles of any other knot: click one to select it, then move it. A handle belongs to its own knot, so the other knots of the link keep theirs.
+
+While a linked knot's handle is selected, the **Position** in the :wtk-selected-knots: **Selected Knots** panel is read-only: the knot's position belongs to the link.
 
 ## :wtk-selected-knots: Editing a link group
 
