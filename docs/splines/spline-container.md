@@ -85,6 +85,18 @@ Click a shape button, then drag in the Scene view to draw the whole shape in one
   <figcaption>Freeform strokes, circles, rectangles, polygons and stars.</figcaption>
 </figure>
 
+## :lucide-download: Importing SVG files
+
+Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit** tab of the :wtk-more: [More](../more/index.md) module and pick an `.svg` file: every path and shape in it becomes a spline. Draw a road network, a coastline or a set of building outlines in a vector editor such as Inkscape or Illustrator, then bring it in as splines to build on.
+
+- A new object named after the file holds the import. Each group or layer of the file becomes an empty child object, nested as in the file, and each path or shape becomes a Spline Container inside its group.
+- Every object takes the name of its element in the file: the Inkscape label, the Illustrator layer name, or the element's id. Elements without a name are named after their kind, like **Path** or **Rect**.
+- Each separate part of a path becomes one path of its Spline Container. Closed parts become closed splines.
+- Curves keep their Bézier handles. Knots without handles are **Linear**, knots whose handles line up are **Mirrored** (same length) or **Continuous**, and the rest are **Broken**.
+- Paths, rectangles (rounded ones too), circles, ellipses, lines, polylines, polygons and `<use>` copies are imported with all their transforms. Text, images, clipping paths, masks and definitions are skipped. Hidden layers come in as inactive objects.
+- One unit of the file is one metre. The center of the drawing's canvas lands on the Scene view pivot, on the ground plane at height 0 and seen from above. In an orthographic side view (Front, Left...) the drawing lands on the plane facing the view instead, as new splines do.
+- Each Spline Container's pivot is at the center of its knots. ++ctrl+z++ removes the whole import.
+
 ## :lucide-mouse-pointer-click: Editing knots
 
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.

@@ -14,6 +14,8 @@ The :wtk-more: **More** module of the [World Toolkit window](../getting-started/
 
     **Centralize Pivot** moves the pivot of the selected Spline Containers to the center of their knots, or of the selected knots. **Place Pivot On Knot 0** moves it onto the first knot of the spline. The splines and the objects' children stay where they are.
 
+    **Import SVG…** turns the paths and shapes of an SVG file into splines, nested and named as the groups and elements of the file. See [Importing SVG files](../splines/spline-container.md#importing-svg-files).
+
 :wtk-component-spline-spawner: **Spawners**
 :   Create spawners that place copies of objects along a spline or inside an area. The **Spline** field shows the Spline Container of the selected object: select the object with the spline to use it.
 

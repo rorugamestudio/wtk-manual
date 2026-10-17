@@ -148,6 +148,7 @@ Commands for [spline containers](../splines/spline-container.md) and [link group
 | `wtk_splines_set_paths` | Replaces a spline's paths with new knot positions, or appends paths with `--mode append`. |
 | `wtk_splines_sample` | *Read-only.* Points at even distances along a spline (`--spacing` in metres, or `--count`), each with its position, direction and up vector. |
 | `wtk_splines_link` | Links two knots of different paths so they move together, under a new Spline Link object. Knots are written as `{"spline": "/Spline", "path": 0, "knot": -1}`; a negative knot counts from the end of the path. |
+| `wtk_splines_import_svg` | Imports an SVG file (`--file`, or the markup itself as `--svg`) as splines, like [Import SVG…](../splines/spline-container.md#importing-svg-files): a root object, an empty object per group and a Spline Container per path or shape, each named after its element. `--scale` is metres per SVG unit (default 1), `--position` is where the center of the drawing lands, and `--plane` is `xz` (the ground, default), `xy` or `zy`. |
 
 Paths are JSON. Positions are in world space unless you pass `--space local`:
 
