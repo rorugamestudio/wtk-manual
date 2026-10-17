@@ -10,10 +10,10 @@ A knot can belong to only one link group, and two knots of the same spline can't
 
 ## :lucide-link: Linking knots
 
-1. While [editing splines](index.md#where-to-edit-splines), select two knots on different splines. They can be in the same Spline Container or in different ones.
+1. While [editing splines](index.md#where-to-edit-splines), select two or more knots, each on a different spline. They can be in the same Spline Container or in different ones.
 2. **Right-click** and choose **Link**.
 
-Both knots move to the point halfway between them, and a new **Spline Link** object holds them. It's created as a child of one of the two knots' spline objects, and is selected for you.
+The knots move to their average position, halfway between them when there are two, and a new **Spline Link** object holds them. It's created as a child of the first selected knot's spline object, and is selected for you.
 
 To add another knot to an existing link:
 
