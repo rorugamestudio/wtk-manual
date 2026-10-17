@@ -57,11 +57,13 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 
 ### Junction heights
 
-With **Height Model** set to **Ground**, the junction lays one ground along the splines of the roads it joins: each road brings its own surface (its spline's height and its carriageway's shape) from its mouth to the middle of the junction, and the ground blends those surfaces where the roads meet. The core lies on that ground, and curbs and sidewalks sit on it at their own heights, so they follow the same slope. Near each mouth, up to where its curbs start to turn, the ground is exactly that road's surface, so its lanes and crossings carry on unchanged.
+With **Height Model** set to **Plane**, the whole junction lies on one flat plane through the junction's position. The plane turns with the junction object: rotate the junction to tilt it, for example to follow a hillside. The core lies on the plane, and curbs and sidewalks sit on it at their own heights.
 
-This keeps curbs at their height and sidewalks continuous where roads at different heights meet, for example a ramp leaving a flat road at a sharp angle. When two roads are so close and so far apart in height that their sidewalks touch, the ground slopes steeply between them; it cannot remove that step, and the layout needs more room or a different grade there.
+The roads bend to meet the plane, not the other way round. At each mouth the road's end moves up or down onto the plane and tilts to its slope across the road, so its lanes, curbs and crossings meet the junction exactly. From the mouth the road eases back to its own grade, over a length that grows with how far its end had to move, so the extra slope stays gentle. Only the road's mesh bends: its spline is unchanged.
 
-**Legacy** is how junctions were built before the ground: the core is interpolated between the mouths. Junctions made with an earlier version keep **Legacy**, so they keep their shape; new junctions use **Ground**. Switch a junction to **Ground** to rebuild it on the ground.
+This keeps every junction flat and its curbs at their height, even where roads arrive at different heights, such as a ramp leaving a flat road at a sharp angle. Two roads that leave the junction side by side at different grades still drift apart in height past their mouths; the layout needs room there.
+
+**Legacy** is how junctions were built before the plane: the core is interpolated between the mouths, and the roads keep their own heights. Junctions made with an earlier version keep **Legacy**, so they keep their shape; new junctions use **Plane**. Switch a junction to **Plane** to rebuild it, and its roads, on the plane.
 
 ### Conversions
 
