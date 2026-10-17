@@ -11,8 +11,14 @@ The **Settings** tab of the Roads panel: how roads are drawn in the Scene view, 
 
 ## :lucide-sliders-horizontal: General
 
-**Show Road Names**
-:   Writes each road's name along it in the Scene view, like the street names on a map. The text keeps the same size on screen and follows the road's line. As you zoom in, long roads repeat their name, and when names would overlap, the longer road keeps its name. A road shows its **Road Name**, or its GameObject name when **Road Name** is empty (see [Road settings](creating-roads.md#road-settings)). Names hide with the Scene view's **Gizmos** and with hidden or inactive roads.
+**Road Names**
+:   Writes each road's name along it in the Scene view, like the street names on a map:
+
+    - **Hide** never shows them.
+    - **Show On Module** shows them while the Roads panel is open in the World Toolkit window. This is the default.
+    - **Always Show** shows them whichever panel is open, and with the World Toolkit window closed.
+
+    The text keeps the same size on screen, follows the road's line and draws over the lane guides. As you zoom in, long roads repeat their name, and when names would overlap, the longer road keeps its name. A road shows its **Road Name**, or its GameObject name when **Road Name** is empty (see [Road settings](creating-roads.md#road-settings)). Names hide with the Scene view's **Gizmos** and with hidden or inactive roads.
 
 ## :lucide-palette: Lane Guides
 
