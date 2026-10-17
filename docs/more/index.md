@@ -48,6 +48,12 @@ Camera, Scene view background and snapping highlight options, the spline and spa
 
     Keep objects on colliders and terrains while the ground changes, or drop them onto it once.
 
+-   :lucide-scan-eye:{ .lg .middle } **[Scene View Modes](scene-view-modes.md)**
+
+    ---
+
+    Draw modes for checking your work in the Scene view, like colouring the geometry by height.
+
 -   :lucide-settings:{ .lg .middle } **[More Settings](settings.md)**
 
     ---
