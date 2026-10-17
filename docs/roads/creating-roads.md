@@ -46,6 +46,9 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
 
 ## :wtk-component-editable-mesh-road: Road settings
 
+**Road Name**
+:   The name written along the road in the Scene view while **Show Road Names** is on in the [Roads settings](settings.md#general). Leave it empty to show the GameObject name. Changing it doesn't rebuild the road.
+
 **Spline Container**
 :   The spline the road follows.
 
