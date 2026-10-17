@@ -40,6 +40,9 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 **Core Subdivision Size**
 :   The size of the triangles inside the core. Smaller values add detail without changing the junction's outline.
 
+**Height Model**
+:   Where the junction takes its heights from. See [Junction heights](#junction-heights).
+
 **Lock Materials**
 :   Keeps the current material slots when the junction rebuilds.
 
@@ -51,6 +54,14 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 
 **Mute**
 :   Roads ignore this junction, as if it weren't there; it still rebuilds its own mesh. Muted junctions are outlined with a red box in the Scene view.
+
+### Junction heights
+
+With **Height Model** set to **Ground**, the junction lays one ground along the splines of the roads it joins: each road brings its own surface (its spline's height and its carriageway's shape) from its mouth to the middle of the junction, and the ground blends those surfaces where the roads meet. The core lies on that ground, and curbs and sidewalks sit on it at their own heights, so they follow the same slope. Near each mouth, up to where its curbs start to turn, the ground is exactly that road's surface, so its lanes and crossings carry on unchanged.
+
+This keeps curbs at their height and sidewalks continuous where roads at different heights meet, for example a ramp leaving a flat road at a sharp angle. When two roads are so close and so far apart in height that their sidewalks touch, the ground slopes steeply between them; it cannot remove that step, and the layout needs more room or a different grade there.
+
+**Legacy** is how junctions were built before the ground: the core is interpolated between the mouths. Junctions made with an earlier version keep **Legacy**, so they keep their shape; new junctions use **Ground**. Switch a junction to **Ground** to rebuild it on the ground.
 
 ### Conversions
 
