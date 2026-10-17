@@ -12,7 +12,7 @@ icon: wtk/component-editable-mesh-road
 
 Press ++esc++ again, when you aren't drawing, to stop editing road points.
 
-New roads use the **Road Rules** set under **New Roads** in the Roads panel: they copy its setup and keep a reference to it. See [Road Rules](#road-rules).
+New roads use the **Road Rules** set under **New Roads** in the Roads panel: they copy its setup and keep a reference to it, along with the [Lane Overrides](#lane-overrides-for-new-roads) set there. See [Road Rules](#road-rules).
 
 To continue an existing road, **double-click** one of its end knots, then click to add points.
 
@@ -42,7 +42,7 @@ Select a road to show its lane controls in the Scene view, where you can change 
 
 ## :wtk-component-spline-container: Converting existing splines
 
-Select one or more spline containers and click :wtk-component-editable-mesh-road: **Create Roads/Junctions from Selection**. Splines become roads that use the **New Roads** rules, and [linked knots](../splines/link-groups.md) become junctions.
+Select one or more spline containers and click :wtk-component-editable-mesh-road: **Create from Selection** under **New Roads** in the Roads panel. Splines become roads that use the **New Roads** rules and lane overrides, and [linked knots](../splines/link-groups.md) become junctions.
 
 ## :wtk-component-editable-mesh-road: Road settings
 
@@ -138,12 +138,18 @@ The **Road Preview** at the bottom of its inspector shows the road it generates.
 
 ### How roads use rules
 
-- When you draw a road or convert splines, the new road copies the rules set under **New Roads** in the Roads panel and keeps a reference to them in its **Rules** field.
+- When you draw a road or convert splines, the new road copies the rules set under **New Roads** in the Roads panel and keeps a reference to them in its **Rules** field. It also gets the lane overrides set there.
 - While a road references rules, it's generated from the asset. Edit the asset, and every road that references it rebuilds.
 - Clear a road's **Rules** field to make it independent: it keeps the setup it copied, which you can then edit on that road alone.
 
 !!! warning "Lane edits change the asset"
     On a road that references rules, changing lane directions or adding lanes in the Scene view edits the rules asset, so every road using it changes too. To change the lanes of one road only, turn on its [Lane Overrides](#road-settings) first: Scene view edits then go to the override instead.
+
+### Lane overrides for new roads
+
+Under **New Roads** in the Roads panel, right below **Road Rules**, **Lane Overrides** lists the lanes of those rules, with the same toggles as a road's [Lane Overrides](#road-settings). Turn on **Override Extra Lanes** or **Override Directions** for a lane to give the roads you draw or convert from now on their own extra lane count or directions; lanes left off take everything from the rules. The rules asset isn't changed.
+
+Each new road gets its own copy of the overrides, which you can then change on that road. The overrides belong to the rules they were set for: pick other rules and the list starts empty, and picking the first rules again brings their overrides back. **Apply to Selected** doesn't use them.
 
 ### Creating rules
 

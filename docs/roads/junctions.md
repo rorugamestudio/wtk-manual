@@ -17,7 +17,7 @@ Junctions are created when roads meet:
 
 - Draw a road and click on another road or on a junction. See [Creating Roads](creating-roads.md#connecting-while-drawing).
 - Drag a road's knot onto another road, or onto a junction.
-- Select linked splines and use **Create Roads/Junctions from Selection**.
+- Select linked splines and use **Create from Selection** under **New Roads** in the Roads panel.
 
 Behind the scenes, the roads' knots are linked with a :wtk-component-spline-link-group: [Link Group](../splines/link-groups.md), so moving the junction moves all connected road ends together.
 
