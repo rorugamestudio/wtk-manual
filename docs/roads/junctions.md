@@ -78,6 +78,8 @@ With a shared mode, each conversion's own **Conversion Arc Radius** is greyed ou
 
 A junction with only two mouths that meet at an angle is one bend of the road. Its **Conversion Arc Radius** is the inner curb of the bend, and the outer curb is drawn around the same centre, so the road keeps its width all the way round and both curbs start their curve at the same point of each road.
 
+When the two roads are almost in line, the junction is a transition between them instead. If both roads have the same profile, every lane, curb and sidewalk keeps its width through it: roads meeting at a slight angle bend round one smooth arc, as long as the shorter of the two mouths allows, and roads side by side shift across with an S curve. Lengthen the mouths with **Two Mouth Transition** to make the bend gentler.
+
 Each conversion has an entry under **Conversion Adjustments**:
 
 **Conversion Arc Radius** and **Conversion Arc Segments**
@@ -90,7 +92,7 @@ Each conversion has an entry under **Conversion Adjustments**:
 :   Continues the border textures (curbs, sidewalks) of both roads through the conversion. When it's off, **Border Triplanar UV Rotation** rotates the border texture instead.
 
 **Two Mouth Transition**
-:   Only for junctions with exactly two mouths, for example where a road changes width or profile. With **Override Mouth Distances**, **First Mouth Distance** and **Second Mouth Distance** set how far from the junction point each road stops, and so how long the transition is. **Bias** moves the S-shaped transition toward the first road (0) or the second (1).
+:   Only for junctions with exactly two mouths, for example where a road changes width or profile. With **Override Mouth Distances**, **First Mouth Distance** and **Second Mouth Distance** set how far from the junction point each road stops, and so how long the transition is. **Bias** moves the S-shaped transition toward the first road (0) or the second (1); a bend between roads with the same profile stays centred where the roads meet.
 
 ### Junction marking
 
