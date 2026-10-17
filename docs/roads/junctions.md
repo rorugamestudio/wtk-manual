@@ -40,9 +40,6 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 **Core Subdivision Size**
 :   The size of the triangles inside the core. Smaller values add detail without changing the junction's outline.
 
-**Height Model**
-:   Where the junction takes its heights from. See [Junction heights](#junction-heights).
-
 **Lock Materials**
 :   Keeps the current material slots when the junction rebuilds.
 
@@ -57,13 +54,13 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 
 ### Junction heights
 
-With **Height Model** set to **Plane**, the whole junction lies on one flat plane through the junction's position. The plane turns with the junction object: rotate the junction to tilt it, for example to follow a hillside. The core lies on the plane, and curbs and sidewalks sit on it at their own heights.
+The whole junction lies on one flat plane through the junction's position. The plane turns with the junction object: rotate the junction to tilt it, for example to follow a hillside. A junction turned almost on its side lies on a level plane instead. The core lies on the plane, and curbs and sidewalks sit on it at their own heights.
 
 The roads bend to meet the plane, not the other way round. At each mouth the road's end moves up or down onto the plane and tilts to its slope across the road, so its lanes, curbs and crossings meet the junction exactly. From the mouth the road eases back to its own grade, over a length that grows with how far its end had to move, so the extra slope stays gentle. Only the road's mesh bends: its spline is unchanged.
 
 This keeps every junction flat and its curbs at their height, even where roads arrive at different heights, such as a ramp leaving a flat road at a sharp angle. Two roads that leave the junction side by side at different grades still drift apart in height past their mouths; the layout needs room there.
 
-**Legacy** is how junctions were built before the plane: the core is interpolated between the mouths, and the roads keep their own heights. Junctions made with an earlier version keep **Legacy**, so they keep their shape; new junctions use **Plane**. Switch a junction to **Plane** to rebuild it, and its roads, on the plane.
+Junctions made with an earlier version are laid on the plane too when they rebuild, so their surface and their roads' ends can change shape.
 
 ### Conversions
 
