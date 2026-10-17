@@ -148,6 +148,9 @@ The :wtk-selected-knots: **Selected Knots** panel says how many knots are select
 **Link** and **Link to Selected Knot Link**
 :   Make knots of different splines move together. See [Link Groups](link-groups.md).
 
+**Circularize**
+:   With three or more knots selected, moves them onto the circle that fits them best, around that circle's own center rather than the knots' midpoint, and turns their handles along it so the curve between selected neighbors is a circular arc. Three knots always sit on their circle, so only their handles change. The circle lies across the knots' up direction (flat on the ground for knots drawn on terrain) and each knot keeps its height along it. **Linear** and **Auto** knots become **Bezier** knots with **Continuous** handles, as do **Mirrored** knots whose two arcs differ. Handles towards knots that aren't selected keep their length. Knots in a straight line can't be circularized.
+
 **Drop to Ground** (++alt+shift+d++)
 :   Moves the selected knots onto the ground below them: any collider or terrain. Knots buried under the ground move up onto it. The spline's own object is ignored, so a road doesn't land on its own mesh.
 
