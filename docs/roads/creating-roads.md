@@ -14,6 +14,8 @@ Press ++esc++ again, when you aren't drawing, to stop editing road points.
 
 New roads use the **Road Rules** set under **New Roads** in the Roads panel: they copy its setup and keep a reference to it, along with the [Lane Overrides](#lane-overrides-for-new-roads) set there. See [Road Rules](#road-rules).
 
+In the Hierarchy, a new road goes right after the last road you created, under the same parent. Move a road into a group and the next ones go there too. [Junctions](junctions.md#creating-junctions) follow their own last one the same way.
+
 To continue an existing road, **double-click** one of its end knots, then click to add points.
 
 !!! tip "Straight segments and rounded corners"

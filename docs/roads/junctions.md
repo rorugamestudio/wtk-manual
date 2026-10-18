@@ -23,6 +23,8 @@ Behind the scenes, the roads' knots are linked with a :wtk-component-spline-link
 
 New junctions start with the settings of the **New Roads** rules. See [Where junction settings come from](#where-junction-settings-come-from).
 
+A new junction is named after the roads it joins, such as *Road Junction Main Street, Road (2)*. In the Hierarchy, it goes right after the last junction you created, under the same parent, so moving a junction into a group makes the next ones go there too. Until you have created one, it goes after the last new road.
+
 ## :wtk-component-editable-mesh-junction: Junction settings
 
 **Junction Core Resolver**
