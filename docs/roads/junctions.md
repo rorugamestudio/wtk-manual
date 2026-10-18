@@ -76,7 +76,7 @@ A **conversion** is where the borders of two neighbouring roads meet inside a ju
 |---|---|
 | **Per Conversion** | Each conversion uses its own **Conversion Arc Radius**. |
 | **Shared Radius** | Every conversion uses the junction's **Shared Conversion Arc Radius**. |
-| **Aligned Mouths** | Every conversion starts from the **Shared Conversion Arc Radius**, then each corner is tuned so that both curb arcs of a road leave it at the same distance. Mouths stay square to their road, even on skewed junctions. |
+| **Aligned Mouths** | Every conversion starts from the **Shared Conversion Arc Radius**, then each corner is tuned so that both curb arcs of a road leave it at the same distance, keeping mouths square to their road on skewed junctions. A corner's radius stays between half and one and a half times the shared radius, so every corner keeps its apex; where squaring a mouth would need more, the mouth is left slightly skewed. |
 
 With a shared mode, each conversion's own **Conversion Arc Radius** is greyed out. Junctions with only two mouths (two road ends meeting) always use their conversion's own radius.
 
