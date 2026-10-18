@@ -66,6 +66,12 @@ This keeps every junction flat and its curbs at their height, even where roads a
 
 Junctions made with an earlier version are laid on the plane too when they rebuild, so their surface and their roads' ends can change shape.
 
+### Neighbouring junctions
+
+Two junctions on neighbouring knots of a road, with no knot of the road between them, share that stretch of road. When both would reach past each other along it, each takes a part of the stretch in proportion to how far it needs, so neither junction runs over the other and both mouths meet at the same point of the road. A junction whose corners end before its part does leaves the rest of the road to its neighbour, which takes it up to what it needs. A mouth with **Override Mouth Distances** keeps its distance, and its neighbour takes what is left.
+
+Rebuilding a junction rebuilds the junctions that share a stretch of road with it as well. Neighbouring junctions made with an earlier version that ran over each other get shorter mouths when they rebuild.
+
 ### Conversions
 
 A **conversion** is where the borders of two neighbouring roads meet inside a junction, for example the curb going around a corner.
