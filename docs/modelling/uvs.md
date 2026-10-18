@@ -34,6 +34,9 @@ Its toolbar holds the **Transform** tools, the **Selection** modes and the **Piv
 **UV Channel**
 :   **UV0 — Material**, the UVs you edit, or **UV1 — Lightmap**, a read-only preview of the [lightmap UVs](#lightmap-uvs).
 
+**Export**
+:   Saves the UVs on display as a PNG or SVG image to paint textures over. See [Exporting the UV layout](#exporting-the-uv-layout).
+
 **Increment**
 :   The steps used while you hold ++ctrl++: **Move**, **Rotate (degrees)** and **Scale factor**. They are the same values as in **Numeric Transform**.
 
@@ -141,3 +144,27 @@ The **Align UVs To 3D** section has a second grid of arrow buttons: each one mov
 **Generate Lightmap UVs** creates the second UV set (UV1) used for baked lighting, and doesn't change your texture UVs (UV0). Then enable **Contribute GI** on the object and bake from Unity's **Lighting** window.
 
 To check the result, switch the UV View's **UV Channel** to **UV1 — Lightmap**. Editable Meshes can also generate them on their own with **Auto Bake Lightmap UVs** (see [Editable Meshes](editable-meshes.md#uv-options)).
+
+## :lucide-image-down: Exporting the UV layout
+
+**Export** in the UV View's toolbar saves the UV layout as an image: faces filled and edges drawn on a transparent background, ready to paint a texture over. It exports what the view shows: every selected mesh, or only the focused one while **Focus Mesh** is on, in the current **UV Channel**, without hidden faces. Set the options, then press **Export...** and choose the file. The options are remembered for the next export.
+
+**Format**
+:   **PNG**, a transparent image, or **SVG**, vector paths that stay sharp at any size and open in vector editors.
+
+**Scope**
+:   The part of UV space the image covers. **Tile Range** covers every tile from **From Tile** to **To Tile**: tile (0, 0) is the 0–1 UV square and (1, 0) the one to its right. **Enclosing UVs** crops the image to the UVs. **Occupied Tiles** covers the tiles that hold faces.
+
+**Split Per Tile**
+:   With **Occupied Tiles**, writes one file per tile instead of one image over all of them. Files are numbered like UDIMs (`_1001`, `_1002`... and `_1011` for the tile above `_1001`), or named `_u<U>_v<V>` when a tile is left of or below the 0–1 square.
+
+**Tile Size (px)**
+:   Pixels across one tile. A PNG larger than your graphics card allows is reduced to fit, and a warning says so. In an SVG it sets the coordinate scale.
+
+**Fill Polygons** and **Fill Color**
+:   Fill the faces. The color's alpha sets the fill opacity.
+
+**Edge Color** and **Edge Width (px)**
+:   How edges are drawn. A width of 0 exports the fill only.
+
+The line under the options tells how many images the export writes and their size. **Export UV Layout...** is also in the UV tool search: right-click in the UV View.

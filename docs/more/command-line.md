@@ -230,6 +230,7 @@ Commands that create and edit [Editable Meshes](../modelling/editable-meshes.md)
 | `wtk_modelling_apply` | Runs a modelling operation on listed faces, edges or vertices, or on all of them: extrude, inset, bevel, loop cut, connect (with `--segments`, `--slide` and `--pinch` on edges), merge, dissolve, cleanup, delete, assign material, translate, rotate, scale and more, plus whole-mesh `subdivide_surface` and `mirror`. Returns the selection the operation left, so operations can be chained. |
 | `wtk_modelling_boolean` | Combines Editable Meshes with a [Boolean Stack](../modelling/booleans.md): difference, union, intersection or slice. `--bake true` turns the result into a plain Editable Mesh. |
 | `wtk_modelling_export_obj` | *Read-only.* Writes an Editable Mesh to a Wavefront `.obj` file at `--path`, like **Export to .OBJ...** in its context menu: polygons and shared vertices as modelled, UVs and normals per face corner, one material group per slot. |
+| `wtk_modelling_export_uv_layout` | *Read-only.* Writes the UV layout of one or more Editable Meshes (`--targets`) to PNG or SVG images, like [**Export**](../modelling/uvs.md#exporting-the-uv-layout) in the UV View: `--scope tile_range` (with `--from_tile` and `--to_tile`), `enclosing_uvs` or `occupied_tiles` (`--split_per_tile true` writes one file per tile), plus `--tile_size`, `--fill`, `--fill_color`, `--edge_color` and `--edge_width`. `--channel 1` exports the lightmap UVs. |
 
 The `create` commands take their shape as JSON, from a file (`--input_file`, absolute or relative to the project folder) or inline (`--definition`). Their descriptions in the command list name every field. Pass `--target` with an existing Editable Mesh to rebuild it in place, keeping its transform, children and references.
 
@@ -240,6 +241,14 @@ The `create` commands take their shape as JSON, from a file (`--input_file`, abs
     ```bash
     unity cmd wtk_modelling_create_loft --definition '{"profiles": ["/Base", "/Middle", "/Top"], "cap_end": false}'
     unity cmd wtk_modelling_create_loft --target "/Loft" --definition '{"interpolation": "Straight"}'
+    ```
+
+!!! example "UDIM layouts to paint over"
+
+    One PNG per UV tile holding faces of the car's meshes, 4096 pixels across, named `car_uv_1001.png`, `car_uv_1002.png` and so on:
+
+    ```bash
+    unity cmd wtk_modelling_export_uv_layout --targets '["/Car/Body", "/Car/Wheels"]' --scope occupied_tiles --split_per_tile true --tile_size 4096 --path Exports/car_uv.png
     ```
 
 !!! example "A knob, start to finish"
