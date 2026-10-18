@@ -60,6 +60,8 @@ The whole junction lies on one flat plane through the junction's position. The p
 
 The roads bend to meet the plane, not the other way round. At each mouth the road's end moves up or down onto the plane and tilts to its slope across the road, so its lanes, curbs and crossings meet the junction exactly. From the mouth the road eases back to its own grade, over a length that grows with how far its end had to move, so the extra slope stays gentle. Only the road's mesh bends: its spline is unchanged.
 
+When a road runs between two junctions on neighbouring knots, with no knot of its own between them, and both easings would overlap, the road doesn't go back to its own grade between the two mouths. It passes smoothly from one junction's plane to the other's, level with each junction at its mouth. Where the junctions sit at very different heights close together, that stretch can get steep: move the junctions apart, or tilt them, to soften it.
+
 This keeps every junction flat and its curbs at their height, even where roads arrive at different heights, such as a ramp leaving a flat road at a sharp angle. Two roads that leave the junction side by side at different grades still drift apart in height past their mouths; the layout needs room there.
 
 Junctions made with an earlier version are laid on the plane too when they rebuild, so their surface and their roads' ends can change shape.
