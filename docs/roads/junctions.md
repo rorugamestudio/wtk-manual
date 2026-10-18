@@ -76,6 +76,8 @@ A **conversion** is where the borders of two neighbouring roads meet inside a ju
 
 With a shared mode, each conversion's own **Conversion Arc Radius** is greyed out. Junctions with only two mouths (two road ends meeting) always use their conversion's own radius.
 
+Where a road curves before it reaches its corners, such as a ramp joining a road at a shallow angle, each corner is placed where the curbs of the two roads really meet. From the mouth up to the corner's arc, the curbs and sidewalks follow the road's own edges, so the junction keeps the shape of the ramp. A corner without an arc meets where each border crosses along the two roads; with a **Conversion Arc Radius** of 0 it stays sharp.
+
 A junction with only two mouths that meet at an angle is one bend of the road. Its **Conversion Arc Radius** is the inner curb of the bend, and the outer curb is drawn around the same centre, so the road keeps its width all the way round and both curbs start their curve at the same point of each road.
 
 When the two roads are almost in line, the junction is a transition between them instead. If both roads have the same profile, every lane, curb and sidewalk keeps its width through it: roads meeting at a slight angle bend round one smooth arc, as long as the shorter of the two mouths allows, and roads side by side shift across with an S curve. Lengthen the mouths with **Two Mouth Transition** to make the bend gentler.
