@@ -84,3 +84,13 @@ When you create a prefab asset from objects whose Editable Meshes store their da
 
 !!! info "When `.emesh` files are written"
     Edits to a mesh that uses an `.emesh` asset are written to the file when you save the scene. Applying a prefab instance's overrides also writes them first, so the prefab's **Mesh Filter** keeps using the mesh imported from the `.emesh` file.
+
+## :wtk-component-editable-mesh: EditableMesh Outliner
+
+The **EditableMesh Outliner** lists every Editable Mesh of the open scenes in one table, to see where each one keeps its data and what needs attention. Open it from **Window > World Toolkit > EditableMesh Outliner**, or with **Open Outliner** under [Scene Meshes](settings.md#scene-meshes) in the Modelling settings.
+
+Each row shows the object's scene, its **Storage** (in the scene or prefab, an `.emesh` in the scene's mesh folder, in another scene's folder, elsewhere in the project, or a missing source), its **Source File** and its size, how many objects use the same `.emesh`, its **Prefab**, what its **Mesh Filter** renders, the generator that made it (roads, junctions, decals, buildings), its vertex and face counts, and **Notes** about anything to look at: a missing source or prefab, unsaved `.emesh` edits, shared sources, prefab overrides. Click a **Source File** or **Prefab** cell to ping it in the Project window.
+
+**Show** filters the rows by storage, or to prefab instances, shared sources or rows with notes, and the search field by object, scene, source file or prefab name. **Scene Meshes** runs **Externalize Now**, **Internalize Now** and **Cleanup Unused** on the loaded scenes. The status bar counts the meshes by storage and what each scene's mesh folder holds.
+
+Rows follow the selection both ways. Double-click a row, or press ++f++, to frame it in the Scene view; right-click a row to ping or reveal its source file, select every object that uses it, or ping its prefab.

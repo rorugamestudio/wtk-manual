@@ -91,6 +91,10 @@ Where the editable mesh data is stored.
 
 **Externalize Now**, **Internalize Now** and **Cleanup Unused Now** do the same on demand for the loaded scenes. **Internalize Now** asks for confirmation, moves the data back into the scenes and turns **Auto Externalize Meshes** off, so the next save doesn't move it out again.
 
+**Cleanup Unused Now** lists the files it will delete, folder by folder, and asks before deleting them; the deleted files are listed in the Console. A scene with unsaved changes still counts what its saved file uses, so the cleanup first offers to save those scenes. Files that only an unsaved scene's saved file still uses are kept until that scene is saved.
+
+**Open Outliner** opens the [EditableMesh Outliner](editable-meshes.md#editablemesh-outliner), a table of every Editable Mesh in the open scenes and where its data is stored.
+
 ## :wtk-uv-view: UV View
 
 Settings of the [UV View](uvs.md#the-uv-view):
