@@ -36,6 +36,9 @@ A new junction is named after the roads it joins, such as *Road Junction Main St
 **Fallback Junction Core Material**
 :   The material for core faces that don't continue a road profile. Leave it empty to keep the current one.
 
+**Height Resolver**
+:   Where the junction takes its heights from: **Plane**, the default, lays it on one flat plane, and **Spline Blend** follows its roads. See [Junction heights](#junction-heights).
+
 **Junction Core UV Scale**
 :   Texture scale of the core.
 
@@ -56,6 +59,10 @@ A new junction is named after the roads it joins, such as *Road Junction Main St
 
 ### Junction heights
 
+**Height Resolver** sets how the junction gets its heights. New junctions, and junctions made with an earlier version, use **Plane**.
+
+#### Plane
+
 The whole junction lies on one flat plane through the junction's position. The plane turns with the junction object: rotate the junction to tilt it, for example to follow a hillside. A junction turned almost on its side lies on a level plane instead. The core lies on the plane, and curbs and sidewalks sit on it at their own heights.
 
 The roads bend to meet the plane, not the other way round. At each mouth the road's end moves up or down onto the plane and tilts to its slope across the road, so its lanes, curbs and crossings meet the junction exactly. From the mouth the road eases back to its own grade, over a length that grows with how far its end had to move, so the extra slope stays gentle. Only the road's mesh bends: its spline is unchanged.
@@ -65,6 +72,14 @@ When a road runs between two junctions on neighbouring knots, with no knot of it
 This keeps every junction flat and its curbs at their height, even where roads arrive at different heights, such as a ramp leaving a flat road at a sharp angle. Two roads that leave the junction side by side at different grades still drift apart in height past their mouths; the layout needs room there.
 
 Junctions made with an earlier version are laid on the plane too when they rebuild, so their surface and their roads' ends can change shape.
+
+#### Spline Blend
+
+The junction follows its roads instead of a plane, for junctions where roads arrive at different heights or grades, such as a side street running down a hill onto a main road.
+
+The widest road passing straight through the junction is the main road: it keeps its own surface, at its own height and slope, from one side of the junction to the other. From there the junction's surface blends towards each of the other roads, so it meets each one at its height and grade. Where no road passes straight through, or two of them are about as wide, the surface settles between all of the roads.
+
+The other roads' ends move only up or down to sit on that surface, then ease back to their own heights along the road, as they do onto a plane. Where two junctions are on neighbouring knots of a road, each easing stops halfway between them. Only the roads' meshes move: their splines are unchanged. Rotating the junction doesn't tilt it.
 
 ### Neighbouring junctions
 

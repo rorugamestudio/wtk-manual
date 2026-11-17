@@ -67,6 +67,9 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
 
     An override starts from the rules' values. While it's off, its fields are greyed out and show the rules' values.
 
+**Layer Overrides**
+:   Appears below **Lane Overrides** when the road's **Rules** have layers, with one entry per layer of the rules' groups. Turn on **Override Width Multiplier** to give that layer its own **Width Multiplier** on this road only: the road's mesh, its junctions and its width follow it, and the rules asset isn't changed. Sublayers keep their own widths.
+
 **Road Layer Groups**
 :   The road's own layers. See [Profiles and Layers](profiles-and-layers.md). When none of the layers has a profile, the road uses its **Default Mesh**, which then shows up in the inspector; see [Default mesh](profiles-and-layers.md#default-mesh).
 
@@ -173,3 +176,20 @@ Selected **junctions** get all the rules' junction settings, and every conversio
 
 !!! note "Roads that reference rules"
     **Apply to Selected** copies the rules into a road's own settings. A road that references rules in its **Rules** field keeps being generated from those, so to switch it to other rules, change its **Rules** field instead.
+
+## :wtk-component-editable-mesh-road: Road Outliner
+
+The **Road Outliner** lists every road of the open scenes in one table, to review and edit many roads without selecting them one by one. Open it from **Window > World Toolkit > Road Outliner**, or with **Open Road Outliner** in the Roads panel.
+
+Each row is a road. Its names, **Rules** and road settings (**Mute**, **Lock Materials**, **Merge Borders**, **Allow Roll**, **Auto Round** and the mesh detail settings) are edited in place, the same as in the road's inspector, with Undo. Settings that come from the road's rules show the rules' value and can't be edited there. **Width**, **Length**, **Points** and **Junctions** are measured from the road and update after it rebuilds.
+
+**Lanes**
+:   Click the cell to edit the road's lanes: how many **Lanes** each base lane has and their **Directions**, each with an **Override** toggle. On a road with rules, an edit turns that [lane override](#road-settings) on, so only this road changes; the rules asset is never changed from here. Turn **Override** off to follow the rules again. Roads without rules edit their own layers.
+
+**Layers**
+:   Click the cell to see the width of each layer on the road and edit its **Width Multiplier**. On a road with rules, editing a value turns that [layer override](#road-settings) on. Roads without rules edit their own layers.
+
+**Overrides**
+:   How many lanes and layers the road overrides from its rules.
+
+The search field filters the rows by name, **Road Name** or rules. Click a header to sort, drag headers to reorder the columns, and right-click a header to show or hide columns; the layout is kept. Rows follow the selection both ways: select a row to select the road, and the other way round. Double-click a row, or press ++f++, to frame the selected roads in the Scene view. **Select Shown** selects every road the table shows, for example before using **Apply to Selected**.

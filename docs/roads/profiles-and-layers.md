@@ -70,7 +70,7 @@ Layers are set on the road component, under **Road Layer Groups**, or in the **G
 :   Flips the profile, to use the same curb asset on both sides of the road.
 
 **Width Multiplier**
-:   Scales the layer's width.
+:   Scales the layer's width. A road that follows [Road Rules](creating-roads.md#road-rules) can give a layer its own width with [Layer Overrides](creating-roads.md#road-settings).
 
 **Lateral Bulge**
 :   A curve that raises the layer across its width, for a crowned road that sheds water. The X axis goes from 0 at the left edge to 1 at the right edge, and the Y axis is the extra height.
@@ -163,7 +163,7 @@ On a road that references Road Rules, the default mesh comes from the rules.
 World Toolkit includes two shaders for road materials, for the Universal Render Pipeline. Pick them in a material's shader menu, under **WorldToolkit > Roads**.
 
 **Lane Wear Lit**
-:   Asphalt with procedural tire wear. **Albedo (Triplanar)**, **Normal Map (Triplanar)** and **Mask Map** are projected in world space (**Tiling Per Metre**, **Blend Sharpness**), so the texture lines up across roads and junctions. The **Wear** settings tint the wheel tracks with rubber (**Rubber Tint**, **Rubber Strength**, **Rubber Smoothness**) and oil (**Oil Tint**, **Oil Strength**), broken up by **Breakup Scale** and **Breakup Amount**. On roads, the tracks follow each lane (**Lane Tracks On Roads**; **Track Gauge**, **Track Width**, **Track Softness** and **Oil Width** are fractions of the lane width). In junctions, they follow the lane guides through the junction.
+:   Asphalt with procedural tire wear. **Albedo (Triplanar)**, **Normal Map (Triplanar)** and **Mask Map** are projected in world space (**Tiling Per Metre**, **Blend Sharpness**), so the texture lines up across roads and junctions. The **Wear** settings tint the wheel tracks with rubber (**Rubber Tint**, **Rubber Strength**, **Rubber Smoothness**) and oil (**Oil Tint**, **Oil Strength**), broken up by **Breakup Scale** and **Breakup Amount**. On roads, the tracks follow each lane (**Lane Tracks On Roads**; **Track Gauge**, **Track Width**, **Track Softness** and **Oil Width** are fractions of the lane width). In junctions, they follow the lane guides through the junction (**Lane Tracks In Junctions**), read from a small mask each junction bakes: **Junction Mask Detail** raises or lowers its resolution. When a junction's mesh is stored in the scene's [mesh folder](../modelling/settings.md#scene-meshes), its mask is stored with it instead of in the scene.
 
 **Road Marking Lit**
 :   Paint for markings: lane dividers, crossings and junction markings. Its **Depth Bias** (**Slope Factor** and **Units**) draws the paint over the asphalt without flickering, even where it's level with the road. **Alpha Clip** cuts out the parts below **Alpha Cutoff**.

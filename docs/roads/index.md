@@ -44,6 +44,9 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 **New Roads**
 :   The **Road Rules** used for the roads you draw or convert, and for new junctions, and the **Lane Overrides** those roads get on top of them (see [Lane overrides for new roads](creating-roads.md#lane-overrides-for-new-roads)). :wtk-component-editable-mesh-road: **Create from Selection** turns the selected spline containers into roads that use these rules, and their linked knots into junctions. **Apply to Selected** applies these rules to the selected roads and junctions.
 
+**Road Outliner**
+:   **Open Road Outliner** opens a table of every road in the open scenes, to review and edit them side by side. See [Road Outliner](creating-roads.md#road-outliner).
+
 **City Block Floors**
 :   :wtk-component-city-block-floor: **Create City Block Floors**, and the settings given to new floors.
 
