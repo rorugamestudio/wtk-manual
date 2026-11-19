@@ -12,7 +12,7 @@ World Toolkit adds its own commands to the Unity command line (CLI). They run in
 ## :lucide-package: Requirements
 
 - The **Unity CLI** (the `unity` command).
-- The **Unity Pipeline** package in your project. Add it from **Window > Package Manager** with **+ > Install package by name...** and the name `com.unity.pipeline`.
+- The **Unity Pipeline** package in your project. Importing World Toolkit adds it (see [Installation](../getting-started/installation.md)); if it was removed, add it again from **Window > Package Management > Package Manager** with **+ > Install package by name...** and the name `com.unity.pipeline`.
 - The Unity editor open on the project. The commands talk to the running editor; they don't start one.
 
 World Toolkit only compiles its commands when the package is installed. Without it, nothing is added and nothing else in World Toolkit changes. So if the commands are missing, check the package first.

@@ -98,7 +98,6 @@ What made them work (keep these when extending them):
 
 ## Open items
 
-- `getting-started/installation.md` is still a stub: it needs the distribution method, minimum Unity version and supported render pipelines from the maintainer.
 - Overlays still missing screenshots: Create Mesh Options (while dragging), Knife and the other tool options panels, the Buildings Layout Overlay labels, the Modelling Tools search popup.
 - Screenshots taken before the October 2026 changes, to recapture with `capture_manual_ui.py` (the pages already describe the current UI):
     - Roads: `window/ui-roads`, `window/ui-roads-settings` (old Snapshot field, Default Junction Settings), `roads/ui-road` (Open WTK Roads button, no Rules or Lane Overrides), `roads/ui-city-block-floor`, `roads/ui-section-city-block-floors` (pre-Surface floor fields).
