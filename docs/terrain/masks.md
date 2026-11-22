@@ -43,10 +43,17 @@ The result always stays between 0 and 1.
 | **Rectangle** / **Circle** | A rectangle, or the ellipse that fits in it, placed by the stamp object's Transform: its position, its Y rotation, and its X and Z **Scale** as the size in meters. Use them as the layer's first fill. | |
 | **Mesh** | The area under a mesh, seen from above. | **Source Mesh**, **Use Front Facing Triangles** |
 | **Collider** | The area under a collider, seen from above. | **Source Collider** |
+| :wtk-component-building-block: **Building Block** | Inside the outline of a [building block](../buildings/building-blocks.md), through its knots. | **Block** |
+| :wtk-component-building-block: **Building Lots** | Inside every lot of a building block. | **Block** |
 
 At a **Width Multiplier** of 1, a **Spline Stroke** reaches 5% of the spline's overall size (the diagonal of its bounds) to each side, so longer splines give wider strokes.
 
 **Use Front Facing Triangles** chooses which side of the mesh counts: on, the triangles that face up (its top); off, the ones that face down (its underside).
+
+**Building Block** and **Building Lots** also carry heights: the block's outline takes the heights of its knots, and each lot is flat at the height its building stands on. A [Height](height.md#height-source) operation with the **Area Mask** source levels the terrain to them; see [Level the ground under a building block](height.md#level-the-ground-under-a-building-block). With **Block** empty, the mask uses the building block on the stamp's object or on its parent. Stamps using these masks rebuild when the block moves or its lots and buildings change.
+
+!!! warning
+    A block whose outline has a [Terrain Spline Snap](terrain-spline-snap.md#terrain-spline-snap) is ignored by these masks: its outline follows the terrain the stamp writes. [`wtk_validate`](../more/command-line.md#any-world-toolkit-object) reports it.
 
 ### :lucide-grid-3x3: Fields
 
