@@ -72,6 +72,7 @@ nav = [
     { "Area Spawner" = "more/area-spawner.md" },
     { "Ground Snap" = "more/ground-snap.md" },
     { "Scene View Modes" = "more/scene-view-modes.md" },
+    { "Scene Labels" = "more/scene-labels.md" },
     { "More Settings" = "more/settings.md" },
     { "Command Line" = "more/command-line.md" },
   ] },

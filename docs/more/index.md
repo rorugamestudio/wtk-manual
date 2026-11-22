@@ -54,6 +54,12 @@ Camera, Scene view background and snapping highlight options, the spline and spa
 
     Draw modes for checking your work in the Scene view, like colouring the geometry by height.
 
+-   :wtk-component-scene-label:{ .lg .middle } **[Scene Labels](scene-labels.md)**
+
+    ---
+
+    Name objects in the Scene view with a line and a label you can read from far away.
+
 -   :lucide-settings:{ .lg .middle } **[More Settings](settings.md)**
 
     ---
