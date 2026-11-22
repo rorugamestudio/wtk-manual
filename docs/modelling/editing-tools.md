@@ -272,7 +272,7 @@ Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors
   <figcaption>Painting vertex colors with the brush.</figcaption>
 </figure>
 
-**Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection.
+**Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection. With Editable Mesh objects selected outside the editing context, **Apply to Selection** colors each whole mesh, hidden faces included, and **Pick from selection** takes the color of the first face.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/vertex-color.webp">

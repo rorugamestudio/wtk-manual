@@ -87,7 +87,7 @@ Move, rotate and scale UVs with the regular transform tools, or with exact value
 **Unflip Islands**
 :   Fixes islands that ended up mirrored.
 
-UV seams are drawn as dashed lines in the Scene view while the **UV** tab is active.
+UV seams are drawn in the Scene view while the **UV** tab is active, as dashed lines unless you change their **Edge Draw Mode** in the [Modelling settings](settings.md#components-visibility).
 
 ## :lucide-layout-grid: Layout tools
 

@@ -26,6 +26,9 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 **Selected Face Fill Type - Topology**, **Selected Face Fill Type - UV**, **Preview New Face Fill Type** and **XRay Fill Type**
 :   How selected faces, faces previewed by a tool and X-Ray meshes are filled in the Scene view: with **Transparency** or **Dithered**.
 
+**Edge Draw Mode**
+:   Draws each kind of edge **Solid** or **Dashed**: **Edges**, the mesh's edges in every component mode (the ones sized by **Non-interactive** and **Interactive Thickness**); **UV Seams**, while the **UV** tab is active; and **Border Edges**, while **Border Edge Thickness** is above 0. Selected and highlighted edges keep the mode of their kind. Dashes grow with the line thickness. UV seams are dashed by default, the others solid.
+
 ## :lucide-palette: Components Colors
 
 | Color | Used for |
@@ -33,7 +36,7 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 | **Selected Faces — Topology** / **Selected Faces — UV** | Selected faces in the Scene view. The alpha sets the transparency or the dither coverage, depending on the fill type. |
 | **UV Tile** | The outline of the UV tile drawn in the Scene view. |
 | **Preview New Faces** | Faces created or rebuilt by a tool's preview. |
-| **UV Seams** | The dashed UV seams in the Scene view, while the **UV** tab is active. |
+| **UV Seams** | The UV seams in the Scene view, while the **UV** tab is active. |
 | **Selectable Vertices**, **Selectable Edges**, **Selectable Faces** | Unselected components you can pick. |
 | **Inactive Vertices**, **Inactive Edges**, **Inactive Faces** | Components outside the current component mode, with their opacity. |
 | **Loose Vertices** | Vertices that don't belong to any face, and their crosses. |

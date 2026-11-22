@@ -29,7 +29,7 @@ Move, rotate and scale the selected components with Unity's regular **Move**, **
 | :wtk-pivot-orientation-edges: **Edges** | Aligned to the selected edges. |
 | :wtk-pivot-orientation-custom: **Custom** | A rotation you stored with **Set Custom**, or set with **Point to**, which aims from the custom pivot toward the selection. |
 
-Press ++z++ to cycle through the origins and ++x++ to cycle through the orientations. Both shortcuts can be changed in Unity's **Shortcuts** window, under **Modelling**.
+Press ++z++ to cycle through the origins and ++x++ to cycle through the orientations. The Scene view briefly shows the new choice, such as *Pivot Origin: Individual*. Both shortcuts can be changed in Unity's **Shortcuts** window, under **Modelling**.
 
 ### :wtk-pivot-origin-custom: Custom pivots
 
@@ -75,7 +75,7 @@ Type exact values instead of dragging:
 
 ## :wtk-pivot: Object pivot
 
-The **Object Pivot** overlay in the Scene view works on the selected Editable Mesh object's own pivot, its Transform. Its buttons move or rotate that pivot without moving the mesh:
+The **Object Pivot** overlay in the Scene view works on the selected Editable Mesh object's own pivot, its Transform. Docked in a Scene view toolbar, it becomes a dropdown with the pivot icon that opens the same options. Its buttons move or rotate that pivot without moving the mesh:
 
 **Show Object Pivot**
 :   Draws the selected object's pivot in the Scene view.
@@ -114,3 +114,17 @@ Press ++shift+v++ to turn snapping on or off. The :wtk-snap: **Snapping** overla
 | **Projected Edge**, **Projected Face** | Snaps to visible edges or faces projected along an axis. **Automatic** follows the axis of the handle you drag, or the normal of a plane handle; dragging freely needs **X**, **Y** or **Z**. |
 
 Most modes have a **Tolerance**: how close the cursor has to get before that target catches it. The UV View has fewer modes: the UV grid, vertices, edges, and edge and face centers.
+
+While you drag one arrow of the **Move** handle, snapping only moves the selection along that arrow's axis; a plane handle snaps along its two axes.
+
+### :lucide-arrow-down-to-dot: Projected snaps
+
+**Projected Face** lands on the surface of the face as it's drawn, even when the face isn't flat. The point has to fall inside the face: when the pivot isn't over the face under the cursor, it lands on the face of that mesh it is over, and with nothing of the mesh on its axis there's no snap. Faces that move with the selection aren't targets.
+
+**Projected Edge** and **Projected Face** each have two more options, shown right under them in the snapping options:
+
+**Individual Origins**
+:   Projects every selected element from its own origin, so each one lands on the target: a vertex, the middle of an edge or the center of a face. Off, the whole selection moves as one with the projection of its pivot. It applies when you move components with the **Move** tool; with [Proportional Transform](#transform-options), and for pivots and objects, the selection still moves as one.
+
+**Projection Offset**
+:   Leaves a gap, in meters, between what is projected and the target, along the projection axis and on the side it started from. It stops short of the target however far you drag; negative values go past it. The dashed line of the snap highlight spans the gap.
