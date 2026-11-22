@@ -432,3 +432,53 @@ body:has(a[href*="/docs/support/"]) .md-nav--secondary .md-nav__link .twemoji {
   height: 1.6em;
   border-radius: 2px;
 }
+
+/* Changelog version picker: "Version [v0.0.6 v]", filled by javascripts/wtk-version-picker.js,
+   which shows one release at a time. The other releases wait in a zero-height holder after it, and
+   their table of contents entries get wtk-version-hidden. Empty (no script) the picker takes no
+   room and every release stays visible. */
+.wtk-version-hidden {
+  display: none !important;
+}
+
+.md-typeset .wtk-release-holder {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.md-typeset .wtk-version-picker:empty {
+  display: none;
+}
+
+.md-typeset .wtk-version-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 1em 0 1.5em;
+}
+
+.md-typeset .wtk-version-picker label {
+  font-weight: 700;
+}
+
+.md-typeset .wtk-version-picker select {
+  min-width: 10em;
+  padding: 0.35em 0.5em;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.md-typeset .wtk-version-picker select:hover,
+.md-typeset .wtk-version-picker select:focus-visible {
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .wtk-version-picker select:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 1px;
+}
