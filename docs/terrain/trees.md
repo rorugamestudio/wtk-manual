@@ -28,7 +28,7 @@ The **Trees** operation places terrain trees inside its [mask](masks.md). Where 
 
 - Trees are placed after every stamp has shaped the terrain and cut its holes, stamp by stamp in Hierarchy order.
 - No tree is placed on a hole.
-- **Minimum Spacing** is kept from every tree already on the terrain: trees in the base and trees placed by earlier operations.
+- **Minimum Spacing** is kept from every tree placed by earlier operations. The base has no trees of its own.
 - The placement pattern is fixed in the world, so moving or reshaping a stamp doesn't reshuffle the trees that stay well inside it.
 - A Trees operation only adds trees; it never removes any.
 

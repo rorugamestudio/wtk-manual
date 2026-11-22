@@ -16,7 +16,7 @@ The **Texture** operation paints a terrain layer inside its [mask](masks.md).
 
 At each point, the terrain layer moves toward full coverage by **Opacity** times the mask strength. Where both are 1, it replaces what was painted there; lower values blend it over the existing paint. The other terrain layers fade in proportion, so the layers always add up to full coverage.
 
-Texture operations paint over each other in the order stamps are applied: stamps lower in the Hierarchy, later layers and later operations in a list paint on top. Everything starts from the painting stored in the target's base.
+Texture operations paint over each other in the order stamps are applied: stamps lower in the Hierarchy, later layers and later operations in a list paint on top. Everything starts from the target's base, painted all over with its **Base Layer**.
 
 ## :lucide-list-ordered: Paint rock on steep slopes
 

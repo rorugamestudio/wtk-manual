@@ -8,7 +8,7 @@ A stamp is a GameObject with a :wtk-component-terrain-stamp: **Terrain Stamp** c
 
 ## :wtk-component-terrain-stamp-target: Setting up a Stamp Target
 
-Stamps need a **Terrain Stamp Target**, which tells them which terrains to modify and keeps those terrains' **base**.
+Stamps need a **Terrain Stamp Target**, which tells them which terrains to modify and sets the **base** they're applied over: flat ground at one height, painted with one terrain layer.
 
 1. Select your terrain objects. Several tiles can share one target.
 2. In the Terrain panel, under **Terrain Stamp Targets**, click **Create Terrain Stamp Target**.
@@ -20,11 +20,14 @@ This creates a **Terrain Stamp Target** object, moves the selected terrains unde
 
 The target's inspector has:
 
-**Capture Base**
-:   Saves the terrains as they are now as the base that stamps build on: heights, painted terrain layers, holes, details and trees. The base is captured automatically the first time stamps are applied, so you only need this to replace it.
+**Base Height**
+:   The world height of the flat ground the stamps are applied over, in meters.
 
-**Restore Base**
-:   Puts the terrains back to their saved base, without any stamp.
+**Base Layer**
+:   The terrain layer painted everywhere under the stamps.
+
+**Apply Base**
+:   Flattens the terrains to **Base Height**, paints them with **Base Layer** and rebuilds the stamps on top. It can be undone.
 
 **Stitch Edges**
 :   Matches the heights along the shared edges of neighbouring terrain tiles, so there are no seams. Full rebuilds do this too.
@@ -32,25 +35,23 @@ The target's inspector has:
 **Rebuild Stamps**
 :   Rebuilds the terrains from the base and every stamp of this target.
 
-The base is saved in the Terrain Stamp Target component, with the scene.
+**Cancel Rebuild**
+:   Shows while a [progressive rebuild](settings.md#terrain-stamp-rebuilds) of this target is running. It stops that rebuild and drops the ones waiting after it. The terrains keep what was rebuilt so far, so the target then warns that they may not match the stamps until you click **Rebuild Stamps**.
 
-!!! warning "Every rebuild starts from the base"
-    Changes you make with Unity's own terrain tools don't survive a rebuild unless they're part of the base. **Capture Base** saves the terrain exactly as it is: if the stamps are applied at that moment, their result becomes part of the base and gets applied twice. To change the base by hand:
+A new target starts its base at the lowest point of its terrains, painted with their first terrain layer, so the tiles meet without steps.
 
-    1. Click **Restore Base** to take the stamps off the terrain.
-    2. Sculpt or paint the terrain.
-    3. Click **Capture Base**.
-    4. Click **Rebuild Stamps** to apply the stamps on top.
+!!! warning "Every rebuild starts from the flat base"
+    The base holds no relief, holes, details or trees of its own. Anything you sculpt or paint with Unity's own terrain tools is replaced at the next rebuild. Build the ground you want to keep with stamps: a stamp with a **Global** mask and a [Height](height.md) operation sets the height of the whole terrain, and stamps above or below it in the Hierarchy shape the rest.
 
 ### :lucide-eraser: Clearing the base
 
-To start again from flat ground, select a Terrain Stamp Target and use the **Clear Terrains** group of the Terrain panel:
+The **Clear Terrains** group of the Terrain panel sets the base of the selected Terrain Stamp Target, like **Apply Base**:
 
 1. Set **Height**, the world height of the flat ground.
 2. Optionally set a **Terrain Layer** to paint over the whole base.
 3. Click **Clear Terrains Base** and confirm.
 
-Every terrain of the target gets a flat base at that height. The terrains then show the cleared base: click **Rebuild Stamps** to apply the stamps on top of it.
+Every terrain of the target is flattened to that height. The terrains then show the bare base: click **Rebuild Stamps** to apply the stamps on top of it.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/terrain/terrain-global-height.webp">
@@ -117,7 +118,7 @@ The **Layer Masks** preview at the bottom of the inspector shows the combined ma
 
 ## :lucide-list-ordered: How stamps are applied
 
-A rebuild starts from the target's base, then:
+A rebuild starts from the target's flat base, then:
 
 1. Applies every enabled stamp of the target, in Hierarchy order from top to bottom (a parent before its children). In each stamp, layers run from top to bottom, and the operations of each layer in list order, except trees and details.
 2. Stitches the edges between neighbouring terrains of the target.

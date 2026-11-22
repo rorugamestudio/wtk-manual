@@ -40,7 +40,7 @@ How often the terrain rebuilds while you drag a stamp. See [Rebuild settings](..
 ## :lucide-refresh-cw: Terrain Stamp Rebuilds
 
 **Use progressive terrain rebuilds (experimental)**
-:   Rebuilds the terrain in tiles, spread over several frames, which keeps the editor responsive on large terrains.
+:   Rebuilds the terrain in tiles, spread over several frames, which keeps the editor responsive on large terrains. A running rebuild shows in Unity's **Background Tasks** window. Cancel it there, or with **Cancel Rebuild** on the [Terrain Stamp Target](stamps.md#setting-up-a-stamp-target), to stop it and drop the rebuilds waiting after it; **Rebuild Stamps** brings the terrains up to date afterwards.
 
 **Show terrain rebuild regions**
 :   Draws the tiles being rebuilt.

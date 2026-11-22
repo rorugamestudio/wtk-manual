@@ -7,7 +7,7 @@ icon: lucide/circle-dashed
 The **Holes** operation cuts holes in the terrain inside its [mask](masks.md), for cave and tunnel entrances, or for openings where a mesh replaces the terrain.
 
 **Action**
-:   **Cut** makes holes. **Fill** closes holes that are already there: holes cut by stamps above it in the Hierarchy, or holes in the target's base.
+:   **Cut** makes holes. **Fill** closes holes cut by stamps above it in the Hierarchy.
 
 **Threshold**
 :   The mask strength, from 0.01 to 0.99, from which the terrain is cut or filled. A hole is either open or closed: there's no partial hole, so the mask only decides where the edge falls.

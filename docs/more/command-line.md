@@ -130,13 +130,13 @@ Commands for [terrain stamps](../terrain/index.md) (tag `worldtoolkit/terrain`).
 
 | Command | What it does |
 | --- | --- |
-| `wtk_terrain_create` | Creates a terrain ready for stamps: one tile or a grid of connected tiles (`--tiles`) with their TerrainData assets, under a new Terrain Stamp Target. The base is flat at `--base_height`, painted with `--layer`, and captured as the base state. |
-| `wtk_terrain_create_target` | Puts existing Unity terrains under a new Terrain Stamp Target and captures their surface as its base state. |
-| `wtk_terrain_create_stamp` | Creates a stamp like **Create with Selected** in the Terrain window: a preset's layers (or a default stamp of one `--type`) on the stamp target of the terrain below, then rebuilds. Pass a spline's object as `--on` to turn it into the stamp. |
+| `wtk_terrain_create` | Creates a terrain ready for stamps: one tile or a grid of connected tiles (`--tiles`) with their TerrainData assets, under a new Terrain Stamp Target. Its flat base is at `--base_height`, painted with `--layer`. |
+| `wtk_terrain_create_target` | Puts existing Unity terrains under a new Terrain Stamp Target. Stamps apply over a flat base, which replaces the terrains' own relief at the first rebuild; `--capture_base` (on by default) starts it at their lowest point, painted with their first terrain layer. |
+| `wtk_terrain_create_stamp` | Creates a stamp like **Create with Selected** in the Terrain window: a preset's layers (or a default stamp of one `--type`) on the stamp target of the terrain below, then rebuilds. Pass a spline's object as `--on` to turn it into the stamp. **Building Block** and **Building Lots** masks bind the block on `--on` or its parent: a building block as `--on` with one of their presets levels the terrain to it. |
 | `wtk_terrain_apply_preset` | Replaces a stamp's layers with a preset's, bound to the stamp's spline. |
 | `wtk_terrain_save_preset` | Saves a stamp's layers as a new Terrain Stamp Preset asset. |
 | `wtk_terrain_rebuild` | Rebuilds one stamp target, or every one in the open scenes, and waits for progressive rebuilds to finish. |
-| `wtk_terrain_base` | `--action capture` takes the terrain's current surface as the base (after sculpting it by hand), `restore` puts the base back without stamps, and `clear` makes the base flat at `--height` and rebuilds the stamps on top. |
+| `wtk_terrain_base` | Manages the flat base the stamps apply over. `--action capture` starts it at the terrains' lowest point, painted with their first terrain layer; `restore` flattens the terrains to it, without stamps; `clear` sets it to `--height` (and `--layer`, a terrain layer asset path), flattens the terrains and rebuilds the stamps on top. |
 | `wtk_terrain_sample` | *Read-only.* The surface height, normal, slope and strongest terrain layer under a list of points. Use it to place objects on the ground, or to check what a stamp did. |
 
 ## :wtk-splines: Splines

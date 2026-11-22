@@ -7,14 +7,14 @@ icon: wtk/terrain
 
 The Terrain module shapes and paints Unity terrains with **stamps**: objects in your scene that each apply one change (raise a hill, carve a riverbed, paint grass, place trees) inside an area you define.
 
-Stamps are **non-destructive**. The terrain is always rebuilt from a saved base plus all the stamps, so you can move, reshape, reorder or delete any stamp at any time, and the terrain updates.
+Stamps are **non-destructive**. The terrain is always rebuilt from a flat base plus all the stamps, so you can move, reshape, reorder or delete any stamp at any time, and the terrain updates.
 
 Open it from the **Terrain** tab of the [World Toolkit window](../getting-started/world-toolkit-window.md).
 
 ## :lucide-workflow: How it fits together
 
 :wtk-component-terrain-stamp-target: **Terrain Stamp Target**
-:   Groups the terrains that stamps affect, and stores their **base**: the state of the terrains before any stamp.
+:   Groups the terrains that stamps affect, and sets their **base**: the flat ground, at one height and painted with one terrain layer, that the stamps are applied over.
 
 :wtk-component-terrain-stamp: **Terrain Stamp**
 :   One stamp. It has an area (usually a spline outline), and one or more **layers**. Each layer combines **masks** (where it applies) with **stamp operations** (what it does).
