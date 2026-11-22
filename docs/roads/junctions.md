@@ -25,6 +25,10 @@ New junctions start with the settings of the **New Roads** rules. See [Where jun
 
 A new junction is named after the roads it joins, such as *Road Junction Main Street, Road (2)*. In the Hierarchy, it goes right after the last junction you created, under the same parent, so moving a junction into a group makes the next ones go there too. Until you have created one, it goes after the last new road.
 
+### :lucide-unlink: Removing roads from a junction
+
+Deleting a road object, its spline or the knot at its end takes that road out of its junctions, in the same undo step. A junction left with a single road is removed; otherwise it's rebuilt for the roads that are left.
+
 ## :wtk-component-editable-mesh-junction: Junction settings
 
 **Junction Core Resolver**

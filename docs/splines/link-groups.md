@@ -47,3 +47,7 @@ The link object's own inspector lists its **Knots**: each entry is a Spline Cont
 
 !!! tip "Unlinking everything"
     Delete the **Spline Link** object to free all its knots at once.
+
+## :lucide-trash-2: Deleting linked splines
+
+When you delete a knot, a spline or a whole object whose knots are linked, those knots leave their links in the same undo step. A **Spline Link** object left with fewer than two knots is deleted. A road [junction](../roads/junctions.md#removing-roads-from-a-junction) is cleaned up the same way. Scenes saved with knots that no longer exist drop them from their links when they open.
