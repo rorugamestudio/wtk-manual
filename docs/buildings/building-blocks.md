@@ -36,6 +36,13 @@ You can also add the component yourself with **Add Component > World Toolkit > B
 !!! note "Editing the outline"
     The block uses its knots as the corners of its area: curves between knots are ignored when it splits lots. While you move the knots, the block hides its buildings, and rebuilds them when you release the mouse or pause for a moment.
 
+    The knots' heights carry into the lots: each knot keeps its height, the outline runs straight between knots, and the inside blends smoothly between them. A block drawn across a slope or a valley follows it, and one whose knots are all at one height stays flat.
+
+In the Scene view, each lot is drawn flat at the height its building stands on: where the building's first volume lays its footprint, by its **Terrain Level**. A lot without a building yet lies at its lowest corner.
+
+!!! tip "Level the terrain for the buildings"
+    A terrain stamp with a **Building Lots** or **Building Block** mask levels the ground under each lot or under the whole block. See [Level the ground under a building block](../terrain/height.md#level-the-ground-under-a-building-block).
+
 ## :lucide-building-2: Choosing the buildings
 
 **Building Rule Chances**
@@ -70,6 +77,8 @@ To change a single edge, use the handle in the middle of that edge in the Scene 
 - **Double-click** it to put the edge back to the **Default Edge Inset**. ++shift++ + **double-click** resets every edge of that building.
 
 Handles of edges you've moved are orange, the others are blue. A dotted line shows the lot edge the inset is measured from. The handles show on the selected block, or on the block of a selected building, and on every block while **Edit Buildings** is on.
+
+Hover a lot handle to see what it adjusts (**Edge Inset**, **Floors**, or whether a frontage is on or off and why), and drag it to see its current value. Where buildings or other geometry hide the lot lines and handles, they're drawn faded; set how in [Lot Overlays](settings.md#lot-overlays).
 
 ## :lucide-split: Lot splitting
 

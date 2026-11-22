@@ -61,6 +61,8 @@ While the Buildings module is active, every building shows a small handle above 
 - **Drag** it up or down to add or remove floors.
 - **Double-click** it to turn **Lock Floors** on or off. The handle is green while the floors are unlocked and red while they're locked.
 
+Hovering the handle shows **Floors**, or **Floors (locked)**; dragging it shows the floor count.
+
 On a building with a **Rules Override**, dragging locks its floors, so the count you dragged to sticks.
 
 ## :lucide-boxes: Volumes
@@ -260,7 +262,7 @@ With **Layout Overlay** on in the Buildings panel, selected buildings show their
 - **Drag** the handles at the top of procedural rows, on the side closest to the camera, up or down to set the row's **Height**.
 - Hold ++ctrl+shift++ over a generated piece to see which wall, row, slot or item and floor it comes from, and **click** to open that field of the wall.
 
-The corner and row height handles edit the Volume Wall asset, so every building that uses the wall follows.
+The corner and row height handles edit the Volume Wall asset, so every building that uses the wall follows. Hover a handle to see what it sets (**Corner Inset**, **Corner Radius**, **Row Height**), and drag it to see the value.
 
 ### :wtk-component-building-generated-piece: Generated pieces
 
