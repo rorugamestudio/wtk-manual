@@ -10,8 +10,6 @@ What changed in each World Toolkit release, newest first.
 
 ## :lucide-tag: v0.0.6
 
-Upcoming: not released yet.
-
 !!! warning "Upgrading from v0.0.5"
     - **Terrain Stamp Targets** no longer keep a copy of their terrains as the base for the stamps: the base is now flat ground at one height, painted with one terrain layer, with no holes, details or trees. A target saved with v0.0.5 gets a base flat at the bottom of each terrain (the terrain object's height), painted with its first terrain layer, at the next rebuild. Set its **Base Height** and click **Apply Base**, and rebuild any relief you sculpted by hand with stamps. See [Setting up a Stamp Target](../terrain/stamps.md#setting-up-a-stamp-target).
     - **Building Blocks** whose knots aren't all on one plane get new lot heights, so their buildings regenerate when their scene opens.
@@ -65,7 +63,7 @@ Upcoming: not released yet.
 
 ## :lucide-tag: v0.0.5
 
-Released: Nov 18, 2026 (current)
+Released: Nov 18, 2026
 
 ### :wtk-splines: Splines
 
