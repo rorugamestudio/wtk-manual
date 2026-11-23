@@ -99,6 +99,40 @@ Some primitives have extra options in that panel:
 - **Stairs from Spline**, **Tube from Spline** and **Surface from Spline** work like the **Spline Based** buttons, on the selected spline.
 - **Loft from Splines** lofts the selected splines in selection order. See [Loft](loft.md#loft-from-splines).
 
+## :wtk-create-stairs: Stairs
+
+**Stairs** builds a staircase along a spline. Select the object with the spline and click **Stairs**: the stairs mesh is added to the spline object and follows its first path. The spline traces the stairs from end to end, and its height is the height the stairs climb or descend; draw it either way, from the bottom or from the top.
+
+The knots split the spline into **flights** and **landings**:
+
+- A segment whose two knots are at the same height (within 1 cm) is a **landing**: one flat face that follows the spline, with no steps. A curved landing follows the curve.
+- Consecutive segments that climb, or descend, the same way make a **flight**. A flight's steps all have the same height, and each one sits where the spline reaches its height, so a straight segment gets treads of equal depth.
+
+Its settings are in the Editable Primitive inspector:
+
+**Stairs Spline** and **Stairs Spline Index**
+:   The spline object, and which of its paths the stairs follow.
+
+**Width**, **Stairs Expand From** and the width anchors
+:   How wide the stairs are, and whether they spread from the spline's center, left or right side. **Stairs Start Width Anchor** and **Stairs End Width Anchor** set the width at each end from an object's position.
+
+**Stairs Step Mode**
+:   **Count** builds a set number of steps (**Stairs Steps Count**), shared among the flights by how much each one rises. **Height** builds steps of about **Stairs Step Height** (0.18 m for new stairs): each flight rounds its rise to a whole number of steps, then stretches or squeezes them to fit it exactly.
+
+**Step Height**, **Step Count** and **Actual Step Height**
+:   Read-only, under the step settings. With **Count**, **Step Height** shows the height the steps got. With **Height**, **Step Count** shows how many steps it made and **Actual Step Height** the height they really got. Flights of different rises can differ by a few millimetres, shown as a range.
+
+**Stairs Add Bottom Cap**, **Stairs Add Back Cap**, **Stairs Add Left Cap** and **Stairs Add Right Cap**
+:   Which closing faces are built: under the stairs, at the far end and along each side.
+
+**Stairs First Step Is Ground Level**
+:   Puts each tread at the height of the step's near end, so the first step lies on the ground.
+
+**Stairs Last Step Is Wall Only**
+:   Leaves the last step as a riser without a tread, for stairs that end against a floor of their own. It has no effect when the stairs end on a landing.
+
+The risers face the lower step whichever way the spline is drawn.
+
 ## :wtk-create-surface: Surface
 
 **Surface** fills the area enclosed by a spline path. Select the object with the spline and click **Surface**: the surface is created as a child of the spline object and fills its first path that has at least three knots.

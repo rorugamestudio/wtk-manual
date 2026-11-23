@@ -8,6 +8,18 @@ What changed in each World Toolkit release, newest first.
 
 <div class="wtk-version-picker"></div>
 
+## :lucide-tag: v0.0.7
+
+!!! warning "Upgrading from v0.0.6"
+    - **Stairs** rebuilt from their parameters (any edit of their settings or spline, or **Force Rebake**) lay their steps out anew: a segment between knots at the same height becomes a landing without steps, and every step of a flight gets the same height. Stairs with a single straight flight keep their shape. See [Stairs](../modelling/primitives.md#stairs).
+
+### :wtk-modelling: Modelling (Editable Mesh)
+
+- **Stairs** turn a spline segment between two knots at the same height into a landing: one flat face, with no steps
+- **Stairs Step Mode** **Height** builds steps of a set height (0.18 m for new stairs), stretched or squeezed so each flight fits its rise; **Count** shares the steps among the flights by their rise
+- The Editable Primitive inspector shows the height the stairs' steps got, and with **Height** how many steps it made
+- Stairs risers face the right way when the spline is drawn from the top down
+
 ## :lucide-tag: v0.0.6
 
 !!! warning "Upgrading from v0.0.5"
