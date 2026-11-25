@@ -17,12 +17,14 @@ With **Edit Road Points** active:
 
 Dropping the end near the middle of the other road (its spline) creates a junction instead.
 
+A new connection is only offered while the Scene view looks down on the roads by at least 45°, like a new junction, so an end dragged past a road near the horizon doesn't attach to it. If the marker doesn't show, tilt the view down.
+
 You can also attach a road while drawing it: start or end the new road on the outer edge of another road, or on the side of a junction.
 
 Once attached:
 
 - Each connection shows a marker where it meets the receiving road. **Click** the marker to select the attached road end.
-- **Drag** the attached end along the edge to move the connection.
+- **Drag** the attached end along the edge to move the connection, from any view.
 - **Drag** it away and release it anywhere else to detach it. This removes the Road Anchor Connection component.
 
 ## :wtk-component-road-anchor-connection: Adding one from the inspector
