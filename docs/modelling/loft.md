@@ -123,6 +123,9 @@ How an open loft leaves its first profile (**Start**) and reaches its last (**En
 **Match Normals**
 :   With **Tangent**: shades the shared spline the way the neighbour's mesh does, so no line shows in the light along the seam, and blends back into this loft's own shading over this share of the first span, from 0 to 1. 0 keeps the loft's own shading. See [Joining lofts without a crease](#joining-lofts-without-a-crease).
 
+**Match Grid**
+:   With **Tangent**: puts the loft's columns where the neighbour's mesh has its vertices along the shared spline, so the two meshes meet vertex to vertex, with no T-junctions along the seam. Columns run across every profile, so the whole loft takes them (plus the ones it needs at its own knots and rails), whatever its **Tessellation** says.
+
 **Cap**
 :   Closes the profile with a face. It needs a closed profile at that end, and is disabled on an open one.
 
@@ -136,7 +139,7 @@ Two lofts that share a profile meet at an angle along it, because each one only 
 
 The neighbour keeps its shape. This loft leaves the shared profile in the same direction the neighbour reaches it, so the surface goes on across the border without a fold (tangent continuity, G1), and the shading closely matches on both sides. **Weight** sets how far that direction carries into this loft before it turns towards its other profiles. When the neighbour changes, this loft follows it.
 
-Even without a fold, the light can still show a faint line along the seam: each mesh shades its border from its own faces only, and the two lofts' vertices along the seam don't line up. Raise **Match Normals** on the end set to **Tangent**: the seam takes the neighbour's shading, and this loft's own shading comes back over that share of its first span. The loft writes this shading as custom normals and rewrites them every time it rebuilds, so while **Match Normals** is above 0, custom normals set by hand on that loft don't stay.
+Each loft tessellates on its own, so their vertices along the seam don't line up; turn on **Match Grid** on the end set to **Tangent** to put this loft's vertices on the neighbour's. Even without a fold, the light can still show a faint line along the seam: each mesh shades its border from its own faces only, and the two lofts' vertices along the seam don't line up. Raise **Match Normals** on the end set to **Tangent**: the seam takes the neighbour's shading, and this loft's own shading comes back over that share of its first span. The loft writes this shading as custom normals and rewrites them every time it rebuilds, so while **Match Normals** is above 0, custom normals set by hand on that loft don't stay.
 
 Set **Tangent** on only one of the two lofts. If both carry on from each other, each follows the other's own shape and they still meet at an angle; the tab says so. On a loft with **Rails**, the rails still pull the surface next to the profile, so a small angle can remain.
 

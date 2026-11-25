@@ -28,6 +28,7 @@ What changed in each World Toolkit release, newest first.
 - Loft **Rail Pacing**: **Surface**, a new loft's default, walks the rails at the pace the surface has, so a rail drawn along the surface leaves it as it is; **Even** is how lofts made before walk them, and they keep it
 - A loft **Rail** can end short of the outer profiles: it steers only the profiles it reaches, and past them the surface carries on smoothly. A rail that reaches fewer than two profiles is left out
 - A loft end set to **Tangent** can carry on from the side of another loft: a loft that has the end's profile as a rail along one of its sides. Two lofts meet in an L without a crease. See [Joining a loft to the side of another](../modelling/loft.md#joining-a-loft-to-the-side-of-another)
+- A loft end set to **Tangent** has **Match Grid**: the loft's columns land on the neighbour's vertices along the shared spline, so the two meshes meet vertex to vertex. See [Ends](../modelling/loft.md#ends)
 - A loft end set to **Tangent** has **Match Normals**: the seam takes the neighbour's shading and blends back into the loft's own over a share of its first span, so no line shows in the light along it. See [Joining lofts without a crease](../modelling/loft.md#joining-lofts-without-a-crease)
 - An end's **Cap** is disabled when the profile at that end is open
 - The options of a loft that's still being set up in the Loft tab (**Shape**, **Alignment**, **Tessellation**, **Surface**) can be changed again before **Create Loft**, and the new loft takes them
