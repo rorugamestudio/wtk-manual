@@ -45,7 +45,9 @@ At the top of the tab:
 **New Loft**
 :   Clears the selection and sets up a new loft.
 
-A loft rebuilds when you edit one of its profile, rail or centerline splines, when you move one of those objects, and when you undo or redo a change to it. Moving the loft object itself doesn't take the surface away from its profiles: it rebuilds in place. Rebuilds go through the Modelling queue, so dragging a knot stays responsive; see [Rebuilds](settings.md#rebuilds).
+A loft rebuilds when you edit one of its profile, rail or centerline splines, when you move one of those objects, and when you undo or redo a change to it. Moving the loft object itself doesn't take the surface away from its profiles: it rebuilds in place. Rebuilds go through the Modelling queue, so dragging a knot stays responsive; see [Rebuilds](settings.md#rebuilds). With **Auto Bake Lightmap UVs** on, the lightmap UVs wait until you stop editing: see [Editable Meshes](editable-meshes.md#uv-options).
+
+A change that would build a very dense loft (over about 400,000 vertices, seconds of work) waits two seconds first, as a task named after the loft in Unity's **Background Tasks** window (the progress bar at the bottom right opens it). **Cancel** puts the loft back as it was before the change, and its mesh stays as it is; the change can be redone. Left alone, the loft builds.
 
 The same settings are under **Loft** in the Editable Primitive inspector.
 
@@ -179,7 +181,7 @@ The second loft leaves the spline in the direction the first loft's surface cros
     - **Max Deviation**: the largest distance allowed between a face and the true surface, in units.
 
 **Max Edge Length** (Adaptive)
-:   The longest face edge, in units. 0 leaves the length unlimited.
+:   The longest face edge, in units. 0 leaves the length unlimited. Like **Max Deviation**, it applies once you press ++enter++ or leave the field.
 
 **Profile Segments** and **Span Segments** (Uniform)
 :   The number of faces around each profile (up to 512), and between neighbouring profiles (up to 256).
