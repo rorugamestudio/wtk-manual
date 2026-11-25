@@ -113,7 +113,7 @@ How an open loft leaves its first profile (**Start**) and reaches its last (**En
 :   With **Tangent**: shades the shared spline the way the neighbour's mesh does, so no line shows in the light along the seam, and blends back into this loft's own shading over this share of the first span, from 0 to 1. 0 keeps the loft's own shading. See [Joining lofts without a crease](#joining-lofts-without-a-crease).
 
 **Cap**
-:   Closes the profile with a face. It needs closed profiles.
+:   Closes the profile with a face. It needs a closed profile at that end, and is disabled on an open one.
 
 ### :lucide-link: Joining lofts without a crease
 
