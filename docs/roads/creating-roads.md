@@ -24,7 +24,7 @@ To continue an existing road, **double-click** one of its end knots, then click 
 ### Connecting while drawing
 
 - Click on the **middle of another road** (its spline) to create a [junction](junctions.md) there.
-- Click on an **existing junction**, anywhere on it, to connect the new road to it. The junction's outline shows while it is the target.
+- Click on an **existing junction**, anywhere on it, to connect the new road to it. The junction's outline shows while it is the target. Keep clicking past it to run the road through the junction.
 - Start or end the new road on the **outer edge** of another road, or on the side of a junction, to attach it there with an [anchored connection](anchored-connections.md).
 
 A click on a road, on its edge or on a junction's surface only connects the new road while the Scene view looks down on the roads by at least 45°, so a click near the horizon doesn't join a far road. A junction's handle joins it from any view.
