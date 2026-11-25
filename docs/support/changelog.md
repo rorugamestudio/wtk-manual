@@ -23,6 +23,10 @@ What changed in each World Toolkit release, newest first.
 - Loft **Facing**: a surface of open profiles faces the side set by the direction of its first profile and the order of its profiles (**Profile Order**), so reshaping it never turns it over and **Reverse Order** does. Lofts made before keep the old rule, now called **Convex Side**
 - Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 
+### :wtk-splines: Splines
+
+- With the **Center** handle position, selected Spline Containers are moved, rotated and scaled about the average of their knots instead of their objects' pivots. See [Moving whole splines](../splines/spline-container.md#moving-whole-splines)
+
 ## :lucide-tag: v0.0.6
 
 !!! warning "Upgrading from v0.0.5"

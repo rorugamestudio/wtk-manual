@@ -157,6 +157,15 @@ The :wtk-selected-knots: **Selected Knots** panel says how many knots are select
 **Center Pivot on Selection**
 :   Moves the container's pivot to the center of the selected knots, without moving the spline.
 
+## :lucide-move-3d: Moving whole splines
+
+Select Spline Containers and use Unity's **Move**, **Rotate** and **Scale** tools on them. The **Center**/**Pivot** toggle in the Scene view toolbar sets where the handle sits:
+
+- **Center**: at the average position of the containers' knots, so rotating and scaling turn about the middle of the splines rather than their objects' pivots. It applies when only Spline Containers are selected; with other objects in the selection, Unity places the handle as usual.
+- **Pivot**: at the active container's own position.
+
+The spline tool's handle for selected containers follows the same toggle.
+
 ## :lucide-list-tree: Paths and path data
 
 The inspector lists the container's splines under **Paths**. **Add Spline Path** adds a new short two-knot spline. Each path has:
