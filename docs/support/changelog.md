@@ -24,6 +24,7 @@ What changed in each World Toolkit release, newest first.
 - Loft **Facing**: a surface of open profiles faces the side set by the direction of its first profile and the order of its profiles (**Profile Order**), so reshaping it never turns it over and **Reverse Order** does. Lofts made before keep the old rule, now called **Convex Side**
 - A loft **Rail** can end short of the outer profiles: it steers only the profiles it reaches, and past them the surface carries on smoothly. A rail that reaches fewer than two profiles is left out
 - A loft end set to **Tangent** can carry on from the side of another loft: a loft that has the end's profile as a rail along one of its sides. Two lofts meet in an L without a crease. See [Joining a loft to the side of another](../modelling/loft.md#joining-a-loft-to-the-side-of-another)
+- A loft end set to **Tangent** has **Match Normals**: the seam takes the neighbour's shading and blends back into the loft's own over a share of its first span, so no line shows in the light along it. See [Joining lofts without a crease](../modelling/loft.md#joining-lofts-without-a-crease)
 - Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 
 ### :wtk-splines: Splines
