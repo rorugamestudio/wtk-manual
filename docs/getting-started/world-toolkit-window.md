@@ -21,7 +21,7 @@ The bar at the top of the window switches between modules:
 !!! info "One module at a time"
     The active module decides what you can click and edit in the Scene view: switching to **Roads** lets you work on road splines, switching to **Terrain** lets you work on stamps, and so on. Closing the window turns all module tools off.
 
-The window remembers the last module you used while the editor stays open.
+The window remembers the last module you used while the editor stays open. Its collapsible sections remember whether you left them open or closed, even after you restart the editor.
 
 ## :wtk-context-tips: Context tips
 
