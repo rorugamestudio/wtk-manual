@@ -51,7 +51,7 @@ The same settings are under **Loft** in the Editable Primitive inspector.
 
 ## :lucide-list-ordered: Profiles
 
-The **Profiles** list holds the sections of the loft, in the order it goes through them. Drag a row to reorder it, and click **×** to remove it. **Reverse Order** runs the loft from the last profile to the first, and **Clear** removes every profile.
+The **Profiles** list holds the sections of the loft, in the order it goes through them. Drag a row to reorder it, and click **×** to remove it. **Reverse Order** runs the loft from the last profile to the first, which also turns over a surface of open profiles whose [Facing](#surface) is **Profile Order**. **Clear** removes every profile.
 
 Select a row to see that profile's settings under the list:
 
@@ -62,14 +62,14 @@ Select a row to see that profile's settings under the list:
 :   Closes the loft to this object's position instead of a spline, for a tip or a pointed end. Only the first and the last profile can be a point, and at least one profile must be a spline.
 
 **Reverse**
-:   Runs the profile backwards. With **Align Directions** on, only the first profile's direction matters.
+:   Runs the profile backwards. With **Align Directions** on, only the first profile's direction matters, and reversing it turns over a surface of open profiles whose [Facing](#surface) is **Profile Order**.
 
 **Seam**
 :   Where a closed profile starts, in knots from its first knot (1.5 is halfway between knots 1 and 2). With **Align Seams** on, this offsets the aligned seam.
 
 ### In the Scene view
 
-While the **Loft** tab is open, the Scene view shows the profiles of the loft: numbers give their order and arrows their direction. The profile selected in the list is highlighted, and rails and the centerline are labelled **R1**, **R2**... and **C**.
+While the **Loft** tab is open, the Scene view shows the profiles of the loft: numbers give their order and arrows their direction, which together set the side an open surface [faces](#surface). The profile selected in the list is highlighted, and rails and the centerline are labelled **R1**, **R2**... and **C**.
 
 Closed profiles show their seam as a dot. **Drag** it along the profile to turn where the profile starts, and untwist the loft. Hold ++ctrl++ to snap it to the knots. Seams can't be dragged on a loft with rails.
 
@@ -165,8 +165,16 @@ The section ends with the current grid: the faces around the profiles × the fac
 **UVs**
 :   **World** keeps one UV unit per world unit. **Normalized** stretches 0 to 1 across the surface.
 
+**Facing**
+:   Which side a surface of open profiles faces. Closed profiles always face outward, whatever this is set to.
+
+    - **Profile Order**: the side comes from the direction of the first profile and the order of the profiles. With the first profile running to the right and the next profiles further ahead, the faces look up, like a Unity plane with the profile along its X axis and the profile order along its Z axis. **Reverse Order**, or **Reverse** on the first profile, turns the surface over. Reshaping the splines never does.
+    - **Convex Side**: the faces look away from the center of the loft, so a dome shows its outside, and up where the surface is flat. Reshaping the loft can turn the surface over, and two lofts joined at a profile can end up facing opposite sides.
+
+    New lofts use **Profile Order**. Lofts made before v0.0.7 keep **Convex Side**, so they face the way they did.
+
 **Flip Normals**
-:   Reverses every generated face, turning the surface inside out.
+:   Reverses every generated face, turning the surface inside out. It applies on top of **Facing**.
 
 **Side Material**
 :   The material of the loft surface. Empty keeps the renderer's first material.

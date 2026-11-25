@@ -12,6 +12,7 @@ What changed in each World Toolkit release, newest first.
 
 !!! warning "Upgrading from v0.0.6"
     - **Stairs** rebuilt from their parameters (any edit of their settings or spline, or **Force Rebake**) lay their steps out anew: a segment between knots at the same height becomes a landing without steps, and every step of a flight gets the same height. Stairs with a single straight flight keep their shape. See [Stairs](../modelling/primitives.md#stairs).
+    - **Lofts** of open profiles made from now on face the side given by their profile order, which can be the other side from before. That includes lofts made by scripts with `wtk_modelling_create_loft`: pass `"facing": "ConvexSide"` for the old side. Lofts saved with v0.0.6 keep facing the way they did. See [Loft](../modelling/loft.md#surface).
 
 ### :wtk-modelling: Modelling (Editable Mesh)
 
@@ -19,6 +20,7 @@ What changed in each World Toolkit release, newest first.
 - **Stairs Step Mode** **Height** builds steps of a set height (0.18 m for new stairs), stretched or squeezed so each flight fits its rise; **Count** shares the steps among the flights by their rise
 - The Editable Primitive inspector shows the height the stairs' steps got, and with **Height** how many steps it made
 - Stairs risers face the right way when the spline is drawn from the top down
+- Loft **Facing**: a surface of open profiles faces the side set by the direction of its first profile and the order of its profiles (**Profile Order**), so reshaping it never turns it over and **Reverse Order** does. Lofts made before keep the old rule, now called **Convex Side**
 
 ## :lucide-tag: v0.0.6
 
