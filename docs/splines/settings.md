@@ -17,6 +17,9 @@ Spline display options are in the **Settings** tab of the :wtk-more: **More** mo
 **Line Thickness** and **Knot Size**
 :   How thick the curves are, and how big the knots.
 
+**Knot Axis Length**
+:   How long the up (green) and forward (blue) axes of selected knots are, in knot sizes. 0 hides them.
+
 **Show Knot Indexes**
 :   Writes each knot's number next to it. Handy for settings that refer to a knot by number, like a [Point Anchor](point-anchors.md)'s **Position**.
 
