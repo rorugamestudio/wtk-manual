@@ -8,8 +8,11 @@ Spline display options are in the **Settings** tab of the :wtk-more: **More** mo
 
 ## :lucide-eye: Spline Display
 
-**Always Show Splines**
-:   Draws splines even when you're not editing them. You can then click a spline's line to select its object, and double-click a selected spline to start editing it.
+**Always Show All Splines**
+:   Draws every spline even when you're not editing them. You can then click a spline's line to select its object, and double-click a selected spline to start editing it. With it off, only the splines of the selected objects, and of their children, are drawn outside spline editing. Also on the [Splines Edit toolbar](index.md#splines-edit-toolbar) and in the modules' editing sections.
+
+**Show Splines Toolbar Outside Context**
+:   Keeps the [Splines Edit toolbar](index.md#splines-edit-toolbar) in the Scene view when you aren't editing splines. While you edit, it's always shown.
 
 **Line Thickness** and **Knot Size**
 :   How thick the curves are, and how big the knots.

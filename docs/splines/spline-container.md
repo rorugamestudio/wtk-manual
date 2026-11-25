@@ -8,14 +8,15 @@ A :wtk-component-spline-container: **Spline Container** holds one or more spline
 
 ## :lucide-pen-tool: Drawing splines
 
-While editing splines:
-
-1. With no knots selected, hold ++shift++ and **click** away from other splines to place the first knot. If a Spline Container is selected and **Append to Selected Container** is on in the [New Splines panel](#new-splines-panel), the new spline is added to it. Otherwise a new **Spline** object is created.
-2. **Click** to add each knot. **Click and drag** to pull out the new knot's handles: it becomes a **Bezier** knot with **Mirrored** handles.
-3. Finish the spline in one of these ways:
-    - **Right-click**, or press ++esc++.
+1. Click :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](index.md#splines-edit-toolbar). If you weren't editing splines, this starts editing them. The [New Splines panel](#new-splines-panel) appears while creation is on.
+2. **Click** away from other splines to place the first knot. If a Spline Container is selected and **Append to Selected Container** is on in the New Splines panel, the new spline is added to it. Otherwise a new **Spline** object is created.
+3. **Click** to add each knot. **Click and drag** to pull out the new knot's handles: it becomes a **Bezier** knot with **Mirrored** handles.
+4. Finish the spline in one of these ways:
+    - **Right-click**, or press ++enter++ or ++esc++.
     - **Click the knot at the other end** of the spline, usually the first one, to close it into a loop.
     - **Click the end knot of another open spline** to join the new spline to it.
+
+Creation stays on, so the next click starts another spline. Click **Create Splines** again, or press ++esc++ when you aren't drawing, to go back to editing knots.
 
 **Double-click** either end knot of an open spline to continue drawing from it: the new knots take that knot's type. **Double-click** a spline between two knots to insert a knot there.
 
@@ -39,7 +40,7 @@ The knot you're drawing from is never a snap target, so it can't swallow the nex
 
 ## :wtk-new-splines: New Splines panel
 
-The :wtk-new-splines: **New Splines** panel in the Scene view sets up the splines you draw:
+The :wtk-new-splines: **New Splines** panel appears in the Scene view while :wtk-new-splines: **Create Splines** is on, and sets up the splines you draw:
 
 **New Spline Mode**
 :   The type of the knots you click: **Auto** creates smooth curves with handles set automatically, **Linear** creates straight segments.

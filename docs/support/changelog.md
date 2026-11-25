@@ -38,6 +38,9 @@ What changed in each World Toolkit release, newest first.
 ### :wtk-splines: Splines
 
 - With the **Center** handle position, selected Spline Containers are moved, rotated and scaled about the average of their knots instead of their objects' pivots. See [Moving whole splines](../splines/spline-container.md#moving-whole-splines)
+- New splines, roads, stamp outlines and building footprints are drawn with :wtk-new-splines: **Create Splines** on the Splines Edit toolbar, in place of ++shift++-click. Creation stays on for the next spline; ++esc++ with nothing being drawn turns it off, and ++enter++ finishes a spline like a right-click. The **New Splines** panel only shows while creation is on. See [Drawing splines](../splines/spline-container.md#drawing-splines)
+- The selected objects' splines, and their children's, are always drawn, even outside spline editing. **Always Show Splines** is now **Always Show All Splines**, also in the Spline Settings
+- **Show Splines Toolbar Outside Context** keeps the Splines Edit toolbar in the Scene view outside spline editing. See [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar)
 
 ## :lucide-tag: v0.0.6
 

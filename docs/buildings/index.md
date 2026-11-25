@@ -32,7 +32,7 @@ Open it from the :wtk-buildings: **Buildings** module of the [World Toolkit wind
 ## :wtk-buildings: The Buildings panel
 
 **Edit Buildings**
-:   Turns on footprint editing in the Scene view. While it's on, the button reads **Exit Editing Buildings**. Hold ++shift++ and click to draw a new building or block, or move the knots of existing footprints. Press ++esc++ to stop editing.
+:   Turns on footprint editing in the Scene view. While it's on, the button reads **Exit Editing Buildings**. Move the knots of existing footprints, or turn on :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar) and click to draw a new building or block. Press ++esc++ to stop editing.
 
 **New Building Defaults**
 :   - **Draw Creates** chooses whether drawing a closed footprint creates a single :wtk-component-building: **Building** or a :wtk-component-building-block: **Block** that splits into lots.

@@ -63,10 +63,11 @@ Every terrain of the target is flattened to that height. The terrains then show 
 ## :lucide-pencil: Creating stamps
 
 1. In the Terrain panel, click **Edit Terrain Stamps**. The button changes to **Exit Editing Terrain Stamps**.
-2. Hold ++shift++ and **click** on the terrain to place the first point of the outline. This creates a new **Terrain Stamp** object.
-3. **Click** to add more points. Click and drag to pull out Bézier handles.
-4. Finish the outline:
-    - **Right-click** to finish it.
+2. Click :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar).
+3. **Click** on the terrain to place the first point of the outline. This creates a new **Terrain Stamp** object.
+4. **Click** to add more points. Click and drag to pull out Bézier handles.
+5. Finish the outline:
+    - **Right-click**, or press ++enter++, to finish it.
     - **Click the first point** to close the outline and finish.
     - Press ++esc++ to discard the stamp you're drawing.
 
@@ -81,10 +82,10 @@ When you finish, the terrain is rebuilt with the new stamp. An outline needs at 
 
 New stamps start from the **Terrain Stamp Preset** set in the panel's **New Terrain Stamps** card. Without one, they start with a single layer: a **Spline Area** mask on the outline and a [Height](height.md) operation. Their target is the selected Terrain Stamp Target, or else the target of the terrain under the first point.
 
-!!! note "Shift-click with a stamp selected"
+!!! note "Drawing with a stamp selected"
     If a stamp is selected, the new outline is added to that stamp instead of creating a new one. Select the terrain or clear the selection first to start a separate stamp.
 
-To edit a stamp, keep **Edit Terrain Stamps** on: click knots to select them, and drag knots or handles to reshape the stamp. The terrain follows. Press ++esc++ to stop editing. Everything you can do with knots is described in [Spline Container](../splines/spline-container.md#editing-knots).
+To edit a stamp, keep **Edit Terrain Stamps** on and **Create Splines** off: click knots to select them, and drag knots or handles to reshape the stamp. The terrain follows. Press ++esc++ to stop editing. Everything you can do with knots is described in [Spline Container](../splines/spline-container.md#editing-knots).
 
 :wtk-component-terrain-stamp: **Create with Selected** adds a stamp to each selected object that doesn't have one, for example to turn existing splines into stamps. The stamp starts from the panel's preset and uses the object's Spline Container (or one on its children) for its spline masks. It targets the terrain under the object, and a target is created for that terrain if needed.
 

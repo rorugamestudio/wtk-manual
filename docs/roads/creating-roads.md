@@ -7,10 +7,11 @@ icon: wtk/component-editable-mesh-road
 ## :lucide-pen-line: Drawing a road
 
 1. In the **Roads** panel, click **Edit Road Points**.
-2. With no knots selected, hold ++shift++ and **click** in the Scene view to start a new road, then **click** to add more points.
-3. Press ++esc++ or **right-click** to finish. A road needs at least two points.
+2. Click :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar).
+3. **Click** in the Scene view to start a new road, then **click** to add more points.
+4. Press ++esc++ or ++enter++, or **right-click**, to finish. A road needs at least two points.
 
-Press ++esc++ again, when you aren't drawing, to stop editing road points.
+Creation stays on for the next road. Press ++esc++ again, when you aren't drawing, to turn creation off, and once more to stop editing road points. Clicking **Create Splines** while the Roads module is open also starts editing road points, so step 1 can be skipped.
 
 New roads use the **Road Rules** set under **New Roads** in the Roads panel: they copy its setup and keep a reference to it, along with the [Lane Overrides](#lane-overrides-for-new-roads) set there. See [Road Rules](#road-rules).
 

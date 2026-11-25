@@ -9,9 +9,9 @@ A :wtk-component-building-block: **Building Block** takes a large area, splits i
 ## :lucide-pen-tool: Creating a block
 
 1. In the :wtk-buildings: **Buildings** module, set **Draw Creates** to :wtk-component-building-block: **Block**.
-2. Click **Edit Buildings**.
-3. Hold ++shift++ and **click** to place the first corner of the block, then **click** to place the others.
-4. **Click** the first corner again, or **right-click**, to close the outline.
+2. Click **Edit Buildings**, then :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar).
+3. **Click** to place the first corner of the block, then **click** to place the others.
+4. **Click** the first corner again, **right-click** or press ++enter++ to close the outline.
 
 The block splits into lots and generates a building on each one. It starts with the **Building Rules** of **New Building Defaults** as its only rules. As with a building, ++esc++ while drawing throws the outline away.
 

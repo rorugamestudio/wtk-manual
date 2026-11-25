@@ -30,7 +30,7 @@ Stamps apply in **Hierarchy order**, top to bottom. Reorder them in the Hierarch
 ## :lucide-rocket: Your first stamp
 
 1. Select your terrain tiles and click **Create Terrain Stamp Target** in the Terrain panel. If you skip this step, the first stamp you draw creates a target for the terrain under it.
-2. Click **Edit Terrain Stamps**, hold ++shift++ and click on the terrain to start an outline, then click to add points. **Right-click** to finish.
+2. Click **Edit Terrain Stamps**, then :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar). Click on the terrain to start an outline, then click to add points. **Right-click** to finish.
 3. With the new stamp selected, set up its layer in the Inspector: [masks](masks.md) say where it applies, operations say what it does.
 4. Move the stamp or drag its knots: the terrain follows.
 

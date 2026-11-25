@@ -9,16 +9,16 @@ A :wtk-component-building: **Building** turns a closed footprint into a building
 ## :lucide-pen-tool: Creating a building
 
 1. In the :wtk-buildings: **Buildings** module, set **Draw Creates** to :wtk-component-building: **Building**.
-2. Click **Edit Buildings**.
-3. Hold ++shift++ and **click** to place the first corner, then **click** to place the others. **Drag** while placing a corner to pull out its handles and curve the walls next to it.
-4. **Click** the first corner again, or **right-click**, to close the footprint.
+2. Click **Edit Buildings**, then :wtk-new-splines: **Create Splines** on the [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar).
+3. **Click** to place the first corner, then **click** to place the others. **Drag** while placing a corner to pull out its handles and curve the walls next to it.
+4. **Click** the first corner again, **right-click** or press ++enter++ to close the footprint.
 
 The building generates right away, using the **Building Rules** set under **New Building Defaults**.
 
 !!! note "While drawing"
     - A footprint needs at least three corners. Finishing with fewer removes it.
-    - ++esc++ throws away the footprint you're drawing, and also stops **Edit Buildings**.
-    - Shift-click starts a new building only when no building is selected. With a building or block selected, it adds the new outline to that object's spline instead, and a building only uses the first outline of its spline. Click an empty spot first to clear the selection.
+    - ++esc++ throws away the footprint you're drawing. With nothing being drawn it turns **Create Splines** off, and the next ++esc++ stops **Edit Buildings**.
+    - A click starts a new building only when no building is selected. With a building or block selected, it adds the new outline to that object's spline instead, and a building only uses the first outline of its spline. Click an empty spot first to clear the selection.
 
 To edit a footprint later, click **Edit Buildings** and move its knots like any [spline](../splines/spline-container.md#editing-knots). Press ++esc++ to stop editing.
 
