@@ -12,6 +12,7 @@ What changed in each World Toolkit release, newest first.
 
 !!! warning "Upgrading from v0.0.6"
     - **Stairs** rebuilt from their parameters (any edit of their settings or spline, or **Force Rebake**) lay their steps out anew: a segment between knots at the same height becomes a landing without steps, and every step of a flight gets the same height. Stairs with a single straight flight keep their shape. See [Stairs](../modelling/primitives.md#stairs).
+    - **Lofts** with a rail that doesn't reach every profile take a new shape at their next rebuild: the rail steers only the profiles it reaches, and past them the surface keeps its own shape instead of bending towards the rail's end. Lofts whose rails reach every profile don't change. See [Loft](../modelling/loft.md#shape).
     - **Lofts** of open profiles made from now on face the side given by their profile order, which can be the other side from before. That includes lofts made by scripts with `wtk_modelling_create_loft`: pass `"facing": "ConvexSide"` for the old side. Lofts saved with v0.0.6 keep facing the way they did. See [Loft](../modelling/loft.md#surface).
 
 ### :wtk-modelling: Modelling (Editable Mesh)
@@ -21,6 +22,8 @@ What changed in each World Toolkit release, newest first.
 - The Editable Primitive inspector shows the height the stairs' steps got, and with **Height** how many steps it made
 - Stairs risers face the right way when the spline is drawn from the top down
 - Loft **Facing**: a surface of open profiles faces the side set by the direction of its first profile and the order of its profiles (**Profile Order**), so reshaping it never turns it over and **Reverse Order** does. Lofts made before keep the old rule, now called **Convex Side**
+- A loft **Rail** can end short of the outer profiles: it steers only the profiles it reaches, and past them the surface carries on smoothly. A rail that reaches fewer than two profiles is left out
+- A loft end set to **Tangent** can carry on from the side of another loft: a loft that has the end's profile as a rail along one of its sides. Two lofts meet in an L without a crease. See [Joining a loft to the side of another](../modelling/loft.md#joining-a-loft-to-the-side-of-another)
 - Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 
 ### :wtk-splines: Splines

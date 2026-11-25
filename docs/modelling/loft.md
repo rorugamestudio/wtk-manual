@@ -91,7 +91,7 @@ Closed profiles show their seam as a dot. **Drag** it along the profile to turn 
 :   Steers the surface between the profiles:
 
     - **None**: the profiles alone shape the surface.
-    - **Rails**: the surface follows the **Rails**, spline paths that should touch every profile.
+    - **Rails**: the surface follows the **Rails**, spline paths that touch the profiles. A rail can end short of the outer profiles: it steers only the profiles it reaches, and past the last of them the surface carries on smoothly and has its own shape back by the next profile. A rail that reaches fewer than two profiles is left out.
     - **Centerline**: the sections follow the **Centerline**, a path the profiles are carried along, keeping their angle to it. The profiles are taken in their order along it.
 
     **Pick Rails** picks rails in the Scene view: click splines to add or remove them, then press ++enter++ or ++esc++. The eyedropper after a rail, or after **Centerline**, picks that one spline: click it, then click the spline in the Scene view.
@@ -101,13 +101,13 @@ Closed profiles show their seam as a dot. **Drag** it along the profile to turn 
 How an open loft leaves its first profile (**Start**) and reaches its last (**End**). A closed loop has no ends.
 
 **Condition**
-:   With **Smooth** interpolation, **Free** lets the surface meet the profile on its own. **Direction** meets it at right angles, tilted by **Angle**. At a point profile, **Direction** rounds the tip. **Tangent** carries on from the neighbouring loft that shares the profile, without a crease: see [Joining lofts without a crease](#joining-lofts-without-a-crease).
+:   With **Smooth** interpolation, **Free** lets the surface meet the profile on its own. **Direction** meets it at right angles, tilted by **Angle**. At a point profile, **Direction** rounds the tip. **Tangent** carries on from the neighbouring loft that shares the profile, or has it as a rail along one of its sides, without a crease: see [Joining lofts without a crease](#joining-lofts-without-a-crease).
 
 **Angle** and **Weight**
 :   **Angle**, with **Direction**, tilts the direction outward (positive) or inward (negative), from -80 to 80 degrees. **Weight**, with **Direction** or **Tangent**, is how far the direction carries into the surface, from 0 to 4.
 
 **Neighbour**
-:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile. The eyedropper after the field picks it in the Scene view, where only the lofts this end can carry on from are tinted and can be clicked. Any other editable primitive under the cursor turns red and says why it can't be the neighbour, for example a loft that doesn't start or end with this end's profile.
+:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile, or have it as a rail along one of its sides. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile or has it as a rail. The eyedropper after the field picks it in the Scene view, where only the lofts this end can carry on from are tinted and can be clicked. Any other editable primitive under the cursor turns red and says why it can't be the neighbour, for example a loft that doesn't start or end with this end's profile or have it as a rail.
 
 **Cap**
 :   Closes the profile with a face. It needs closed profiles.
@@ -125,6 +125,16 @@ The neighbour keeps its shape. This loft leaves the shared profile in the same d
 Set **Tangent** on only one of the two lofts. If both carry on from each other, each follows the other's own shape and they still meet at an angle; the tab says so. On a loft with **Rails**, the rails still pull the surface next to the profile, so a small angle can remain.
 
 The lofts stay separate objects with their own options and materials. For a single mesh with no border at all, put every profile in one loft instead: **Smooth** interpolation already passes through each profile without a crease.
+
+#### Joining a loft to the side of another
+
+A loft can also carry on from the side of another one, where the surface stops across its profiles: two lofts meeting in an L, or a wall that turns into a flat roof. That side isn't a profile, so make it a rail:
+
+1. Draw the spline the two lofts meet along, from a profile end of the first loft to the end of another of its profiles (snap to them).
+2. On the first loft, set **Guide** to **Rails** and add that spline as a rail. Its side now runs along the spline between the profiles it reaches; past them the side keeps its own shape.
+3. Use the same spline as the first or last profile of the second loft, and set that end to **Tangent**.
+
+The second loft leaves the spline in the direction the first loft's surface crosses it, along the stretch the rail steers. The rail must run along a side: a rail across the middle of the first loft has surface on both sides, so the end is left free and the tab says so.
 
 ## :lucide-align-center: Alignment
 
@@ -201,7 +211,9 @@ When the profiles can't make a loft, the reason shows at the top of the tab, onc
 Some problems still build a loft and show a note instead:
 
 - *Profiles have different knot counts, so they are aligned by arc length.* **Point Mapping** is set to **Knots**, but the profiles don't match.
-- *A rail does not touch every profile; the surface bridges the gap.*
+- *A rail does not touch every profile; the surface bridges the gap.* A rail runs past a profile at a distance instead of through it.
+- *Rail 2 reaches fewer than two profiles, so it is left out.* The rail ends before it reaches a second profile, so it has no span to steer.
 - *Add rails, or the loft is built without them.* and *Choose a centerline spline; the loft is built without one.* The **Guide** is set but has nothing to follow yet.
-- *No other loft starts or ends with the first profile; the start is left free.* and *Several lofts start or end with the first profile: choose the start's Neighbour.* A **Tangent** end has no loft to follow, or more than one.
+- *No other loft starts or ends with the first profile or runs along it as a rail; the start is left free.* and *Several lofts start or end with the first profile or run along it: choose the start's Neighbour.* A **Tangent** end has no loft to follow, or more than one.
+- *That rail runs across Loft, not along a side of it; the start is left free.* The end's profile is a rail of the neighbour, but not one along its side.
 - *Loft (1) carries on from this loft as well; set Tangent on one of them only.* Both lofts are set to **Tangent** towards each other.
