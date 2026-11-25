@@ -96,6 +96,15 @@ Closed profiles show their seam as a dot. **Drag** it along the profile to turn 
 
     **Pick Rails** picks rails in the Scene view: click splines to add or remove them, then press ++enter++ or ++esc++. The eyedropper after a rail, or after **Centerline**, picks that one spline: click it, then click the spline in the Scene view.
 
+**Rail Pacing**
+:   How the surface walks along its rails between two profiles. **Surface** goes at the pace the surface itself has there, so a rail drawn along the surface, like one made with **Spline from Sides**, leaves it as it is. **Even** walks each rail in equal steps of its length, which can slide the surface along the rail. New lofts use **Surface**; lofts made before v0.0.7 keep **Even**, so they keep their shape.
+
+**Spline from Sides**
+:   On a loft that exists, makes splines along its sides: where the surface stops at the start or the end of its profiles. The Scene view shows the sides cut at the profiles. Click a segment to make a spline along it. ++shift++-click to pick several first (++shift++-click one again to drop it), then press ++enter++ or click **Make Splines**; segments that meet make one spline. ++esc++ cancels. Each spline has a knot on each profile it passes, with Bezier tangents that follow the side exactly, and goes under the loft. A loft of closed profiles has no sides.
+
+**Add as Rail**
+:   Adds the splines **Spline from Sides** makes to the loft's rails, so its sides follow them when you edit them, and another loft can carry on from them with **Tangent** (see [Joining a loft to the side of another](#joining-a-loft-to-the-side-of-another)). On a loft that had no rails yet it also sets **Rail Pacing** to **Surface**, so the loft keeps its shape.
+
 ## :lucide-circle-dashed: Ends
 
 How an open loft leaves its first profile (**Start**) and reaches its last (**End**). A closed loop has no ends.
@@ -135,8 +144,8 @@ The lofts stay separate objects with their own options and materials. For a sing
 
 A loft can also carry on from the side of another one, where the surface stops across its profiles: two lofts meeting in an L, or a wall that turns into a flat roof. That side isn't a profile, so make it a rail:
 
-1. Draw the spline the two lofts meet along, from a profile end of the first loft to the end of another of its profiles (snap to them).
-2. On the first loft, set **Guide** to **Rails** and add that spline as a rail. Its side now runs along the spline between the profiles it reaches; past them the side keeps its own shape.
+1. Select the first loft, click **Spline from Sides** with **Add as Rail** on, and click the side segment the second loft should start from (++shift++-click to take several that meet). Or draw the spline yourself, from a profile end of the first loft to the end of another of its profiles (snap to them), and add it to the first loft's **Rails**.
+2. The first loft's side now runs along the spline between the profiles it reaches; past them the side keeps its own shape. Edit the spline to reshape that side.
 3. Use the same spline as the first or last profile of the second loft, and set that end to **Tangent**.
 
 The second loft leaves the spline in the direction the first loft's surface crosses it, along the stretch the rail steers. The rail must run along a side: a rail across the middle of the first loft has surface on both sides, so the end is left free and the tab says so.
