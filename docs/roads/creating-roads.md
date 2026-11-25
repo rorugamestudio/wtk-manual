@@ -27,6 +27,8 @@ To continue an existing road, **double-click** one of its end knots, then click 
 - Click on an **existing junction** to connect the new road to it.
 - Start or end the new road on the **outer edge** of another road, or on the side of a junction, to attach it there with an [anchored connection](anchored-connections.md).
 
+A click on a road, or on its edge, only connects the new road while the Scene view looks down on the roads by at least 45°, so a click near the horizon doesn't join a far road. An existing junction can be joined from any view.
+
 The junctions and connections are made when you finish the road.
 
 ## :lucide-mouse-pointer-click: Editing a road

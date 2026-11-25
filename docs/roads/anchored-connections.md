@@ -17,9 +17,9 @@ With **Edit Road Points** active:
 
 Dropping the end near the middle of the other road (its spline) creates a junction instead.
 
-A new connection is only offered while the Scene view looks down on the roads by at least 45°, like a new junction, so an end dragged past a road near the horizon doesn't attach to it. If the marker doesn't show, tilt the view down.
-
 You can also attach a road while drawing it: start or end the new road on the outer edge of another road, or on the side of a junction.
+
+Either way, a new connection is only offered while the Scene view looks down on the roads by at least 45°, like a new junction, so a road end near the horizon doesn't attach to a far road. If the marker doesn't show, tilt the view down.
 
 Once attached:
 
