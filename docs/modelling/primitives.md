@@ -73,7 +73,7 @@ Some primitives have extra options in that panel:
 
 ## :lucide-sliders-horizontal: Creation options
 
-**Plane**, **Orient** and **Orient to First Step** are in the **Create Mesh Options** panel. **Snap First Point to Surface** is there too, and under **Create Options** in the **Create** tab, next to **Material** and **Vertex Color**.
+**Plane**, **Orient**, **Orient to First Step** and **Create from Center** are in the **Create Mesh Options** panel. **Snap First Point to Surface** is there too, and under **Create Options** in the **Create** tab, next to **Material** and **Vertex Color**.
 
 **Plane**
 :   The plane the footprint is drawn on: **XZ** (the ground), **XY**, **YZ**, or **Face Surface**, the surface under the cursor. In an orthographic view that looks along that plane, such as **Front** or **Left** with **XZ**, the footprint goes on the plane facing the view instead (**XY** in **Front**, **YZ** in **Left**).
@@ -83,6 +83,9 @@ Some primitives have extra options in that panel:
 
 **Orient to First Step**
 :   The first drag sets the direction of one side, and a second step sets the depth. Useful for drawing boxes that are rotated to match something already in the scene.
+
+**Create from Center**
+:   For the round primitives (circle, custom polygon, cylinder, cone, sphere and torus): the first point is the center and the drag sets the radius, out to the cursor. With **Orient to First Step** the drag also sets the rotation, and there is no depth step. A cylinder, cone, sphere or torus drawn this way gets its pivot in the middle of its height (**Pivot** set to **Center** in its Editable Primitive inspector) instead of on its base.
 
 **Snap First Point to Surface**
 :   Places the first point on the surface under the cursor, even if snapping is off. The following steps stay on the plane started by that first point.

@@ -49,6 +49,8 @@ See [UVs](uvs.md) for manual UV editing.
 
 Primitives keep their parameters in an :wtk-component-editable-primitive: **Editable Primitive** component, next to the Editable Mesh. Its inspector shows the parameters of the primitive's **Kind**: sizes, segments, the vertex color, the UV offset, scale and rotation, and the spline settings of stairs, tubes, surfaces and [lofts](loft.md). Changing a value rebuilds the mesh right away: a typed value applies when you press ++enter++ or leave the field, and a slider applies while you drag it. Right-click the component and choose **Force Rebake** to rebuild it from its parameters on demand.
 
+Cylinders, cones, spheres and tori also have a **Pivot**: **Base** puts the pivot on the base they stand on, **Center** in the middle of their height. Changing it in the inspector moves the pivot, not the primitive. Primitives drawn with [Create from Center](primitives.md#creation-options) start with **Center**.
+
 While a mesh is controlled by its primitive, its vertices, edges and faces can't be edited directly. Click **Make Editable** at the top of the **Topology** tab to turn it into a regular Editable Mesh and edit the topology. After that, the primitive parameters are gone.
 
 ## :lucide-combine: Combining and splitting objects
