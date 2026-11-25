@@ -21,6 +21,7 @@ What changed in each World Toolkit release, newest first.
 - The Editable Primitive inspector shows the height the stairs' steps got, and with **Height** how many steps it made
 - Stairs risers face the right way when the spline is drawn from the top down
 - Loft **Facing**: a surface of open profiles faces the side set by the direction of its first profile and the order of its profiles (**Profile Order**), so reshaping it never turns it over and **Reverse Order** does. Lofts made before keep the old rule, now called **Convex Side**
+- Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 
 ## :lucide-tag: v0.0.6
 

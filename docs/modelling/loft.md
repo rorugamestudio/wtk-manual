@@ -61,6 +61,8 @@ Select a row to see that profile's settings under the list:
 **Point**
 :   Closes the loft to this object's position instead of a spline, for a tip or a pointed end. Only the first and the last profile can be a point, and at least one profile must be a spline.
 
+The eyedropper after **Spline** picks a spline path in the Scene view, and the one after **Point** an empty object, shown as a dot. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view).
+
 **Reverse**
 :   Runs the profile backwards. With **Align Directions** on, only the first profile's direction matters, and reversing it turns over a surface of open profiles whose [Facing](#surface) is **Profile Order**.
 
@@ -92,7 +94,7 @@ Closed profiles show their seam as a dot. **Drag** it along the profile to turn 
     - **Rails**: the surface follows the **Rails**, spline paths that should touch every profile.
     - **Centerline**: the sections follow the **Centerline**, a path the profiles are carried along, keeping their angle to it. The profiles are taken in their order along it.
 
-    **Pick Rails** and **Pick Centerline** pick them in the Scene view. Click splines to add or remove rails, then press ++enter++ or ++esc++; for the centerline, a single click picks it.
+    **Pick Rails** picks rails in the Scene view: click splines to add or remove them, then press ++enter++ or ++esc++. The eyedropper after a rail, or after **Centerline**, picks that one spline: click it, then click the spline in the Scene view.
 
 ## :lucide-circle-dashed: Ends
 
@@ -105,7 +107,7 @@ How an open loft leaves its first profile (**Start**) and reaches its last (**En
 :   **Angle**, with **Direction**, tilts the direction outward (positive) or inward (negative), from -80 to 80 degrees. **Weight**, with **Direction** or **Tangent**, is how far the direction carries into the surface, from 0 to 4.
 
 **Neighbour**
-:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile.
+:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile. The eyedropper after the field picks it in the Scene view, where only the lofts this end can carry on from are tinted and can be clicked.
 
 **Cap**
 :   Closes the profile with a face. It needs closed profiles.
