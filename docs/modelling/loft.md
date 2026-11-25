@@ -51,6 +51,12 @@ A change that would build a very dense loft (over about 400,000 vertices, second
 
 The same settings are under **Loft** in the Editable Primitive inspector.
 
+### Several lofts at once
+
+Select several lofts and the **Loft** tab edits them together: a change to an option (**Interpolation**, **Quality**, **Flip Normals**, a material...) applies to every selected loft, and is undone in one step. A field shows **–** while the lofts have different values for it; set it to give them all the same one. What each loft has of its own is disabled until you select a single loft: its profiles, rails, **Centerline**, an end's **Neighbour**, **Pick Rails** and **Spline from Sides**. The status line counts the lofts, the faces they have in all, and names the loft behind each warning.
+
+A field shows when any of the selected lofts uses it: an end's **Angle** shows if one of them has that end set to **Direction**, and its **Cap** is enabled if one of them has a closed profile there.
+
 ## :lucide-list-ordered: Profiles
 
 The **Profiles** list holds the sections of the loft, in the order it goes through them. Drag a row to reorder it, and click **×** to remove it. **Reverse Order** runs the loft from the last profile to the first, which also turns over a surface of open profiles whose [Facing](#surface) is **Profile Order**. **Clear** removes every profile.
@@ -73,7 +79,7 @@ The eyedropper after **Spline** picks a spline path in the Scene view, and the o
 
 ### In the Scene view
 
-While the **Loft** tab is open, the Scene view shows the profiles of the loft: numbers give their order and arrows their direction, which together set the side an open surface [faces](#surface). The profile selected in the list is highlighted, and rails and the centerline are labelled **R1**, **R2**... and **C**.
+While the **Loft** tab is open, the Scene view shows the profiles of the loft: numbers give their order and arrows their direction, which together set the side an open surface [faces](#surface). The profile selected in the list is highlighted, and rails and the centerline are labelled **R1**, **R2**... and **C**. With [several lofts](#several-lofts-at-once) selected, it shows them for each one, and the seam dots of each can be dragged.
 
 Closed profiles show their seam as a dot. **Drag** it along the profile to turn where the profile starts, and untwist the loft. Hold ++ctrl++ to snap it to the knots. Seams can't be dragged on a loft with rails.
 
