@@ -101,6 +101,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 
 ## :lucide-mouse-pointer-click: Editing knots
 
+- Each knot shows as a sphere with a stem pointing up and a flat tip ahead of it, pointing the way the knot faces. The tip's shape tells the knot type (see the table below); the stem and tip use the **Knot Rotation Marker** color.
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
 - **Drag** across empty space to box-select knots, with the same modifiers.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
@@ -128,11 +129,11 @@ The :wtk-selected-knots: **Selected Knots** panel says how many knots are select
 **In** and **Out**
 :   The length of the knot's two handles. Expand them to type each handle's position. Typing a handle value turns the knot into a **Bezier** knot with **Broken** handles, unless it is **Mirrored**.
 
-| Type | Curve |
-|---|---|
-| **Linear** | Straight lines in and out of the knot, no handles. |
-| **Auto** | Smooth, with handles set automatically. |
-| **Bezier** | Handles you control. Choose how they behave: **Mirrored** (both sides equal), **Broken** (independent) or **Continuous** (aligned, but different lengths). |
+| Type | Curve | Tip |
+|---|---|---|
+| **Linear** | Straight lines in and out of the knot, no handles. | A triangle. |
+| **Auto** | Smooth, with handles set automatically. | A half disc. |
+| **Bezier** | Handles you control. Choose how they behave: **Mirrored** (both sides equal), **Broken** (independent) or **Continuous** (aligned, but different lengths). | A point with hollow sides. |
 
 ### :lucide-menu: Knot menu
 

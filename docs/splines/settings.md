@@ -20,9 +20,6 @@ Spline display options are in the **Settings** tab of the :wtk-more: **More** mo
 **Show Knot Indexes**
 :   Writes each knot's number next to it. Handy for settings that refer to a knot by number, like a [Point Anchor](point-anchors.md)'s **Position**.
 
-**Use Tangent Mode Knot Shapes**
-:   Draws knots with a shape that tells their type: squares for **Linear** knots, circles for **Auto** knots. **Bezier** knots keep the usual shape: a pin pointing the way the knot faces.
-
 **Draw Occluded** and **Occluded Opacity**
 :   Draws splines hidden behind other objects, faded to **Occluded Opacity**.
 
