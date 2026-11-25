@@ -29,9 +29,6 @@ A small vertical toolbar in the Scene view, always shown while you edit splines,
 :wtk-new-splines: **Create Splines**
 :   Turns creation on and off. While it's on, clicks draw new splines instead of selecting: roads in the Roads module, footprints in Buildings, stamp outlines in Terrain. See [Drawing splines](spline-container.md#drawing-splines). Clicked while you aren't editing, it starts editing in the module open in the [World Toolkit window](../getting-started/world-toolkit-window.md), with creation on.
 
-**Local Handle**
-:   What the **Move**, **Rotate** and **Scale** handles line up with when the tool handle rotation is **Local**: the Spline Container's transform (**Object**), the first selected knot (**First Knot**), or the average rotation of the selected knots (**Average**).
-
 :wtk-selection-filter: **Edit Selected Only**
 :   The open module's option to show editable knots only on the selected objects: **Edit Selected Splines Only**, **Edit Selected Roads Only** and so on. Also in the module's editing section of the World Toolkit window. Clicking another spline's line still selects it instead (++shift++ adds it), also after clicking empty space has cleared the selection.
 

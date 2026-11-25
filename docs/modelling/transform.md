@@ -11,6 +11,8 @@ Move, rotate and scale the selected components with Unity's regular **Move**, **
 
 ## :lucide-crosshair: Pivot and orientation
 
+Both are in the Scene view's **Tool Settings**, in place of Unity's **Center**/**Pivot** and **Global**/**Local** dropdowns, while a modelling transform tool is active.
+
 **Origin** sets where the handle sits:
 
 | Origin | Pivot |
@@ -29,7 +31,7 @@ Move, rotate and scale the selected components with Unity's regular **Move**, **
 | :wtk-pivot-orientation-edges: **Edges** | Aligned to the selected edges. |
 | :wtk-pivot-orientation-custom: **Custom** | A rotation you stored with **Set Custom**, or set with **Point to**, which aims from the custom pivot toward the selection. |
 
-Press ++z++ to cycle through the origins and ++x++ to cycle through the orientations. The Scene view briefly shows the new choice, such as *Pivot Origin: Individual*. Both shortcuts can be changed in Unity's **Shortcuts** window, under **Modelling**.
+Unity's own shortcuts work on them: ++z++ switches the origin between **Center** and **Individual** (Unity's **Pivot**), and ++x++ the orientation between **Global** and **Local**. **Custom**, **Normal** and **Edges** are picked from the dropdowns.
 
 ### :wtk-pivot-origin-custom: Custom pivots
 
