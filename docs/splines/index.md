@@ -33,7 +33,7 @@ A small vertical toolbar in the Scene view, always shown while you edit splines,
 :   What the **Move**, **Rotate** and **Scale** handles line up with when the tool handle rotation is **Local**: the Spline Container's transform (**Object**), the first selected knot (**First Knot**), or the average rotation of the selected knots (**Average**).
 
 :wtk-selection-filter: **Edit Selected Only**
-:   The open module's option to show editable knots only on the selected objects: **Edit Selected Splines Only**, **Edit Selected Roads Only** and so on. Also in the module's editing section of the World Toolkit window.
+:   The open module's option to show editable knots only on the selected objects: **Edit Selected Splines Only**, **Edit Selected Roads Only** and so on. Also in the module's editing section of the World Toolkit window. With nothing selected, click a spline's line to select it.
 
 :wtk-visibility: **Always Show All Splines**
 :   Keeps every spline drawn when you aren't editing, as in the [Spline Settings](settings.md).
