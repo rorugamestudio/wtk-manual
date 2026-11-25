@@ -101,7 +101,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 
 ## :lucide-mouse-pointer-click: Editing knots
 
-- Each knot shows as a flat icon facing you whose shape tells the knot type (see the table below), with a darker outline. Selected knots are bigger, ringed in the **Selected Knot** color, and show their up (green) and forward (blue) axes. Small arrows halfway along each segment show which way the spline runs.
+- Each knot shows as a flat icon facing you whose shape tells the knot type (see the table below), with a darker outline. Selected knots are bigger, ringed in the **Selected Knot** color with a light touch of it in their fill, and show their up (green) and forward (blue) axes. Small arrows halfway along each segment show which way the spline runs.
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
 - **Drag** across empty space to box-select knots, with the same modifiers.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.

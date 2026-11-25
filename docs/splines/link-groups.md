@@ -17,13 +17,13 @@ The knots move to their average position, halfway between them when there are tw
 
 To add another knot to an existing link:
 
-1. Click the link's cube in the Scene view to select it.
+1. Click the link's cross in the Scene view to select it.
 2. Hold ++shift++ and click the knot to add.
 3. **Right-click** and choose **Link to Selected Knot Link**. The knot jumps to the link's position.
 
 ## :lucide-move-3d: Moving linked knots
 
-Linked knots can't be selected one by one, only their [handles](#handles-of-linked-knots) can. Each link is drawn as a small cube where its knots meet: click the cube, or box-select it, to select the link. A link that belongs to a road junction is drawn as the junction's outline raised into a prism instead; its cube stays clickable at the centre. When a road is about to connect to a junction or split another road, the offer shows the footprint the junction will have, with the mouth of the arriving road.
+Linked knots can't be selected one by one, only their [handles](#handles-of-linked-knots) can. Each link is drawn as a small cross facing you where its knots meet, in the style of the knot icons: click the cross, or box-select it, to select the link. A link that belongs to a road junction is drawn as the junction's outline raised into a prism instead; its cross stays clickable at the centre. When a road is about to connect to a junction or split another road, the offer shows the footprint the junction will have, with the mouth of the arriving road.
 
 - With a link selected, Unity's **Move** and **Rotate** tools move and turn all its knots together.
 - Moving the **Spline Link** object any other way, for example from its Transform in the Inspector, moves its knots too.
