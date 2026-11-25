@@ -107,7 +107,7 @@ How an open loft leaves its first profile (**Start**) and reaches its last (**En
 :   **Angle**, with **Direction**, tilts the direction outward (positive) or inward (negative), from -80 to 80 degrees. **Weight**, with **Direction** or **Tangent**, is how far the direction carries into the surface, from 0 to 4.
 
 **Neighbour**
-:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile. The eyedropper after the field picks it in the Scene view, where only the lofts this end can carry on from are tinted and can be clicked.
+:   With **Tangent**: the loft this end carries on from. It must start or end with this end's profile. Leave it empty and the loft finds it: the one other loft that starts or ends with that profile. The eyedropper after the field picks it in the Scene view, where only the lofts this end can carry on from are tinted and can be clicked. Any other editable primitive under the cursor turns red and says why it can't be the neighbour, for example a loft that doesn't start or end with this end's profile.
 
 **Cap**
 :   Closes the profile with a face. It needs closed profiles.

@@ -34,7 +34,7 @@ You can turn the tips off in the Modelling **Settings** tab, under **Scene View 
 Fields that hold a scene object or a spline, such as a loft's rails or its **Neighbour**, have a small eyedropper button after them. Click it, then click in the Scene view to fill the field with what's under the cursor:
 
 - Spline fields pick a spline path by its line. Every path you can pick shows faintly, and the one under the cursor is highlighted.
-- Object fields pick the clicked object, or the component of the field's type on it or on one of its parents. A field of a component type, or one that only accepts some objects, offers just those: they're tinted, objects in front of them don't get in the way, and empty objects show as dots you can click.
+- Object fields pick the clicked object, or the component of the field's type on it or on one of its parents. A field of a component type, or one that only accepts some objects, offers just those: they're tinted, objects in front of them don't get in the way, and empty objects show as dots you can click. Some fields also say why an object can't be picked: under the cursor it turns red, with the reason next to it, and when nothing in the scene fits, the context tips say so.
 
 A label next to the cursor names what a click would pick. While you pick, the move, rotate and scale handles are hidden so they don't take the click, and the context tips say what to click. Press ++esc++, or click the eyedropper again, to stop without picking. The change can be undone like any other edit of the field.
 
