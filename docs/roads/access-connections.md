@@ -86,7 +86,7 @@ Once connected:
 :   The first receiving lane this road's lanes continue, counting from the left of the receiving road (its lane layer and repeat), whether those lanes **End** or **Start** there, and which of that lane's ends (or starts) it is along the receiving road, from its start. **Lane Tips** sets all three from a list.
 
 **Transition Length**
-:   How much of this road, in meters, is used to blend its end into the receiving road. An edge access uses at least one and a half times the length of its kerb returns, and its heights may ease over a longer stretch when it is much higher or lower than the receiving road.
+:   How much of this road, in meters, is used to blend its end into the receiving road. An edge access uses at least one and a half times the length of its kerb returns, more when it meets the receiving road at a slant (so its rows turn back square without folding over the corners), and its heights may ease over a longer stretch when it is much higher or lower than the receiving road.
 
 ## :lucide-circle-alert: Status
 
