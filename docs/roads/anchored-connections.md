@@ -26,6 +26,7 @@ Once attached:
 - Each connection shows a marker where it meets the receiving road. **Click** the marker to select the attached road end.
 - **Drag** the attached end along the edge to move the connection, from any view.
 - **Drag** it away and release it anywhere else to detach it. This removes the Road Anchor Connection component.
+- Moving the attached road's object as a whole (or a parent of it) detaches it too, in the same Undo step. Moving both roads together keeps the connection, and it follows the receiving road when only that road moves.
 
 ## :wtk-component-road-anchor-connection: Adding one from the inspector
 

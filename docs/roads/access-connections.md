@@ -52,6 +52,7 @@ Once connected:
 
 - **Drag** the connected end to move the connection, from any view: along the edges of roads (an edge access) or onto other rows of lane tips (a lane access). An access dropped on the other kind of target switches its **Mode**, and an anchored road end dropped on lane tips becomes a lane access.
 - **Drag** it away and release it anywhere else to remove the Road Access Connection component.
+- Moving the connected road's object as a whole (or a parent of it) removes its connections, in the same Undo step. Moving both roads together keeps them, and a connection follows the receiving road when only that road moves.
 
 ## :wtk-component-road-access-connection: Adding one from the inspector
 
