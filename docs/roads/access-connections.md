@@ -23,6 +23,8 @@ The access then fits its end onto the edge of the receiving road's carriageway:
 - Its **carriageway** keeps the width of its lanes and runs straight on until it reaches the receiving carriageway. When the access arrives at an angle, its end is skewed along the edge.
 - Its **borders** turn round **kerb returns** of **Arc Radius** and meet the receiving road's borders where they were cut.
 - The gap between each kerb return and the lanes is filled with a curved piece of carriageway, in the material of the lanes beside it.
+- Across the receiving road's border band the access stays level with the receiving road, so its borders meet the cut ones. Past the band its height eases into its own, like a road easing into a junction: a steep access eases over a longer stretch, so the grade it adds stays gentle.
+- Triplanar profiles (see [Profiles and Layers](profiles-and-layers.md)) keep their world-space mapping where the end is bent, so a sidewalk's pattern carries on from the receiving road's into the corners.
 
 With **Arc Radius** at 0 the access meets the receiving road square, without kerb returns or curved pieces.
 
@@ -84,7 +86,7 @@ Once connected:
 :   The first receiving lane this road's lanes continue, counting from the left of the receiving road (its lane layer and repeat), whether those lanes **End** or **Start** there, and which of that lane's ends (or starts) it is along the receiving road, from its start. **Lane Tips** sets all three from a list.
 
 **Transition Length**
-:   How much of this road, in meters, is used to blend its end into the receiving road. An edge access uses at least one and a half times the length of its kerb returns.
+:   How much of this road, in meters, is used to blend its end into the receiving road. An edge access uses at least one and a half times the length of its kerb returns, and its heights may ease over a longer stretch when it is much higher or lower than the receiving road.
 
 ## :lucide-circle-alert: Status
 
