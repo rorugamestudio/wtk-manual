@@ -185,10 +185,10 @@ The inspector lists the container's splines under **Paths**. **Add Spline Path**
 :   Extra values stored along the spline, each with a **Name** that other tools look up. Add an entry and pick its type, for example **Float Curve** (a curve from the start of the spline, 0, to its end, 1) or **Gradient** (colors along it). A [Point Anchor](point-anchors.md) can read a **Float Curve** to scale its object.
 
 **Override Debug Sampling** and **Debug Samples Per Segment**
-:   Draw this spline smoother or coarser than the **Samples Per Segment** in the [Spline Settings](settings.md).
+:   Draw this spline smoother or coarser than the **Samples Per Segment** in the [Spline Settings](settings.md). **Debug Samples Per Segment** shows once **Override Debug Sampling** is on.
 
 **Debug Thickness Data Name** and **Debug Color Data Name**
-:   The name of a **Float Curve** that sets the drawn line's thickness along the spline, and of a **Gradient** that colors it.
+:   Pick, from the spline's **Path Data**, a **Float Curve** that sets the drawn line's thickness along the spline and a **Gradient** that colors it; each entry is listed with its type, for example "Data (Gradient)". A name that no longer matches an entry of that type shows as "(missing)".
 
 ??? info "Editing a Float Curve in the Scene view"
     Set a **Float Curve**'s **Show On Scene As** to draw it along the spline while its object is selected and splines are shown. **Sides Mirrored** draws two lines, one on each side of the spline, half the value away from it, which suits widths. **Sides** draws one line offset to the right, negative values going left. **Vertical Mirrored** and **Vertical** do the same above and below the spline.
