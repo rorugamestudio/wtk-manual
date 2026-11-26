@@ -73,6 +73,12 @@ Rounds or cuts the selected edges or vertices.
 **Junctions**
 :   How corners where several beveled edges meet are filled: with segmented faces (**Segmented**) or with a single polygon (**Ngon**).
 
+**Auto Smooth**
+:   Off by default. Shades the faces the bevel creates smooth and marks each edge they touch, including the borders with the old faces, hard (sharp shading) when the angle between its faces reaches **Auto Smooth Angle**. Flatter edges stay smooth, so a rounded bevel with enough segments shades as one curve. Without it, the new faces keep the flat or smooth shading of the faces they came from. The rest of the mesh keeps its shading either way.
+
+**Auto Smooth Angle**
+:   The angle, from 0 to 180 degrees, at which the edges of the new faces become hard. 30 by default.
+
 ### :wtk-modify-bridge: Bridge
 
 Connects two selected face groups, edge chains or edge loops with new faces. Handy for joining two parts of a mesh or closing a gap between them.
