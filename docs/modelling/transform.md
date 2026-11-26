@@ -31,7 +31,7 @@ Both are in the Scene view's **Tool Settings**, in place of Unity's **Center**/*
 | :wtk-pivot-orientation-edges: **Edges** | Aligned to the selected edges. |
 | :wtk-pivot-orientation-custom: **Custom** | A rotation you stored with **Set Custom**, or set with **Point to**, which aims from the custom pivot toward the selection. |
 
-Unity's own shortcuts work on them: ++z++ switches the origin between **Center** and **Individual** (Unity's **Pivot**), and ++x++ the orientation between **Global** and **Local**. **Custom**, **Normal** and **Edges** are picked from the dropdowns.
+Unity's own shortcuts cycle them: ++z++ through the origins and ++x++ through the orientations. The Scene view briefly shows the new choice, such as *Pivot Origin: Individual*.
 
 ### :wtk-pivot-origin-custom: Custom pivots
 
