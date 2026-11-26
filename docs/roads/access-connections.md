@@ -1,5 +1,5 @@
 ---
-icon: wtk/component-road-anchor-connection
+icon: wtk/component-road-access-connection
 ---
 
 # Access Connections
@@ -9,7 +9,7 @@ An **access connection** connects the end of a road to another road as an access
 - **Edge**: the road meets the **side** of the receiving road. The receiving road's borders break where the access meets it, and this road's lanes run on until they reach the receiving road's lanes. Its kerbs curve into the receiving road's kerbs with kerb returns. Use it for side streets, service roads and car park entrances that cross a sidewalk.
 - **Lanes**: the road continues **lanes** of the receiving road where they end or start: at the end of the receiving road, or at the end of a lane's spline range. Use it for exit and entry ramps, or to split the end of a road into several roads.
 
-The connection is a :wtk-component-road-anchor-connection: **Road Access Connection** component on the connecting road. Like an [anchored connection](anchored-connections.md), it follows the receiving road when that road changes.
+The connection is a :wtk-component-road-access-connection: **Road Access Connection** component on the connecting road. Like an [anchored connection](anchored-connections.md), it follows the receiving road when that road changes.
 
 !!! tip
     To attach a road to the side of another one **without** breaking its borders (a walkway arriving on a sidewalk, a driveway), use an [anchored connection](anchored-connections.md) instead.
@@ -53,13 +53,13 @@ Once connected:
 - **Drag** the connected end to move the connection, from any view: along the edges of roads (an edge access) or onto other rows of lane tips (a lane access). An access dropped on the other kind of target switches its **Mode**, and an anchored road end dropped on lane tips becomes a lane access.
 - **Drag** it away and release it anywhere else to remove the Road Access Connection component.
 
-## :wtk-component-road-anchor-connection: Adding one from the inspector
+## :wtk-component-road-access-connection: Adding one from the inspector
 
 1. Add a **Road Access Connection** component to the road that should connect (**Add Component > World Toolkit > Roads > Road Access Connection**).
 2. Choose its **Mode**, which end connects (**Source Path Index** and **Endpoint**) and the receiving road in **Target Spline**.
 3. For an edge access, set where along the receiving road it sits in **Spline Position**. For a lane access, pick the lanes in **Lane Tips**: it lists every row of lane ends and starts of the receiving road that fits this road's number of lanes.
 
-## :wtk-component-road-anchor-connection: Settings
+## :wtk-component-road-access-connection: Settings
 
 **Mode**
 :   **Edge** meets the side of the receiving road and breaks its borders; **Lanes** continues lanes of the receiving road where they end or start.

@@ -33,7 +33,7 @@ Open it from the **Roads** tab of the [World Toolkit window](../getting-started/
 :wtk-component-road-anchor-connection: **Road Anchor Connection**
 :   A road that attaches to the side of another road without a full junction. See [Anchored Connections](anchored-connections.md).
 
-:wtk-component-road-anchor-connection: **Road Access Connection**
+:wtk-component-road-access-connection: **Road Access Connection**
 :   A road that connects to another road as an access, without a junction: through its borders on its side, or onto the tips of some of its lanes. See [Access Connections](access-connections.md).
 
 :wtk-component-city-block-floor: **City Block Floor**
@@ -83,7 +83,7 @@ The **Settings** tab sets the lane guides and their colors, how road splines are
 
     Attach the end of a road to the side of another road or junction, for driveways and entrances.
 
--   :wtk-component-road-anchor-connection:{ .lg .middle } **[Access Connections](access-connections.md)**
+-   :wtk-component-road-access-connection:{ .lg .middle } **[Access Connections](access-connections.md)**
 
     ---
 
