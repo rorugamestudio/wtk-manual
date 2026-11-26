@@ -42,6 +42,7 @@ nav = [
     { "Profiles and Layers" = "roads/profiles-and-layers.md" },
     { "Junctions" = "roads/junctions.md" },
     { "Anchored Connections" = "roads/anchored-connections.md" },
+    { "Access Connections" = "roads/access-connections.md" },
     { "City Blocks" = "roads/city-blocks.md" },
     { "Roads Settings" = "roads/settings.md" },
   ] },

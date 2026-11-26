@@ -128,6 +128,7 @@ World Toolkit is a set of world-building tools for Unity: model meshes in the Sc
 <tr markdown><td markdown>:lucide-paintbrush: [Markings](roads/junctions.md#markings-in-junctions)</td><td>Crossings and stop lines at every junction mouth, and markings that continue through junctions.</td></tr>
 <tr markdown><td markdown>:lucide-palette: [Road materials](roads/profiles-and-layers.md#road-materials)</td><td>URP shaders for asphalt with tire tracks that follow the lanes, and for road paint.</td></tr>
 <tr markdown><td markdown>:wtk-component-road-anchor-connection: [Anchored Connections](roads/anchored-connections.md)</td><td>Attach the end of a road to the side of another road or junction, for driveways and entrances.</td></tr>
+<tr markdown><td markdown>:wtk-component-road-anchor-connection: [Access Connections](roads/access-connections.md)</td><td>Connect a road to another one through its borders, with kerb returns, or continue some of its lanes where they end.</td></tr>
 <tr markdown><td markdown>:wtk-component-city-block-floor: [City Blocks](roads/city-blocks.md)</td><td>Fill the areas enclosed by roads with floors that follow the roads around them.</td></tr>
 </tbody>
 <tbody class="wtk-features-buildings" markdown>
