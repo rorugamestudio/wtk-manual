@@ -41,6 +41,13 @@ What changed in each World Toolkit release, newest first.
 - **Show Spline Range Controls**: the spline ranges of the selected roads' groups, layers and sub layers in the Scene view. Drag an end along the road (it keeps its anchor and units), click it to type its value, right-click a range to flip or remove it and the road to add one. See [Editing spline ranges in the Scene view](../roads/profiles-and-layers.md#editing-spline-ranges-in-the-scene-view)
 - **Layer Overrides** has **Override Spline Ranges** for each layer and each of its sub layers, and the new **Group Overrides** for each group: a road that follows rules can have its own spline ranges. See [Road settings](../roads/creating-roads.md#road-settings)
 - The Road Outliner's **Overrides** column counts spline range overrides too
+- Range and width handles are small cubes; a selected handle lights up the range or layer line it changes
+- Range ends sit exactly where the ranges start and end (they used to drift up to half a metre along roads whose spline speeds up and slows down), and the selected end's fields set the range type, the anchor (Start, End or Knot), the knot and Units or Percent, keeping the end in place
+- Right-click a spline range to change its **Anchor** (Spline or Junction Mouths)
+- Width handles of layers left of a centred road's middle sit on their left edge; handles that would cover each other step ahead along the road; while dragging, the handles stay put along the road until the mouse is released
+- Ranges of different elements drawn over the same stretch move apart sideways instead of covering each other
+- The lane and width controls glide along the road with the camera instead of jumping between points
+- Faster: dragging a spline range no longer resolves the junctions again at every step, and roads rebuild faster (about twice as fast in a test crossing) since ranges in percent no longer measure the whole road each time
 
 ### :wtk-splines: Splines
 
