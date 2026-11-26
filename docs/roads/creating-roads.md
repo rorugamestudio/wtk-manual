@@ -49,14 +49,14 @@ Knots work the same as on any [spline](../splines/spline-container.md#editing-kn
 
 Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. They cross the road under the middle of the view (where the view's centre meets the ground) and glide along it as the camera moves. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
 
-With **Show Spline Range Controls** on, the selected roads also show the spline ranges of their groups, layers and sub layers, to move, add and remove in the Scene view. See [Editing spline ranges in the Scene view](profiles-and-layers.md#editing-spline-ranges-in-the-scene-view).
+With **Show Spline Range Controls** on, the selected roads also show the spline ranges of their groups, layers, sub layers and lanes, to move, add and remove in the Scene view. See [Editing spline ranges in the Scene view](profiles-and-layers.md#editing-spline-ranges-in-the-scene-view).
 
 ### Layer widths in the Scene view
 
-Turn on **Show Width Controls** under **Points** in the Roads panel to show a width handle on each layer of the selected roads, across the road where its lane controls are: under the middle of the view, gliding along the road as the camera moves. A green line spans each layer, and the handle, a small cube, sits on an edge its width moves: the outer edge in a centred group (the left one for layers left of the road's middle, the right one otherwise), or the edge away from the group's **Anchor Group Id** in a group placed against another. Each group's handles sit one step further along the road than the previous group's, its layers side by side.
+Turn on **Show Width Controls** under **Points** in the Roads panel to show a width handle on each layer of the selected roads, across the road where its lane controls are: under the middle of the view, gliding along the road as the camera moves. A green line spans each layer, and the handle, a small cube, sits on an edge its width moves: the outer edge (the left one for layers left of the road's middle, the right one otherwise) in a centred group, where the lanes stay centred and the layers beside them grow outwards, or the edge away from the group's **Anchor Group Id** in a group placed against another. Each group's handles sit one step further along the road than the previous group's, its layers side by side.
 
 - **Drag** a handle sideways to change the layer's **Width Multiplier**. The handles stay where they are along the road until you release the mouse. **Esc** while dragging puts it back.
-- **Click** a handle to select it: it and its layer's line turn white and the other lines fade, and the **Layer Width** overlay (bottom right of the Scene view by default) shows the layer's width on this road in metres (**Width (m)**, its lanes included) and its **Width Multiplier**, to type a value. **Frame Selected** (++f++) frames the handle; **Esc** deselects it.
+- **Click** a handle to select it: it and its layer's line turn white and the other lines fade, and the **Layer Width** overlay (bottom right of the Scene view by default) shows its **Road**, **Group** and **Layer** and, on a road with rules, whether the width comes from the road's override or the rules (**Width From**); then the layer's width on this road in metres (**Width (m)**, its lanes included) and its **Width Multiplier**, to type a value. **Frame Selected** (++f++) frames the handle; **Esc** deselects it.
 - **Right-click** a handle and choose **Remove Override** to make the layer follow the rules' width multiplier again (roads with rules).
 - Hover a handle to see the layer's name, width and multiplier, and whether the change goes to the road's override or to the rules.
 
@@ -81,10 +81,11 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
 :   Optional [Road Rules](#road-rules). While it's set, the road is generated from the asset's layers and generation settings, and the road's own copies of those settings are hidden. Expand the field's arrow to edit the asset from the road inspector, or click **New** to create a Road Rules asset and assign it.
 
 **Lane Overrides**
-:   Appears when the road's **Rules** have lanes, with one entry per lane (**Lane 0**, **Lane 1** and so on, followed by the layer's name). It changes that lane on this road only, without touching the rules:
+:   Appears when the road has lane layers, with one entry per lane layer (**Lane 0**, **Lane 1** and so on, followed by the layer's name). It changes that lane on this road only, without touching the rules:
 
-    - Turn on **Override Extra Lanes** to give this road its own **Extra Lanes** count.
-    - Turn on **Override Directions** to give it its own **Lane Direction**, and choose which extra lanes run the other way with **Invert Extra Lane 1**, **Invert Extra Lane 2** and so on.
+    - Turn on **Override Extra Lanes** to give this road its own **Extra Lanes** count (roads with rules).
+    - Turn on **Override Directions** to give it its own **Lane Direction**, and choose which extra lanes run the other way with **Invert Extra Lane 1**, **Invert Extra Lane 2** and so on (roads with rules).
+    - Turn on **Lane 1 Spline Ranges**, **Lane 2 Spline Ranges** and so on to build each lane of the layer only along its **Spline Ranges**; outside them its place stays empty. These work on roads with or without rules. See [Lanes](profiles-and-layers.md#lanes).
 
     An override starts from the rules' values. While it's off, its fields are greyed out and show the rules' values.
 
@@ -177,6 +178,7 @@ The **Road Preview** at the bottom of its inspector shows the road it generates.
 - When you draw a road or convert splines, the new road copies the rules set under **New Roads** in the Roads panel and keeps a reference to them in its **Rules** field. It also gets the lane overrides set there.
 - While a road references rules, it's generated from the asset. Edit the asset, and every road that references it rebuilds.
 - Clear a road's **Rules** field to make it independent: it keeps the setup it copied, which you can then edit on that road alone.
+- To make it independent as it is now, overrides included, right-click the road component and choose **Embed Rules Into Component**: the road's own layers and generation settings become the rules' with its overrides built in (layer widths, spline ranges, extra lanes and lane directions), its **Rules** field is cleared, and it builds the same mesh. Its lanes' spline ranges stay in its **Lane Overrides**. Undo brings the rules back.
 
 !!! warning "Lane edits change the asset"
     On a road that references rules, changing lane directions or adding lanes in the Scene view edits the rules asset, so every road using it changes too. To change the lanes of one road only, turn on its [Lane Overrides](#road-settings) first: Scene view edits then go to the override instead.

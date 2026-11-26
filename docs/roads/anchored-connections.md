@@ -29,7 +29,7 @@ Once attached:
 
 ## :wtk-component-road-anchor-connection: Adding one from the inspector
 
-Right-click the road component of the road that should attach, and choose **Add Anchored Connection**. This adds a Road Anchor Connection component; then pick the receiving road in **Target Spline**.
+Add a **Road Anchor Connection** component to the road that should attach (**Add Component > World Toolkit > Roads > Road Anchor Connection**), then pick the receiving road in **Target Spline**.
 
 ## :wtk-component-road-anchor-connection: Settings
 

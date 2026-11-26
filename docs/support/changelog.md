@@ -11,6 +11,8 @@ What changed in each World Toolkit release, newest first.
 ## :lucide-tag: v0.0.7
 
 !!! warning "Upgrading from v0.0.6"
+    - Road layers have **Is Lane** and **Is Border**, which used to be set on the profile. Layers saved before take them from their profile when their rules or road are opened or edited; save the Road Rules (and scenes with roads that have their own layers) to keep them there. Scripts reading `RoadProfile.IsLane` / `IsBorder` get the old profile values (now obsolete): read `RoadLayer.IsLane` / `IsBorder`. See [Layers](../roads/profiles-and-layers.md#layers).
+    - A **centred** layer group now puts the middle of its lane layers on the road's spline, with the layers beside them extending outwards. Roads whose borders differ on each side (a sidewalk wider on one side, by the rules or by a Layer Override) move sideways at their next rebuild so that their lanes are centred on the spline. See [Layer Groups](../roads/profiles-and-layers.md#layer-groups).
     - **Stairs** rebuilt from their parameters (any edit of their settings or spline, or **Force Rebake**) lay their steps out anew: a segment between knots at the same height becomes a landing without steps, and every step of a flight gets the same height. Stairs with a single straight flight keep their shape. See [Stairs](../modelling/primitives.md#stairs).
     - **Lofts** with a rail that doesn't reach every profile take a new shape at their next rebuild: the rail steers only the profiles it reaches, and past them the surface keeps its own shape instead of bending towards the rail's end. Lofts whose rails reach every profile don't change. See [Loft](../modelling/loft.md#shape).
     - **Lofts** of open profiles made from now on face the side given by their profile order, which can be the other side from before. That includes lofts made by scripts with `wtk_modelling_create_loft`: pass `"facing": "ConvexSide"` for the old side. Lofts saved with v0.0.6 keep facing the way they did. See [Loft](../modelling/loft.md#surface).
@@ -50,6 +52,13 @@ What changed in each World Toolkit release, newest first.
 - The lane and width controls cross the road under the middle of the view (also when looking towards the horizon) and glide along it with the camera instead of jumping between points
 - A click on a range or width handle a few pixels off its centre no longer falls through and deselects the road
 - Faster: dragging a spline range no longer resolves the junctions again at every step, and roads rebuild faster (about twice as fast in a test crossing) since ranges in percent no longer measure the whole road each time
+- **Is Lane** and **Is Border** are set on each layer instead of on its profile, so one profile serves lane and non-lane layers. See [Layers](../roads/profiles-and-layers.md#layers)
+- A centred group centres its lane layers on the spline; the layers beside them extend outwards, so borders of different widths on each side no longer shift the lanes. See [Layer Groups](../roads/profiles-and-layers.md#layer-groups)
+- Single lanes can be limited to **Spline Ranges** in a road's **Lane Overrides** (also on roads without rules) and in the Scene view; outside them the lane's place stays empty. See [Lanes](../roads/profiles-and-layers.md#lanes)
+- **Embed Rules Into Component** on the road component's context menu: the road takes its rules' layers and settings with its overrides built in and lets the rules go, building the same mesh. See [How roads use rules](../roads/creating-roads.md#how-roads-use-rules)
+- The **Spline Range** and **Layer Width** overlays list what the selected handle belongs to (Road, Group, Layer, Sublayer, Lane, Range) as read-only lines, and the Spline Range overlay picks the range's **Anchor**
+- **Show Mesh Wireframe** (Roads panel, under **Points**) hides the Editable Mesh wireframe of selected roads and junctions when off
+- **Add Anchored Connection** is no longer on the road component's context menu: add a Road Anchor Connection component, or drag a road end onto another road's edge
 - Junctions rebuild about twice as fast, and roads a fifth faster, in scenes with many junctions: a junction looks for its neighbours along its roads with one search of the scene per rebuild, and what is recorded for Undo after each rebuild no longer reads the whole Road Rules asset again while it hasn't changed. The meshes come out the same
 
 ### :wtk-splines: Splines
@@ -61,6 +70,7 @@ What changed in each World Toolkit release, newest first.
 
 ### :lucide-bug: Bug fixes
 
+- **Apply to Selected**, **Create Road Rules From Current Setup** and other copies of road rules keep junction-mouth spline ranges as they are: the copies used to lose their anchor, setback and length, which moved crossings and lane dividers
 - Scene view handles and outlines drawn away from the world origin no longer wobble: thick lines turned jagged, dots moved or disappeared, a few pixels off at 1 km from the origin and tens of pixels at 20 km
 
 ## :lucide-tag: v0.0.6

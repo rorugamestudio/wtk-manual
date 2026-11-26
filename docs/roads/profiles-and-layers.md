@@ -44,14 +44,10 @@ The **Profile Preview** at the bottom of the inspector shows the result in 3D. *
 
 ### Profile settings
 
-**Is Lane**
-:   Marks the profile as a driving lane. Lanes have a direction and show lane guides. A layer's lane settings (**Lane Direction**, **Extra Lane Count** and **Lane Divisions**) only work with lane profiles, and are greyed out for other profiles.
-
-**Is Border**
-:   Marks the profile as a road border (curb, gutter, sidewalk). Junctions treat borders differently from the road surface: borders continue around the [corners](junctions.md#conversions) between roads.
+Whether a layer is a lane or a border is set on the [layer](#layers) (**Is Lane**, **Is Border**), not on its profile, so one profile can serve both.
 
 **Regular Profile UV Type** and **Junction Border Profile UV Type**
-:   How textures are mapped: along roads, and for border profiles inside junctions. **Unfold** follows the profile along the road, with **Unfold Scale** and **Unfold Offset**. **Triplanar** projects the texture in world space, with **Triplanar Scale**.
+:   How textures are mapped: along roads, and for border layers inside junctions. **Unfold** follows the profile along the road, with **Unfold Scale** and **Unfold Offset**. **Triplanar** projects the texture in world space, with **Triplanar Scale**.
 
 **Default Material**
 :   The material used for spans with no material of their own.
@@ -62,6 +58,15 @@ Layers are set on the road component, under **Road Layer Groups**, or in the **G
 
 **Name** and **Profile**
 :   The layer's name and its Road Profile.
+
+**Is Lane**
+:   Marks the layer as a traffic lane. Lanes have a direction and show lane guides, and the road's lanes (lane controls, [Lane Overrides](creating-roads.md#road-settings), junction lane connections) are its lane layers. The lane settings (**Lane Direction**, **Extra Lane Count** and **Lane Divisions**) only work on lane layers, and are greyed out on others. In a centred group, the lane layers sit around the road's spline and the layers beside them extend outwards (see [Layer Groups](#layer-groups)).
+
+**Is Border**
+:   Marks the layer as a road border (curb, gutter, sidewalk). Junctions treat borders differently from the road surface: borders continue around the [corners](junctions.md#conversions) between roads, with the profile's **Junction Border Profile UV Type**.
+
+!!! note "Rules and roads from before v0.0.7"
+    **Is Lane** and **Is Border** used to be set on the profile. Layers saved before take them from their profile when their rules or road are opened or edited, and keep them from then on.
 
 **Alignment** and **Offset**
 :   Where the layer sits: **Left**, **Center** or **Right**, then shifted by **Offset**.
@@ -86,7 +91,7 @@ Layers are set on the road component, under **Road Layer Groups**, or in the **G
 
 ### Lanes
 
-For lane layers (layers whose profile has **Lane** enabled; for other profiles, these fields are greyed out in the inspector):
+For lane layers (layers with **Is Lane** on; for other layers, these fields are greyed out in the inspector):
 
 **Lane Direction**
 :   **Forward**, **Backward** or **Both**.
@@ -112,9 +117,11 @@ You can also edit lanes in the Scene view. Select a road to show its lane contro
 !!! warning
     On a road that references [Road Rules](creating-roads.md#road-rules), these lane edits change the rules asset, and so every road that uses it. To change one road only, turn on that lane's **Lane Overrides** in the [road inspector](creating-roads.md#road-settings) first.
 
+A single lane can be limited to parts of the road: turn on **Lane 1 Spline Ranges**, **Lane 2 Spline Ranges** and so on in the road's [Lane Overrides](creating-roads.md#road-settings), on a road with or without rules, or add a range to the lane in the [Scene view](#editing-spline-ranges-in-the-scene-view). Outside its ranges the lane isn't built, with its sub layers and the dividers beside it, and its place stays empty: the other lanes don't move. Rules don't have lane ranges; they belong to each road.
+
 ## :lucide-ruler: Spline ranges
 
-Layers, sub layers, lane divisions and layer groups can be limited to parts of the road with **Spline Ranges**. With an empty list they apply everywhere. Each range has an **Anchor**:
+Layers, sub layers, lane divisions, layer groups and single lanes (in a road's [Lane Overrides](creating-roads.md#road-settings)) can be limited to parts of the road with **Spline Ranges**. With an empty list they apply everywhere. Each range has an **Anchor**:
 
 | Anchor | What it covers |
 |---|---|
@@ -127,17 +134,17 @@ Use spline ranges for a sidewalk that only exists on one block, or a parking lan
 
 ### Editing spline ranges in the Scene view
 
-Turn on **Show Spline Range Controls** under **Points** in the [Roads panel](index.md#the-roads-panel) to show the spline ranges of the selected roads in the Scene view. Each range is drawn beside the road where what it limits lies: groups (blue) along their left edge, layers (orange) and sub layers (violet) along their middle, with a small cube at each end exactly where the range starts and ends. Ranges of different elements that would lie on top of each other over the same stretch move apart sideways. A flipped range is dotted. A **Junction Mouths** range shows one interval at each junction mouth.
+Turn on **Show Spline Range Controls** under **Points** in the [Roads panel](index.md#the-roads-panel) to show the spline ranges of the selected roads in the Scene view. Each range is drawn beside the road where what it limits lies: groups (blue) along their left edge, layers (orange), sub layers (violet) and lanes (yellow) along their middle, with a small cube at each end exactly where the range starts and ends. Ranges of different elements that would lie on top of each other over the same stretch move apart sideways. A flipped range is dotted. A **Junction Mouths** range shows one interval at each junction mouth.
 
 - **Drag** the handle at either end of a range to move that end along the road. The end keeps its anchor (the path's start, end or a knot) and its distance type (units or percent); with a range set by a start and a distance, the other end stays where it is. On a **Junction Mouths** range, the end nearer the junction sets **Mouth Setback** and the other one **Mouth Length**. **Esc** while dragging puts the range back.
-- **Click** an end to select it: it and its range light up, the other ranges fade, and the range's settings show in the **Spline Range** overlay (bottom right of the Scene view by default), as in the inspector. The first row picks the **Range** type (**Start To End** or **Start Distance**). The second edits this end: what it is measured from (**Start**, **End** or **Knot**, with the knot's index **K**), its distance (**+**) and whether that is in **Units** or **Percent** (a fraction of the path, 0-1); for the end of a **Start Distance** range, its **Distance**. Changing a type keeps the end where it is. A **Junction Mouths** range shows **Setback m** and **Length m**. Press **Enter** to apply a number. **Frame Selected** (++f++) frames the selected end; **Esc** deselects it.
-- **Right-click** a range or one of its ends to **Flip** or **Remove** it, to **Remove Override** (the element follows the rules' ranges again, on a road with rules), or to change its **Anchor**: a **Junction Mouths** range made a **Spline** range covers the interval you clicked; a **Spline** range made a **Junction Mouths** one keeps its **Mouth Setback** and **Mouth Length**.
-- **Right-click** the road and choose **Add Spline Range Here**, then the group, layer or sub layer: a new range is added around that point. On an element without ranges, which used the whole road, it then only applies there.
+- **Click** an end to select it: it and its range light up, the other ranges fade, and the **Spline Range** overlay (bottom right of the Scene view by default) shows what the range belongs to (**Road**, **Group**, **Layer**, **Sublayer**, **Lane**) and which of its ranges it is (**Range**, with whether it's an override or the rules'), then its settings as in the inspector. **Anchor** measures the range from the spline path or from each junction mouth, keeping it where it is. **Type** picks **Start To End** or **Start Distance**. The next row edits this end: what it is measured from (**Start**, **End** or **Knot**, with the knot's index **K**), its distance (**+**) and whether that is in **Units** or **Percent** (a fraction of the path, 0-1); for the end of a **Start Distance** range, its **Distance**. Changing a type keeps the end where it is. A **Junction Mouths** range shows **Setback m** and **Length m**. Press **Enter** to apply a number. **Frame Selected** (++f++) frames the selected end; **Esc** deselects it.
+- **Right-click** a range or one of its ends to **Flip** or **Remove** it, to **Remove Override** (the element follows the rules' ranges again, on a road with rules; lanes' ranges are always the road's own), or to change its **Anchor**: a **Junction Mouths** range made a **Spline** range covers the interval you clicked; a **Spline** range made a **Junction Mouths** one keeps its **Mouth Setback** and **Mouth Length**.
+- **Right-click** the road and choose **Add Spline Range Here**, then the group, layer, sub layer or lane: a new range is added around that point. On an element without ranges, which used the whole road, it then only applies there.
 
 Hover a range to see what it belongs to and whether it's the road's own range, an override or the rules'.
 
 !!! note "Roads that follow Road Rules"
-    On a road that references [Road Rules](creating-roads.md#road-rules), these edits change the road's [Layer Overrides and Group Overrides](creating-roads.md#road-settings), never the rules asset. When the element's **Override Spline Ranges** is off, the first change asks whether to override it on this road: **Override** turns it on with copies of the rules' ranges, and **Cancel** leaves the ranges as they are.
+    On a road that references [Road Rules](creating-roads.md#road-rules), these edits change the road's [Layer Overrides and Group Overrides](creating-roads.md#road-settings) (a lane's ranges, its Lane Overrides), never the rules asset. When the element's **Override Spline Ranges** is off, the first change asks whether to override it on this road: **Override** turns it on with copies of the rules' ranges, and **Cancel** leaves the ranges as they are.
 
 !!! tip "Crossings and stop lines"
     Give a sub layer a **Junction Mouths** range to paint it at every junction the road reaches. Sub layers whose ranges are all unflipped **Junction Mouths** ranges are laid out straight along the lanes at the mouth, square to them, even where the road curves.
@@ -153,7 +160,7 @@ Layers are organized in groups: the road's **Road Layer Groups**, or the **Group
 :   Groups this one replaces. Wherever this group is active, along its **Spline Ranges**, the groups listed here are turned off.
 
 **Alignment On Anchor Group** and **Anchor Group Id**
-:   **Center** centers the group on the road. **Left Of Group** lines up the group's left edge with the left edge of the group named in **Anchor Group Id**, and **Right Of Group** lines up the right edges.
+:   **Center** puts the middle of the group's lane layers (from the first to the last, with whatever lies between them, like a median) on the road's spline, and the layers beside them extend outwards: a wider sidewalk on one side doesn't shift the lanes. A group without lane layers is centred as a whole. **Left Of Group** lines up the group's left edge with the left edge of the group named in **Anchor Group Id**, and **Right Of Group** lines up the right edges.
 
 **Offset**
 :   Shifts the whole group sideways (X) and up (Y).
