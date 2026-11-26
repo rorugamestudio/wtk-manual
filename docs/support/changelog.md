@@ -49,6 +49,10 @@ What changed in each World Toolkit release, newest first.
 - The selected objects' splines, and their children's, are always drawn, even outside spline editing. **Always Show Splines** is now **Always Show All Splines**, also in the Spline Settings
 - **Show Splines Toolbar Outside Context** keeps the Splines Edit toolbar in the Scene view outside spline editing. See [Splines Edit toolbar](../splines/index.md#splines-edit-toolbar)
 
+### :lucide-bug: Bug fixes
+
+- Scene view handles and outlines drawn away from the world origin no longer wobble: thick lines turned jagged, dots moved or disappeared, a few pixels off at 1 km from the origin and tens of pixels at 20 km
+
 ## :lucide-tag: v0.0.6
 
 !!! warning "Upgrading from v0.0.5"
