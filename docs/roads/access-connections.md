@@ -25,6 +25,7 @@ The access then fits its end onto the edge of the receiving road's carriageway:
 - The gap between each kerb return and the lanes is filled with a curved piece of carriageway, in the material of the lanes beside it.
 - Across the receiving road's border band the access stays level with the receiving road, so its borders meet the cut ones. Past the band its height eases into its own, like a road easing into a junction: a steep access eases over a longer stretch, so the grade it adds stays gentle.
 - Triplanar profiles (see [Profiles and Layers](profiles-and-layers.md)) keep their world-space mapping where the end is bent, so a sidewalk's pattern carries on from the receiving road's into the corners.
+- Where the access touches the receiving road it takes that road's normals, so the shading runs on across the seam without a line.
 
 With **Arc Radius** at 0 the access meets the receiving road square, without kerb returns or curved pieces.
 

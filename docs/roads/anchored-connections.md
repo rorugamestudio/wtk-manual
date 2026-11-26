@@ -4,7 +4,7 @@ icon: wtk/component-road-anchor-connection
 
 # Anchored Connections
 
-An **anchored connection** attaches the end of a road to the **side** of another road, or to the side of a junction, without building a full junction there. The end of the approaching road is fitted onto the receiving road's outer edge, and follows it when that road changes. Use it for driveways, parking entrances and service roads.
+An **anchored connection** attaches the end of a road to the **side** of another road, or to the side of a junction, without building a full junction there. The end of the approaching road is fitted onto the receiving road's outer edge, and follows it when that road changes. Where the two meet, the end takes the receiving road's normals, so the shading runs on across the seam without a line. Use it for driveways, parking entrances and service roads.
 
 The connection is a :wtk-component-road-anchor-connection: **Road Anchor Connection** component on the approaching road.
 
