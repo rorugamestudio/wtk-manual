@@ -52,7 +52,7 @@ You can also press ++d++ in the Scene view to edit the pivot, starting from wher
 :   Restricts the transform to the chosen axes.
 
 :wtk-proportional-transform: **Proportional Transform**
-:   Also moves nearby unselected components, fading with distance, for smooth soft edits. Turn it on with **Activate**, then set the **Radius** of the effect and its **Falloff** shape: **Smooth**, **Sphere**, **Root**, **Sharp**, **Linear**, **Constant**, or a **Custom** curve. **Domain** decides what counts as "nearby": everything within the radius (**World**), or only components connected to the selection (**Connected**).
+:   Also moves nearby unselected components, fading with distance, for smooth soft edits. Turn it on with **Activate**, or with :wtk-proportional-transform: in the Modelling Edit toolbar, whose arrow opens these same options in a panel, then set the **Radius** of the effect and its **Falloff** shape: **Smooth**, **Sphere**, **Root**, **Sharp**, **Linear**, **Constant**, or a **Custom** curve. **Domain** decides what counts as "nearby": everything within the radius (**World**), or only components connected to the selection (**Connected**).
 
 :wtk-proportional-2-axis: **Proportional 2-Axis Scaling**
 :   A toolbar toggle. When you drag one of the **Scale** tool's plane handles, which scale two axes at once, both axes scale by the same amount.

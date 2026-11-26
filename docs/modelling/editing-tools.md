@@ -254,7 +254,7 @@ For automatic smoothing of the whole mesh by angle, see **Auto Smooth** in the [
 
 ## :wtk-brush: Vertex colors
 
-Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again to stop.
+Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors by dragging over the mesh. Click it again, or press ++esc++, to stop (the next ++esc++ leaves the editing context). The arrow beside the button opens the paint options in a panel, the same ones as in the **Vertex Color** section of the **Topology** tab:
 
 **Color**
 :   The paint color. White visually erases painted color.
@@ -265,12 +265,17 @@ Click :wtk-brush: **Paint** in the Modelling Edit toolbar to paint vertex colors
 **Face Corners**
 :   Paints only the corners of the face under the cursor. Turn it off to paint every face inside the brush.
 
+**Hide Overlays**
+:   On by default: while **Paint** is on, the mesh shows as it renders, without the vertices, edges, faces and X-Ray of the editing context drawn over it, so you see the colors as you paint them.
+
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/vertex-paint.webp">
     <source src="../assets/videos/modelling/vertex-paint.mp4" type="video/mp4">
   </video>
   <figcaption>Painting vertex colors with the brush.</figcaption>
 </figure>
+
+While painting, hold ++ctrl++ (++cmd++ on macOS) to pick a color from the mesh: the brush turns into an eyedropper with a swatch of the color under it, and a click (or a drag) takes the color of the face corner nearest the cursor as the paint color.
 
 **Apply to Selection** fills the selection with the current color, and **Pick from selection** takes the color from the selection. With Editable Mesh objects selected outside the editing context, **Apply to Selection** colors each whole mesh, hidden faces included, and **Pick from selection** takes the color of the first face.
 
