@@ -109,7 +109,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 - **Click** a spline's line to select its object.
 - **Drag** a selected knot or handle to move it. With snapping on, dragged knots snap too.
 - Unity's **Move**, **Rotate** and **Scale** tools work on the selected knots. Rotating a single knot turns it in place, and several knots turn around their center.
-- The handle rotation dropdown in the Scene view's **Tool Settings**, next to **Center**/**Pivot**, picks what the handles line up with: **Global** (world axes), or local axes from the Spline Container's transform (**Object**), the first selected knot (**First Knot**) or the average rotation of the selected knots (**Average**). Unity's ++x++ shortcut cycles through the four.
+- The handle rotation dropdown in the Scene view's **Tool Settings**, next to **Center**/**Pivot**, picks what the handles line up with: **Global** (world axes), local axes from the Spline Container's transform (**Object**), the first selected knot (**First Knot**) or the average rotation of the selected knots (**Average**), or, in Unity 7, the Scene view grid (**Grid**). Unity's ++x++ shortcut cycles through them.
 - They also work on selected handles: **Move** moves them, and **Rotate** and **Scale** turn and scale their ends about the tool's handle with **Center**, or each handle about its own knot with **Pivot**, which changes its length (scaling Y to 0 lays each handle level with its knot). **Mirrored** and **Continuous** knots keep their other handle in line.
 - ++f++ frames the selected knots.
 - ++delete++ or ++backspace++ deletes the selected knots. Deleting the last knot of a spline removes the spline.
