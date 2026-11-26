@@ -106,6 +106,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 - **Drag** across empty space to box-select knots, with the same modifiers.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
 - The Scene view highlights the part of the spline each selected knot shapes: the line on both sides of the knot, fading out halfway to the next knots. Its color is the **Knot Segment Highlight** in the [Spline Settings](settings.md#colors), green by default.
+- When a segment of the spline is selected, the knots at its ends show as selected too, since they move with it, and the highlight fades from them into the segments beyond.
 - **Click** a spline's line to select its object.
 - **Drag** a selected knot or handle to move it. With snapping on, dragged knots snap too.
 - Unity's **Move**, **Rotate** and **Scale** tools work on the selected knots. Rotating a single knot turns it in place, and several knots turn around their center.
