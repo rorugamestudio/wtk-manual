@@ -132,7 +132,7 @@ Enable **Flip** on a range to use everything **except** that part. Normal ranges
 
 Use spline ranges for a sidewalk that only exists on one block, or a parking lane that stops before a corner.
 
-A limited layer is built with the same rows as the rest of the road where it runs, plus a row at each of its ends that the layers beside it get too, so its edges meet theirs exactly, even on curves.
+A limited layer is built with the same rows as the rest of the road where it runs, plus a row at each of its ends laid on the edges of the layers beside it (they get no extra rows), so its edges meet theirs exactly, even on curves.
 
 ### Editing spline ranges in the Scene view
 
