@@ -57,6 +57,7 @@ Turn on **Show Width Controls** under **Points** in the Roads panel to show a wi
 
 - **Drag** a handle sideways to change the layer's **Width Multiplier**. The handles stay where they are along the road until you release the mouse. **Esc** while dragging puts it back.
 - **Click** a handle to select it: it and its layer's line turn white and the other lines fade, and the **Layer Width** overlay (bottom right of the Scene view by default) shows its **Road**, **Group** and **Layer** and, on a road with rules, whether the width comes from the road's override or the rules (**Width From**); then the layer's width on this road in metres (**Width (m)**, its lanes included) and its **Width Multiplier**, to type a value. **Frame Selected** (++f++) frames the handle; **Esc** deselects it.
+- **Shift+click** handles to select several, or to take one out of the selection. The overlay shows the last one clicked: what the selected layers don't share shows as a dash (**—**), and a width or multiplier typed in applies to every selected layer, in one undo step.
 - **Right-click** a handle and choose **Remove Override** to make the layer follow the rules' width multiplier again (roads with rules).
 - Hover a handle to see the layer's name, width and multiplier, and whether the change goes to the road's override or to the rules.
 
