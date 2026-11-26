@@ -50,6 +50,7 @@ What changed in each World Toolkit release, newest first.
 - The lane and width controls cross the road under the middle of the view (also when looking towards the horizon) and glide along it with the camera instead of jumping between points
 - A click on a range or width handle a few pixels off its centre no longer falls through and deselects the road
 - Faster: dragging a spline range no longer resolves the junctions again at every step, and roads rebuild faster (about twice as fast in a test crossing) since ranges in percent no longer measure the whole road each time
+- Junctions rebuild about twice as fast, and roads a fifth faster, in scenes with many junctions: a junction looks for its neighbours along its roads with one search of the scene per rebuild, and what is recorded for Undo after each rebuild no longer reads the whole Road Rules asset again while it hasn't changed. The meshes come out the same
 
 ### :wtk-splines: Splines
 
