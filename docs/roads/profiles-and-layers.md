@@ -132,6 +132,8 @@ Enable **Flip** on a range to use everything **except** that part. Normal ranges
 
 Use spline ranges for a sidewalk that only exists on one block, or a parking lane that stops before a corner.
 
+A limited layer is built with the same rows as the rest of the road where it runs, plus a row at each of its ends that the layers beside it get too, so its edges meet theirs exactly, even on curves.
+
 ### Editing spline ranges in the Scene view
 
 Turn on **Show Spline Range Controls** under **Points** in the [Roads panel](index.md#the-roads-panel) to show the spline ranges of the selected roads in the Scene view. Each range is drawn beside the road where what it limits lies: groups (blue) along their left edge, layers (orange), sub layers (violet) and lanes (yellow) along their middle, with a small cube at each end exactly where the range starts and ends. Ranges of different elements that would lie on top of each other over the same stretch move apart sideways. A flipped range is dotted. A **Junction Mouths** range shows one interval at each junction mouth.
