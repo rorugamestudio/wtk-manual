@@ -13,11 +13,11 @@ The connection is a :wtk-component-road-anchor-connection: **Road Anchor Connect
 With **Edit Road Points** active:
 
 1. **Drag the end knot** of a road close to the outer edge of another road, or to the side of a junction between two of its roads. A marker shows where the road will attach.
-2. Release to attach it.
+2. Release to attach it. On the edge of a road, a dialog asks how: **Anchor** attaches it with an anchored connection, **Access** with an [access connection](access-connections.md) that breaks the road's borders, and **Cancel** leaves the end where it was dropped. On the side of a junction it attaches as an anchored connection.
 
 Dropping the end near the middle of the other road (its spline) creates a junction instead.
 
-You can also attach a road while drawing it: start or end the new road on the outer edge of another road, or on the side of a junction.
+You can also attach a road while drawing it: start or end the new road on the outer edge of another road (the same dialog asks how when you finish the road), or on the side of a junction.
 
 Either way, a new connection is only offered while the Scene view looks down on the roads by at least 45°, like a new junction, so a road end near the horizon doesn't attach to a far road. If the marker doesn't show, tilt the view down.
 

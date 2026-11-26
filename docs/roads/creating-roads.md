@@ -26,7 +26,7 @@ To continue an existing road, **double-click** one of its end knots, then click 
 
 - Click on the **middle of another road** (its spline) to create a [junction](junctions.md) there.
 - Click on an **existing junction**, anywhere on it, to connect the new road to it. The junction's outline shows while it is the target. Keep clicking past it to run the road through the junction.
-- Start or end the new road on the **outer edge** of another road, or on the side of a junction, to attach it there with an [anchored connection](anchored-connections.md).
+- Start or end the new road on the **outer edge** of another road, or on the side of a junction, to attach it there. On a road's edge a dialog asks, when you finish the road, whether to make an [anchored connection](anchored-connections.md) or an [access connection](access-connections.md); a junction's side makes an anchored connection.
 
 A click on a road, on its edge or on a junction's surface only connects the new road while the Scene view looks down on the roads by at least 45°, so a click near the horizon doesn't join a far road. A junction's handle joins it from any view.
 
@@ -39,9 +39,9 @@ With **Edit Road Points** active:
 - **Click** spline knots to select them, and **drag** selected knots or their handles to reshape the road.
 - **Double-click** a road's spline to insert a knot there.
 - **Drag a knot** onto another road to create a junction there, or onto a junction to connect it to that junction.
-- **Drag a road end** onto the outer edge of another road to attach it with an [anchored connection](anchored-connections.md).
+- **Drag a road end** onto the outer edge of another road to attach it with an [anchored connection](anchored-connections.md) or an [access connection](access-connections.md), as a dialog asks, or onto a row of lane tips of another road (shown while you drag) to continue those lanes with a lane access.
 
-A new junction on a road and a new anchored connection are only offered while the Scene view looks down on the roads by at least 45°, so a knot dragged past a road near the horizon doesn't join it. Dropping a knot on an existing junction works from any view.
+A new junction on a road and a new anchored or access connection are only offered while the Scene view looks down on the roads by at least 45°, so a knot dragged past a road near the horizon doesn't join it. Dropping a knot on an existing junction works from any view.
 
 A knot inserted on a curved span, by double-clicking it or by connecting another road there, keeps the road's shape: it gets **Continuous** handles, and the handles of the knots on either side shorten to fit their part of the span, so a **Mirrored** knot between two spans becomes **Continuous**.
 
