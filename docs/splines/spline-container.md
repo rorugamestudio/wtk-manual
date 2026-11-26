@@ -101,7 +101,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 
 ## :lucide-mouse-pointer-click: Editing knots
 
-- Each knot shows as a flat icon facing you whose shape tells the knot type (see the table below), with a darker outline. Selected knots keep their size, ringed in the **Selected Knot** color with a light touch of it in their fill, and show their right (red), up (green) and forward (blue) axes. Small arrows halfway along each segment show which way the spline runs.
+- Each knot shows as a flat icon facing you whose shape tells the knot type (see the table below), with a darker outline. Selected knots keep their size, ringed in the **Selected Knot** color with a light touch of it in their fill, and show their right (red), up (green) and forward (blue) axes, as does the knot under the pointer. Small arrows halfway along each segment show which way the spline runs.
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
 - **Drag** across empty space to box-select knots, with the same modifiers.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
@@ -110,7 +110,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 - **Drag** a selected knot or handle to move it. With snapping on, dragged knots snap too.
 - Unity's **Move**, **Rotate** and **Scale** tools work on the selected knots. Rotating a single knot turns it in place, and several knots turn around their center.
 - The handle rotation dropdown in the Scene view's **Tool Settings**, next to **Center**/**Pivot**, picks what the handles line up with: **Global** (world axes), local axes from the Spline Container's transform (**Object**), the first selected knot (**First Knot**) or the average rotation of the selected knots (**Average**), or, in Unity 7, the Scene view grid (**Grid**). Unity's ++x++ shortcut cycles through them.
-- They also work on selected handles: **Move** moves them, and **Rotate** and **Scale** turn and scale their ends about the tool's handle with **Center**, or each handle about its own knot with **Pivot**, which changes its length (scaling Y to 0 lays each handle level with its knot). **Mirrored** and **Continuous** knots keep their other handle in line.
+- They also work on selected handles: **Move** moves them, **Rotate** and **Scale** turn and scale several handles as a group, their ends about the tool's handle, and a single handle about its own knot, which changes its length (scaling Y to 0 lays it level with its knot). **Mirrored** and **Continuous** knots keep their other handle in line.
 - ++f++ frames the selected knots.
 - ++delete++ or ++backspace++ deletes the selected knots. Deleting the last knot of a spline removes the spline.
 
