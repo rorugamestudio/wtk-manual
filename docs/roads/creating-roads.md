@@ -157,7 +157,7 @@ The radius you set is a target: short segments or nearby corners can make the ac
 ### Joining borders
 
 **Merge Overlapping Borders**
-:   Welds border vertices that overlap the borders of this road or of other roads, to close small gaps. Overlapping vertices move to their midpoint. Both roads need it enabled. It also tidies tight turns: where a border would fold over itself, the folded stretch collapses into a single point.
+:   Welds border vertices that overlap the borders of this road or of other roads, to close small gaps. Overlapping vertices move to their midpoint. Both roads need it enabled. Vertices across the same cross-section of one road never weld: a narrow profile left on its own (a curb whose sidewalk and gutter end earlier) keeps its shape. It also tidies tight turns: where a border would fold over itself, the folded stretch collapses into a single point.
 
 **Border Merge Tolerance**
 :   How close two border vertices must be to merge. Between two roads, the smaller tolerance applies.
