@@ -47,16 +47,17 @@ A knot inserted on a curved span, by double-clicking it or by connecting another
 
 Knots work the same as on any [spline](../splines/spline-container.md#editing-knots), including the right-click menu.
 
-Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. They sit at the point of the road nearest the middle of the view and glide along it as the camera moves. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
+Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. They cross the road under the middle of the view (where the view's centre meets the ground) and glide along it as the camera moves. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
 
 With **Show Spline Range Controls** on, the selected roads also show the spline ranges of their groups, layers and sub layers, to move, add and remove in the Scene view. See [Editing spline ranges in the Scene view](profiles-and-layers.md#editing-spline-ranges-in-the-scene-view).
 
 ### Layer widths in the Scene view
 
-Turn on **Show Width Controls** under **Points** in the Roads panel to show a width handle on each layer of the selected roads, across the road where its lane controls are: at the point of the road nearest the middle of the view, gliding along the road as the camera moves. A green line spans each layer, and the handle, a small cube, sits on an edge its width moves: the outer edge in a centred group (the left one for layers left of the road's middle, the right one otherwise), or the edge away from the group's **Anchor Group Id** in a group placed against another. Handles that would cover each other on screen step ahead along the road.
+Turn on **Show Width Controls** under **Points** in the Roads panel to show a width handle on each layer of the selected roads, across the road where its lane controls are: under the middle of the view, gliding along the road as the camera moves. A green line spans each layer, and the handle, a small cube, sits on an edge its width moves: the outer edge in a centred group (the left one for layers left of the road's middle, the right one otherwise), or the edge away from the group's **Anchor Group Id** in a group placed against another. Each group's handles sit one step further along the road than the previous group's, its layers side by side.
 
 - **Drag** a handle sideways to change the layer's **Width Multiplier**. The handles stay where they are along the road until you release the mouse. **Esc** while dragging puts it back.
-- **Click** a handle to select it: it and its layer's line turn white, and the layer's width on this road in metres (**Width m**, its lanes included) and its **Width Multiplier** (**×**) show above it, to type a value and press **Enter**. **Esc** deselects it.
+- **Click** a handle to select it: it and its layer's line turn white and the other lines fade, and the **Layer Width** overlay (bottom right of the Scene view by default) shows the layer's width on this road in metres (**Width (m)**, its lanes included) and its **Width Multiplier**, to type a value. **Frame Selected** (++f++) frames the handle; **Esc** deselects it.
+- **Right-click** a handle and choose **Remove Override** to make the layer follow the rules' width multiplier again (roads with rules).
 - Hover a handle to see the layer's name, width and multiplier, and whether the change goes to the road's override or to the rules.
 
 Width handles are for the top-level layers; sub layers keep the widths set in their layer.
