@@ -35,6 +35,13 @@ What changed in each World Toolkit release, newest first.
 - The options of a loft that's still being set up in the Loft tab (**Shape**, **Alignment**, **Tessellation**, **Surface**) can be changed again before **Create Loft**, and the new loft takes them
 - Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 
+### :wtk-roads: Roads
+
+- **Show Width Controls** (Roads panel, under **Show Lane Controls**): a width handle on each layer of the selected roads in the Scene view; drag it, or click it to type the layer's width in metres or its **Width Multiplier**. On a road with rules it changes the layer's width override, offering to turn it on first. See [Layer widths in the Scene view](../roads/creating-roads.md#layer-widths-in-the-scene-view)
+- **Show Spline Range Controls**: the spline ranges of the selected roads' groups, layers and sub layers in the Scene view. Drag an end along the road (it keeps its anchor and units), click it to type its value, right-click a range to flip or remove it and the road to add one. See [Editing spline ranges in the Scene view](../roads/profiles-and-layers.md#editing-spline-ranges-in-the-scene-view)
+- **Layer Overrides** has **Override Spline Ranges** for each layer and each of its sub layers, and the new **Group Overrides** for each group: a road that follows rules can have its own spline ranges. See [Road settings](../roads/creating-roads.md#road-settings)
+- The Road Outliner's **Overrides** column counts spline range overrides too
+
 ### :wtk-splines: Splines
 
 - With the **Center** handle position, selected Spline Containers are moved, rotated and scaled about the average of their knots instead of their objects' pivots. See [Moving whole splines](../splines/spline-container.md#moving-whole-splines)

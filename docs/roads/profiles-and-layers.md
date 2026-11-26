@@ -70,7 +70,7 @@ Layers are set on the road component, under **Road Layer Groups**, or in the **G
 :   Flips the profile, to use the same curb asset on both sides of the road.
 
 **Width Multiplier**
-:   Scales the layer's width. A road that follows [Road Rules](creating-roads.md#road-rules) can give a layer its own width with [Layer Overrides](creating-roads.md#road-settings).
+:   Scales the layer's width. A road that follows [Road Rules](creating-roads.md#road-rules) can give a layer its own width with [Layer Overrides](creating-roads.md#road-settings). With **Show Width Controls** on, drag or type it in the [Scene view](creating-roads.md#layer-widths-in-the-scene-view).
 
 **Lateral Bulge**
 :   A curve that raises the layer across its width, for a crowned road that sheds water. The X axis goes from 0 at the left edge to 1 at the right edge, and the Y axis is the extra height.
@@ -124,6 +124,20 @@ Layers, sub layers, lane divisions and layer groups can be limited to parts of t
 Enable **Flip** on a range to use everything **except** that part. Normal ranges add up, and flipped ranges each remove their part.
 
 Use spline ranges for a sidewalk that only exists on one block, or a parking lane that stops before a corner.
+
+### Editing spline ranges in the Scene view
+
+Turn on **Show Spline Range Controls** under **Points** in the [Roads panel](index.md#the-roads-panel) to show the spline ranges of the selected roads in the Scene view. Each range is drawn beside the road where what it limits lies: groups (blue) along their left edge, layers (orange) and sub layers (violet) along their middle. A flipped range is dotted. A **Junction Mouths** range shows one interval at each junction mouth.
+
+- **Drag** the handle at either end of a range to move that end along the road. The end keeps its anchor (the path's start, end or a knot) and its distance type (units or percent); with a range set by a start and a distance, the other end stays where it is. On a **Junction Mouths** range, the end nearer the junction sets **Mouth Setback** and the other one **Mouth Length**. **Esc** while dragging puts the range back.
+- **Click** an end to select it and type its value in the field above it: **Start** or **End** in metres (**m**) or percent of the path (**%**), the range's length for one set by a start and a distance, or **Setback m** and **Length m** for a **Junction Mouths** range. Press **Enter** to apply, **Esc** to deselect.
+- **Right-click** a range to **Flip** or **Remove** it.
+- **Right-click** the road and choose **Add Spline Range Here**, then the group, layer or sub layer: a new range is added around that point. On an element without ranges, which used the whole road, it then only applies there.
+
+Hover a range to see what it belongs to and whether it's the road's own range, an override or the rules'.
+
+!!! note "Roads that follow Road Rules"
+    On a road that references [Road Rules](creating-roads.md#road-rules), these edits change the road's [Layer Overrides and Group Overrides](creating-roads.md#road-settings), never the rules asset. When the element's **Override Spline Ranges** is off, the first change asks whether to override it on this road: **Override** turns it on with copies of the rules' ranges, and **Cancel** leaves the ranges as they are.
 
 !!! tip "Crossings and stop lines"
     Give a sub layer a **Junction Mouths** range to paint it at every junction the road reaches. Sub layers whose ranges are all unflipped **Junction Mouths** ranges are laid out straight along the lanes at the mouth, square to them, even where the road curves.

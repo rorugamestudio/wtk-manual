@@ -49,6 +49,21 @@ Knots work the same as on any [spline](../splines/spline-container.md#editing-kn
 
 Select a road to show its lane controls in the Scene view, where you can change lane directions and add or remove lanes. See [Lanes](profiles-and-layers.md#lanes). To hide them, turn off **Show Lane Controls** under **Points** in the Roads panel.
 
+With **Show Spline Range Controls** on, the selected roads also show the spline ranges of their groups, layers and sub layers, to move, add and remove in the Scene view. See [Editing spline ranges in the Scene view](profiles-and-layers.md#editing-spline-ranges-in-the-scene-view).
+
+### Layer widths in the Scene view
+
+Turn on **Show Width Controls** under **Points** in the Roads panel to show a width handle on each layer of the selected roads, across the road where its lane controls are. A green line spans each layer, and the handle sits on the edge its width moves: the right edge, or the left one for a group placed against the right of its **Anchor Group Id**.
+
+- **Drag** a handle sideways to change the layer's **Width Multiplier**. **Esc** while dragging puts it back.
+- **Click** a handle to select it: the layer's width on this road in metres (**Width m**, its lanes included) and its **Width Multiplier** (**×**) show above it, to type a value and press **Enter**. **Esc** deselects it.
+- Hover a handle to see the layer's name, width and multiplier, and whether the change goes to the road's override or to the rules.
+
+Width handles are for the top-level layers; sub layers keep the widths set in their layer.
+
+!!! note "Roads that follow Road Rules"
+    On a road that references [Road Rules](#road-rules), a width handle changes the layer's [Layer Overrides](#road-settings) on this road only. When the layer's **Override Width Multiplier** is off, the first change asks whether to override it on this road: **Override** turns it on, starting from the rules' value, and **Cancel** leaves the width as it is. The rules asset is never changed from the Scene view.
+
 ## :wtk-component-spline-container: Converting existing splines
 
 Select one or more spline containers and click :wtk-component-editable-mesh-road: **Create from Selection** under **New Roads** in the Roads panel. Splines become roads that use the **New Roads** rules and lane overrides, and [linked knots](../splines/link-groups.md) become junctions.
@@ -73,7 +88,15 @@ Select one or more spline containers and click :wtk-component-editable-mesh-road
     An override starts from the rules' values. While it's off, its fields are greyed out and show the rules' values.
 
 **Layer Overrides**
-:   Appears below **Lane Overrides** when the road's **Rules** have layers, with one entry per layer of the rules' groups. Turn on **Override Width Multiplier** to give that layer its own **Width Multiplier** on this road only: the road's mesh, its junctions and its width follow it, and the rules asset isn't changed. Sublayers keep their own widths.
+:   Appears below **Lane Overrides** when the road's **Rules** have layers, with one entry per layer of the rules' groups. It changes that layer on this road only: the road's mesh, its junctions and its width follow it, and the rules asset isn't changed.
+
+    - Turn on **Override Width Multiplier** to give the layer its own **Width Multiplier**. Sublayers keep their own widths.
+    - Turn on **Override Spline Ranges** to give the layer its own **Spline Ranges** (as many as you need; an empty list uses the whole road). Each of the layer's sub layers, listed under it, has its own **Override Spline Ranges** too.
+
+    An override starts from the rules' values. While it's off, its fields are greyed out and show the rules' values. The Scene view's [width](#layer-widths-in-the-scene-view) and [spline range](profiles-and-layers.md#editing-spline-ranges-in-the-scene-view) handles change these overrides.
+
+**Group Overrides**
+:   Appears below **Layer Overrides**, with one entry per group of the rules. Turn on **Override Spline Ranges** to give the group its own **Spline Ranges** on this road only, starting from the rules' ranges.
 
 **Road Layer Groups**
 :   The road's own layers. See [Profiles and Layers](profiles-and-layers.md). When none of the layers has a profile, the road uses its **Default Mesh**, which then shows up in the inspector; see [Default mesh](profiles-and-layers.md#default-mesh).
@@ -195,6 +218,6 @@ Each row is a road. Its names, **Rules** and road settings (**Mute**, **Lock Mat
 :   Click the cell to see the width of each layer on the road and edit its **Width Multiplier**. On a road with rules, editing a value turns that [layer override](#road-settings) on. Roads without rules edit their own layers.
 
 **Overrides**
-:   How many lanes and layers the road overrides from its rules.
+:   How many lanes, layers and groups the road overrides from its rules (widths and spline ranges). Hover the cell to see what each override changes.
 
 The search field filters the rows by name, **Road Name** or rules. Click a header to sort, drag headers to reorder the columns, and right-click a header to show or hide columns; the layout is kept. Rows follow the selection both ways: select a row to select the road, and the other way round. Double-click a row, or press ++f++, to frame the selected roads in the Scene view. **Select Shown** selects every road the table shows, for example before using **Apply to Selected**.
