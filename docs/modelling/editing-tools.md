@@ -302,7 +302,7 @@ The **Materials** section lists the mesh's material slots.
 - **Delete** removes the slot.
 
 !!! tip "Drag and drop"
-    In face mode, drag a material from the Project window onto one of the selected faces in the Scene view to give it to all the selected faces.
+    In face mode, drag a material from the Project window onto one of the selected faces in the Scene view to give it to all the selected faces. While it's over them, the selected faces show the material, only the outline of the selection stays drawn, and *Assign (material) to selection* appears by the cursor; drop to apply it.
 
 ## :lucide-search: Modelling Tools search
 
