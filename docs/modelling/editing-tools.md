@@ -190,6 +190,15 @@ In edge mode, Connect cuts every face that has two selected edges, from one edge
 
 In vertex mode the options don't apply: the selected vertices are joined by a single edge.
 
+### :lucide-scissors: Boolean (Destructive)
+
+The **Boolean (Destructive)** card closes the **Modify** section.
+
+**Surface Cut**
+:   Cuts the active mesh with the other selected meshes. The cutting meshes are kept. Select the mesh to be cut **last**.
+
+For non-destructive booleans, see [Booleans](booleans.md).
+
 ## :wtk-shape-freeform: Shapes
 
 The **Shapes** section of the **Topology** tab draws new edges onto the faces of the selected mesh, like a stencil:
@@ -228,13 +237,6 @@ These two whole-mesh tools are run from the [Modelling Tools search](#modelling-
 
 !!! note
     Both tools skip meshes with faces that have holes. Vertex colors and custom normals aren't kept, and a mesh with manual UVs switches to automatic UVs.
-
-## :lucide-scissors: Boolean (destructive)
-
-**Surface Cut**
-:   Cuts the active mesh with the other selected meshes. The cutting meshes are kept. Select the mesh to be cut **last**.
-
-For non-destructive booleans, see [Booleans](booleans.md).
 
 ## :wtk-normals: Normals and shading
 
