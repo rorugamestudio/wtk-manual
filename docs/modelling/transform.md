@@ -41,8 +41,9 @@ With **Origin** set to **Custom**:
 - **Set Custom Pivot** stores the center of the current selection.
 - **Edit** moves the stored pivot with a handle in the Scene view.
 - **Auto Update Custom Pivot** moves the stored pivot along with the selection when you use **Move**.
+- **Reset** sets **Origin** back to **Center** and the stored pivot to the center of the selection.
 
-**Custom Orient** works the same way, with **Auto Update Custom Orientation** following **Rotate**.
+**Custom Orient** works the same way, with **Auto Update Custom Orientation** following **Rotate**; its **Reset** sets **Orient** back to **Global** and **Custom Orient** to zero. The **Pivot Position** and **Pivot Rotation** cards of the Modelling Toolkit window and the Scene view's pivot overlays have the same settings.
 
 While **Origin** or **Orient** is **Custom**, the Scene view shows its icon at the top right of the transform handle: :wtk-pivot-origin-custom: for a custom pivot, :wtk-pivot-orientation-custom: for a custom orientation, both when both are. It shows in the **UV** tab too.
 

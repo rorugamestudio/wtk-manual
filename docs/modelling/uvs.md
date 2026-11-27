@@ -72,7 +72,7 @@ Move, rotate and scale UVs with the regular transform tools, or with exact value
 
 ### :wtk-pivot-origin-custom: The UV pivot in the Scene view
 
-While you edit UVs in the Scene view, the pivot is the UV tile and the handle together. The tile drawn on the selection has the shape the texture has on the selected faces, and the handle sits on its point at **Pivot Alignment On Tile** **U** and **V**, from 0 to 1 across and up the tile (0.5, 0.5 is its center). A new **U** or **V** keeps the tile and moves the pivot inside it.
+While you edit UVs in the Scene view, the pivot is the UV tile and the handle together. The tile drawn on the selection has the shape the texture has on the selected faces, and the handle sits on its point at **Pivot Alignment On Tile** **U** and **V**, from 0 to 1 across and up the tile (0.5, 0.5 is its center), set in the **Pivot Position** card or the Scene view's **Pivot Position** overlay. A new **U** or **V** keeps the tile and moves the pivot inside it.
 
 The **UV** tab has pivot modes of its own, which the Scene view's **Tool Settings** and the ++z++ / ++x++ shortcuts follow while you edit UVs. The **Topology** tab keeps its own.
 
