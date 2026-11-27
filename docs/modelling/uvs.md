@@ -151,10 +151,10 @@ The **Align Elements** card lines up the selected UVs:
 
 - **Flip U** and **Flip V** mirror the selection across its own bounds.
 - The grid of arrow buttons aligns the selected elements to the left, center or right, and to the top, middle or bottom of the selection. The buttons on each side of the center dot center the selection on U only or on V only.
-- **Move Connected Islands** moves every island the selection touches as one piece instead of moving only the selected elements.
 - **Auto Separate Islands** first makes the selection an island of its own wherever it still shares UVs with faces outside it, then moves only the selection, so the faces around it stay where they are. A selection that already is its own island is left as it is. While it's on, **Move Connected Islands** is turned off.
+- **Move Connected Islands** moves every island the selection touches as one piece instead of moving only the selected elements.
 
-The **Align UVs To 3D** card has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Move Connected Islands** and **Auto Separate Islands** options, both off by default: the buttons move only the selected UVs, as before. With [**Individual Origins**](#the-uv-pivot-in-the-scene-view) on, each selected island lines up with its own corner, side or center, instead of the selection moving as one piece.
+The **Align UVs To 3D** card has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Auto Separate Islands** and **Move Connected Islands** options, both off by default: the buttons move only the selected UVs, as before. With [**Individual Origins**](#the-uv-pivot-in-the-scene-view) on, each selected island lines up with its own corner, side or center, instead of the selection moving as one piece.
 
 ## :lucide-scan: Projection
 
