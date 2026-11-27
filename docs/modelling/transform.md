@@ -44,6 +44,8 @@ With **Origin** set to **Custom**:
 
 **Custom Orient** works the same way, with **Auto Update Custom Orientation** following **Rotate**.
 
+While **Origin** or **Orient** is **Custom**, the Scene view shows its icon at the top right of the transform handle: :wtk-pivot-origin-custom: for a custom pivot, :wtk-pivot-orientation-custom: for a custom orientation, both when both are. It shows in the **UV** tab too.
+
 You can also press ++d++ in the Scene view to edit the pivot, starting from where the handle is: the first press edits its position with a handle, the second its rotation, and the third finishes. ++esc++ cancels.
 
 !!! note "Editing UVs"
