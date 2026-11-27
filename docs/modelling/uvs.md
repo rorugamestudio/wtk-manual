@@ -70,6 +70,18 @@ Move, rotate and scale UVs with the regular transform tools, or with exact value
   <figcaption>Moving, rotating and scaling UVs straight in the Scene view, with the UV View alongside.</figcaption>
 </figure>
 
+### :wtk-pivot-origin-custom: The UV pivot in the Scene view
+
+While you edit UVs in the Scene view, the pivot is the UV tile and the handle together. The tile drawn on the selection has the shape the texture has on the nearest selected face, and the handle sits on its point at **Tile Preview Pivot** **U** and **V**, from 0 to 1 across and up the tile (0.5, 0.5 is its center).
+
+- A new selection starts on the texture tile under its center.
+- The **Move** handle has only an X and a Y arrow, along the tile's edges, even when the texture is skewed and the tile is a rhombus. **Rotate** turns around the tile's normal only, and **Scale** stretches along the tile's edges. The **Rect** tool frames the selection along the tile's edges too. Rotating and scaling work around the pivot, which keeps its point of the tile.
+- Dragging a handle moves the UVs, and the tile and the pivot go with them. Undo brings all of them back.
+- Setting the pivot yourself, with **Custom Pivot Origin**, its **Edit** button or **Set Custom Pivot**, moves the tile and the handle there without changing the UVs. A new **U** or **V** keeps the tile and moves the pivot inside it.
+- In **Pivot Rotation**, **Custom Orientation** turns the handle, not the tile, to **Custom Orient**. It turns on when you set a custom orientation in the **UV** tab; off, the handle follows the tile's edges.
+
+**Origin** and **Orient** don't apply to UV editing, so the **UV** tab doesn't show them, and **Auto Update Custom Pivot** has no effect there: the pivot always follows the tile.
+
 **Quick Rotate**
 :   **Rotate Left** and **Rotate Right** turn the selection by **Angle** (90 degrees by default).
 

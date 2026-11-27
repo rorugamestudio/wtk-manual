@@ -46,6 +46,9 @@ With **Origin** set to **Custom**:
 
 You can also press ++d++ in the Scene view to edit the pivot, starting from where the handle is: the first press edits its position with a handle, the second its rotation, and the third finishes. ++esc++ cancels.
 
+!!! note "Editing UVs"
+    In the **UV** tab the pivot sits on the UV tile, and **Origin** and **Orient** don't apply. See [The UV pivot in the Scene view](uvs.md#the-uv-pivot-in-the-scene-view).
+
 ## :wtk-transform-options: Transform Options
 
 **Lock on axis**
