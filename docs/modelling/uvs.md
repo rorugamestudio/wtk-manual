@@ -37,6 +37,9 @@ Its toolbar holds the **Transform** tools, the **Selection** modes and the **Piv
 **Export**
 :   Saves the UVs on display as a PNG or SVG image to paint textures over. See [Exporting the UV layout](#exporting-the-uv-layout).
 
+**Repeat Texture**
+:   Repeats the texture over the whole view, as a texture with **Wrap Mode** set to **Repeat** tiles on the mesh, so islands placed past the 0–1 square show the part of the texture they get. Off, the texture shows on the 0–1 square only. The view repeats it whatever the texture's own **Wrap Mode**.
+
 **Increment**
 :   The steps used while you hold ++ctrl++: **Move**, **Rotate (degrees)** and **Scale factor**. They are the same values as in **Numeric Transform**.
 
