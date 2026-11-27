@@ -105,6 +105,7 @@ Merges the selected vertices.
 Cuts new edges across faces by hand.
 
 - **Click** on surfaces or edges to place cut points.
+- **Click** off the mesh to place a point pinned to the screen: while you orbit the view it stays where it is on screen, and the cut it makes follows the view. The next click on the mesh fixes these points to the view of that moment, so their cuts stay as they are when you orbit again. ++backspace++ on that click pins them to the screen again.
 - Hold ++shift++ over an edge for a **loop cut** all around the mesh, then click to apply.
 - Press ++enter++ or **right-click** to apply the cut.
 - ++backspace++ removes the last point, ++esc++ cancels.
@@ -112,8 +113,17 @@ Cuts new edges across faces by hand.
 **Selected Only**
 :   Only cuts the selected edges or faces.
 
-**Step**
-:   Snaps cut points along edges in steps. 0 is continuous; 0.25 snaps to quarters of the edge.
+**Force Snap Vertex**
+:   Snaps cut points to the vertices under the cursor, even with [Snapping](transform.md#snapping) off. Uses the vertex tolerance of the **Snapping** overlay.
+
+**Force Snap Edge**
+:   Snaps cut points to the edges under the cursor, even with Snapping off. Uses the edge tolerance of the **Snapping** overlay.
+
+**Edge Step**
+:   Snaps the cut points on edges in steps along the edge. 0 is continuous; 0.25 snaps to quarters of the edge. While Snapping's **Grid** or **Increment** is on, they set the steps instead.
+
+**Loop Step**
+:   Snaps the ++shift++ loop cut in steps along its edge the same way.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/knife.webp">
