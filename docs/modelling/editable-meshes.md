@@ -43,7 +43,7 @@ Select several Editable Meshes to change their settings together. A setting they
 :   Use local-space or world-space coordinates for the automatic UVs. World space keeps texture scale consistent across objects of different sizes.
 
 **Auto Bake Lightmap UVs**
-:   Generates lightmap UVs (UV1) automatically. Unity's unwrapper takes a while on dense meshes, so while a mesh is being rebuilt over and over (a loft as you edit it), they wait until you stop: then they bake as a **Lightmap UVs** task in **Background Tasks**, whose **Cancel** stops after the mesh being baked. Meshes over 20,000 faces wait for the scene to be saved instead. Pending meshes always bake before their scene is saved and before lighting is baked.
+:   Generates lightmap UVs (UV1) automatically. Unity's unwrapper takes a while on dense meshes, so while a mesh is being rebuilt over and over (a loft as you edit it, or a mesh whose vertices, edges or faces you move, slide or ++shift++-extrude, by dragging or with **Numeric Transform**), they wait until you stop: then they bake as a **Lightmap UVs** task in **Background Tasks**, whose **Cancel** stops after the mesh being baked. Meshes over 20,000 faces wait for the scene to be saved instead. Pending meshes always bake before their scene is saved and before lighting is baked.
 
 See [UVs](uvs.md) for manual UV editing.
 
