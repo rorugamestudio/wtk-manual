@@ -88,7 +88,9 @@ The **UV** tab has pivot modes of its own, which the Scene view's **Tool Setting
 :   **UV**: a 2D gizmo along the tile's edges, even when the texture skews the tile into a rhombus: **Move** has an X and a Y arrow and a 2-axis square between them, **Rotate** turns around the tile's normal, and **Scale** stretches along X and Y. The **Rect** tool frames the selection along the tile's edges too.
 :   **Custom**: along **Custom Orient**, with the handles chosen in **Custom Gizmo**: the **2D Gizmo** or Unity's **3D Gizmo**. The tile keeps the shape of the texture. **Reset** puts **Orient** back to **UV**, and **Custom Orient** back to the world axes for the 3D gizmo or along the tile for the 2D one.
 
-The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. **Auto Update Custom Pivot** has no effect while you edit UVs.
+The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. With **Origin** set to **Custom**, **Auto Update Custom Pivot** decides what the custom pivot does when the UVs move under it: on, it goes with the UVs it stands on; off, it keeps its place, and the tile is the one under it now.
+
+Two short, thicker shafts and a small quad mark the tile's bottom left corner, where U and V start, so you can tell which way the texture runs.
 
 **Quick Rotate**
 :   **Rotate Left** and **Rotate Right** turn the selection by **Angle** (90 degrees by default).
