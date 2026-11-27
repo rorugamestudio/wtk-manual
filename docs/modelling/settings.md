@@ -33,7 +33,7 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 
 | Color | Used for |
 |---|---|
-| **Selected Faces — Topology** / **Selected Faces — UV** | Selected faces in the Scene view. The alpha sets the transparency or the dither coverage, depending on the fill type. |
+| **Selected Faces — Topology** / **Selected Faces — UV** | Selected faces in the Scene view. The alpha sets the transparency or the dither coverage, depending on the fill type. While you edit UVs, the centers of selected faces take the UV color too. |
 | **UV Tile** | The outline of the UV tile drawn in the Scene view. |
 | **Preview New Faces** | Faces created or rebuilt by a tool's preview. |
 | **UV Seams** | The UV seams in the Scene view, while the **UV** tab is active. |

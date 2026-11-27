@@ -86,7 +86,7 @@ The **UV** tab has pivot modes of its own, which the Scene view's **Tool Setting
 **Orient**
 :   **Global**: Unity's own **Move**, **Rotate** and **Scale** handles, along the world axes.
 :   **UV**: a 2D gizmo along the tile's edges, even when the texture skews the tile into a rhombus: **Move** has an X and a Y arrow and a 2-axis square between them, **Rotate** turns around the tile's normal, and **Scale** stretches along X and Y. The **Rect** tool frames the selection along the tile's edges too.
-:   **Custom**: along **Custom Orient**, with the handles chosen in **Custom Gizmo**: the **2D Gizmo** or Unity's **3D Gizmo**. The tile keeps the shape of the texture. **Reset** puts **Custom Orient** back to the world axes for the 3D gizmo, or along the tile for the 2D one.
+:   **Custom**: along **Custom Orient**, with the handles chosen in **Custom Gizmo**: the **2D Gizmo** or Unity's **3D Gizmo**. The tile keeps the shape of the texture. **Reset** puts **Orient** back to **UV**, and **Custom Orient** back to the world axes for the 3D gizmo or along the tile for the 2D one.
 
 The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. **Auto Update Custom Pivot** has no effect while you edit UVs.
 
@@ -152,7 +152,7 @@ The **Align Elements** card lines up the selected UVs:
 - **Move Connected Islands** moves every island the selection touches as one piece instead of moving only the selected elements.
 - **Auto Separate Islands** first makes the selection an island of its own wherever it still shares UVs with faces outside it, then moves only the selection, so the faces around it stay where they are. A selection that already is its own island is left as it is. While it's on, **Move Connected Islands** is turned off.
 
-The **Align UVs To 3D** card has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Move Connected Islands** and **Auto Separate Islands** options, both off by default: the buttons move only the selected UVs, as before.
+The **Align UVs To 3D** card has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Move Connected Islands** and **Auto Separate Islands** options, both off by default: the buttons move only the selected UVs, as before. With [**Individual Origins**](#the-uv-pivot-in-the-scene-view) on, each selected island lines up with its own corner, side or center, instead of the selection moving as one piece.
 
 ## :lucide-scan: Projection
 
