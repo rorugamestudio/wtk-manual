@@ -18,10 +18,10 @@ Which parts of a mesh are drawn in the Scene view, in each situation:
 | **Occluded** | Components hidden behind other geometry. |
 | **Backface** | Components on faces turned away from the camera. |
 
-Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occluded Opacity** and **Backface Opacity** fade the occluded and backfacing components. In face mode, with the **Face** row's backface column on, the faces turned away from the camera are also filled with the **Backfaced Faces** color.
+Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occluded Opacity** and **Backface Opacity** fade the occluded and backfacing components. The other modes' components show too, in their **Inactive** colors and without the selection: vertices in edge and face modes, edges in vertex and face modes, and face centers in vertex and edge modes. Each follows its own row. In face mode, with the **Face** row's backface column on, the faces turned away from the camera are also filled with the **Backfaced Faces** color.
 
 **Show Face Centers**
-:   Draws a dot in the middle of each face.
+:   Draws a dot in the middle of each face, in every component mode. Outside face mode the dots take the **Inactive Faces** color.
 
 **Selected Face Fill Type - Topology**, **Selected Face Fill Type - UV**, **Preview New Face Fill Type** and **XRay Fill Type**
 :   How selected faces, faces previewed by a tool and X-Ray meshes are filled in the Scene view: with **Transparency** or **Dithered**.
@@ -39,7 +39,7 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 | **Preview New Faces** | Faces created or rebuilt by a tool's preview. |
 | **UV Seams** | The UV seams in the Scene view, while the **UV** tab is active. |
 | **Selectable Vertices**, **Selectable Edges**, **Selectable Faces** | Unselected components you can pick. |
-| **Inactive Vertices**, **Inactive Edges**, **Inactive Faces** | Components outside the current component mode, with their opacity. |
+| **Inactive Vertices**, **Inactive Edges**, **Inactive Faces** | Components outside their own component mode, with their opacity: vertices in edge and face modes, edges in vertex and face modes, face centers in vertex and edge modes. Vertices without faces keep the **Loose Vertices** color. |
 | **Loose Vertices** | Vertices that don't belong to any face, and their crosses. |
 | **Selected Object Wireframe**, **Editable Primitive Wireframe**, **Boolean Stack Wireframe** | The wireframe of selected Editable Meshes, Editable Primitives and Boolean Stacks while you're outside the editing context. |
 
