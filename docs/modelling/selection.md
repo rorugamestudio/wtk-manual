@@ -71,6 +71,7 @@ The toolbar lets you decide what a box selection includes:
 | ++shift+comma++ | Shrink the selection |
 | ++ctrl+d++ | Duplicate the selected components |
 | ++delete++ or ++backspace++ | Delete the selected components |
+| ++f++ | Frame the selected components; press it again soon after to frame the handle (the pivot), in topology and UV editing alike |
 
 On macOS, use ++cmd++ instead of ++ctrl++.
 
