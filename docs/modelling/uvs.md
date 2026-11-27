@@ -37,6 +37,9 @@ Its toolbar holds the **Transform** tools, the **Selection** modes and the **Piv
 **Export**
 :   Saves the UVs on display as a PNG or SVG image to paint textures over. See [Exporting the UV layout](#exporting-the-uv-layout).
 
+**Texture**
+:   The texture behind the UVs. By default it's the main texture of the first material of the mesh on view: the one its shader marks as main, or else the first texture the shader uses. Pick another material of the selected meshes in the list, or **Custom Texture** to show any texture of the project, chosen in the field next to it. A long texture name is cut short; hover it to read it whole.
+
 **Repeat Texture**
 :   Repeats the texture over the whole view, as a texture with **Wrap Mode** set to **Repeat** tiles on the mesh, so islands placed past the 0–1 square show the part of the texture they get. Off, the texture shows on the 0–1 square only. The view repeats it whatever the texture's own **Wrap Mode**.
 
