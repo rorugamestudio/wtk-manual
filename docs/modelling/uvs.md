@@ -17,7 +17,7 @@ Editing UVs by hand switches the edited faces to manual UVs.
 
 ## :wtk-uv-view: The UV View
 
-**Open UV View** in the **UV** tab opens the UV editor, which shows the selected mesh's UVs over its texture. Turn on **Auto Open UV View** to open it every time you switch to the **UV** tab.
+**Open UV View** in the **UV** tab opens the UV editor, which shows the selected mesh's UVs over its texture. Turn on **Auto Open UV View** to open it every time you switch to the **UV** tab, and whenever a UV action of the tab, the command palette or ++enter++ runs while it's closed. With it off, those actions edit the UVs of the Scene View selection and leave the UV View closed.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/uv-edit.webp">

@@ -106,7 +106,7 @@ Settings of the [UV View](uvs.md#the-uv-view):
 :   Draw the borders of UV islands as dashed lines, and a dot in the middle of each face.
 
 **Auto Open UV View**
-:   Opens the UV View every time you switch to the **UV** tab.
+:   Opens the UV View every time you switch to the **UV** tab, and when a UV action runs while it's closed. Off, UV actions leave it closed.
 
 **Texture Opacity**
 :   The opacity of the material's texture behind the UVs.
