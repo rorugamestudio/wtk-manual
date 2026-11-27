@@ -21,7 +21,7 @@ Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh*
 ## :wtk-select: Selecting
 
 - **Click** a component to select it. The rest of the selection is cleared.
-- **Drag** across empty space to box-select.
+- **Drag** across empty space to box-select. While you drag, the components the box takes already show as selected, as they will be when you let go, with ++shift++ or ++ctrl++ applied. The selection itself only changes when you release the mouse, in one undo step, and a box that changes nothing leaves no undo step.
 - **Click** empty space to deselect the components of the current mode.
 - Hold ++shift++ to add to the selection, or ++ctrl++ to remove from it. Both work with clicks, double-clicks and box selection, and with either key held a click on empty space leaves the selection alone.
 - With ++alt++ held, clicks go to the Scene view camera instead of selecting.

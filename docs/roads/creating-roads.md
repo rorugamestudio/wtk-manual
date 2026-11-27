@@ -37,6 +37,7 @@ The junctions and connections are made when you finish the road.
 With **Edit Road Points** active:
 
 - **Click** spline knots to select them, and **drag** selected knots or their handles to reshape the road.
+- **Drag** across empty space to box-select road points and junctions; hold ++shift++ to add to the selection. They show as selected while you drag, and are selected when you release the mouse.
 - **Double-click** a road's spline to insert a knot there.
 - **Drag a knot** onto another road to create a junction there, or onto a junction to connect it to that junction.
 - **Drag a road end** onto the outer edge of another road to attach it with an [anchored connection](anchored-connections.md) or an [access connection](access-connections.md), as a dialog asks, or onto a row of lane tips of another road (shown while you drag) to continue those lanes with a lane access.

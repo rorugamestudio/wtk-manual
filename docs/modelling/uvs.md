@@ -59,6 +59,8 @@ UV selection works on its own component types, chosen in the toolbar or with the
 
 The toolbar also has **UV corners** and **Connected 3D** modes, and box-selection rules for edges and faces, as in the [Scene view](selection.md#box-selection-rules).
 
+As in the Scene view, a box being dragged in the UV View already shows what it will select, in every mode and with ++shift++ or ++ctrl++ applied. The selection changes when you release the mouse, and leaves an undo step only when it changes.
+
 ## :lucide-move: Transforming UVs
 
 Move, rotate and scale UVs with the regular transform tools, or with exact values under **Numeric Transform**: **Move Selection**, **Rotate Selection** and **Scale Selection** apply the typed offset, angle or factor.

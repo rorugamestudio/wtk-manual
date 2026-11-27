@@ -103,7 +103,7 @@ Click **Import SVG…** in the :wtk-splines: **Splines** section of the **Edit**
 
 - Each knot shows as a flat icon facing you whose shape tells the knot type (see the table below), with a darker outline. Selected knots keep their size, ringed in the **Selected Knot** color with a light touch of it in their fill, and show their right (red), up (green) and forward (blue) axes, as does the knot under the pointer. Small arrows halfway along each segment show which way the spline runs.
 - **Click** a knot or handle to select it. Hold ++shift++ to add to the selection, ++ctrl++ to remove from it.
-- **Drag** across empty space to box-select knots, with the same modifiers.
+- **Drag** across empty space to box-select knots, with the same modifiers. The knots and links inside already show as selected while you drag; the selection changes when you release the mouse, in one undo step, and a box that changes nothing leaves none.
 - ++ctrl+a++ selects every knot of the splines you already have knots on, or every visible knot when nothing is selected.
 - The Scene view highlights the part of the spline each selected knot shapes: the line on both sides of the knot, fading out halfway to the next knots. Its color is the **Knot Segment Highlight** in the [Spline Settings](settings.md#colors), green by default.
 - When a segment of the spline is selected, the knots at its ends show as selected too, since they move with it, and the highlight fades from them into the segments beyond.
