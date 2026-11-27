@@ -134,7 +134,7 @@ Cuts new edges across faces by hand.
 
 ### :wtk-modify-slide: Slide
 
-Slides the selected vertices or edges along the surrounding edges, without changing the shape of the surface. **Step** snaps the slide amount.
+Slides the selected vertices or edges along the surrounding edges, without changing the shape of the surface. **Step** snaps the slide amount. With [Preserve UVs](transform.md#transform-options) on, the texture stays in place while they slide.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/edge-slide.webp">

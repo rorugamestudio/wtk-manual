@@ -54,6 +54,9 @@ You can also press ++d++ in the Scene view to edit the pivot, starting from wher
 
 ## :wtk-transform-options: Transform Options
 
+**Preserve UVs**
+:   On by default. Keeps the texture in place on the faces around the components you move, rotate, scale or [slide](editing-tools.md#slide), so they glide over it instead of stretching it. A UV island that moves as a whole, such as a detached part or a face with its own island, keeps its UVs: its texture travels with it. Only meshes with manual UVs change; [automatic UVs](uvs.md#automatic-uvs) follow the geometry by themselves. It also applies to **Numeric Transform**, repeats and **Drop to Ground**. A vertex pulled straight off the surface keeps its UVs.
+
 **Lock on axis**
 :   Restricts the transform to the chosen axes.
 
