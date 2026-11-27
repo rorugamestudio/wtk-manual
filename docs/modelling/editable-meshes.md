@@ -24,6 +24,8 @@ There are three ways:
 
 Meshes made by a generator (a primitive, a [Boolean Stack](booleans.md) or a [decal](decals.md)) say so in the inspector: *This mesh is controlled by its generator. Use Make Editable to edit its topology.*
 
+Select several Editable Meshes to change their settings together. A setting they don't share shows a dash (—) until you give it a value, and changing one axis of **Auto UV Scale** keeps each mesh's other axis. A setting that one of the selected meshes can't take, such as **Auto UV** on a primitive, stays locked for the whole selection. Turning **Auto UV** on asks once for all the meshes that would lose their manual UVs, and **Undo** reverts the change on all of them in one step.
+
 ### :lucide-blend: Shading
 
 **Auto Smooth**
