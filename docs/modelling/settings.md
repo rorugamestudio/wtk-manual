@@ -27,7 +27,7 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 :   How selected faces, faces previewed by a tool and X-Ray meshes are filled in the Scene view: with **Transparency** or **Dithered**.
 
 **Edge Draw Mode**
-:   Draws each kind of edge **Solid** or **Dashed**: **Edges**, the mesh's edges in every component mode (the ones sized by **Non-interactive** and **Interactive Thickness**); **UV Seams**, while the **UV** tab is active; and **Border Edges**, while **Border Edge Thickness** is above 0. Selected and highlighted edges keep the mode of their kind. Dashes grow with the line thickness. UV seams are dashed by default, the others solid.
+:   Draws each kind of edge **Solid** or **Dashed**: **Edges - Topology** and **Edges - UV**, the mesh's edges in every component mode (the ones sized by **Non-interactive** and **Interactive Thickness**), while you edit topology or while the **UV** tab is active; **UV Seams**, while the **UV** tab is active; and **Border Edges**, while **Border Edge Thickness** is above 0. Selected and highlighted edges keep the mode of their kind. Dashes grow with the line thickness. Edges and UV seams are dashed by default, border edges solid.
 
 ## :lucide-palette: Components Colors
 
