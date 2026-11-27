@@ -18,7 +18,7 @@ Which parts of a mesh are drawn in the Scene view, in each situation:
 | **Occluded** | Components hidden behind other geometry. |
 | **Backface** | Components on faces turned away from the camera. |
 
-Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occluded Opacity** and **Backface Opacity** fade the occluded and backfacing components; the centers of backfacing faces take the **Backfaced Faces** color instead.
+Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occluded Opacity** and **Backface Opacity** fade the occluded and backfacing components. In face mode, with the **Face** row's backface column on, the faces turned away from the camera are also filled with the **Backfaced Faces** color.
 
 **Show Face Centers**
 :   Draws a dot in the middle of each face.
@@ -34,7 +34,7 @@ Each row (**Vertex**, **Edge**, **Face**) can turn every column on or off. **Occ
 | Color | Used for |
 |---|---|
 | **Selected Faces — Topology** / **Selected Faces — UV** | Selected faces in the Scene view. The alpha sets the transparency or the dither coverage, depending on the fill type. While you edit UVs, the centers of selected faces take the UV color too. |
-| **Backfaced Faces** | The centers of faces turned away from the camera, shown while the **Face** row's backface column is on. The alpha sets their transparency. |
+| **Backfaced Faces** | The fill of faces turned away from the camera, drawn in face mode while the **Face** row's backface column is on. The alpha sets their transparency; **Backface Opacity** doesn't change it. |
 | **UV Tile** | The outline of the UV tile drawn in the Scene view. |
 | **Preview New Faces** | Faces created or rebuilt by a tool's preview. |
 | **UV Seams** | The UV seams in the Scene view, while the **UV** tab is active. |
