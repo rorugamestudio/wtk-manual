@@ -123,7 +123,7 @@ UV seams are drawn in the Scene view while the **UV** tab is active, as dashed l
 
 ## :lucide-align-center: Aligning
 
-The **Align Elements** section lines up the selected UVs:
+The aligning tools are cards at the end of the **Modify** section of the **UV** tab. The **Align Elements** card lines up the selected UVs:
 
 - **Flip U** and **Flip V** mirror the selection across its own bounds.
 - The grid of arrow buttons aligns the selected elements to the left, center or right, and to the top, middle or bottom of the selection. The buttons on each side of the center dot center the selection on U only or on V only.
@@ -132,7 +132,7 @@ The **Align Elements** section lines up the selected UVs:
 
 **Distribute Islands** places the selected islands one after another along U (**Distribute U**) or V (**Distribute V**), with **Island Spacing** between them.
 
-The **Align UVs To 3D** section has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Move Connected Islands** and **Auto Separate Islands** options, both off by default: the buttons move only the selected UVs, as before.
+The **Align UVs To 3D** card has a second grid of arrow buttons: each one moves the UVs so the texture tile lines up with that corner, side or the center of the selection, as it's oriented on the mesh. Use it to start a texture exactly at the corner of a wall. It has the same **Move Connected Islands** and **Auto Separate Islands** options, both off by default: the buttons move only the selected UVs, as before.
 
 ## :lucide-scan: Projection
 
