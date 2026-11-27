@@ -59,7 +59,7 @@ While a mesh is controlled by its primitive, its vertices, edges and faces can't
 
 In the **Topology** tab, under **Modify**:
 
-- :wtk-modify-merge-meshes: **Merge Meshes** merges the selected Editable Mesh objects into the active one.
+- :wtk-modify-merge-meshes: **Merge Meshes** merges the selected Editable Mesh objects into the active one. With two or more of them selected, it's also in the **EditableMesh** menu when you right-click in the Scene view while you aren't editing a mesh, and in the component's menu in the Inspector. Meshes made by a generator take no part until you make them editable.
 - :wtk-modify-separate: **Separate** moves the selected faces into a new Editable Mesh object.
 
 ## :lucide-file-box: Mesh data and .emesh files
