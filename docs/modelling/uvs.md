@@ -90,7 +90,7 @@ The **UV** tab has pivot modes of its own, which the Scene view's **Tool Setting
 
 The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. With **Origin** set to **Custom**, **Auto Update Custom Pivot** decides what the custom pivot does when the UVs move under it: on, it goes with the UVs it stands on; off, it keeps its place, and the tile is the one under it now.
 
-Two short, thicker shafts and a small quad mark the tile's bottom left corner, where U and V start, so you can tell which way the texture runs.
+A short red shaft along U, a green one along V and a small yellow quad centered on the tile's bottom left corner, where U and V start, show which way the texture runs.
 
 **Quick Rotate**
 :   **Rotate Left** and **Rotate Right** turn the selection by **Angle** (90 degrees by default).
