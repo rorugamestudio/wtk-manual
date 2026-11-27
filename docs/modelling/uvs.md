@@ -80,6 +80,9 @@ The **UV** tab has pivot modes of its own, which the Scene view's **Tool Setting
 :   **Center**: the tile is the texture tile under the selection's center, read from the UVs as they are now.
 :   **Custom**: the pivot is at **Custom Pivot Origin**, set with the field, its **Edit** button, or **Set Custom Pivot**, which keeps the pivot where it is now. Setting it moves the tile and the handle without changing the UVs. **Reset** goes back to **Center**.
 
+**Individual Origins**
+:   Gives each selected UV island its own tile, the texture tile under the island's center, and its own pivot at **Pivot Alignment On Tile**. **Rotate** and **Scale** turn and scale every island around its own pivot, and the Scene view draws one tile per island; the handle stays on the pivot of the **Origin**.
+
 **Orient**
 :   **Global**: Unity's own **Move**, **Rotate** and **Scale** handles, along the world axes.
 :   **UV**: a 2D gizmo along the tile's edges, even when the texture skews the tile into a rhombus: **Move** has an X and a Y arrow and a 2-axis square between them, **Rotate** turns around the tile's normal, and **Scale** stretches along X and Y. The **Rect** tool frames the selection along the tile's edges too.
