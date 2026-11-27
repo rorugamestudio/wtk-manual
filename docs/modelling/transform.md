@@ -19,7 +19,7 @@ Both are in the Scene view's **Tool Settings**, in place of Unity's **Center**/*
 |---|---|
 | :wtk-pivot-origin-center: **Center** | The center of the whole selection. |
 | :wtk-pivot-origin-individual: **Individual** | Each selected element transforms around its own center. |
-| :wtk-pivot-origin-custom: **Custom** | A position you stored with **Set Custom Pivot**. |
+| :wtk-pivot-origin-custom: **Custom** | A position you stored with **Set Custom**. |
 
 **Orient** sets how the handle is rotated:
 
@@ -38,12 +38,12 @@ Unity's own shortcuts cycle them: ++z++ through the origins and ++x++ through th
 
 With **Origin** set to **Custom**:
 
-- **Set Custom Pivot** stores the center of the current selection.
+- **Set Custom** stores the center of the current selection in **Custom Origin**.
 - **Edit** moves the stored pivot with a handle in the Scene view.
-- **Auto Update Custom Pivot** moves the stored pivot along with the selection when you use **Move**.
+- **Auto Update Custom** moves the stored pivot along with the selection when you use **Move**.
 - **Reset** sets **Origin** back to **Center** and the stored pivot to the center of the selection.
 
-**Custom Orient** works the same way, with **Auto Update Custom Orientation** following **Rotate**; its **Reset** sets **Orient** back to **Global** and **Custom Orient** to zero. The **Pivot Position** and **Pivot Rotation** cards of the Modelling Toolkit window and the Scene view's pivot overlays have the same settings; the overlays use shorter names: **Set Custom**, **Custom Origin** and **Auto Update Custom**.
+**Custom Orient** works the same way, with its own **Auto Update Custom** following **Rotate**; its **Reset** sets **Orient** back to **Global** and **Custom Orient** to zero. The **Pivot Position** and **Pivot Rotation** cards of the Modelling Toolkit window and the Scene view's pivot overlays have the same settings.
 
 While **Origin** or **Orient** is **Custom**, the Scene view shows its icon at the top right of the transform handle: :wtk-pivot-origin-custom: for a custom pivot, :wtk-pivot-orientation-custom: for a custom orientation, both when both are. It shows in the **UV** tab too.
 

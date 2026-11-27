@@ -78,17 +78,17 @@ The **UV** tab has pivot modes of its own, which the Scene view's **Tool Setting
 
 **Origin**
 :   **Center**: the tile is the texture tile under the selection's center, read from the UVs as they are now.
-:   **Custom**: the pivot is at **Custom Pivot Origin**, set with the field, its **Edit** button, or **Set Custom Pivot**, which keeps the pivot where it is now. Setting it moves the tile and the handle without changing the UVs. **Reset** goes back to **Center**.
+:   **Custom**: the pivot is at **Custom Origin**, set with the field, its **Edit** button, or **Set Custom**, which keeps the pivot where it is now. Setting it moves the tile and the handle without changing the UVs. **Reset** goes back to **Center**.
 
 **Individual Origins**
-:   Gives each selected UV island its own tile, the texture tile under the island's center, and its own pivot at **Pivot Alignment On Tile**. **Rotate** and **Scale** turn and scale every island around its own pivot, and the Scene view draws one tile per island; the handle stays on the pivot of the **Origin**. With **Origin** set to **Custom**, the tiles stay centered on their islands, not on the custom pivot: **Auto Update Custom Pivot** shows an asterisk, and its tooltip says why.
+:   Gives each selected UV island its own tile, the texture tile under the island's center, and its own pivot at **Pivot Alignment On Tile**. **Rotate** and **Scale** turn and scale every island around its own pivot, and the Scene view draws one tile per island; the handle stays on the pivot of the **Origin**. With **Origin** set to **Custom**, the tiles stay centered on their islands, not on the custom pivot: **Pivot Position**'s **Auto Update Custom** shows an asterisk, and its tooltip says why.
 
 **Orient**
 :   **Global**: Unity's own **Move**, **Rotate** and **Scale** handles, along the world axes.
 :   **UV**: a 2D gizmo along the tile's edges, even when the texture skews the tile into a rhombus: **Move** has an X and a Y arrow and a 2-axis square between them, **Rotate** turns around the tile's normal, and **Scale** stretches along X and Y. The **Rect** tool frames the selection along the tile's edges too.
 :   **Custom**: along **Custom Orient**, with the handles chosen in **Custom Gizmo**: the **2D Gizmo** or Unity's **3D Gizmo**. The tile keeps the shape of the texture. **Reset** puts **Orient** back to **UV**, and **Custom Orient** back to the world axes for the 3D gizmo or along the tile for the 2D one.
 
-The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. With **Origin** set to **Custom**, **Auto Update Custom Pivot** decides what the custom pivot does when the UVs move under it: on, it goes with the UVs it stands on; off, it keeps its place, and the tile is the one under it now.
+The tile always sits on the UVs it stands for: dragging a handle, the UV View, the buttons of the **UV** tab and undo move the tile and the pivot along with the UVs. Rotating and scaling work around the pivot, which keeps its point of the tile. With **Origin** set to **Custom**, **Pivot Position**'s **Auto Update Custom** decides what the custom pivot does when the UVs move under it: on, it goes with the UVs it stands on; off, it keeps its place, and the tile is the one under it now.
 
 A short red shaft along U, a green one along V and a small yellow quad centered on the tile's bottom left corner, where U and V start, show which way the texture runs.
 
