@@ -269,6 +269,17 @@ For automatic smoothing of the whole mesh by angle, see **Auto Smooth** in the [
 | **Create Support Edge** | Adds an edge between exactly two selected vertices. |
 | **Validate Mesh** | Writes a report of topology problems to the Console. |
 | **Delete Unused Materials** | Removes material slots no face uses. |
+| **Select Overlapping** | Under **Overlapping Faces**: selects faces that lie on top of another face of the same mesh, facing the same way. One face of each stack stays unselected (the largest, or the first of faces the same size), so pressing Delete leaves a single face where the stack was. |
+
+**Overlapping Faces** compares the visible faces of each selected mesh in pairs. It replaces the current selection and switches to face selection.
+
+**Overlap Distance**
+:   How far apart two faces can be along their normal and still count as lying on the same plane. Raise it to catch copies that were nudged slightly off the surface.
+
+**Min Coverage**
+:   How much of the larger face the shared area must cover, from 0 to 1. At **1** only exact copies are selected. The default **0.9** also takes faces that are nearly the same. Lower values take faces that overlap only partly, and **0** takes any overlap, such as a small face lying on a larger one.
+
+Faces that touch only along an edge, and faces back to back (facing opposite ways), are never selected.
 
 ## :wtk-brush: Vertex colors
 
