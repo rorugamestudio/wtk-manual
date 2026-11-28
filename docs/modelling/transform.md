@@ -70,8 +70,10 @@ You can also press ++d++ in the Scene view to edit the pivot, starting from wher
 
 Type exact values instead of dragging:
 
-1. Choose **Move**, **Rotate** or **Scale**.
-2. Enter the values and press **Apply**. **Reset** clears them.
+1. Choose **Move**, **Rotate** or **Scale**. The section follows the active tool: its button reads **Move Selection**, **Rotate Selection** or **Scale Selection**, and each tool keeps its own values.
+2. Enter the **X**, **Y** and **Z** values and press that button. **Reset** clears them.
+
+With any other tool active, or while you edit a pivot, the section is grayed out. The **UV** tab has the same section for UVs, see [Transforming UVs](uvs.md#transforming-uvs).
 
 **Absolute**
 :   Moves the pivot to the typed world position, instead of moving by that amount.

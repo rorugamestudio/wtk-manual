@@ -44,7 +44,7 @@ Its toolbar holds the **Transform** tools, the **Selection** modes and the **Piv
 :   Repeats the texture over the whole view, as a texture with **Wrap Mode** set to **Repeat** tiles on the mesh, so islands placed past the 0–1 square show the part of the texture they get. Off, the texture shows on the 0–1 square only. The view repeats it whatever the texture's own **Wrap Mode**.
 
 **Increment**
-:   The steps used while you hold ++ctrl++: **Move**, **Rotate (degrees)** and **Scale factor**. They are the same values as in **Numeric Transform**.
+:   The steps used while you hold ++ctrl++: **Move**, **Rotate (degrees)** and **Scale factor**. **Move** and **Rotate** are the same values as in **Numeric Transform**; **Scale factor** is the scale step alone, since **Numeric Transform** has its own scale per axis.
 
 ### :lucide-mouse-pointer-click: Selecting UVs
 
@@ -63,7 +63,13 @@ As in the Scene view, a box being dragged in the UV View already shows what it w
 
 ## :lucide-move: Transforming UVs
 
-Move, rotate and scale UVs with the regular transform tools, or with exact values under **Numeric Transform**: **Move Selection**, **Rotate Selection** and **Scale Selection** apply the typed offset, angle or factor.
+Move, rotate and scale UVs with the regular transform tools, or with exact values under **Numeric Transform**. It works as in the [Topology tab](transform.md#numeric-transform): it follows the active **Move**, **Rotate** or **Scale** tool, and its button applies the typed values to the UV selection. **X** is U and **Y** is V:
+
+- **Move Selection** moves by the **X** and **Y** offset.
+- **Rotate Selection** turns by the **Z** angle, in degrees.
+- **Scale Selection** scales by the **X** and **Y** factors.
+
+The fields a tool doesn't use are grayed out. **Reset** brings back the defaults: 0.1 offset, 15° and 1.1 factor.
 
 <figure class="wtk-video">
   <video controls muted loop playsinline preload="none" poster="../../assets/videos/modelling/uv-edit-in-scene.webp">
