@@ -135,6 +135,7 @@ Hide parts of a mesh to reach what's behind them. Under **Visibility** in the **
 
 - **Hide Selected Components** and **Hide Unselected Components**.
 - **Select *n* Hidden** selects the hidden components of the current type, and **Reveal *n* Selected** shows the selected hidden components again. The buttons count the components they affect, for example **Select 4 Hidden Faces**.
+- **Reveal All Components** shows every hidden vertex, edge and face of the selected meshes at once, whatever the component type.
 
 For whole objects, the **Mesh** card has:
 
