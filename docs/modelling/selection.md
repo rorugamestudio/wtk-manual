@@ -27,7 +27,7 @@ Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh*
 - With ++alt++ held, clicks go to the Scene view camera instead of selecting.
 - ++q++ switches to the :wtk-select: **Select** tool.
 
-When several components are under the cursor, a component on a face turned toward the camera wins over one on a face turned away. After that, the vertex or edge closest to the cursor wins, or the face closest to the camera. Components on faces turned away from the camera can only be picked when **Backface Picking** allows it (see [Modelling Settings](settings.md)). Hidden components can't be selected.
+When several components are under the cursor, a component on a face turned toward the camera wins over one on a face turned away. After that, the vertex or edge closest to the cursor wins, within its **Vertex Hitbox** or **Edge Hitbox** (see [Modelling Settings](settings.md#misc)), or the face closest to the camera. Components on faces turned away from the camera can only be picked when **Backface Picking** allows it (see [Modelling Settings](settings.md)). Hidden components can't be selected.
 
 Copies of a vertex or edge on the same spot, such as the separate vertices each face of an imported mesh keeps at a corner, the corner of a block resting on the ground, or a long edge running over shorter ones on the other side (a T-junction), are equally close to the cursor. Then the face under the cursor decides: hover the spot from inside a face to pick the vertex or edge that belongs to that face, in the same object or in another selected one. Away from their faces, the pick stays as above. The highlight and the click always agree.
 

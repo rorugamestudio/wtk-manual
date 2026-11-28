@@ -38,6 +38,7 @@ What changed in each World Toolkit release, newest first.
 - Eyedropper buttons on the loft's rails, **Centerline**, profile **Spline** and **Point**, and an end's **Neighbour** pick them in the Scene view, in the Loft tab and the Inspector. **Neighbour** only offers the lofts that end can carry on from. The eyedropper on **Centerline** replaces **Pick Centerline**. See [Picking in the Scene view](../getting-started/world-toolkit-window.md#picking-in-the-scene-view)
 - Copies of a vertex or edge on the same spot (split corners, the corner of an object resting on another, a long edge over shorter ones at a T-junction) are told apart by the face under the cursor: hovering the spot from inside a face picks the one that belongs to it, for the highlight and the click alike, also across selected objects. See [Selection](../modelling/selection.md#selecting)
 - **Preselection Glow**: the highlighted vertex or edge glows into the faces it belongs to, so a split copy glows on its own face and a shared one on all of them. Its color and size are in the Modelling Settings. See [Preselection Glow](../modelling/settings.md#preselection-glow)
+- **Vertex Hitbox** and **Edge Hitbox** in the Modelling Settings (**Misc**): how far from the cursor a vertex or an edge is highlighted and selected, the same distance for both. See [Misc](../modelling/settings.md#misc)
 
 ### :wtk-roads: Roads
 
@@ -72,6 +73,7 @@ What changed in each World Toolkit release, newest first.
 
 ### :lucide-bug: Bug fixes
 
+- Vertices and edges are highlighted wherever a click selects them: the highlight used to miss them in spots between components, mostly on surfaces seen at an angle, while a click there still selected them
 - **Apply to Selected**, **Create Road Rules From Current Setup** and other copies of road rules keep junction-mouth spline ranges as they are: the copies used to lose their anchor, setback and length, which moved crossings and lane dividers
 - Scene view handles and outlines drawn away from the world origin no longer wobble: thick lines turned jagged, dots moved or disappeared, a few pixels off at 1 km from the origin and tens of pixels at 20 km
 
