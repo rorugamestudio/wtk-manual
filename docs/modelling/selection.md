@@ -29,6 +29,10 @@ Choosing a component mode switches Unity's tool context to **WTK: Editable Mesh*
 
 When several components are under the cursor, a component on a face turned toward the camera wins over one on a face turned away. After that, the vertex or edge closest to the cursor wins, or the face closest to the camera. Components on faces turned away from the camera can only be picked when **Backface Picking** allows it (see [Modelling Settings](settings.md)). Hidden components can't be selected.
 
+Copies of a vertex or edge on the same spot, such as the separate vertices each face of an imported mesh keeps at a corner, or the corner of a block resting on the ground, are equally close to the cursor. Then the face under the cursor decides: hover the spot from inside a face to pick the copy that belongs to that face, in the same object or in another selected one. Away from their faces, the pick stays as above. The highlight and the click always agree.
+
+The highlighted vertex or edge also **glows** into the faces it belongs to, fading away from it, so you can see which copy a click takes: a vertex or edge shared by several faces glows on all of them, a split copy only on its own face. Turn the glow off or change its color and size under [Preselection Glow](settings.md#preselection-glow).
+
 ### :lucide-mouse-pointer-click: Double-click
 
 A double-click selects a whole group of components at once. What it selects depends on the component mode, and on whether you clicked another component of the same mesh first:

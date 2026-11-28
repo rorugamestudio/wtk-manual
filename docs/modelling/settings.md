@@ -60,6 +60,22 @@ Sizes in screen pixels, so they stay readable at any zoom:
 
 Small offsets, in pixels, that lift highlights off the surface so they don't flicker into it: **Face Highlight Offset (px)**, **Vertex Overlay Offset (px)**, **Edge Overlay Offset (px)** and **Face Center Offset (px)**. Raise them if highlights disappear into the mesh.
 
+## :lucide-sparkles: Preselection Glow
+
+The glow that fades from the highlighted vertex or edge into the faces it belongs to, showing which of several overlapping copies a click takes (see [Selection](selection.md#selecting)):
+
+**Preselection Glow**
+:   Turns the glow on or off.
+
+**Glow Color**
+:   The glow's color. Its alpha is the opacity at the vertex or edge.
+
+**Vertex Glow Radius (px)** and **Edge Glow Width (px)**
+:   How far from the vertex or edge, in screen pixels, the glow fades out.
+
+**Glow Face Coverage**
+:   The largest share of a face the glow covers, measured from the vertex or edge to the face's farthest corner. Lower it to keep the fade visible on small faces.
+
 ## :wtk-snap: Snapping
 
 The snapping options, in two groups: **Scene View** and **UV View**. They're the same options as in the Scene view's **Snapping** overlay; see [Snapping](transform.md#snapping) for what each one does. The :wtk-snap-overlay: button in the section's header shows or hides that overlay.
