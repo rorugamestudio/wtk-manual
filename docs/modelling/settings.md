@@ -97,7 +97,7 @@ The snapping options, in two groups: **Scene View** and **UV View**. They're the
 :   How far from the cursor, in pixels, a vertex or an edge is highlighted and selected. The highlight and the click use the same distance, so what is highlighted is what a click takes. Both are 8 by default.
 
 **Backface Picking**
-:   Whether you can pick components on faces turned away from the camera: **Off**, following the visibility settings (**Respect Component Visibility**), or always (**Always True**).
+:   Whether you can pick components on faces turned away from the camera: **Off**, following the visibility settings (**Respect Component Visibility**: the **Backface** toggle of the vertex, edge or face row in [Components Visibility](#components-visibility)), or always (**Always True**). It applies to the highlight and to the click alike.
 
 **Show Face Orientation**
 :   Draws faces blue from the front and red from the back. Quick way to spot flipped faces.

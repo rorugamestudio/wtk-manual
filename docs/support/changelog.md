@@ -73,6 +73,7 @@ What changed in each World Toolkit release, newest first.
 
 ### :lucide-bug: Bug fixes
 
+- **Backface Picking** applies to the highlight and the click in the Scene view: components on faces turned away from the camera (surfaces seen from behind) were highlighted and selected whatever it was set to, ignoring the **Backface** toggles of Components Visibility under **Respect Component Visibility**
 - Vertices and edges are highlighted wherever a click selects them: the highlight used to miss them in spots between components, mostly on surfaces seen at an angle and along edges going away from the camera, while a click there still selected them. Where hitboxes overlap, the highlight now takes the vertex or edge nearest to the cursor, as a click does: at a corner it used to take another edge instead of the sides of the face under the cursor
 - **Apply to Selected**, **Create Road Rules From Current Setup** and other copies of road rules keep junction-mouth spline ranges as they are: the copies used to lose their anchor, setback and length, which moved crossings and lane dividers
 - Scene view handles and outlines drawn away from the world origin no longer wobble: thick lines turned jagged, dots moved or disappeared, a few pixels off at 1 km from the origin and tens of pixels at 20 km
