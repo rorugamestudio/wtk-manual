@@ -51,7 +51,7 @@ Sizes in screen pixels, so they stay readable at any zoom:
 :   **Unselected Vertex Size**, **Selected Vertex Size**, **Preselection Vertex Size**, and **Loose Vertex Cross Size** for the cross drawn on vertices without faces.
 
 **Edges**
-:   **Non-interactive Thickness** (in vertex and face modes) and **Interactive Thickness** (in edge mode); **UV Seam Thickness** (0 hides the seams); **Border Edge Thickness** for the border edges of the mesh and of each material (0 uses Unity's own edge drawing); **Selected / Preselection Thickness**; and **Snap Edge Candidate Thickness** for edges highlighted while snapping.
+:   **Non-interactive Thickness** (in vertex and face modes) and **Interactive Thickness** (in edge mode); **UV Seam Thickness** (0 hides the seams); **Border Edge Thickness** for the border edges of the mesh and of each material, which keep it when selected or highlighted, also in the outline of selected and highlighted faces (0 uses Unity's own edge drawing, and border edges then take the selected thickness like the others); **Selected / Preselection Thickness** for the other selected and highlighted edges and face outlines; and **Snap Edge Candidate Thickness** for edges highlighted while snapping.
 
 **Object**
 :   **Object Pivot Size**, the size of the object pivot indicator.
